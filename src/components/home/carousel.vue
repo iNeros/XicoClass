@@ -10,6 +10,7 @@
                 :key="i"
                 :src="item.src"
                 reverse-transition="fade-transition"
+                
                 transition="fade-transition"
             ></v-carousel-item>
         </v-carousel>
