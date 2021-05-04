@@ -2,7 +2,7 @@
     <div class="carousel">
         <v-carousel 
             height="600px"
-            
+            cycle
             show-arrows-on-hover
             >
             <v-carousel-item
