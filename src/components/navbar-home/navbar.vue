@@ -34,7 +34,7 @@
                 <v-btn href="#" depressed plain class="menu-text">
                   Avisos
                 </v-btn>
-                <v-btn href="#" depressed plain class="menu-text">
+                <v-btn href="/Biblioteca" depressed plain class="menu-text">
                   Biblioteca
                 </v-btn>
                 <v-btn href="#" depressed plain class="menu-text">
