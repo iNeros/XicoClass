@@ -30,8 +30,14 @@
 <script>
 export default {
   name: "centerImages",
-  data() {},
+  data() {
+    return{
+
+    };
+  },
 };
+
+
 </script>
 
 <style scoped>
