@@ -7,7 +7,8 @@ const routes = [
   {
     path: "/",
     name: "Login",
-    component: () => import(/* webpackChunkName: "Login" */ "../views/Auth/Login.vue"),
+    component: () =>
+      import(/* webpackChunkName: "Login" */ "../views/Auth/Login.vue"),
   },
 
   {
@@ -19,14 +20,15 @@ const routes = [
   {
     path: "/About",
     name: "About",
-    component: () => import(/* webpackChunkName: "about" */ "../views/About.vue"),
-  }
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/About.vue"),
+  },
 ];
 
 const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
-  routes
+  routes,
 });
 
 export default router;
