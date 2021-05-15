@@ -26,9 +26,12 @@
 export default {
   name: "footerHome",
   component: {},
-  data: () => ({
-    links: ["Inicio", "Apartado Legal", "Equipo", "Acerca De"],
-  }),
+  data: () => {
+    return{
+      links: ["Inicio", "Apartado Legal", "Equipo", "Acerca De"],
+    };
+    
+  },
 };
 </script>
 
