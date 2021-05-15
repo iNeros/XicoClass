@@ -2,29 +2,42 @@
   <div class="home">
     <navbar></navbar>
     <carouselHome> </carouselHome>
+    <!--AGREGAR AQUI DISEÑO PARALAX PARA CUANDO HAGA SCROLL HACIA LAS IMAGENES 
+    SE BAJE A UN AXIS ESPECIFICO EN Y ; (QUE SE VEAN LAS 2 IMAGENES POR COMPLETO)  -->
     
+    <!--#region ImagenesHome -->
     <div class="center-info"> 
-        <v-row align-content="space-around">
-          <v-col cols="12" sm="6" class="mx-0 px-0">
-            <v-card>
+        <v-row align-content="space-around" class="my-0 py-0">
+          <v-col cols="12" sm="12" align-self="center" class="my-0 py-0">
+            <v-card
+            flat
+            >
               <v-img 
-              src="@/assets/media/holders/800x600.png"
-              max-height="600px"
-              max-width="100%"
+              class="img-borders"
+              src="@/assets/media/holders/1600x500.png"
+              max-height="500px"
+              max-width="80%"
               ></v-img>
             </v-card>
           </v-col>
-          <v-col cols="12" sm="6" class="mx-0 px-0">
-            <v-card>
+        </v-row>
+        <v-row align-content="space-around" class="my-0 py-0">
+          <v-col cols="12" sm="12" align-self="center" class="my-0 py-0">
+            <v-card
+            flat
+            >
               <v-img 
-              src="@/assets/media/holders/800x600.png"
-              max-height="600px"
-              max-width="100%"
+              class="img-borders"
+              src="@/assets/media/holders/1600x500.png"
+              max-height="500px"
+              max-width="80%"
               ></v-img>
             </v-card>
           </v-col>
         </v-row>
     </div>
+    <!--#endregion-->
+    
     <div class="spacer"></div>
   <footerHome></footerHome>
   </div>
@@ -52,11 +65,16 @@ export default {
 
 <style>
 .center-info{
+  margin-top: 10px;
   display: block;
 }
 .spacer{
   display: block;
   height: 20px;
+}
+.img-borders{
+  margin-right: auto!important;
+  margin-left: auto!important;
 }
 
 </style>
