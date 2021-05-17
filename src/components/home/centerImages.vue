@@ -31,13 +31,9 @@
 export default {
   name: "centerImages",
   data() {
-    return{
-
-    };
+    return {};
   },
 };
-
-
 </script>
 
 <style scoped>

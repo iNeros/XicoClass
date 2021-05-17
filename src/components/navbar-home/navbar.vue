@@ -28,7 +28,12 @@
           <v-menu offset-y dark>
             <template v-slot:activator="{ on, attrs }">
               <div class="menu-text">
-                <v-btn href="Home" depressed plain class="menu-text btn-selected">
+                <v-btn
+                  href="Home"
+                  depressed
+                  plain
+                  class="menu-text btn-selected"
+                >
                   Inicio
                 </v-btn>
                 <v-btn href="/avisos" depressed plain class="menu-text">
@@ -152,6 +157,7 @@ export default {
 </script>
 
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 .navbar {
   display: block;
   height: 100px;

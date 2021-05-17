@@ -19,6 +19,7 @@ import carouselHome from "@/components/home/carousel.vue";
 import centerImages from "@/components/home/centerImages.vue";
 import SeccionNoticias from "../components/home/seccionNoticias.vue";
 
+
 export default {
   name: "Home",
 
@@ -36,6 +37,7 @@ export default {
 </script>
 
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 .spacer {
   display: block;
   height: 20px;

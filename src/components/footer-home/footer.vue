@@ -27,10 +27,9 @@ export default {
   name: "footerHome",
   component: {},
   data: () => {
-    return{
+    return {
       links: ["Inicio", "Apartado Legal", "Equipo", "Acerca De"],
     };
-    
   },
 };
 </script>
