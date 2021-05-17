@@ -68,8 +68,9 @@ export default {
         show: false,
 
     };
-  },
-};
+
+},
+}
 </script>
 
 <style scoped>

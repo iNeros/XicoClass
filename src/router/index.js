@@ -32,13 +32,13 @@ const routes = [
     path: "/Biblioteca",
     name: "Biblioteca",
     component: () =>
-      import(/* webpackChunkName: "Home" */ "../views/Biblioteca.vue"),
+      import(/* webpackChunkName: "Biblioteca" */ "../views/Biblioteca.vue"),
   },
   {
-    path: "/avisos",
-    name: "avisos",
+    path: "/Avisos",
+    name: "Avisos",
     component: () =>
-      import(/* webpackChunkName: "Home" */ "../views/avisos.vue"),
+      import(/* webpackChunkName: "Avisos" */ "../views/Avisos.vue"),
   },
 ];
 
