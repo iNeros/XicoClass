@@ -18,5 +18,4 @@ export default {
 
 <style>
 /* ----------------------AQUI SE IMPORTAN FUENTES GLOBALMENTE-------------------- */
-
 </style>
