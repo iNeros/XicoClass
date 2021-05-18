@@ -1,13 +1,16 @@
 <template>
-  <v-carousel>
+  <v-container fluid>
+  <v-row > 
+    <v-carousel>
     <v-carousel-item
       v-for="(item,i) in items"
       :key="i"
       :src="item.src"
       reverse-transition="fade-transition"
-      transition="fade-transition"
-    ></v-carousel-item>
+      transition="fade-transition"></v-carousel-item>
   </v-carousel>
+  </v-row> 
+  </v-container>
 </template>
 
 <script>
@@ -18,7 +21,7 @@ export default {
       return {
         items: [
           {
-            src: "@/assets/media/holders/imagenCentro1.png",
+            src: require('@/assets/media/sliders/Slider1.png'),
           },
           {
             src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
