@@ -1,6 +1,6 @@
 <template>
   <div class="footerHome">
-    <v-footer color="#5D576B" absolute padless height="150px">
+    <v-footer color="#5D576B" absolute height="150px">
       <v-row justify="center" no-gutters>
         <v-btn color="white" text rounded class="my-2" href="/Home">
           Inicio
@@ -38,6 +38,10 @@ export default {
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
+
+.footerHome{
+  margin-top: 150px;
+}
 
 .text-redes {
   width: 250px;
