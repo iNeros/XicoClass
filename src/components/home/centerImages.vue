@@ -31,9 +31,39 @@
 
 <template>
   <v-container fluid>
+    
+    <!-- Imagenes Normales
     <v-row xs="6" lg="12" class="py-0 my-0">
+        <v-img src="@/assets/media/holders/imagenCentro1.png"></v-img>
+        <v-img src="@/assets/media/holders/imagenCentro2.png"></v-img>
+    </v-row>
+    -->
+
+    <!-- Con Propiedad de HOVER -->
+    <v-row xs="6" lg="12" class="py-0 my-0">
+      <v-hover
+        v-slot="{ hover }"
+        open-delay="200"
+      >
+      <v-card
+      :elevation="hover ? 16 : 2"
+      :class="{ 'on-hover': hover }"
+      >
       <v-img src="@/assets/media/holders/imagenCentro1.png"></v-img>
-      <v-img src="@/assets/media/holders/imagenCentro2.png"></v-img>
+      </v-card>
+      </v-hover>
+
+      <v-hover
+        v-slot="{ hover }"
+        open-delay="200"
+      >
+      <v-card
+        :elevation="hover ? 12 : 2"
+        :class="{ 'on-hover': hover }"
+        >
+          <v-img src="@/assets/media/holders/imagenCentro2.png"></v-img>
+        </v-card>
+      </v-hover>
     </v-row>
 
   </v-container>
@@ -49,7 +79,20 @@ export default {
 };
 </script>
 
+<style lang="sass" scoped>
+.v-card.on-hover.theme--dark
+  background-color: rgba(#FFF, 0.8)
+  >.v-card__text
+    color: #000
+</style>
+
 <style scoped>
+.v-card:not(.on-hover) {
+  opacity: .95;
+ }
+.v-card {
+  transition: opacity .4s ease-in-out;
+}
 .center-info {
   margin-top: 10px;
   display: block;
@@ -74,11 +117,5 @@ export default {
   justify-content: center;
   flex-direction: column;
 }
-
-.imagen{
-  width: 100%;
-  height: 100%;
-}
-
 
 </style>
