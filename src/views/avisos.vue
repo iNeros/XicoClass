@@ -1,5 +1,5 @@
 <template>
-  <div class="Avisos">
+  <div class="svisos">
     <navbar></navbar>
 
     <h2 style="color: #f45b69" id="ods">Hoy</h2>
@@ -87,6 +87,7 @@ import footerHome from "@/components/footer-home/footer.vue";
 
 export default {
   name: "Avisos",
+
   components: {
     navbar,
     footerHome,
