@@ -1,5 +1,5 @@
 <template>
-  <div class="svisos">
+  <div class="Avisos">
     <navbar></navbar>
 
     <h2 style="color: #f45b69" id="ods">Hoy</h2>
