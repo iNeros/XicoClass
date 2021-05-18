@@ -23,7 +23,7 @@ export default {
   methods: {
     Obtener() {
       let vue = this;
-      fetch("https://xicolass.herokuapp.com/FirstAPI.php?var=gibran")
+      fetch("https://xicolass.herokuapp.com/FirstAPI.php?var=othon")
         .then((datos) => datos.json())
 
         .then((datos) => {
