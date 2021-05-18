@@ -1,3 +1,4 @@
+<!-- Hechos por nero 
 <template>
   <div class="center-info">
     <v-row align-content="space-around" class="my-0 py-0">
@@ -26,6 +27,18 @@
     </v-row>
   </div>
 </template>
+-->
+
+<template>
+  <v-container fluid>
+    <v-row xs="6" lg="12" class="py-0 my-0">
+      <v-img src="@/assets/media/holders/SecondGroup@2x.png"></v-img>
+      <v-img src="@/assets/media/holders/imagenCentro2.png"></v-img>
+    </v-row>
+
+  </v-container>
+
+</template>
 
 <script>
 export default {
@@ -49,4 +62,23 @@ export default {
   margin-right: auto !important;
   margin-left: auto !important;
 }
+
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.imagen{
+  width: 100%;
+  height: 100%;
+}
+
+
 </style>
