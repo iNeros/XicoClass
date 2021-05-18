@@ -6,7 +6,7 @@
         <v-btn @click="Obtener()"> LLAMAR EL API</v-btn>
       </v-col>
       <v-col cols="12" md="4">
-        <h3>{{ losDatos[1] }}</h3>
+        <h3>{{ losDatos }}</h3>
       </v-col>
     </v-row>
   </div>
@@ -27,7 +27,7 @@ export default {
         .then((datos) => datos.json())
 
         .then((datos) => {
-          vue.losDatos = datos[0];
+          vue.losDatos = datos[0][8];
           console.log(vue.losDatos); //esto solo muestra
         });
     },
