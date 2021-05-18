@@ -1,34 +1,3 @@
-<!-- Hechos por nero 
-<template>
-  <div class="center-info">
-    <v-row align-content="space-around" class="my-0 py-0">
-      <v-col cols="12" sm="12" align-self="center" class="my-0 py-0">
-        <v-card flat>
-          <v-img
-            class="img-borders"
-            src="@/assets/media/holders/1600x500.png"
-            max-height="500px"
-            max-width="80%"
-          ></v-img>
-        </v-card>
-      </v-col>
-    </v-row>
-    <v-row align-content="space-around" class="my-0 py-0">
-      <v-col cols="12" sm="12" align-self="center" class="my-0 py-0">
-        <v-card flat>
-          <v-img
-            class="img-borders"
-            src="@/assets/media/holders/1600x500.png"
-            max-height="500px"
-            max-width="80%"
-          ></v-img>
-        </v-card>
-      </v-col>
-    </v-row>
-  </div>
-</template>
--->
-
 <template>
   <v-container fluid>
     <!-- Imagenes Normales
@@ -37,7 +6,6 @@
         <v-img src="@/assets/media/holders/imagenCentro2.png"></v-img>
     </v-row>
     -->
-
     <!-- Con Propiedad de HOVER -->
     <v-row xs="6" lg="12" class="py-0 my-0">
       <v-hover v-slot="{ hover }" open-delay="200">
