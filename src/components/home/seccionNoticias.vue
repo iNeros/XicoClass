@@ -1,15 +1,5 @@
 <template>
-  <div class="seccionNoticias">
-    <v-row class="dobleColumna">
-      <v-col cols="12" md="8">
-        <h3>.......</h3>
-        <v-btn @click="Obtener()"> LLAMAR EL API</v-btn>
-      </v-col>
-      <v-col cols="12" md="4">
-        <h3>{{ losDatos }}</h3>
-      </v-col>
-    </v-row>
-  </div>
+  
 </template>
 
 <script>
@@ -44,7 +34,6 @@ export default {
   display: block;
   margin-top: 100px;
 }
-
 .dobleColumna {
   width: 80%;
   margin-left: auto;
