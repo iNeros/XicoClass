@@ -1,5 +1,5 @@
 <template>
-  <div class="avisos">
+  <div class="Avisos">
     <navbar></navbar>
 
     <h2 style="color: #f45b69" id="ods">Hoy</h2>
@@ -82,7 +82,7 @@
 </template>
 
 <script>
-import navbar from "../components/navbar-home/navbar.vue";
+import navbar from "@/components/navbar-home/navbar.vue";
 import footerHome from "@/components/footer-home/footer.vue";
 
 export default {
