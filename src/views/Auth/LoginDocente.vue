@@ -41,20 +41,20 @@
         </v-card-actions>
       </v-card>
       <div class="forgotten-password">
-        <forgottenPassword></forgottenPassword>
+        <forgottenPasswordDocentes></forgottenPasswordDocentes>
       </div>
     </div>
   </body>
 </template>
 
 <script>
-import forgottenPassword from "@/components/dialogs/forgottenPassword.vue";
+import forgottenPasswordDocentes from "@/components/dialogs/forgottenPasswordDocentes.vue";
 import { required, email } from "vuelidate/lib/validators";
 
 export default {
   name: "Landing",
   components: {
-    forgottenPassword,
+    forgottenPasswordDocentes,
   },
   data() {
     return {
