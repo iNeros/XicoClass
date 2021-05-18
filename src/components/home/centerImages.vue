@@ -7,7 +7,7 @@
     </v-row>
     -->
     <!-- Con Propiedad de HOVER -->
-    <v-row xs="6" lg="12" class="py-0 my-0">
+    <v-row xs="6" cols="12" class="py-0 my-0">
       <v-hover v-slot="{ hover }" open-delay="200">
         <v-card :elevation="hover ? 16 : 2" :class="{ 'on-hover': hover }">
           <v-img src="@/assets/media/holders/imagenCentro1.png"></v-img>
