@@ -28,7 +28,7 @@ export default {
     return {
       items: [
         {
-          src: require("@/assets/media/sliders/Slider1.png"),
+          src: require("@/assets/media/sliders/slider1.png"),
         },
         {
           src: "https://cdn.vuetifyjs.com/images/carousel/sky.jpg",
