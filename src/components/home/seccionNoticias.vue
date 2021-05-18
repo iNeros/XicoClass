@@ -1,7 +1,20 @@
 <template>
-  <v-container>
-    
-  </v-container>
+
+<div>
+  <h1>Hola</h1>
+</div>
+<!--
+  <v-container fluid>
+    <v-row class="">
+      <v-col cols="8" class="">
+        <h1>hola</h1>
+        
+      </v-col>
+      <v-col cols="4" class="">
+
+      </v-col>
+    </v-row>
+  </v-container> -->
 </template>
 
 <script>
