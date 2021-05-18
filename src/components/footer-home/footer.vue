@@ -1,6 +1,6 @@
 <template>
   <div class="footerHome">
-    <v-footer color="#5D576B" padless height="150px">
+    <v-footer color="#5D576B" absolute padless height="150px">
       <v-row justify="center" no-gutters>
         <v-btn
           v-for="link in links"
