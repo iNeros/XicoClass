@@ -32,7 +32,7 @@
 <template>
   <v-container fluid>
     <v-row xs="6" lg="12" class="py-0 my-0">
-      <v-img src="@/assets/media/holders/SecondGroup@2x.png"></v-img>
+      <v-img src="@/assets/media/holders/imagenCentro1.png"></v-img>
       <v-img src="@/assets/media/holders/imagenCentro2.png"></v-img>
     </v-row>
 

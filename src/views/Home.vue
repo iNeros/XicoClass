@@ -15,9 +15,9 @@
 // import  component  from '@/components/foler-name/component.vue'
 import navbar from "@/components/navbar-home/navbar.vue";
 import footerHome from "@/components/footer-home/footer.vue";
-import carouselHome from "@/components/home/carousel.vue";
-import centerImages from "@/components/home/centerImages.vue";
-import SeccionNoticias from "../components/home/seccionNoticias.vue";
+import carouselHome from "@/components/home/Carousel.vue";
+import centerImages from "@/components/home/CenterImages.vue";
+import SeccionNoticias from "@/components/home/seccionNoticias.vue";
 
 export default {
   name: "Home",
