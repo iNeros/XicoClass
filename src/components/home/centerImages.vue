@@ -31,7 +31,6 @@
 
 <template>
   <v-container fluid>
-    
     <!-- Imagenes Normales
     <v-row xs="6" lg="12" class="py-0 my-0">
         <v-img src="@/assets/media/holders/imagenCentro1.png"></v-img>
@@ -41,33 +40,19 @@
 
     <!-- Con Propiedad de HOVER -->
     <v-row xs="6" lg="12" class="py-0 my-0">
-      <v-hover
-        v-slot="{ hover }"
-        open-delay="200"
-      >
-      <v-card
-      :elevation="hover ? 16 : 2"
-      :class="{ 'on-hover': hover }"
-      >
-      <v-img src="@/assets/media/holders/imagenCentro1.png"></v-img>
-      </v-card>
+      <v-hover v-slot="{ hover }" open-delay="200">
+        <v-card :elevation="hover ? 16 : 2" :class="{ 'on-hover': hover }">
+          <v-img src="@/assets/media/holders/imagenCentro1.png"></v-img>
+        </v-card>
       </v-hover>
 
-      <v-hover
-        v-slot="{ hover }"
-        open-delay="200"
-      >
-      <v-card
-        :elevation="hover ? 12 : 2"
-        :class="{ 'on-hover': hover }"
-        >
+      <v-hover v-slot="{ hover }" open-delay="200">
+        <v-card :elevation="hover ? 12 : 2" :class="{ 'on-hover': hover }">
           <v-img src="@/assets/media/holders/imagenCentro2.png"></v-img>
         </v-card>
       </v-hover>
     </v-row>
-
   </v-container>
-
 </template>
 
 <script>
@@ -88,10 +73,10 @@ export default {
 
 <style scoped>
 .v-card:not(.on-hover) {
-  opacity: .95;
- }
+  opacity: 0.95;
+}
 .v-card {
-  transition: opacity .4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
 }
 .center-info {
   margin-top: 10px;
@@ -117,5 +102,4 @@ export default {
   justify-content: center;
   flex-direction: column;
 }
-
 </style>

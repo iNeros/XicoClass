@@ -14,7 +14,7 @@
         v-for="user in losDatos"
         :key="user[user]"
       >
-        <v-card class="sizes" color="#f45b69" dark >
+        <v-card class="sizes" color="#f45b69" dark>
           <v-card-title class="text-h5">
             {{ user[1] }}
           </v-card-title>
@@ -63,7 +63,7 @@
         v-for="user in losDatos"
         :key="user[user]"
       >
-        <v-card class="sizes" color="#349ff4" dark >
+        <v-card class="sizes" color="#349ff4" dark>
           <v-card-title class="text-h5">
             {{ user[1] }}
           </v-card-title>
@@ -138,11 +138,11 @@ export default {
   margin-right: 30px;
   margin-left: 20px;
 }
-.sizes{
-  min-height:250px;
-  max-height:250px;
+.sizes {
+  min-height: 250px;
+  max-height: 250px;
 }
-.texto{
+.texto {
   height: 150px;
   overflow-y: auto;
 }
