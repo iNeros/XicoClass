@@ -1,28 +1,37 @@
 <template>
   <div class="MiPortal">
-      <navbar></navbar>
-      <div class="tabs-for-wideview">
+    <navbar></navbar>
+    <div class="tabs">
+      <menuTabs></menuTabs>
+    </div>
+    <div>
+        
+    </div>
 
-      </div>
-      <div class="tabs-for-phoneview">
-
-      </div>
-
-      <footerHome></footerHome>
+    <footerHome></footerHome>
   </div>
 </template>
 
 <script>
 import navbar from "@/components/navbar-home/navbar.vue";
 import footerHome from "@/components/footer-home/footer.vue";
+import menuTabs from "@/components/MiPortal/menuTabs/menuTabs.vue";
 export default {
   name: "MiPortal",
   data() {
-    return {};
+    return {
+        tab: 1
+    };
   },
-  components:{
-      navbar,
-      footerHome
+  components: {
+    navbar,
+    footerHome,
+    menuTabs,
+  },
+  watch: {
+    tab: function () {
+      console.log(this.tab)
+    },
   }
 };
 </script>
