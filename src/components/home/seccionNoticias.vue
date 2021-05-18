@@ -6,7 +6,7 @@
         <v-btn @click="Obtener()"> LLAMAR EL API</v-btn>
       </v-col>
       <v-col cols="12" md="4">
-        <h3>{{losDatos}}</h3>
+        <h3>{{ losDatos[1] }}</h3>
       </v-col>
     </v-row>
   </div>
@@ -21,25 +21,21 @@ export default {
     };
   },
   methods: {
-    
     Obtener() {
       let vue = this;
-      fetch("https://xicolass.herokuapp.com/FirstAPI.php?var=gibran")
+      fetch("https://xicolass.herokuapp.com/FirstAPI.php?var=othon")
         .then((datos) => datos.json())
 
         .then((datos) => {
-          vue.losDatos = datos[0][8];
-          console.log(vue.losDatos) //esto solo muestra
+          vue.losDatos = datos[0];
+          console.log(vue.losDatos); //esto solo muestra
         });
     },
-
   },
 
   mounted() {
-    
     this.Obtener();
-
-  }
+  },
 };
 </script>
 

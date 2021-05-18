@@ -17,7 +17,7 @@ export default {
 
   components: {
     navbar,
-    footerHome
+    footerHome,
   },
   data() {
     return {};
