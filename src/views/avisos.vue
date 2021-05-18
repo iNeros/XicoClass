@@ -86,7 +86,7 @@ import navbar from "../components/navbar-home/navbar.vue";
 import footerHome from "@/components/footer-home/footer.vue";
 
 export default {
-  name: "avisos",
+  name: "Avisos",
   components: {
     navbar,
     footerHome,
