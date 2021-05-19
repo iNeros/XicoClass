@@ -11,7 +11,7 @@
       <v-col cols="6" xs="12" sm="12" md="6" lg="6" xl="6" class="my-0 py-0 mx-0 px-0">
         <v-hover v-slot="{ hover }" open-delay="100">
           <v-card :elevation="hover ? 16 : 2" :class="{ 'on-hover': hover }">
-            <a href="/Avisos">
+            <a href="/Biblioteca">
             <v-img src="@/assets/media/holders/imgCentroMob1.png">
             </v-img>
             </a>
@@ -22,7 +22,7 @@
       <v-col cols="6" xs="12" sm="12" md="6" lg="6" xl="6" class="my-0 py-0 mx-0 px-0">
         <v-hover v-slot="{ hover }" open-delay="100">
           <v-card :elevation="hover ? 16 : 2" :class="{ 'on-hover': hover }">
-            <a href="/Biblioteca">
+            <a href="/Avisos">
             <v-img src="@/assets/media/holders/imgCentroMob2.png"></v-img>
             </a>
           </v-card>
