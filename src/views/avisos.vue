@@ -136,7 +136,6 @@ export default {
   margin-top: 10px;
 }
 .margenes {
-  display: block;
   margin-right: 30px;
   margin-left: 20px;
   min-height: 280px;
