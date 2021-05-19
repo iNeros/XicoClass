@@ -4,7 +4,7 @@
     <carousel> </carousel>
     <!--AGREGAR AQUI DISEÑO PARALAX PARA CUANDO HAGA SCROLL HACIA LAS IMAGENES 
     SE BAJE A UN AXIS ESPECIFICO EN Y ; (QUE SE VEAN LAS 2 IMAGENES POR COMPLETO)  -->
-    <centerImages class="mt-0 pt-0 mb-5 pb-5"> </centerImages>
+    <centerImages class="ml-0 pl-0 mr-0 pr-0"> </centerImages>
     <seccionNoticias></seccionNoticias>
     <div class="spacer"></div>
     <footerHome></footerHome>

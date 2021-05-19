@@ -7,19 +7,28 @@
     </v-row>
     -->
     <!-- Con Propiedad de HOVER -->
-    <v-row xs="6" cols="12" class="py-0 my-0">
-      <v-hover v-slot="{ hover }" open-delay="100">
-        <v-card :elevation="hover ? 16 : 2" :class="{ 'on-hover': hover }">
-          <v-img src="@/assets/media/holders/imagenCentro1.png"></v-img>
-        </v-card>
-      </v-hover>
+    <v-row >
+      <v-col cols="12" xs="6" lg="12" class="my-0 py-0">
+        <v-hover v-slot="{ hover }" open-delay="100">
+          <v-card :elevation="hover ? 16 : 2" :class="{ 'on-hover': hover }">
+            <a href="/Biblioteca">
+            <v-img container src="@/assets/media/holders/imagenCentro1.png"></v-img>
+            </a>
+          </v-card>
+        </v-hover>
+      </v-col>
 
-      <v-hover v-slot="{ hover }" open-delay="100">
-        <v-card :elevation="hover ? 16 : 2" :class="{ 'on-hover': hover }">
-          <v-img src="@/assets/media/holders/imagenCentro2.png"></v-img>
-        </v-card>
-      </v-hover>
+      <v-col cols="12" xs="6" lg="12" class="my-0 py-0">
+        <v-hover v-slot="{ hover }" open-delay="100">
+          <v-card :elevation="hover ? 16 : 2" :class="{ 'on-hover': hover }">
+            <a href="/Avisos">
+            <v-img src="@/assets/media/holders/imagenCentro2.png"></v-img>
+            </a>
+          </v-card>
+        </v-hover>
+      </v-col>
     </v-row>
+
   </v-container>
 </template>
 
