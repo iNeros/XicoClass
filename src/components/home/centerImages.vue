@@ -9,7 +9,7 @@
     <!-- Con Propiedad de HOVER -->
     <v-row>
       <v-col
-        cols="6"
+        cols="12"
         xs="12"
         sm="12"
         md="6"
@@ -27,7 +27,7 @@
       </v-col>
 
       <v-col
-        cols="6"
+        cols="12"
         xs="12"
         sm="12"
         md="6"
