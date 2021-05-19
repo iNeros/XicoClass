@@ -19,7 +19,6 @@
           </v-card-actions>
         </v-card>
       </v-col>
-
       <!--Columna de Redes sociales-->
       <v-col cols="12" xs="6" lg="4" class="">
         <h2 class="ml-6" style="color: #1565c0">Redes Sociales</h2>
