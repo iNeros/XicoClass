@@ -12,7 +12,8 @@
         <v-hover v-slot="{ hover }" open-delay="100">
           <v-card :elevation="hover ? 16 : 2" :class="{ 'on-hover': hover }">
             <a href="/Avisos">
-            <v-img src="@/assets/media/holders/imagenCentro2.png"></v-img>
+            <v-img src="@/assets/media/holders/imgCentroMob1.png">
+            </v-img>
             </a>
           </v-card>
         </v-hover>
@@ -22,7 +23,7 @@
         <v-hover v-slot="{ hover }" open-delay="100">
           <v-card :elevation="hover ? 16 : 2" :class="{ 'on-hover': hover }">
             <a href="/Biblioteca">
-            <v-img src="@/assets/media/holders/imagenCentro1.png"></v-img>
+            <v-img src="@/assets/media/holders/imgCentroMob2.png"></v-img>
             </a>
           </v-card>
         </v-hover>
