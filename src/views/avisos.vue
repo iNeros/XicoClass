@@ -1,5 +1,5 @@
 <template>
-  <div class="avisos">
+  <div class="Avisos">
     <navbar></navbar>
 
     <h2 style="color: #f45b69" id="ods">Hoy</h2>
@@ -14,7 +14,7 @@
         v-for="user in losDatos"
         :key="user[user]"
       >
-        <v-card class="sizes" color="#f45b69" dark >
+        <v-card class="sizes" color="#f45b69" dark>
           <v-card-title class="text-h5">
             {{ user[1] }}
           </v-card-title>
@@ -63,7 +63,7 @@
         v-for="user in losDatos2"
         :key="user[user]"
       >
-        <v-card class="sizes" color="#349ff4" dark >
+        <v-card class="sizes" color="#349ff4" dark>
           <v-card-title class="text-h5">
             {{ user[1] }}
           </v-card-title>
@@ -82,11 +82,12 @@
 </template>
 
 <script>
-import navbar from "../components/navbar-home/navbar.vue";
+import navbar from "@/components/navbar-home/navbar.vue";
 import footerHome from "@/components/footer-home/footer.vue";
 
 export default {
   name: "avisos",
+
   components: {
     navbar,
     footerHome,
@@ -156,14 +157,16 @@ export default {
   margin-top: 10px;
 }
 .margenes {
+  display: block;
   margin-right: 30px;
   margin-left: 20px;
+  min-height: 280px;
 }
-.sizes{
-  min-height:250px;
-  max-height:250px;
+.sizes {
+  min-height: 250px;
+  max-height: 250px;
 }
-.texto{
+.texto {
   height: 150px;
   overflow-y: auto;
 }

@@ -21,9 +21,9 @@
               name="login"
               label="Usuario"
               type="text"
-              class="mb-6"
-            ></v-text-field>
-
+              class="form__input mb-6"
+            >
+            </v-text-field>
             <v-text-field
               prepend-icon="mdi-lock"
               id="password"
@@ -33,6 +33,7 @@
             ></v-text-field>
           </v-form>
         </v-card-text>
+
         <v-card-actions>
           <v-btn dark color="red" width="200" class="btn-design" href="/home">
             INICIAR SESION
@@ -40,23 +41,56 @@
         </v-card-actions>
       </v-card>
       <div class="forgotten-password">
-        <forgottenPassword></forgottenPassword>
+        <forgottenPasswordDocentes></forgottenPasswordDocentes>
       </div>
     </div>
   </body>
 </template>
 
 <script>
-import forgottenPassword from "@/components/dialogs/forgottenPassword.vue";
+import forgottenPasswordDocentes from "@/components/dialogs/forgottenPasswordDocentes.vue";
+import { required, email } from "vuelidate/lib/validators";
 
 export default {
   name: "Landing",
   components: {
-    forgottenPassword,
+    forgottenPasswordDocentes,
   },
   data() {
     return {
       show: false,
+      usuario: "",
+      contraseña: "",
+      submitStatus: null,
+    };
+  },
+  methods: {
+    submit() {
+      console.log("submit!");
+      this.$v.$touch();
+      if (this.$v.$invalid) {
+        this.submitStatus = "ERROR";
+      } else {
+        // do your submit logic here
+        this.submitStatus = "PENDING";
+        setTimeout(() => {
+          this.submitStatus = "OK";
+        }, 500);
+      }
+    },
+  },
+
+  validations() {
+    return {
+      form: {
+        usuario: {
+          email,
+          required,
+        },
+        contraseña: {
+          required,
+        },
+      },
     };
   },
 };
