@@ -6,10 +6,10 @@ import vuetify from "./plugins/vuetify";
 import Vuelidate from "vuelidate";
 import axios from "axios";
 import VueAxios from "vue-axios";
-import Vuex from 'vuex'
+import Vuex from "vuex";
 Vue.use(VueAxios, axios);
 Vue.use(Vuelidate);
-Vue.use(Vuex)
+Vue.use(Vuex);
 Vue.config.productionTip = false;
 
 new Vue({

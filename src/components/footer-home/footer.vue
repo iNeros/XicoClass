@@ -39,7 +39,7 @@ export default {
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
 
-.footerHome{
+.footerHome {
   margin-top: 150px;
 }
 

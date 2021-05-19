@@ -4,9 +4,7 @@
     <div class="tabs">
       <menuTabs></menuTabs>
     </div>
-    <div>
-        
-    </div>
+    <div></div>
 
     <footerHome></footerHome>
   </div>
@@ -20,7 +18,7 @@ export default {
   name: "MiPortal",
   data() {
     return {
-        tab: 1
+      tab: 1,
     };
   },
   components: {
@@ -30,9 +28,9 @@ export default {
   },
   watch: {
     tab: function () {
-      console.log(this.tab)
+      console.log(this.tab);
     },
-  }
+  },
 };
 </script>
 

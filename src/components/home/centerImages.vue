@@ -41,7 +41,7 @@ export default {
 
 <style scoped>
 .v-card:not(.on-hover) {
-  opacity: 0.90;
+  opacity: 0.9;
 }
 .v-card {
   transition: opacity 0.4s ease-in-out;
