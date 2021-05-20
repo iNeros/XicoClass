@@ -118,7 +118,7 @@ export default {
           console.log(vue.losDatos1); //esto solo muestra
         });
     },
-      Obtener2() {
+    Obtener2() {
       let vue = this;
       fetch("https://xicolass.herokuapp.com/FirstAPI.php?var=othon&ap=3")
         .then((datos) => datos.json())

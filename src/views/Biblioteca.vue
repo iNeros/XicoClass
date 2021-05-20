@@ -1,12 +1,11 @@
 <template>
   <div class="home">
     <navbar></navbar>
-  
-    <div class = "tab">
-      <menuTabsBiblio>      </menuTabsBiblio>
+
+    <div class="tab">
+      <menuTabsBiblio> </menuTabsBiblio>
     </div>
 
-    
     <footerHome></footerHome>
   </div>
 </template>

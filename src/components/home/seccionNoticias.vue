@@ -7,12 +7,10 @@
         <hr class="mb-3" color="#f45b69" id="od" />
         <!-- Carta de Avisos-->
         <v-card class="sizes" color="#f45b69" dark>
-          <v-card-title class="text-h5"> {{losDatos[1]}} </v-card-title>
-          <v-card-subtitle
-            class="texto">{{losDatos[3]}}
-          </v-card-subtitle>
+          <v-card-title class="text-h5"> {{ losDatos[1] }} </v-card-title>
+          <v-card-subtitle class="texto">{{ losDatos[3] }} </v-card-subtitle>
           <v-card-actions>
-            <v-btn text>{{losDatos[2]}} </v-btn>
+            <v-btn text>{{ losDatos[2] }} </v-btn>
           </v-card-actions>
         </v-card>
       </v-col>
@@ -66,23 +64,23 @@ export default {
     return {
       losDatos: [],
       items: [
-      {
-        color: "#1F7087",
-        src: "https://cdn.vuetifyjs.com/images/cards/foster.jpg",
-        title: "Supermodel",
-        artist: "Foster the People",
-      },
-      {
-        color: "#952175",
-        src: "https://cdn.vuetifyjs.com/images/cards/halcyon.png",
-        title: "Halcyon Days",
-        artist: "Ellie Goulding",
-      },
-    ],
+        {
+          color: "#1F7087",
+          src: "https://cdn.vuetifyjs.com/images/cards/foster.jpg",
+          title: "Supermodel",
+          artist: "Foster the People",
+        },
+        {
+          color: "#952175",
+          src: "https://cdn.vuetifyjs.com/images/cards/halcyon.png",
+          title: "Halcyon Days",
+          artist: "Ellie Goulding",
+        },
+      ],
     };
   },
   methods: {
-     Obtener() {
+    Obtener() {
       let vue = this;
       fetch("https://xicolass.herokuapp.com/FirstAPI.php?var=othon&ap=1")
         .then((datos) => datos.json())
@@ -91,7 +89,7 @@ export default {
           console.log(vue.losDatos); //esto solo muestra
         });
     },
- },
+  },
   mounted() {
     this.Obtener();
   },

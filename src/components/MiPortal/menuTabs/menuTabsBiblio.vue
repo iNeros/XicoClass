@@ -2,7 +2,7 @@
   <div class="menuTabs">
     <!-- VISTA DE LAS TABS EN WIDEVIEW --->
     <div class="hidden-sm-and-down">
-      <v-tabs grow class="menu-tabs" color="#30dba0!important" >
+      <v-tabs grow class="menu-tabs" color="#30dba0!important">
         <!--
         <v-tab @click="texto = 'Materia Impreso'"> MATERIAL IMPRESO </v-tab>
         <v-tab @click="texto = 'Material Visual'"> MATERIAL VISUAL </v-tab>
@@ -10,8 +10,7 @@
         --->
         <v-tab>Material Impreso</v-tab>
         <v-tab>Material Didactico</v-tab>
-        <v-tab >Material Visual</v-tab>
-
+        <v-tab>Material Visual</v-tab>
       </v-tabs>
     </div>
     <!-- VISTA DE LAS TABS EN DISPOSITIVOS MOVILES --->
@@ -69,7 +68,6 @@
                 </v-btn>
               </v-list-item-title>
             </v-list-item>
-
           </v-list>
         </v-menu>
       </div>

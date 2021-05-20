@@ -30,11 +30,11 @@
               <div class="menu-text">
                 <v-btn
                   id="Inicio"
-                  href="/Home"
                   depressed
                   plain
                   class="menu-text"
-                  @click="CambiarColor(), (seleccionado = 1)"
+                  href="/Home"
+                  @click="setInicio()"
                 >
                   Inicio
                 </v-btn>
@@ -44,7 +44,7 @@
                   depressed
                   plain
                   class="menu-text"
-                   @click="CambiarColor(), (seleccionado = 2)"
+                  @click="setAvisos()"
                 >
                   Avisos
                 </v-btn>
@@ -54,7 +54,7 @@
                   depressed
                   plain
                   class="menu-text"
-                   @click="CambiarColor(), (seleccionado = 3)"
+                  @click="setBiblioteca()"
                 >
                   Biblioteca
                 </v-btn>
@@ -64,11 +64,12 @@
                   depressed
                   plain
                   class="menu-text"
-                   @click="CambiarColor(), (seleccionado = 4)"
+                  @click="setPortal()"
                 >
                   Mi Portal
                 </v-btn>
                 <v-btn
+                  id="MiPerfil"
                   depressed
                   plain
                   v-bind="attrs"
@@ -82,7 +83,7 @@
             <v-list light>
               <v-list-item>
                 <v-list-item-title
-                  ><v-btn href="/MiPerfil" depressed plain
+                  ><v-btn @click="setPerfil()" href="/MiPerfil" depressed plain
                     >Mi Perfil</v-btn
                   ></v-list-item-title
                 >
@@ -113,39 +114,59 @@
             <v-list-item>
               <v-list-item-title
                 ><v-btn
-                  id="navbar-inicio"
-                  class="btn-selected"
+                  id="smInicio"
                   href="/Home"
                   depressed
                   plain
+                  @click="setInicio()"
                   >Inicio</v-btn
                 ></v-list-item-title
               >
             </v-list-item>
             <v-list-item>
               <v-list-item-title
-                ><v-btn id="navbar-avisos" href="/avisos" depressed plain
+                ><v-btn
+                  id="smAvisos"
+                  href="/avisos"
+                  depressed
+                  plain
+                  @click="setAvisos()"
                   >Avisos</v-btn
                 ></v-list-item-title
               >
             </v-list-item>
             <v-list-item>
               <v-list-item-title
-                ><v-btn id="navbar-biblio" href="/Biblioteca" depressed plain
+                ><v-btn
+                  id="smBiblio"
+                  href="/Biblioteca"
+                  depressed
+                  plain
+                  @click="setBiblioteca()"
                   >Biblioteca</v-btn
                 ></v-list-item-title
               >
             </v-list-item>
             <v-list-item>
               <v-list-item-title
-                ><v-btn id="navbar-portal" href="/MiPortal" depressed plain
+                ><v-btn
+                  id="smPortal"
+                  href="/MiPortal"
+                  depressed
+                  plain
+                  @click="setPortal()"
                   >Mi Portal</v-btn
                 ></v-list-item-title
               >
             </v-list-item>
             <v-list-item>
               <v-list-item-title
-                ><v-btn id="navbar-perfil" href="/MiPerfil" depressed plain
+                ><v-btn
+                  id="smPerfil"
+                  href="/MiPerfil"
+                  depressed
+                  plain
+                  @click="setPerfil()"
                   >Mi Perfil</v-btn
                 ></v-list-item-title
               >
@@ -171,33 +192,74 @@
 
 export default {
   name: "navbar",
-
+  data() {
+    return {};
+  },
   components: {},
   methods: {
-    CambiarColor() {
-      switch (this.seleccionado) {
-        case 1:
+    setInicio() {
+      localStorage.selectedNavTab = 1;
+    },
+    setAvisos() {
+      localStorage.selectedNavTab = 2;
+    },
+    setBiblioteca() {
+      localStorage.selectedNavTab = 3;
+    },
+    setPortal() {
+      localStorage.selectedNavTab = 4;
+    },
+    setPerfil() {
+      localStorage.selectedNavTab = 5;
+    },
+    setSelected() {
+      switch (localStorage.selectedNavTab) {
+        case "1":
           document.getElementById("Inicio").classList.add("btn-selected");
           break;
-        case 2:
+        case "2":
           document.getElementById("Avisos").classList.add("btn-selected");
           break;
-        case 3:
+        case "3":
           document.getElementById("Biblioteca").classList.add("btn-selected");
           break;
-        case 4:
+        case "4":
           document.getElementById("MiPortal").classList.add("btn-selected");
+          break;
+        case "5":
+          document.getElementById("MiPerfil").classList.add("btn-selected");
           break;
         default:
           document.getElementById("Inicio").classList.add("btn-selected");
           break;
       }
     },
+    setSelectedSmallView() {
+      setTimeout(6000);
+      switch (localStorage.selectedNavTab) {
+        case "1":
+          document.getElementById("smInicio").classList.add("btn-selected");
+          break;
+        case "2":
+          document.getElementById("smAvisos").classList.add("btn-selected");
+          break;
+        case "3":
+          document.getElementById("smBiblio").classList.add("btn-selected");
+          break;
+        case "4":
+          document.getElementById("smPortal").classList.add("btn-selected");
+          break;
+        case "5":
+          document.getElementById("smPerfil").classList.add("btn-selected");
+          break;
+        default:
+          document.getElementById("smInicio").classList.add("btn-selected");
+          break;
+      }
+    },
   },
-  data() {
-    return {
-      seleccionado: "",
-    };
+  mounted() {
+    this.setSelected();
   },
 };
 </script>
