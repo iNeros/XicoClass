@@ -8,22 +8,20 @@ export default new Vuex.Store({
     portalStep: 1,
   },
   mutations: {
-
     //MUTATIONS FOR MI PORTAL
-    setMisMaterias(state){
+    setMisMaterias(state) {
       state.portalStep = 1;
     },
-    setMisTareas(state){
+    setMisTareas(state) {
       state.portalStep = 2;
     },
-    setMisDocumentos(state){
+    setMisDocumentos(state) {
       state.portalStep = 3;
     },
-    setMisTramites(state){
+    setMisTramites(state) {
       state.portalStep = 4;
     },
     // END OF MUTATIONS FOR MI PORTAL
-
   },
   actions: {},
   modules: {},

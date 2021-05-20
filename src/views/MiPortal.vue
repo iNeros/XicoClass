@@ -34,12 +34,10 @@ import misTareas from "@/components/MiPortal/windows/misTareas.vue";
 import misDocumentos from "@/components/MiPortal/windows/misDocumentos.vue";
 import misTramites from "@/components/MiPortal/windows/misTramites.vue";
 
-
 export default {
   name: "MiPortal",
   data() {
-    return {
-    };
+    return {};
   },
   components: {
     navbar,
@@ -49,12 +47,8 @@ export default {
     misTareas,
     misDocumentos,
     misTramites,
-
   },
-  mounted(){
-
-
-  }
+  mounted() {},
 };
 </script>
 

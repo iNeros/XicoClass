@@ -3,10 +3,14 @@
     <!-- VISTA DE LAS TABS EN WIDEVIEW --->
     <div class="hidden-sm-and-down">
       <v-tabs fixed-tabs class="menu-tabs" color="#30dba0!important">
-        <v-tab @click="(texto = 'MIS MATERIAS'),(setMaterias())"> MIS MATERIAS  </v-tab>
-        <v-tab @click="(texto = 'TAREAS'),(setTareas())"> TAREAS </v-tab>
-        <v-tab @click="(texto = 'MIS DOCUMENTOS'),(setDocumentos())"> MIS DOCUMENTOS </v-tab>
-        <v-tab @click="(texto = 'TRAMITES'),(setTramites())"> TRAMITES </v-tab>
+        <v-tab @click="(texto = 'MIS MATERIAS'), setMaterias()">
+          MIS MATERIAS
+        </v-tab>
+        <v-tab @click="(texto = 'TAREAS'), setTareas()"> TAREAS </v-tab>
+        <v-tab @click="(texto = 'MIS DOCUMENTOS'), setDocumentos()">
+          MIS DOCUMENTOS
+        </v-tab>
+        <v-tab @click="(texto = 'TRAMITES'), setTramites()"> TRAMITES </v-tab>
       </v-tabs>
     </div>
     <!-- VISTA DE LAS TABS EN DISPOSITIVOS MOVILES --->
@@ -32,7 +36,7 @@
                   class="button-menu ma-0"
                   color="red"
                   dark
-                  @click="(texto = 'MIS MATERIAS'),(setMaterias())"
+                  @click="(texto = 'MIS MATERIAS'), setMaterias()"
                 >
                   MIS MATERIAS
                 </v-btn>
@@ -45,7 +49,7 @@
                   class="button-menu"
                   color="red"
                   dark
-                  @click="(texto = 'TAREAS'),(setTareas())"
+                  @click="(texto = 'TAREAS'), setTareas()"
                 >
                   TAREAS
                 </v-btn>
@@ -58,7 +62,7 @@
                   class="button-menu"
                   color="red"
                   dark
-                  @click="(texto = 'MIS DOCUMENTOS'),(setDocumentos())"
+                  @click="(texto = 'MIS DOCUMENTOS'), setDocumentos()"
                 >
                   MIS DOCUMENTOS
                 </v-btn>
@@ -71,7 +75,7 @@
                   class="button-menu"
                   color="red"
                   dark
-                  @click="(texto = 'TRAMITES'),(setTramites())"
+                  @click="(texto = 'TRAMITES'), setTramites()"
                 >
                   TRAMITES
                 </v-btn>
@@ -93,19 +97,19 @@ export default {
     };
   },
   methods: {
-    setMaterias(){
-      this.$store.commit('setMisMaterias');
+    setMaterias() {
+      this.$store.commit("setMisMaterias");
     },
-    setTareas(){
-      this.$store.commit('setMisTareas');
+    setTareas() {
+      this.$store.commit("setMisTareas");
     },
-    setDocumentos(){
-      this.$store.commit('setMisDocumentos');
+    setDocumentos() {
+      this.$store.commit("setMisDocumentos");
     },
-    setTramites(){
-      this.$store.commit('setMisTramites');
-    }
-  }
+    setTramites() {
+      this.$store.commit("setMisTramites");
+    },
+  },
 };
 </script>
 
