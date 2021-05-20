@@ -6,16 +6,13 @@
         <h2 style="color: #f45b69" id="ods">Avisos recientes</h2>
         <hr class="mb-3" color="#f45b69" id="od" />
         <!-- Carta de Avisos-->
-        <v-card color="#385F73" dark>
-          <v-card-title class="text-h5"> Aviso 1 </v-card-title>
+        <v-card class="sizes" color="#f45b69" dark>
+          <v-card-title class="text-h5"> {{losDatos[1]}} </v-card-title>
           <v-card-subtitle
-            >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet
-            maiores quo atque? Accusamus adipisci cumque aut nobis sit ullam at
-            beatae quidem deleniti sunt corporis, ducimus temporibus recusandae,
-            voluptatem voluptatum.
+            class="texto">{{losDatos[3]}}
           </v-card-subtitle>
           <v-card-actions>
-            <v-btn text> Leer mas </v-btn>
+            <v-btn text>{{losDatos[2]}} </v-btn>
           </v-card-actions>
         </v-card>
       </v-col>
@@ -68,29 +65,7 @@ export default {
   data() {
     return {
       losDatos: [],
-    };
-  },
-  methods: {
-     Obtener() {
-      let vue = this;
-      fetch("https://xicolass.herokuapp.com/FirstAPI.php?var=othon&ap=1")
-        .then((datos) => datos.json())
-        .then((datos) => {
-          vue.losDatos = datos;
-          console.log(vue.losDatos); //esto solo muestra
-        });
-    },
- },
-  mounted() {
-    this.Obtener();
-  },
-};
-</script>
-
-<script>
-export default {
-  data: () => ({
-    items: [
+      items: [
       {
         color: "#1F7087",
         src: "https://cdn.vuetifyjs.com/images/cards/foster.jpg",
@@ -104,7 +79,22 @@ export default {
         artist: "Ellie Goulding",
       },
     ],
-  }),
+    };
+  },
+  methods: {
+     Obtener() {
+      let vue = this;
+      fetch("https://xicolass.herokuapp.com/FirstAPI.php?var=othon&ap=1")
+        .then((datos) => datos.json())
+        .then((datos) => {
+          vue.losDatos = datos[0];
+          console.log(vue.losDatos); //esto solo muestra
+        });
+    },
+ },
+  mounted() {
+    this.Obtener();
+  },
 };
 </script>
 
@@ -117,5 +107,13 @@ export default {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
+}
+.sizes {
+  min-height: 250px;
+  max-height: 250px;
+}
+.texto {
+  height: 150px;
+  overflow-y: auto;
 }
 </style>
