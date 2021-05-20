@@ -1,7 +1,10 @@
 <template>
   <div class="home">
     <navbar></navbar>
-    <h1>Es que te quieroooo neroooo</h1>
+    <div class = "tab">
+      <menuTabsBiblio>
+      </menuTabsBiblio>
+    </div>
     <div class="spacer"></div>
     <footerHome></footerHome>
   </div>
@@ -11,6 +14,7 @@
 // import  component  from '@/components/foler-name/component.vue'
 import navbar from "@/components/navbar-home/navbar.vue";
 import footerHome from "@/components/footer-home/footer.vue";
+import menuTabsBiblio from "@/components/MiPortal/menuTabs/menuTabsBiblio.vue";
 
 export default {
   name: "Biblioteca",
@@ -18,6 +22,7 @@ export default {
   components: {
     navbar,
     footerHome,
+    menuTabsBiblio,
   },
   data() {
     return {};
