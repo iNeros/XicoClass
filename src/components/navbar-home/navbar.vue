@@ -29,20 +29,43 @@
             <template v-slot:activator="{ on, attrs }">
               <div class="menu-text">
                 <v-btn
+                  id="Inicio"
                   href="/Home"
                   depressed
                   plain
-                  class="menu-text btn-selected"
+                  class="menu-text"
+                  @click="CambiarColor(), (seleccionado = 1)"
                 >
                   Inicio
                 </v-btn>
-                <v-btn href="/Avisos" depressed plain class="menu-text">
+                <v-btn
+                  id="Avisos"
+                  href="/Avisos"
+                  depressed
+                  plain
+                  class="menu-text"
+                   @click="CambiarColor(), (seleccionado = 2)"
+                >
                   Avisos
                 </v-btn>
-                <v-btn href="/Biblioteca" depressed plain class="menu-text">
+                <v-btn
+                  id="Biblioteca"
+                  href="/Biblioteca"
+                  depressed
+                  plain
+                  class="menu-text"
+                   @click="CambiarColor(), (seleccionado = 3)"
+                >
                   Biblioteca
                 </v-btn>
-                <v-btn href="/MiPortal" depressed plain class="menu-text">
+                <v-btn
+                  id="MiPortal"
+                  href="/MiPortal"
+                  depressed
+                  plain
+                  class="menu-text"
+                   @click="CambiarColor(), (seleccionado = 4)"
+                >
                   Mi Portal
                 </v-btn>
                 <v-btn
@@ -150,8 +173,31 @@ export default {
   name: "navbar",
 
   components: {},
+  methods: {
+    CambiarColor() {
+      switch (this.seleccionado) {
+        case 1:
+          document.getElementById("Inicio").classList.add("btn-selected");
+          break;
+        case 2:
+          document.getElementById("Avisos").classList.add("btn-selected");
+          break;
+        case 3:
+          document.getElementById("Biblioteca").classList.add("btn-selected");
+          break;
+        case 4:
+          document.getElementById("MiPortal").classList.add("btn-selected");
+          break;
+        default:
+          document.getElementById("Inicio").classList.add("btn-selected");
+          break;
+      }
+    },
+  },
   data() {
-    return {};
+    return {
+      seleccionado: "",
+    };
   },
 };
 </script>
