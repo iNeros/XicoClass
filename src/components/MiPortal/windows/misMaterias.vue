@@ -7,7 +7,7 @@
     <v-card elevation="24" class="container" 
              El Contenido.. :V  
     </v-card> -->
-    <v-container fluid class="text-center">
+    <v-container class="pa-4 text-center">
       <v-row
       class="fill-height"
       align="center"
@@ -18,25 +18,59 @@
         <v-col
         :key="i"
         cols="12"
-        md="4"
+        xl="12"
+        lg="12"
+        md="12"
+        xs="4"
         >
         <v-hover v-slot="{ hover }" open-delay="200">
           <v-card
           :elevation="hover ? 12 : 2"
           :class="{ 'on-hover': hover }"
           shaped
-          class="mx-auto card-container"
-          height="300"
-          width="400"
           >
           <v-card-title class="display-1 titulo-tarjeta">
-            Materias
+            <v-row
+            class="fill-height flex-column"
+            justify="space-between"
+            >
+              <v-col
+              cols="9"
+              class=""
+              >
+              <p class="mt-1 text-left mx-6 mt-2 mb-2">
+                  {{ item.materia }}
+              </p>
+              </v-col>
+              <v-col
+              cols="3"
+              class=""
+              >
+                <v-avatar>
+                  
+                </v-avatar>
+              </v-col>
+            </v-row>
           </v-card-title>
           <v-card-text>
-          
+            <p class="subtitle-1 text-left mx-6">
+                {{item.nombreDocente}}
+              </p>
+            <p class="subtitle-1 grey--text mx-6 my-0 text-left">
+              {{item.horario}}
+            </p>
+            <v-divider class="mx-6"></v-divider>
           </v-card-text>
+          <p class="body-1" justify="">
+            {{item.descripcion}}
+          </p>
           <v-card-actions>
-            <v-btn> Boton </v-btn>
+            <v-btn
+            class="ma-4"
+            color="deep-purple accent-3"
+            block
+            text
+            > Ver mas </v-btn>
           </v-card-actions>
           </v-card>
         </v-hover>
@@ -52,20 +86,23 @@ export default {
   data: () => ({
     items: [
       {
-        tittle:'',
-        text:'',
-        subtext:''
-        
+        materia:'#Nombre Asignatura',
+        nombreDocente:'Nombre del docente',
+        horario:'Horario',
+        descripcion:'Lorem ipsum dolor sit amet consectetur',
+        img:'https://cdn.vuetifyjs.com/images/john.jpg'
       },
       {
-        tittle:'',
-        text:'',
-        subtext:''
+        materia:'#Nombre Asignatura',
+        nombreDocente:'Nombre del docente',
+        horario:'Horario',
+        descripcion:'Lorem ipsum dolor sit amet consectetur',
       },
       {
-        tittle:'',
-        text:'',
-        subtext:''
+        materia:'#Nombre Asignatura',
+        nombreDocente:'Nombre del docente',
+        horario:'Horario',
+        descripcion:'Lorem ipsum dolor sit amet consectetur',
       },
     ],
   }),
