@@ -30,12 +30,10 @@
           shaped
           >
           <v-card-title class="display-1 titulo-tarjeta">
-            <v-row
-            class="fill-height flex-column"
-            justify="space-between"
-            >
+            <v-row>
               <v-col
-              cols="9"
+              cols="12"
+              lg="7"
               class=""
               >
               <p class="mt-1 text-left mx-6 mt-2 mb-2">
@@ -43,11 +41,15 @@
               </p>
               </v-col>
               <v-col
-              cols="3"
+              cols="12"
+              lg="5"
               class=""
               >
-                <v-avatar>
-                  
+                <v-avatar
+                class="mx-0 my-0 px-0 py-0"
+                size="60"
+                >
+                  <v-img :src="item.img"></v-img>
                 </v-avatar>
               </v-col>
             </v-row>
@@ -90,19 +92,21 @@ export default {
         nombreDocente:'Nombre del docente',
         horario:'Horario',
         descripcion:'Lorem ipsum dolor sit amet consectetur',
-        img:'https://cdn.vuetifyjs.com/images/john.jpg'
+        img:'https://cdn.vuetifyjs.com/images/john.jpg',
       },
       {
         materia:'#Nombre Asignatura',
         nombreDocente:'Nombre del docente',
         horario:'Horario',
         descripcion:'Lorem ipsum dolor sit amet consectetur',
+        img:'https://cdn.vuetifyjs.com/images/john.jpg',
       },
       {
         materia:'#Nombre Asignatura',
         nombreDocente:'Nombre del docente',
         horario:'Horario',
         descripcion:'Lorem ipsum dolor sit amet consectetur',
+        img:'https://cdn.vuetifyjs.com/images/john.jpg',
       },
     ],
   }),
