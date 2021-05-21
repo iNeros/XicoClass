@@ -7,10 +7,18 @@
         <hr class="mb-3" color="#f45b69" id="od" />
         <!-- Carta de Avisos-->
         <v-card class="sizes" color="#f45b69" dark>
-          <v-card-title class="text-h5"> {{ losDatos[1] }} </v-card-title>
-          <v-card-subtitle class="texto">{{ losDatos[3] }} </v-card-subtitle>
+          <v-card-title class="ods">
+            {{ losDatos[1] }}
+          </v-card-title>
+          <v-card-subtitle class="texto">{{ losDatos[2] }}</v-card-subtitle>
           <v-card-actions>
-            <v-btn text>{{ losDatos[2] }} </v-btn>
+            <v-btn
+      color="#f45b69"
+      dark
+      v-bind:href="''+losDatos[5]"
+    >
+      Enlace
+    </v-btn>
           </v-card-actions>
         </v-card>
       </v-col>
