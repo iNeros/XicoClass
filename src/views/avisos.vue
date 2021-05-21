@@ -102,7 +102,7 @@ export default {
   methods: {
     Obtener() {
       let vue = this;
-      fetch("https://xicolass.herokuapp.com/FirstAPI.php?var=othon&ap=1")
+      fetch("https://xicolass.herokuapp.com/FirstAPI.php?var=1&ap=1")
         .then((datos) => datos.json())
         .then((datos) => {
           vue.losDatos = datos;
@@ -111,7 +111,7 @@ export default {
     },
     Obtener1() {
       let vue = this;
-      fetch("https://xicolass.herokuapp.com/FirstAPI.php?var=othon&ap=2")
+      fetch("https://xicolass.herokuapp.com/FirstAPI.php?var=1&ap=2")
         .then((datos) => datos.json())
         .then((datos) => {
           vue.losDatos1 = datos;
@@ -120,7 +120,7 @@ export default {
     },
     Obtener2() {
       let vue = this;
-      fetch("https://xicolass.herokuapp.com/FirstAPI.php?var=othon&ap=3")
+      fetch("https://xicolass.herokuapp.com/FirstAPI.php?var=1&ap=3")
         .then((datos) => datos.json())
         .then((datos) => {
           vue.losDatos2 = datos;
