@@ -7,10 +7,10 @@
     <v-card elevation="24" class="container" 
              El Contenido.. :V  
     </v-card> -->
-
-    <v-container class="" v-for="(item, i) in items" :key="i">
-      <v-row class="mt-5">
-        <v-col cols="12" lg="3">
+    <v-container fluid>
+      <div class="" v-for="(item, i) in items" :key="i"> 
+        <v-row cols="12" lg="3" class="mt-5">
+        <!-- <v-col cols="3">  -->
           <v-hover v-slot="{ hover }" open-delay="200">
             <v-card
               :elevation="hover ? 12 : 2"
@@ -36,8 +36,9 @@
               </v-card-actions>
             </v-card>
           </v-hover>
-        </v-col>
+          <!-- </v-col> -->
       </v-row>
+      </div>
     </v-container>
   </div>
 </template>
@@ -72,9 +73,12 @@ export default {
   margin-left: 20px;
 }
 .container {
+  width: 100%;
+  min-height: 300px;
+  margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 100px;
+  margin-bottom: 40px;
 }
 
 .card-container {
