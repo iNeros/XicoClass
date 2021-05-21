@@ -36,7 +36,7 @@
               lg="7"
               class=""
               >
-              <p class="mt-1 text-left mx-6 mt-2 mb-2">
+              <p class="mt-1 text-left mx-6 ">
                   {{ item.materia }}
               </p>
               </v-col>
@@ -46,8 +46,8 @@
               class=""
               >
                 <v-avatar
-                class="mx-0 my-0 px-0 py-0"
-                size="60"
+                class="ma-0 profile"
+                size="90"
                 >
                   <v-img :src="item.img"></v-img>
                 </v-avatar>
@@ -55,7 +55,7 @@
             </v-row>
           </v-card-title>
           <v-card-text>
-            <p class="subtitle-1 text-left mx-6">
+            <p class="subtitle-1 text-left mx-6 ">
                 {{item.nombreDocente}}
               </p>
             <p class="subtitle-1 grey--text mx-6 my-0 text-left">
@@ -99,14 +99,14 @@ export default {
         nombreDocente:'Nombre del docente',
         horario:'Horario',
         descripcion:'Lorem ipsum dolor sit amet consectetur',
-        img:'https://cdn.vuetifyjs.com/images/john.jpg',
+        img:'https://cdn.vuetifyjs.com/images/cards/halcyon.png',
       },
       {
         materia:'#Nombre Asignatura',
         nombreDocente:'Nombre del docente',
         horario:'Horario',
         descripcion:'Lorem ipsum dolor sit amet consectetur',
-        img:'https://cdn.vuetifyjs.com/images/john.jpg',
+        img:'https://cdn.vuetifyjs.com/images/cards/foster.jpg',
       },
     ],
   }),
