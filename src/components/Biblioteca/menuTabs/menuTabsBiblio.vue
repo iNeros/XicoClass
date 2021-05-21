@@ -3,14 +3,9 @@
     <!-- VISTA DE LAS TABS EN WIDEVIEW --->
     <div class="hidden-sm-and-down">
       <v-tabs grow class="menu-tabs" color="#30dba0!important">
-        <!--
-        <v-tab @click="texto = 'Materia Impreso'"> MATERIAL IMPRESO </v-tab>
-        <v-tab @click="texto = 'Material Visual'"> MATERIAL VISUAL </v-tab>
-        <v-tab @click="texto = 'Material Didactico'"> MATERIAL DIDACTICO </v-tab>
-        --->
-        <v-tab>Material Impreso</v-tab>
-        <v-tab>Material Didactico</v-tab>
-        <v-tab>Material Visual</v-tab>
+        <v-tab @click="(texto = 'Materia Impreso'),setImpreso()"> MATERIAL IMPRESO </v-tab>
+        <v-tab @click="(texto = 'Material Visual'),setVisual()"> MATERIAL VISUAL </v-tab>
+        <v-tab @click="(texto = 'Material Didactico'),setDidactico()"> MATERIAL DIDACTICO </v-tab>
       </v-tabs>
     </div>
     <!-- VISTA DE LAS TABS EN DISPOSITIVOS MOVILES --->
@@ -77,11 +72,22 @@
 
 <script>
 export default {
-  name: "menuTabs",
+  name: "menuTabsBiblio",
   data() {
     return {
       texto: "Material",
     };
+  },
+  methods: {
+    setImpreso() {
+      this.$store.commit("setImpresoTab");
+    },
+    setVisual() {
+      this.$store.commit("setVisualTab");
+    },
+    setDidactico() {
+      this.$store.commit("setDidacticoTab");
+    },
   },
 };
 </script>
