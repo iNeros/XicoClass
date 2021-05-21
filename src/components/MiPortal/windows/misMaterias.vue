@@ -7,37 +7,38 @@
     <v-card elevation="24" class="container" 
              El Contenido.. :V  
     </v-card> -->
-  <v-container>
-    <v-row class="mt-5">
-      <v-col
-      cols="12" lg="3"
-      >
-      <v-hover
-      v-slot = "{ hover }"
-      open-delay="200"
-      >  
-        <v-card
-        :elevation="hover ? 16:2"
-        :class="{'on-hover':hover}"
-        shaped
-        class="mx-auto"
-        height="300"
-        width="400"
-        >
-        <v-card-title
-        class="display-1 titulo-tarjeta">
-          Materia
-        </v-card-title>
-        <v-card-text>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et quisquam obcaecati cumque assumenda, suscipit voluptatum perspiciatis nobis doloribus accusamus impedit labore eaque tempora velit nisi odio exercitationem corrupti. Sunt, odit.
-        </v-card-text>
 
-        </v-card>
-      </v-hover>
-      
-      </v-col>
-    </v-row>
-  </v-container>
+    <v-container class="" v-for="(item, i) in items" :key="i">
+      <v-row class="mt-5">
+        <v-col cols="12" lg="3">
+          <v-hover v-slot="{ hover }" open-delay="200">
+            <v-card
+              :elevation="hover ? 12 : 2"
+              :class="{ 'on-hover': hover }"
+              shaped
+              class="mx-auto"
+              height="300"
+              width="400"
+            >
+              <v-card-title class="display-1 titulo-tarjeta">
+                Materia
+              </v-card-title>
+              <v-card-text>
+                <div class="my-3 subtitle-1">Nombre del profesor/a</div>
+                <v-divider class="mx-2"></v-divider>
+                <div class="mt-2">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Possimus asperiores ab cumque harum maxime labore.
+                </div>
+              </v-card-text>
+              <v-card-actions>
+                <v-btn> Boton </v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-hover>
+        </v-col>
+      </v-row>
+    </v-container>
   </div>
 </template>
 
@@ -45,7 +46,9 @@
 export default {
   name: "misMaterias",
   data() {
-    return {};
+    return {
+      items: [1, 2, 3],
+    };
   },
 };
 </script>
@@ -68,14 +71,11 @@ export default {
   font-size: 20px;
   margin-left: 20px;
 }
-/* .container {
-  width: 80%;
-  min-height: 300px;
-  margin-top: 0px;
+.container {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 100px;
-}*/
+}
 
 .card-container {
   width: 80%;
