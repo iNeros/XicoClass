@@ -4,8 +4,8 @@
     <carousel> </carousel>
     <!--AGREGAR AQUI DISEÑO PARALAX PARA CUANDO HAGA SCROLL HACIA LAS IMAGENES 
     SE BAJE A UN AXIS ESPECIFICO EN Y ; (QUE SE VEAN LAS 2 IMAGENES POR COMPLETO)  -->
-    <centerImages> </centerImages>
-    <seccion-noticias> </seccion-noticias>
+    <centerImages class="ml-0 pl-0 mr-0 pr-0"> </centerImages>
+    <seccionNoticias></seccionNoticias>
     <div class="spacer"></div>
     <footerHome></footerHome>
   </div>
@@ -17,7 +17,7 @@ import navbar from "@/components/navbar-home/navbar.vue";
 import footerHome from "@/components/footer-home/footer.vue";
 import carousel from "@/components/home/carousel.vue";
 import centerImages from "@/components/home/centerImages.vue";
-import SeccionNoticias from "@/components/home/seccionNoticias.vue";
+import seccionNoticias from "@/components/home/seccionNoticias.vue";
 
 export default {
   name: "Home",
@@ -27,7 +27,7 @@ export default {
     footerHome,
     carousel,
     centerImages,
-    SeccionNoticias,
+    seccionNoticias,
   },
   data() {
     return {};

@@ -15,7 +15,7 @@
         :key="user[user]"
       >
         <v-card class="sizes" color="#f45b69" dark>
-          <v-card-title class="text-h5">
+          <v-card-title class="ods">
             {{ user[1] }}
           </v-card-title>
           <v-card-subtitle class="texto">{{ user[3] }}</v-card-subtitle>
@@ -36,11 +36,11 @@
         sm="12"
         md="6"
         lg="3"
-        v-for="user in losDatos"
+        v-for="user in losDatos1"
         :key="user[user]"
       >
         <v-card class="sizes" color="#f8b725" dark>
-          <v-card-title class="text-h5">
+          <v-card-title class="ods">
             {{ user[1] }}
           </v-card-title>
           <v-card-subtitle class="texto">{{ user[3] }}</v-card-subtitle>
@@ -60,11 +60,11 @@
         sm="12"
         md="6"
         lg="3"
-        v-for="user in losDatos"
+        v-for="user in losDatos2"
         :key="user[user]"
       >
         <v-card class="sizes" color="#349ff4" dark>
-          <v-card-title class="text-h5">
+          <v-card-title class="ods">
             {{ user[1] }}
           </v-card-title>
           <v-card-subtitle class="texto">{{ user[3] }}</v-card-subtitle>
@@ -95,27 +95,49 @@ export default {
   data() {
     return {
       losDatos: [],
+      losDatos1: [],
+      losDatos2: [],
     };
   },
   methods: {
     Obtener() {
       let vue = this;
-      fetch("https://xicolass.herokuapp.com/FirstAPI.php?var=othon")
+      fetch("https://xicolass.herokuapp.com/FirstAPI.php?var=1&ap=1")
         .then((datos) => datos.json())
-
         .then((datos) => {
           vue.losDatos = datos;
           console.log(vue.losDatos); //esto solo muestra
         });
     },
+    Obtener1() {
+      let vue = this;
+      fetch("https://xicolass.herokuapp.com/FirstAPI.php?var=1&ap=2")
+        .then((datos) => datos.json())
+        .then((datos) => {
+          vue.losDatos1 = datos;
+          console.log(vue.losDatos1); //esto solo muestra
+        });
+    },
+    Obtener2() {
+      let vue = this;
+      fetch("https://xicolass.herokuapp.com/FirstAPI.php?var=1&ap=3")
+        .then((datos) => datos.json())
+        .then((datos) => {
+          vue.losDatos2 = datos;
+          console.log(vue.losDatos1); //esto solo muestra
+        });
+    },
   },
   mounted() {
     this.Obtener();
+    this.Obtener1();
+    this.Obtener2();
   },
 };
 </script>
 
 <style scoped>
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap");
 .v-text-field {
   margin-left: 20px;
   margin-right: 20px;
@@ -127,16 +149,17 @@ export default {
   color: #f45b69;
 }
 #ods {
+    font-family: "Montserrat";
   margin-left: 20px;
   margin-right: 20px;
 }
 .v-card {
+    font-family: "Montserrat";
   margin-left: 20px;
   margin-bottom: 10px;
   margin-top: 10px;
 }
 .margenes {
-  display: block;
   margin-right: 30px;
   margin-left: 20px;
   min-height: 280px;

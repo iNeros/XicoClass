@@ -1,8 +1,24 @@
 <template>
   <div class="home">
     <navbar></navbar>
-    <h1>Es que te quieroooo neroooo</h1>
-    <div class="spacer"></div>
+    <div class="tab">
+      <menuTabsBiblio> </menuTabsBiblio>
+    </div>
+
+    <div class="AccionWindow">
+      <v-window v-model="$store.state.tabsBiblio">
+        <v-window-item :value="1">
+          <impreso></impreso>
+        </v-window-item>
+        <v-window-item :value="2">
+          <visual></visual>
+        </v-window-item>
+        <v-window-item :value="3">
+          <didactico></didactico>
+        </v-window-item>
+      </v-window>
+    </div>
+
     <footerHome></footerHome>
   </div>
 </template>
@@ -11,6 +27,10 @@
 // import  component  from '@/components/foler-name/component.vue'
 import navbar from "@/components/navbar-home/navbar.vue";
 import footerHome from "@/components/footer-home/footer.vue";
+import menuTabsBiblio from "@/components/Biblioteca/menuTabs/menuTabsBiblio.vue";
+import impreso from '../components/Biblioteca/windows/impreso.vue';
+import visual from '../components/Biblioteca/windows/visual.vue';
+import didactico from '../components/Biblioteca/windows/didactico.vue';
 
 export default {
   name: "Biblioteca",
@@ -18,6 +38,10 @@ export default {
   components: {
     navbar,
     footerHome,
+    menuTabsBiblio,
+    impreso,
+    visual,
+    didactico,
   },
   data() {
     return {};
