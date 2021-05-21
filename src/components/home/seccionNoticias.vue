@@ -82,7 +82,7 @@ export default {
   methods: {
     Obtener() {
       let vue = this;
-      fetch("https://xicolass.herokuapp.com/FirstAPI.php?var=othon&ap=1")
+      fetch("https://xicolass.herokuapp.com/FirstAPI.php?var=1&ap=1")
         .then((datos) => datos.json())
         .then((datos) => {
           vue.losDatos = datos[0];
