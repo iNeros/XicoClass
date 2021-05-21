@@ -1,11 +1,11 @@
 <template>
   <div class="misTareas">
-    <div class="container" v-for="(item, i) in items" :key="i">
+    <div class="container" v-for="(item, i) in Tareas" :key="i">
       <v-card elevation="24" class="card-container">
         <v-card-text>
           <v-row>
             <v-col cols="8">
-              <p class="display-1 titulo-tarjeta">#1234 TITULO DE LA TAREA</p>
+              <p class="display-1 titulo-tarjeta">#{{item[0]}} {{item[1]}}</p>
             </v-col>
             <v-col cols="4" class="status-text">
               <span class="status-label">ESTATUS: </span>
@@ -20,19 +20,7 @@
               <b>Descripcion:</b>
             </span>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit
-              amet mauris viverra, lobortis justo a, consectetur risus. Nullam
-              vulputate diam purus, eu tempor dui efficitur id. Ut feugiat
-              tempus mi, ac commodo nunc bibendum et. Suspendisse finibus,
-              lectus vel fermentum eleifend, lorem ante sollicitudin leo, id
-              finibus odio sapien luctus sem. Suspendisse est quam, mattis nec
-              laoreet eget, rhoncus a augue. Pellentesque elementum sem ac
-              libero posuere dictum. Aliquam eu egestas felis. Integer porta
-              risus eu magna blandit, quis dictum diam laoreet. Quisque
-              tristique mi dui, sed imperdiet arcu fermentum vitae. Cras vitae
-              risus tellus. Integer convallis, nunc nec porta efficitur, eros
-              libero varius lorem, ut aliquet risus metus nec mi. Suspendisse
-              vel rhoncus felis
+              {{item[2]}}
             </p>
           </div>
         </v-card-text>
@@ -75,13 +63,25 @@ export default {
   name: "misTareas",
   data() {
     return {
-      items: [1, 2, 3, 4, 5],
+      Tareas: [],
       archivos: null,
     };
   },
   methods: {
     DescargarArchivo() {},
     SubirArchivo() {},
+    Tarea() {
+      let vue = this;
+      fetch("https://xicolass.herokuapp.com/TareasApi.php?ap=1")
+        .then((datos) => datos.json())
+        .then((datos) => {
+          vue.Tareas = datos;
+          console.log(vue.Tareas); //esto solo muestra
+        });
+    },
+  },
+mounted() {
+    this.Tarea();
   },
 };
 </script>
