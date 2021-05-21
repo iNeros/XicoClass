@@ -33,7 +33,9 @@
             <v-row>
               <v-col
               cols="12"
-              lg="7"
+              lg="8"
+              md="8"
+              xs="8"
               class=""
               >
               <p class="mt-1 text-left mx-6 ">
@@ -42,11 +44,13 @@
               </v-col>
               <v-col
               cols="12"
-              lg="5"
+              lg="4"
+              md="4"
+              xs="4"
               class=""
               >
                 <v-avatar
-                class="ma-0 profile"
+                class="ma-0 pa-0 "
                 size="90"
                 >
                   <v-img :src="item.img"></v-img>
