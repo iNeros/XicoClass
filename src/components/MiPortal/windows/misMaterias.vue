@@ -7,7 +7,6 @@
     <v-card elevation="24" class="container" 
              El Contenido.. :V  
     </v-card> -->
-<<<<<<< Updated upstream
     <v-container class="pa-4 text-center">
       <v-row
       class="fill-height"
@@ -81,30 +80,6 @@
           </v-card-actions>
           </v-card>
         </v-hover>
-=======
-    <v-container fluid class="text-center">
-      <v-row class="fill-height" align="center" justify="center"> </v-row>
-      <template v-for="(item, i) in items">
-        <v-col :key="i" cols="12" md="4">
-          <v-hover v-slot="{ hover }" open-delay="200">
-            <v-card
-              :elevation="hover ? 12 : 2"
-              :class="{ 'on-hover': hover }"
-              shaped
-              class="mx-auto card-container"
-              height="300"
-              width="400"
-            >
-              <v-card-title class="display-1 titulo-tarjeta">
-                Materias
-              </v-card-title>
-              <v-card-text> </v-card-text>
-              <v-card-actions>
-                <v-btn> Boton </v-btn>
-              </v-card-actions>
-            </v-card>
-          </v-hover>
->>>>>>> Stashed changes
         </v-col>
       </template>
     </v-container>
@@ -117,7 +92,6 @@ export default {
   data: () => ({
     items: [
       {
-<<<<<<< Updated upstream
         materia:'#Nombre Asignatura',
         nombreDocente:'Nombre del docente',
         horario:'Horario',
@@ -137,21 +111,6 @@ export default {
         horario:'Horario',
         descripcion:'Lorem ipsum dolor sit amet consectetur',
         img:'https://cdn.vuetifyjs.com/images/cards/foster.jpg',
-=======
-        tittle: "",
-        text: "",
-        subtext: "",
-      },
-      {
-        tittle: "",
-        text: "",
-        subtext: "",
-      },
-      {
-        tittle: "",
-        text: "",
-        subtext: "",
->>>>>>> Stashed changes
       },
     ],
   }),

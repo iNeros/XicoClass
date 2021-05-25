@@ -63,10 +63,6 @@ export default {
   name: "misTareas",
   data() {
     return {
-<<<<<<< Updated upstream
-      Tareas: [],
-=======
->>>>>>> Stashed changes
       archivos: null,
       Tareas: [],
     };
