@@ -40,7 +40,7 @@
                   class="button-menu ma-0"
                   color="red"
                   dark
-                  @click="texto = 'Material Impreso'"
+                  @click="texto = 'Material Impreso', setImpreso()"
                 >
                   Material Impreso
                 </v-btn>
@@ -53,7 +53,7 @@
                   class="button-menu"
                   color="red"
                   dark
-                  @click="texto = 'Material Visual'"
+                  @click="texto = 'Material Visual', setVisual()"
                 >
                   Material Visual
                 </v-btn>
@@ -66,9 +66,22 @@
                   class="button-menu"
                   color="red"
                   dark
-                  @click="texto = 'Material Didactico'"
+                  @click="texto = 'Material Didactico', setDidactico()"
                 >
                   Material Didactico
+                </v-btn>
+              </v-list-item-title>
+            </v-list-item>
+
+            <v-list-item>
+              <v-list-item-title>
+                <v-btn
+                  class="button-menu"
+                  color="red"
+                  dark
+                  @click="texto = 'Xico Store', setStore()"
+                >
+                  Xico Store
                 </v-btn>
               </v-list-item-title>
             </v-list-item>
