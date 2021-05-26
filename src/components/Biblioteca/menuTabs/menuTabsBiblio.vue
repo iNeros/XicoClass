@@ -12,6 +12,9 @@
         <v-tab @click="(texto = 'Material Didactico'), setDidactico()">
           MATERIAL DIDACTICO
         </v-tab>
+        <v-tab @click="(texto = 'Xico Store'), setStore()">
+          XICO STORE
+        </v-tab>
       </v-tabs>
     </div>
     <!-- VISTA DE LAS TABS EN DISPOSITIVOS MOVILES --->
@@ -93,6 +96,9 @@ export default {
     },
     setDidactico() {
       this.$store.commit("setDidacticoTab");
+    },
+    setStore() {
+      this.$store.commit("setStoreTab");
     },
   },
 };
