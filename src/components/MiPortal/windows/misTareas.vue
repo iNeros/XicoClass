@@ -30,7 +30,7 @@
               <span class="texto-material"> MATERIAL ADJUNTO: </span>
               <template>
                 <!-- AQUI VA UN: V-FOR -->
-                <button v-on:click="Archivo(item[0])">ver</button>
+                <button v-on:click="Archivo(item[0])">Ver</button>
                   <div v-for="(archivo,i) in archivos" :key="i"> 
                 <v-chip class="mx-2" @click="DescargarArchivo(archivo[2])">
                   {{archivo[1]}}
@@ -69,7 +69,7 @@ export default {
   },
   methods: {
     DescargarArchivo(id) {
-      window.location.href = ''+id;
+      window.open(''+id, '_blank');
     },
     SubirArchivo() {},
     Tarea() {
