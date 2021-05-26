@@ -30,12 +30,12 @@
               <span class="texto-material"> MATERIAL ADJUNTO: </span>
               <template>
                 <!-- AQUI VA UN: V-FOR -->
-                <v-chip class="mx-2" @click="DescargarArchivo(id)">
-                  Este Es Un Documento
+                <button v-on:click="Archivo(item[0])">ver</button>
+                  <div v-for="(archivo,i) in archivos" :key="i"> 
+                <v-chip class="mx-2" @click="DescargarArchivo(archivo[2])">
+                  {{archivo[1]}}
                 </v-chip>
-                <v-chip class="ma-2" @click="DescargarArchivo(id)">
-                  Este Es Otro Documento
-                </v-chip>
+                </div>
               </template>
             </v-col>
             <v-col cols="6">
@@ -63,20 +63,31 @@ export default {
   name: "misTareas",
   data() {
     return {
-      archivos: null,
+      archivos: [],
       Tareas: [],
     };
   },
   methods: {
-    DescargarArchivo() {},
+    DescargarArchivo(id) {
+      window.location.href = ''+id;
+    },
     SubirArchivo() {},
     Tarea() {
       let vue = this;
-      fetch("https://xicolass.herokuapp.com/TareasApi.php?ap=1")
+      fetch("https://xicolass.herokuapp.com/TareasApi.php?if=1&ap=1")
         .then((datos) => datos.json())
         .then((datos) => {
           vue.Tareas = datos;
           console.log(vue.Tareas); //esto solo muestra
+        });
+    },
+    Archivo: function(id) {
+      let vue = this;
+      fetch("https://xicolass.herokuapp.com/TareasApi.php?if=2&ap="+id)
+        .then((datos) => datos.json())
+        .then((datos) => {
+          vue.archivos = datos;
+          console.log(vue.archivos); //esto solo muestra
         });
     },
   },
