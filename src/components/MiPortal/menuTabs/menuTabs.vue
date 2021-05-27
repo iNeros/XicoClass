@@ -8,7 +8,7 @@
         </v-tab>
         <v-tab @click="(texto = 'TAREAS'), setTareas()"> TAREAS </v-tab>
         <v-tab @click="(texto = 'MIS DOCUMENTOS'), setDocumentos()">
-          MIS DOCUMENTOS
+          DATOS PERSONALES
         </v-tab>
         <v-tab @click="(texto = 'TRAMITES'), setTramites()"> TRAMITES </v-tab>
       </v-tabs>

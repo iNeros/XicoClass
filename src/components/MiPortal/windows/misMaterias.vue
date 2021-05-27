@@ -72,7 +72,7 @@
           </p>
           <v-card-actions>
             <v-btn
-            class="ma-4"
+            class=""
             color="deep-purple accent-3"
             block
             text
