@@ -54,6 +54,15 @@ export default {
   border-radius: 55px;
   opacity: 1;
 }
+.titulo{
+  font-family: "Montserrat";
+  font-weight: 800;
+  font-size: 34;
+  color: white;
+}
+.subtitulo{
+  font-family: "Montserratc";
+}
 
 
 
