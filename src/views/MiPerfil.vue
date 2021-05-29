@@ -8,7 +8,7 @@
         class="tam-card estilo-card"
         >
         <div >
-
+          
         </div>
        
         </v-col>
