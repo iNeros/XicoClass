@@ -7,7 +7,7 @@
         cols="12"
         class="tam-card estilo-card "
         >
-        
+
         <v-simple-table height="400px" class="deep-purple accent-2 mt-12" >
           <template v-slot:default>
             <thead>
@@ -107,7 +107,6 @@ export default {
   width: 1478px;
   height: 600px;
 }
-
 /* UI */
 .estilo-card{
   background-color: #7C4DFF;
@@ -134,7 +133,5 @@ export default {
   font-size: 40;
   color:white;
 }
-
-
 
 </style>
