@@ -20,13 +20,13 @@
               </tr>
             </thead>
             <tbody>
-              <tr v-for="item in datos" :key="item.name" class="subtitulo">
-              <td bgcolor="#7C4DFF" >{{item.campo}}</td>
-              <td bgcolor="#7C4DFF" >{{item.dato}}</td>
+              <tr v-for="item in datos" :key="item.campo" class="subtitulo">
+              <td :bgcolor="getColor(item.id)" >{{item.campo}}</td>
+              <td :bgcolor="getColor(item.id)" >{{item.dato}}</td>
             </tr>
             </tbody>
           </template>
-        </v-simple-table>
+        </v-simple-table> 
     
         </v-col>
       </v-row>
@@ -48,31 +48,42 @@ export default {
     return {
       datos: [
         {
+          id:1,
           campo: 'Matricula',
           dato: '167O00561',
         },
         {
+          id:2,
           campo: 'Nombre del alumno',
           dato: 'Susana Distancia',
         },
         {
+          id:3,
           campo: 'Curp',
           dato: 'MOVO970604HVZ',
         },
         {
+          id:4,
           campo: 'Fecha de nacimiento',
           dato: '1&/04/96',
         },
         {
+          id:5,
           campo: 'Grupo',
           dato: '3º grado',
         },
       ]
     };
-  },
+  }, 
   components: {
     navbar,
     footerHome,
+  },
+  methods: {
+    getColor (id){
+      if(id % 2 == 0) return '#4527A0'
+      else return '#7C4DFF'
+    },
   },
 };
 </script>
