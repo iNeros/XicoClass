@@ -1,11 +1,11 @@
 <template>
   <div class="misTareas">
-    <div class="container" v-for="(item, i) in Tareas" :key="i">
+    <div class="container" v-for="item in Tareas" :key="item.id_actividad">
       <v-card elevation="24" class="card-container">
         <v-card-text>
           <v-row>
             <v-col cols="8">
-              <p class="display-1 titulo-tarjeta">#{{item[0]}} {{item[1]}}</p>
+              <p class="display-1 titulo-tarjeta">#{{item.id_actividad}} {{item.nombre}}</p>
             </v-col>
             <v-col cols="4" class="status-text">
               <span class="status-label">ESTATUS: </span>
@@ -20,7 +20,7 @@
               <b>Descripcion:</b>
             </span>
             <p>
-              {{item[2]}}
+              {{item.descripcion}}
             </p>
           </div>
         </v-card-text>
@@ -30,10 +30,10 @@
               <span class="texto-material"> MATERIAL ADJUNTO: </span>
                 <!-- AQUI VA UN: V-FOR -->
                 <template >
-                  <div v-for="(archivo,i) in archivos" :key="i"> 
-                  <div v-if="archivo[4]==item[0]">
-                <v-chip class="mx-2" @click="DescargarArchivo(archivo[2])">
-                  {{archivo[1]}}
+                  <div v-for="archivo in archivos" :key="archivo.id_archivo"> 
+                  <div v-if="archivo.id_actividades==item.id_actividad">
+                <v-chip class="mx-2" @click="DescargarArchivo(archivo.ruta)">
+                  {{archivo.nombre}}
                 </v-chip>
                 </div>
                   </div>
@@ -60,6 +60,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   name: "misTareas",
   data() {
@@ -76,24 +77,26 @@ export default {
     SubirArchivo() {
       window.alert('si funca loco');
     },
-    Tarea() {
-      let vue = this;
-      fetch("https://xicolass.herokuapp.com/TareasApi.php?if=1&ap=1")
-        .then((datos) => datos.json())
-        .then((datos) => {
-          vue.Tareas = datos;
-          console.log(vue.Tareas); //esto solo muestra
-        });
-    },
+    Tarea(){
+            axios.get("https://xicoclassapi.azurewebsites.net/Actividades.php?id=1")
+            .then(r => {
+                this.Tareas = r.data;
+                console.log(this.Tareas);
+            })
+            .catch(function(error){
+                console.log(error);
+            })
+        },
     Archivo(){
-      let vue = this;
-      fetch("https://xicolass.herokuapp.com/TareasApi.php?if=2")
-        .then((datos) => datos.json())
-        .then((datos) => {
-          vue.archivos = datos;
-          console.log(vue.archivos); //esto solo muestra
-        });
-    },
+            axios.get("https://xicoclassapi.azurewebsites.net/Archivos.php")
+            .then(r => {
+                this.archivos = r.data;
+                console.log(this.archivos);
+            })
+            .catch(function(error){
+                console.log(error);
+            })
+        },
   },
 mounted() {
     this.Tarea();
