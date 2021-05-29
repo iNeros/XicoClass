@@ -7,7 +7,10 @@
         cols="12"
         class="tam-card estilo-card "
         >
-
+        <v-avatar
+        class="">
+          <img src="@/assets/media/logos/CaraNiña.png">
+        </v-avatar>
         <v-simple-table height="400px" class="deep-purple accent-2 mt-12" >
           <template v-slot:default>
             <thead>
@@ -105,7 +108,7 @@ export default {
 /* Proiedades Layout */
 .tam-card{
   width: 1478px;
-  height: 600px;
+  height: 800px;
 }
 /* UI */
 .estilo-card{
