@@ -7,7 +7,8 @@
         cols="12"
         class="tam-card estilo-card "
         >
-        <v-simple-table height="300px" class="deep-purple accent-2 mt-12" >
+        
+        <v-simple-table height="400px" class="deep-purple accent-2 mt-12" >
           <template v-slot:default>
             <thead>
               <tr >
@@ -65,12 +66,22 @@ export default {
         {
           id:4,
           campo: 'Fecha de nacimiento',
-          dato: '1&/04/96',
+          dato: '16/04/2018',
         },
         {
           id:5,
           campo: 'Grupo',
           dato: '3º grado',
+        },
+        {
+          id:6,
+          campo: 'Padre de familia o Tutor',
+          dato: 'Elmer Homero',
+        },
+        {
+          id:7,
+          campo: 'En caso de emergencia llamar:',
+          dato: '2283534791',
         },
       ]
     };
