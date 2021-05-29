@@ -1,16 +1,33 @@
 <template>
   <div class="MiPerfil">
     <navbar></navbar>
-    <v-container class="pa-4 text-center">
+    <v-container class="pa-4">
       <v-row class="my-6">
         <v-col
         cols="12"
-        class="tam-card estilo-card"
+        class="tam-card estilo-card "
         >
-        <div >
-          
-        </div>
-       
+        <v-simple-table height="300px" class="deep-purple accent-2 mt-12" >
+          <template v-slot:default>
+            <thead>
+              <tr >
+                <th class="titulo-tabla text-left ">
+                  Campos
+                </th>
+                <th class="titulo-tabla text-left">
+                  Datos
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="item in datos" :key="item.name" class="subtitulo">
+              <td bgcolor="#7C4DFF" >{{item.campo}}</td>
+              <td bgcolor="#7C4DFF" >{{item.dato}}</td>
+            </tr>
+            </tbody>
+          </template>
+        </v-simple-table>
+    
         </v-col>
       </v-row>
 
@@ -28,7 +45,30 @@ import footerHome from "@/components/footer-home/footer.vue";
 export default {
   name: "MiPerfil",
   data() {
-    return {};
+    return {
+      datos: [
+        {
+          campo: 'Matricula',
+          dato: '167O00561',
+        },
+        {
+          campo: 'Nombre del alumno',
+          dato: 'Susana Distancia',
+        },
+        {
+          campo: 'Curp',
+          dato: 'MOVO970604HVZ',
+        },
+        {
+          campo: 'Fecha de nacimiento',
+          dato: '1&/04/96',
+        },
+        {
+          campo: 'Grupo',
+          dato: '3º grado',
+        },
+      ]
+    };
   },
   components: {
     navbar,
@@ -43,12 +83,12 @@ export default {
 /* Proiedades Layout */
 .tam-card{
   width: 1478px;
-  height: 1091px;
+  height: 600px;
 }
 
 /* UI */
 .estilo-card{
-  background: #A85DFF 0% 0% no-repeat padding-box;
+  background-color: #7C4DFF;
   box-shadow: 4px 6px 3px #00000029;
   border: 1px solid #707070;
   border-radius: 55px;
@@ -61,7 +101,16 @@ export default {
   color: white;
 }
 .subtitulo{
-  font-family: "Montserratc";
+  font-family: "Montserrat";
+  font-weight: 800;
+  font-size: 30;
+  color: white;
+}
+.titulo-tabla{
+  font-family:'Montserrat';
+  font-weight: 800;
+  font-size: 40;
+  color:white;
 }
 
 
