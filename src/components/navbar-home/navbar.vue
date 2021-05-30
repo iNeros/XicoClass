@@ -172,6 +172,18 @@
             <v-list-item>
               <v-list-item-title
                 ><v-btn
+                  id="smEvaluacion"
+                  href="/Evaluacion"
+                  depressed
+                  plain
+                  @click="setEvaluacion()"
+                  >Evaluacion</v-btn
+                ></v-list-item-title
+              >
+            </v-list-item>
+            <v-list-item>
+              <v-list-item-title
+                ><v-btn
                   id="smPerfil"
                   href="/MiPerfil"
                   depressed
@@ -222,6 +234,9 @@ export default {
     setPerfil() {
       localStorage.selectedNavTab = 5;
     },
+    setEvaluacion(){
+      localStorage.selectedNavTab = 6;
+    },
     setSelected() {
       switch (localStorage.selectedNavTab) {
         case "1":
@@ -238,6 +253,9 @@ export default {
           break;
         case "5":
           document.getElementById("MiPerfil").classList.add("btn-selected");
+          break;
+        case "6":
+          document.getElementById("Evaluacion").classList.add("btn-selected");
           break;
         default:
           document.getElementById("Inicio").classList.add("btn-selected");
@@ -261,6 +279,9 @@ export default {
           break;
         case "5":
           document.getElementById("smPerfil").classList.add("btn-selected");
+          break;
+        case "6":
+          document.getElementById("smEvaluacion").classList.add("btn-selected");
           break;
         default:
           document.getElementById("smInicio").classList.add("btn-selected");
