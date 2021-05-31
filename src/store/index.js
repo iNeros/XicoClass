@@ -33,9 +33,6 @@ export default new Vuex.Store({
     setDidacticoTab(state) {
       state.tabsBiblio = 3;
     },
-    setStoreTab(state) {
-      state.tabsBiblio = 4;
-    },
     // END OF MUTATIONS FOR BIBLIOTECA
   },
   actions: {},

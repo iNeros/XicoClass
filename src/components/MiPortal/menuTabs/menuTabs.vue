@@ -8,9 +8,9 @@
         </v-tab>
         <v-tab @click="(texto = 'TAREAS'), setTareas()"> TAREAS </v-tab>
         <v-tab @click="(texto = 'MIS DOCUMENTOS'), setDocumentos()">
-          DATOS PERSONALES
+          MIS DOCUMENTOS
         </v-tab>
-        <v-tab @click="(texto = 'TRAMITES'), setTramites()"> FORMATOS </v-tab>
+        <v-tab @click="(texto = 'TRAMITES'), setTramites()"> TRAMITES </v-tab>
       </v-tabs>
     </div>
     <!-- VISTA DE LAS TABS EN DISPOSITIVOS MOVILES --->
@@ -64,7 +64,7 @@
                   dark
                   @click="(texto = 'MIS DOCUMENTOS'), setDocumentos()"
                 >
-                  DATOS PERSONALES
+                  MIS DOCUMENTOS
                 </v-btn>
               </v-list-item-title>
             </v-list-item>

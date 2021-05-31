@@ -72,7 +72,7 @@
           </p>
           <v-card-actions>
             <v-btn
-            class=""
+            class="ma-4"
             color="deep-purple accent-3"
             block
             text
@@ -81,7 +81,7 @@
           </v-card>
         </v-hover>
         </v-col>
-      </template>
+      </template> 
     </v-container>
   </div>
 </template>
@@ -114,7 +114,7 @@ export default {
       },
     ],
   }),
-};
+}
 </script>
 
 <style scoped>

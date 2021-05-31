@@ -3,18 +3,9 @@
     <!-- VISTA DE LAS TABS EN WIDEVIEW --->
     <div class="hidden-sm-and-down">
       <v-tabs grow class="menu-tabs" color="#30dba0!important">
-        <v-tab @click="(texto = 'Materia Impreso'), setImpreso()">
-          MATERIAL IMPRESO
-        </v-tab>
-        <v-tab @click="(texto = 'Material Visual'), setVisual()">
-          MATERIAL VISUAL
-        </v-tab>
-        <v-tab @click="(texto = 'Material Didactico'), setDidactico()">
-          MATERIAL DIDACTICO
-        </v-tab>
-        <v-tab @click="(texto = 'Xico Store'), setStore()">
-          XICO STORE
-        </v-tab>
+        <v-tab @click="(texto = 'Materia Impreso'),setImpreso()"> MATERIAL IMPRESO </v-tab>
+        <v-tab @click="(texto = 'Material Visual'),setVisual()"> MATERIAL VISUAL </v-tab>
+        <v-tab @click="(texto = 'Material Didactico'),setDidactico()"> MATERIAL DIDACTICO </v-tab>
       </v-tabs>
     </div>
     <!-- VISTA DE LAS TABS EN DISPOSITIVOS MOVILES --->
@@ -40,7 +31,7 @@
                   class="button-menu ma-0"
                   color="red"
                   dark
-                  @click="texto = 'Material Impreso', setImpreso()"
+                  @click="texto = 'Material Impreso'"
                 >
                   Material Impreso
                 </v-btn>
@@ -53,7 +44,7 @@
                   class="button-menu"
                   color="red"
                   dark
-                  @click="texto = 'Material Visual', setVisual()"
+                  @click="texto = 'Material Visual'"
                 >
                   Material Visual
                 </v-btn>
@@ -66,22 +57,9 @@
                   class="button-menu"
                   color="red"
                   dark
-                  @click="texto = 'Material Didactico', setDidactico()"
+                  @click="texto = 'Material Didactico'"
                 >
                   Material Didactico
-                </v-btn>
-              </v-list-item-title>
-            </v-list-item>
-
-            <v-list-item>
-              <v-list-item-title>
-                <v-btn
-                  class="button-menu"
-                  color="red"
-                  dark
-                  @click="texto = 'Xico Store', setStore()"
-                >
-                  Xico Store
                 </v-btn>
               </v-list-item-title>
             </v-list-item>
@@ -109,9 +87,6 @@ export default {
     },
     setDidactico() {
       this.$store.commit("setDidacticoTab");
-    },
-    setStore() {
-      this.$store.commit("setStoreTab");
     },
   },
 };
