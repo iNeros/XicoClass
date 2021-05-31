@@ -5,18 +5,13 @@
       <v-row class="my-6">
         <v-col
         cols="12"
-        class="tam-card estilo-card "
+        class="tam-card estilo-card"
+        :class="getColorBack()"
         >
-        <div class="elipse container">
+        <div class="elipse container mt-6">
           <img class="avatar container" src="@/assets/media/logos/CaraNiña.png" >
-        </div>        
-        <!-- <v-avatar
-        class="avatar"
-        size="302"
-        >
-          <img src="@/assets/media/logos/CaraNiña.png">
-        </v-avatar> -->
-        <v-simple-table height="400px" class="deep-purple accent-2 mt-12" >
+        </div>
+        <v-simple-table height="400px" class="deep-purple accent-2 mt-6" >
           <template v-slot:default>
             <thead>
               <tr >
@@ -91,7 +86,21 @@ export default {
           campo: 'En caso de emergencia llamar:',
           dato: '2283534791',
         },
-      ]
+      ],
+      colores: [
+        {
+          idcolor: 1,
+        },
+        {
+          idcolor: 2,
+        },
+        {
+          idcolor: 3,
+        },
+        {
+          idcolor: 4,
+        },
+      ],
     };
   }, 
   components: {
@@ -103,6 +112,16 @@ export default {
       if(id % 2 == 0) return '#4527A0'
       else return '#7C4DFF'
     },
+    getColorBack(){
+      let a = 1;
+      let b= 5;
+      let numeroAleatorio = ( a + Math.floor(Math.random() * b) );
+      if(numeroAleatorio == 1) return 'morado'
+      else if (numeroAleatorio == 2) return 'morado-claro'
+      else if (numeroAleatorio == 3) return 'turquesa'
+      else if (numeroAleatorio == 4) return 'naranja'
+      else if (numeroAleatorio == 5) return 'verde'
+    },
   },
 };
 </script>
@@ -110,7 +129,7 @@ export default {
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap");
 
-/* Proiedades Layout */
+/* Proiedades Layouts */
 .tam-card{
   width: 1478px;
   height: 800px;
@@ -138,9 +157,7 @@ export default {
 }
 /* UI */
 .estilo-card{
-  background-color: #7C4DFF;
   box-shadow: 4px 6px 3px #00000029;
-  border: 1px solid #707070;
   border-radius: 55px;
   opacity: 1;
 }
@@ -164,5 +181,20 @@ export default {
   font-size: 40;
   color:white;
 }
-
+/* Colores */
+.morado{
+  background-color: #7E57C2;
+}
+.morado-claro{
+  background-color: #BA68C8;
+}
+.turquesa{
+  background-color: #26A69A;
+}
+.naranja{
+  background-color: #FF9800;
+}
+.verde{
+  background-color: #64DD17;
+}
 </style>
