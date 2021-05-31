@@ -87,20 +87,6 @@ export default {
           dato: '2283534791',
         },
       ],
-      colores: [
-        {
-          idcolor: 1,
-        },
-        {
-          idcolor: 2,
-        },
-        {
-          idcolor: 3,
-        },
-        {
-          idcolor: 4,
-        },
-      ],
     };
   }, 
   components: {
@@ -114,13 +100,14 @@ export default {
     },
     getColorBack(){
       let a = 1;
-      let b= 5;
+      let b= 6;
       let numeroAleatorio = ( a + Math.floor(Math.random() * b) );
       if(numeroAleatorio == 1) return 'morado'
       else if (numeroAleatorio == 2) return 'morado-claro'
       else if (numeroAleatorio == 3) return 'turquesa'
       else if (numeroAleatorio == 4) return 'naranja'
       else if (numeroAleatorio == 5) return 'verde'
+      else return 'morado-inicial'
     },
   },
 };
@@ -182,6 +169,12 @@ export default {
   color:white;
 }
 /* Colores */
+.morado-inicial{
+  background-color: #7C4DFF ;
+}
+.morado-opaco{
+  background-color: #4527A0;
+}
 .morado{
   background-color: #7E57C2;
 }
