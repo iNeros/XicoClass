@@ -11,7 +11,7 @@
         <div class="elipse container mt-6">
           <img class="avatar container" src="@/assets/media/logos/CaraNiña.png" >
         </div>
-        <v-simple-table height="400px" class="deep-purple accent-2 mt-6" >
+        <v-simple-table height="400px" class="deep-purple accent-2 mt-6">
           <template v-slot:default>
             <thead>
               <tr >
