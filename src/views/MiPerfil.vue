@@ -7,10 +7,15 @@
         cols="12"
         class="tam-card estilo-card "
         >
-        <v-avatar
-        class="">
+        <div class="elipse container">
+          <img class="avatar container" src="@/assets/media/logos/CaraNiña.png" >
+        </div>        
+        <!-- <v-avatar
+        class="avatar"
+        size="302"
+        >
           <img src="@/assets/media/logos/CaraNiña.png">
-        </v-avatar>
+        </v-avatar> -->
         <v-simple-table height="400px" class="deep-purple accent-2 mt-12" >
           <template v-slot:default>
             <thead>
@@ -110,6 +115,27 @@ export default {
   width: 1478px;
   height: 800px;
 }
+.avatar{
+  display: block;
+  top: 52px;
+  left: 852px;
+  width: 270px;
+  height: 270px;
+  background: no-repeat padding-box;
+  opacity: 1;
+  
+}
+.elipse{
+  max-width: 100%;
+  top: 518px;
+  left: 842px;
+  width: 302px;
+  height: 302px;
+  border-radius: 10em;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 2px 4px 6px #00000029;
+  opacity: 1;
+}
 /* UI */
 .estilo-card{
   background-color: #7C4DFF;
@@ -120,8 +146,10 @@ export default {
 }
 .titulo{
   font-family: "Montserrat";
-  font-weight: 800;
-  font-size: 34;
+  font: weight 800px;;
+  font-size: 34px;
+  line-height: 40px;
+  letter-spacing: 0.01px;
   color: white;
 }
 .subtitulo{
