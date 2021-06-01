@@ -1,7 +1,7 @@
 <template>
   <div class="misTareas">
     <div class="container" v-for="item in Tareas" :key="item.id_actividad">
-      <v-card elevation="24" class="card-container">
+      <v-card elevation="24" class="card-container" >
         <v-card-text>
           <v-row>
             <v-col cols="8">
@@ -171,7 +171,46 @@ export default {
   font-weight: 800;
   color: #30dba0;
 }
-
+/* Colores  */
+.morado-inicial {
+  background-color: #7c4dff;
+}
+.morado-opaco {
+  background-color: #4527a0;
+}
+.morado {
+  background-color: #7e57c2;
+}
+.morado-claro {
+  background-color: #ba68c8;
+}
+.turquesa {
+  background-color: #26a69a;
+}
+.naranja{
+  background-color: #FF9800;
+}
+.naranja-claro {
+  background-color: #ff9800;
+}
+.verde {
+  background-color: #64dd17;
+}
+.verde-claro{
+  background-color: #B2FF59;
+}
+.azul{
+  background-color: #283593;
+}
+.azul-claro{
+  background-color: #80D8FF;
+}
+.rojo{
+  background-color: #D50000;
+}
+.rojo-claro{
+  background-color: #E91E63;
+}
 /* Estos Estilos Los Aplicaremos Al ID: estado-text  */
 .estado-pendiente {
   color: red !important;
