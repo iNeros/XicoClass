@@ -19,7 +19,7 @@
     ref="form"
     v-model="valid"
     lazy-validation
-  >
+  >   <!-- NOMBRE -->
     <v-text-field
       v-model="name"
       :rules="nameRules"
@@ -27,7 +27,7 @@
       placeholder="Nombre o nombres del alumno"
       required
     ></v-text-field>
-    
+    <!-- APELLIDO -->
     <v-text-field
       v-model="apellido"
       :rules="apellidoRules"
@@ -46,14 +46,14 @@
     max="7"
     thumb-label
     ></v-slider>
-    
+    <!-- CORREO -->
     <v-text-field
       v-model="email"
       :rules="emailRules"
       label="E-mail"
       required
     ></v-text-field>
-
+    <!-- GRUPO -->
     <v-select
       v-model="select"
       :items="items"
@@ -86,14 +86,33 @@
       class="titulo"
     >
       CURP
+      <small class="subtitulo">Suba el arcvhio(imagen o pdf) o escriba el CURP del alumno</small>
     </v-stepper-step>
 
     <v-stepper-content step="2">
-      <v-card
-        color="grey lighten-1"
-        class="mb-12"
-        height="200px"
-      ></v-card>
+      <v-form
+        ref="form"
+        v-model="valid"
+        lazy-validation
+      >  
+      <v-text-field
+        v-model="curp"
+        :rules="curpRules"
+        label="Ingrese el CURP del alumno"
+        placeholder="CURP del alumno"
+        required
+      ></v-text-field>
+      </v-form>
+
+      <v-file-input
+        chips
+        counter
+        show-size 
+        accept="image/*,.pdf"
+        label="Subir Archivo"
+      >        
+      </v-file-input>
+
       <v-btn
         color="primary"
         @click="e6 = 3"
@@ -199,6 +218,10 @@
         'Grupo 1',
         'Grupo 2',
         'Grupo 3',
+      ],
+      curp:'',
+      curpRules:[
+        v => (v && v.length == 18) || 'Ingrese un CURP valido'
       ],
     }),
 
