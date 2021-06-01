@@ -61,13 +61,12 @@
       label="Grupo"
       required
     ></v-select>
-    
   </v-form>
+
       <v-btn
         :disabled="!valid"
         color="primary"
         @click="validate, e6 = 2"
-
       >
         Continuar
       </v-btn>
@@ -79,7 +78,7 @@
       </v-btn>
     
     </v-stepper-content>
-
+    <!-- CURP STEPPER -->
     <v-stepper-step
       :complete="e6 > 2"
       step="2"
@@ -98,12 +97,11 @@
       <v-text-field
         v-model="curp"
         :rules="curpRules"
+        :counter="18"
         label="Ingrese el CURP del alumno"
         placeholder="CURP del alumno"
         required
       ></v-text-field>
-      </v-form>
-
       <v-file-input
         chips
         counter
@@ -112,6 +110,7 @@
         label="Subir Archivo"
       >        
       </v-file-input>
+      </v-form>
 
       <v-btn
         color="primary"
@@ -136,11 +135,21 @@
     </v-stepper-step>
 
     <v-stepper-content step="3">
-      <v-card
-        color="grey lighten-1"
-        class="mb-12"
-        height="200px"
-      ></v-card>
+      <v-form
+        ref="form"
+        v-model="valid"
+        lazy-validation
+      >  
+      <v-file-input
+        chips
+        counter
+        show-size 
+        accept="image/*,.pdf"
+        label="Subir Archivo"
+      >        
+      </v-file-input>
+      </v-form>
+
       <v-btn
         color="primary"
         @click="e6 = 4"
@@ -153,6 +162,7 @@
         >
         Cancelar
       </v-btn>
+
     </v-stepper-content>
 
     <v-stepper-step 
@@ -160,13 +170,44 @@
     class="titulo"
     >
       INE/IDENTIFICACIÓN DE PADRE O TUTOR
+      <small class="subtitulo">Suba su INE por la parte delantera y por el reverso (2 archivos en total)</small>
     </v-stepper-step>
     <v-stepper-content step="4">
-      <v-card
-        color="grey lighten-1"
-        class="mb-12"
-        height="200px"
-      ></v-card>
+      <v-file-input
+        chips
+        counter
+        multiple
+        show-size 
+        accept="image/*,.pdf"
+        label="Subir INE"
+        @change="addFiles"
+      >
+      </v-file-input>
+
+    <!-- SUBIR DOS ARCHIVOS EN MISMO INPUT no sirve jeje
+      <v-file-input v-model="currFiles"
+        chips
+        counter
+        multiple chips
+        show-size 
+        accept="image/*,.pdf"
+        label="Subir INE"
+        @change="inputChanged"
+      >
+      <template v-slot:selection="{ text, index,}">
+        <v-chip small text-color="white" color="#295671" close @click:close="remove(index)">
+          {{text}}
+        </v-chip>
+      </template>
+      </v-file-input>
+
+      <div v-if="files.length">
+        <h5>Archivos cargados</h5>
+        <v-chip v-for="f in files" :key="f.files" >
+          {{f.name}}
+        </v-chip>
+      </div>
+      -->
       <v-btn
         color="primary"
         @click="e6 = 1"
@@ -179,6 +220,7 @@
       >
         Cancel
       </v-btn>
+      
     </v-stepper-content>
   </v-stepper>
   </v-container>
@@ -202,9 +244,8 @@
       apellidoRules:[
         v => !!v || 'Apellido es necesario',
       ],
-      age:null,
+      age: null,
       ageRules:[
-
         v => v < 6 || '¡No te creo!',
         v => !!v || 'Edad es necesaria',
       ],
@@ -223,18 +264,24 @@
       curpRules:[
         v => (v && v.length == 18) || 'Ingrese un CURP valido'
       ],
+      files: [],
+      readers: [],
     }),
 
     methods: {
       validate () {
-        this.$refs.form.validate()
+        this.$refs.form.validate();
       },
       reset () {
-        this.$refs.form.reset()
+        this.$refs.form.reset();
       },
       resetValidation () {
-        this.$refs.form.resetValidation()
+        this.$refs.form.resetValidation();
       },
+      addFiles () {
+        console.log('files', this.files)
+      },
+
     },
   }
 </script>
