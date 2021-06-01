@@ -14,12 +14,12 @@
             <template v-slot:default>
               <thead>
                 <tr>
-                  <th class="titulo-tabla text-left">Campos</th>
-                  <th class="titulo-tabla text-left">Datos</th>
+                  <th class="titulo text-left">Campos</th>
+                  <th class="titulo text-left">Datos</th>
                 </tr>
               </thead>
               <tbody>
-                <tr v-for="item in datos" :key="item.campo" class="subtitulo">
+                <tr v-for="item in datos" :key="item.campo" class="titulo">
                   <td :bgcolor="getColor(item.id)">{{ item.campo }}</td>
                   <td :bgcolor="getColor(item.id)">{{ item.dato }}</td>
                 </tr>
@@ -97,7 +97,7 @@ export default {
       if (numeroAleatorio == 1) return "morado";
       else if (numeroAleatorio == 2) return "morado-claro";
       else if (numeroAleatorio == 3) return "turquesa";
-      else if (numeroAleatorio == 4) return "naranja";
+      else if (numeroAleatorio == 4) return "naranja-claro";
       else if (numeroAleatorio == 5) return "verde";
       else return "morado-inicial";
     },
@@ -153,12 +153,6 @@ export default {
   font-size: 28;
   color: white;
 }
-.titulo-tabla {
-  font-family: "Montserrat";
-  font-weight: 800;
-  font-size: 40;
-  color: white;
-}
 /* Colores */
 .morado-inicial {
   background-color: #7c4dff;
@@ -175,10 +169,28 @@ export default {
 .turquesa {
   background-color: #26a69a;
 }
-.naranja {
+.naranja{
+  background-color: #FF9800;
+}
+.naranja-claro {
   background-color: #ff9800;
 }
 .verde {
   background-color: #64dd17;
+}
+.verde-claro{
+  background-color: #B2FF59;
+}
+.azul{
+  background-color: #283593;
+}
+.azul-claro{
+  background-color: #80D8FF;
+}
+.rojo{
+  background-color: #D50000;
+}
+.rojo-claro{
+  background-color: #E91E63;
 }
 </style>
