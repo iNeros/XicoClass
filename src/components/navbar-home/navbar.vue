@@ -69,12 +69,12 @@
                   Mi Portal
                 </v-btn>
                 <v-btn
-                id="Evaluacion"
-                href="/Evaluacion"
-                depressed
-                plain
-                class="menu-text"
-                @click="setEvaluacion()"
+                  id="Evaluacion"
+                  href="/Evaluacion"
+                  depressed
+                  plain
+                  class="menu-text"
+                  @click="setEvaluacion()"
                 >
                   Evaluacion
                 </v-btn>
@@ -234,7 +234,7 @@ export default {
     setPerfil() {
       localStorage.selectedNavTab = 5;
     },
-    setEvaluacion(){
+    setEvaluacion() {
       localStorage.selectedNavTab = 6;
     },
     setSelected() {

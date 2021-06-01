@@ -12,9 +12,7 @@
         <v-tab @click="(texto = 'Material Didactico'), setDidactico()">
           MATERIAL DIDACTICO
         </v-tab>
-        <v-tab @click="(texto = 'Xico Store'), setStore()">
-          XICO STORE
-        </v-tab>
+        <v-tab @click="(texto = 'Xico Store'), setStore()"> XICO STORE </v-tab>
       </v-tabs>
     </div>
     <!-- VISTA DE LAS TABS EN DISPOSITIVOS MOVILES --->
@@ -40,7 +38,7 @@
                   class="button-menu ma-0"
                   color="red"
                   dark
-                  @click="texto = 'Material Impreso', setImpreso()"
+                  @click="(texto = 'Material Impreso'), setImpreso()"
                 >
                   Material Impreso
                 </v-btn>
@@ -53,7 +51,7 @@
                   class="button-menu"
                   color="red"
                   dark
-                  @click="texto = 'Material Visual', setVisual()"
+                  @click="(texto = 'Material Visual'), setVisual()"
                 >
                   Material Visual
                 </v-btn>
@@ -66,7 +64,7 @@
                   class="button-menu"
                   color="red"
                   dark
-                  @click="texto = 'Material Didactico', setDidactico()"
+                  @click="(texto = 'Material Didactico'), setDidactico()"
                 >
                   Material Didactico
                 </v-btn>
@@ -79,7 +77,7 @@
                   class="button-menu"
                   color="red"
                   dark
-                  @click="texto = 'Xico Store', setStore()"
+                  @click="(texto = 'Xico Store'), setStore()"
                 >
                   Xico Store
                 </v-btn>

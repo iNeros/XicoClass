@@ -1,36 +1,30 @@
 <template>
-    <div class="Evaluacion">
-        <navbar></navbar>
-        <v-container>
-            <h1>Hola</h1>
-        </v-container>
+  <div class="Evaluacion">
+    <navbar></navbar>
+    <v-container>
+      <h1>Hola</h1>
+    </v-container>
 
-
-    
     <div>
-        <footerHome></footerHome>
+      <footerHome></footerHome>
     </div>
-    </div>
-
+  </div>
 </template>
 
 <script>
-import navbar from '../components/navbar-home/navbar.vue';
+import navbar from "../components/navbar-home/navbar.vue";
 import footerHome from "@/components/footer-home/footer.vue";
 export default {
-    name: "Evaluacion",
-    data() {
-        return {};
-    },
-    components: {
-        navbar,
-        footerHome,
-    },
-    mounted() 
-    {},
+  name: "Evaluacion",
+  data() {
+    return {};
+  },
+  components: {
+    navbar,
+    footerHome,
+  },
+  mounted() {},
 };
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
