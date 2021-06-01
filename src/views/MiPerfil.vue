@@ -149,8 +149,8 @@ export default {
 }
 .subtitulo {
   font-family: "Montserrat";
-  font-weight: 800;
-  font-size: 30;
+  font-weight: 600px;
+  font-size: 28;
   color: white;
 }
 .titulo-tabla {
