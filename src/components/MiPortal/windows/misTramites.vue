@@ -41,13 +41,13 @@
       label="Grupo"
       required
     ></v-select>
-
-    
     
   </v-form>
       <v-btn
+        :disabled="!valid"
         color="primary"
-        @click="e6 = 2"
+        @click="validate, e6 = 2"
+
       >
         Continuar
       </v-btn>
