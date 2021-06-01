@@ -22,7 +22,6 @@
   >
     <v-text-field
       v-model="name"
-      :counter="10"
       :rules="nameRules"
       label="Nombre/s"
       required
@@ -38,58 +37,35 @@
     <v-select
       v-model="select"
       :items="items"
-      :rules="[v => !!v || 'El grupo es necesario']"
-      label="Grupo a inscribirse"
+      :rules="[v => !!v || 'Item is required']"
+      label="Grupo"
       required
     ></v-select>
 
-    <v-checkbox
-      v-model="checkbox"
-      :rules="[v => !!v || 'You must agree to continue!']"
-      label="Do you agree?"
-      required
-    ></v-checkbox>
-
-    <v-btn
-      :disabled="!valid"
-      color="success"
-      class="mr-4"
-      @click="validate"
-    >
-      Validate
-    </v-btn>
-
-    <v-btn
-      color="error"
-      class="mr-4"
-      @click="reset"
-    >
-      Reset Form
-    </v-btn>
-
-    <v-btn
-      color="warning"
-      @click="resetValidation"
-    >
-      Reset Validation
-    </v-btn>
+    
+    
   </v-form>
       <v-btn
         color="primary"
         @click="e6 = 2"
       >
-        Continue
+        Continuar
       </v-btn>
-      <v-btn text>
-        Cancel
+      <v-btn 
+        color="grey lighten-2"
+        @click="e6 = 1"
+      >
+        Cancelar
       </v-btn>
+    
     </v-stepper-content>
 
     <v-stepper-step
       :complete="e6 > 2"
       step="2"
+      class="titulo"
     >
-      Configure analytics for this app
+      CURP
     </v-stepper-step>
 
     <v-stepper-content step="2">
@@ -102,18 +78,22 @@
         color="primary"
         @click="e6 = 3"
       >
-        Continue
+        Continuar
       </v-btn>
-      <v-btn text>
-        Cancel
+      <v-btn 
+        color="grey lighten-2"
+        @click="e6 = e6-1"
+        >
+        Cancelar
       </v-btn>
     </v-stepper-content>
 
     <v-stepper-step
       :complete="e6 > 3"
       step="3"
+      class="titulo"
     >
-      Select an ad format and name ad unit
+      COMPROBANTE DE DOMICILIO
     </v-stepper-step>
 
     <v-stepper-content step="3">
@@ -126,15 +106,21 @@
         color="primary"
         @click="e6 = 4"
       >
-        Continue
+        Continuar
       </v-btn>
-      <v-btn text>
-        Cancel
+      <v-btn
+        color="grey lighten-2"
+        @click="e6 = e6-1"
+        >
+        Cancelar
       </v-btn>
     </v-stepper-content>
 
-    <v-stepper-step step="4">
-      View setup instructions
+    <v-stepper-step 
+    step="4"
+    class="titulo"
+    >
+      INE/IDENTIFICACIÓN DE PADRE O TUTOR
     </v-stepper-step>
     <v-stepper-content step="4">
       <v-card
@@ -148,48 +134,42 @@
       >
         Continue
       </v-btn>
-      <v-btn text>
+      <v-btn
+        color="grey lighten-2"
+        @click="e6 = e6-1"
+      >
         Cancel
       </v-btn>
     </v-stepper-content>
   </v-stepper>
-    </v-container>
+  </v-container>
   </div>
 </template>
 
 <script>
-export default {
-  name: "misTramites",
-  data() {
-    return {
-      e6: 1,
-    };
-  },
-};
-</script>
-
-<script>
   export default {
+    name:"misTramites",
     data: () => ({
+      e6:1,
       valid: true,
       name: '',
       nameRules: [
         v => !!v || 'Name is required',
+        /* 
         v => (v && v.length <= 10) || 'Name must be less than 10 characters',
+         */
       ],
       email: '',
       emailRules: [
         v => !!v || 'E-mail is required',
-        v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
+        v => /.+@.+\..+/.test(v) || 'E-mail debe ser valido',
       ],
       select: null,
       items: [
-        'Item 1',
-        'Item 2',
-        'Item 3',
-        'Item 4',
+        'Grupo 1',
+        'Grupo 2',
+        'Grupo 3',
       ],
-      checkbox: false,
     }),
 
     methods: {
