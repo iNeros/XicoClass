@@ -24,9 +24,29 @@
       v-model="name"
       :rules="nameRules"
       label="Nombre/s"
+      placeholder="Nombre o nombres del alumno"
       required
     ></v-text-field>
-
+    
+    <v-text-field
+      v-model="apellido"
+      :rules="apellidoRules"
+      label="Apellidos"
+      placeholder="Apellidos del alumno"
+      required
+    ></v-text-field>
+    <!-- SLIDER EDAD -->
+    <v-slider
+    v-model="age"
+    :rules="ageRules"
+    color="blue"
+    label="Edad"
+    hint="Desliza hasta llegar a tu edad"
+    min="2"
+    max="7"
+    thumb-label
+    ></v-slider>
+    
     <v-text-field
       v-model="email"
       :rules="emailRules"
@@ -154,14 +174,24 @@
       valid: true,
       name: '',
       nameRules: [
-        v => !!v || 'Name is required',
+        v => !!v || 'Nombre es necesario',
         /* 
         v => (v && v.length <= 10) || 'Name must be less than 10 characters',
          */
       ],
+      apellido: '',
+      apellidoRules:[
+        v => !!v || 'Apellido es necesario',
+      ],
+      age:null,
+      ageRules:[
+
+        v => v < 6 || '¡No te creo!',
+        v => !!v || 'Edad es necesaria',
+      ],
       email: '',
       emailRules: [
-        v => !!v || 'E-mail is required',
+        v => !!v || 'E-mail es necesario',
         v => /.+@.+\..+/.test(v) || 'E-mail debe ser valido',
       ],
       select: null,
@@ -193,17 +223,15 @@
 .titulo{
   font-family: "Montserrat";
   font: weight 800px;
-  font-size: 34px;
+  font-size: 30px;
   line-height: 40px;
   letter-spacing: 0.01px;
-  color: white;
 }
 .subtitulo {
   font-family: "Montserrat";
-  font-weight: 600px;
-  font-size: 28px;
+  font-weight: 800px;
+  font-size: 22px;
   line-height: 40px;
-  color: #00000098;
 }
 
 
