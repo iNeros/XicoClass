@@ -16,6 +16,7 @@
               :elevation="hover ? 12 : 2"
               :class="{ 'on-hover': hover }"
               shaped
+              color=""
             >
               <v-card-title class="display-1 titulo-tarjeta">
                 <v-row>
@@ -157,6 +158,48 @@ export default {
   font-weight: 800;
   color: #30dba0;
 }
+
+.morado-inicial {
+  background-color: #7c4dff;
+}
+.morado-opaco {
+  background-color: #4527a0;
+}
+.morado {
+  background-color: #7e57c2;
+}
+.morado-claro {
+  background-color: #ba68c8;
+}
+.turquesa {
+  background-color: #26a69a;
+}
+.naranja{
+  background-color: #FF9800;
+}
+.naranja-claro {
+  background-color: #ff9800;
+}
+.verde {
+  background-color: #64dd17;
+}
+.verde-claro{
+  background-color: #B2FF59;
+}
+.azul{
+  background-color: #283593;
+}
+.azul-claro{
+  background-color: #80D8FF;
+}
+.rojo{
+  background-color: #D50000;
+}
+.rojo-claro{
+  background-color: #E91E63;
+}
+
+
 </style>
 
 <style lang="sass" scoped>
