@@ -7,15 +7,15 @@
     <v-card elevation="24" class="container" 
              El Contenido.. :V  
     </v-card> -->
-    <v-container class="pa-4 text-center">
-      <v-row class="fill-height" align="center" justify="center"> </v-row>
+    <v-container fluid class="pa-4 text-center">
+      <v-row class="fill-height"> 
       <template v-for="(item, i) in items">
-        <v-col :key="i" cols="12" xl="12" lg="12" md="12" xs="4">
+        <v-col :key="i" cols="12" xl="4" lg="4" md="6" xs="12">
           <v-hover v-slot="{ hover }" open-delay="200">
             <v-card 
               :elevation="hover ? 12 : 2"
               :class="{ 'on-hover': hover }"
-              shaped
+              shaped              
               color="#80D8FF"
             >
               <v-card-title class="titulo">
@@ -53,6 +53,7 @@
           </v-hover>
         </v-col>
       </template>
+      </v-row>
     </v-container>
   </div>
 </template>
@@ -75,6 +76,13 @@ export default {
         horario: "Horario",
         descripcion: "Lorem ipsum dolor sit amet consectetur",
         img: "https://cdn.vuetifyjs.com/images/cards/halcyon.png",
+      },
+      {
+        materia: "#Nombre Asignatura",
+        nombreDocente: "Nombre del docente",
+        horario: "Horario",
+        descripcion: "Lorem ipsum dolor sit amet consectetur",
+        img: "https://cdn.vuetifyjs.com/images/cards/foster.jpg",
       },
       {
         materia: "#Nombre Asignatura",
