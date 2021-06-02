@@ -16,7 +16,7 @@
               :elevation="hover ? 12 : 2"
               :class="{ 'on-hover': hover }"
               shaped
-              color=""
+              :color="getColorBack()"
             >
               <v-card-title class="display-1 titulo-tarjeta">
                 <v-row>
@@ -84,6 +84,17 @@ export default {
         img: "https://cdn.vuetifyjs.com/images/cards/foster.jpg",
       },
     ],
+    getColorBack() {
+      let a = 1;
+      let b = 6;
+      let numeroAleatorio = a + Math.floor(Math.random() * b);
+      if (numeroAleatorio == 1) return "morado";
+      else if (numeroAleatorio == 2) return "morado-claro";
+      else if (numeroAleatorio == 3) return "turquesa";
+      else if (numeroAleatorio == 4) return "naranja-claro";
+      else if (numeroAleatorio == 5) return "verde";
+      else return "morado-inicial";
+    },
   }),
 };
 </script>
