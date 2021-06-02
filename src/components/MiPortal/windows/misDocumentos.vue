@@ -1,15 +1,19 @@
 <template>
   <div class="misDocumentos">
-    <v-container>
+    <v-container >
       <v-row>
-      <template v-for="(item,i) in items">
-        <v-col :key="i"
+      <template v-for="item in items">
+        <v-col :key="item.items"
           cols="6"
           class=""
           >
           <h1>{{item}} </h1>
+          <v-divider class=""></v-divider>
         </v-col>
       </template>
+      <v-col cols="6">
+        <h1>donde esta este text fukk tesxt asjhd fhbfbe hgrebfbr</h1>
+      </v-col>
       </v-row>
       
     </v-container>
@@ -20,14 +24,8 @@
 export default {
   name: "misDocumentos",
   data: () => ({
-    items:[
-      {
-        actaNacimiento:'Acta de nacimiento',
-        curpAlumno:'CURP alumno',
-        curpPadre:'CURP Padre de familia o Tutor',
-        docsOficiales:'Docs oficiales',
-      },
-    ],
+    actaNacimiento:'',
+    curpAlumno:'',
   }),
 };
 </script>

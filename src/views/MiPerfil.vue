@@ -19,7 +19,7 @@
                 </tr>
               </thead>
               <tbody>
-                <tr v-for="item in datos" :key="item.campo" class="titulo">
+                <tr v-for="item in datos" :key="item.datos" class="titulo">
                   <td :bgcolor="getColor(item.id)">{{ item.campo }}</td>
                   <td :bgcolor="getColor(item.id)">{{ item.dato }}</td>
                 </tr>
