@@ -11,7 +11,7 @@
               </thead>
               <tbody>
                 <tr v-for="item in items" :key="item.items" class="titulo">
-                  <td bgcolor="" class="titulo">{{ item.doc }}</td>
+                  <td bgcolor="" class="titulo" >{{ item.doc }}</td>
                   <td bgcolor="">
                     <v-btn 
                       class="ma-2"
