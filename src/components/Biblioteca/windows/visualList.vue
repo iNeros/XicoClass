@@ -1,7 +1,7 @@
 <template>
-  
+    <div>
     <v-list dense>
-      <v-subheader>REPORTS</v-subheader>
+      <v-subheader>VIDEOS</v-subheader>
       <v-list-item-group
         v-model="selectedItem"
         color="#30dba0"
@@ -34,9 +34,14 @@
         <v-list-item>Text3</v-list-item>
         -->
       </v-list-item-group>
+
+    
+
     </v-list>
+    </div>
     
 </template>
+
 
 <script>
 export default {
