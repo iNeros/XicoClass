@@ -1,21 +1,41 @@
 <template>
   <div class="misDocumentos">
     <v-container >
-      <v-row>
-      <template v-for="item in items">
-        <v-col :key="item.items"
-          cols="6"
-          class=""
-          >
-          <h1>{{item}} </h1>
-          <v-divider class=""></v-divider>
-        </v-col>
-      </template>
-      <v-col cols="6">
-        <h1>donde esta este text fukk tesxt asjhd fhbfbe hgrebfbr</h1>
-      </v-col>
-      </v-row>
-      
+      <v-simple-table height="400px" class="mt-6">
+            <template v-slot:default>
+              <thead>
+                <tr>
+                  <th class="titulo">Documentos</th>
+                  <th class="titulo">Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="item in items" :key="item.items" class="titulo">
+                  <td bgcolor="" class="titulo">{{ item.doc }}</td>
+                  <td bgcolor="">
+                    <v-btn 
+                      class="ma-2"
+                      color="error"
+                      elevation="2"                      
+                      large
+                      >Eliminar</v-btn>
+                    <v-btn 
+                      class="ma-2"
+                      color="primary"
+                      elevation="2"                      
+                      large
+                      >Subir</v-btn>
+                    <v-btn 
+                      class="ma-2"
+                      color="success"
+                      elevation="2"                      
+                      large
+                    >Ver</v-btn>
+                  </td>
+                </tr>
+              </tbody>
+            </template>
+          </v-simple-table>
     </v-container>
   </div>
 </template>
@@ -24,10 +44,35 @@
 export default {
   name: "misDocumentos",
   data: () => ({
-    actaNacimiento:'',
-    curpAlumno:'',
+    items: [ 
+      {
+        id:1,
+        doc: 'Acta de nacimiento',
+      },
+      {
+        id:2,
+        doc: 'CURP del Alumno',
+      },
+      {
+        id:3,
+        doc: 'CURP del Padre de familia o Tutor',
+      },
+      {
+        id:4,
+        doc: 'docs oficiales',
+      },
+    ],
   }),
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap");
+.titulo {
+  font-family: "Montserrat";
+  font: weight 800;
+  font-size: 34px;
+  line-height: 40px;
+  letter-spacing: 0.01px;
+}
+</style>

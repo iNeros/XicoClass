@@ -20,7 +20,7 @@
             >
               <v-card-title class="titulo">
                 <v-row>
-                  <v-col cols="12" lg="8" md="8" xs="8" class="">
+                  <v-col cols="12" xl="8" lg="8" md="8" xs="8" class="">
                     <p class="mt-1 text-left mx-6">
                       {{ item.materia }}
                     </p>
