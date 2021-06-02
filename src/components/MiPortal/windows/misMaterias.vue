@@ -12,13 +12,13 @@
       <template v-for="(item, i) in items">
         <v-col :key="i" cols="12" xl="12" lg="12" md="12" xs="4">
           <v-hover v-slot="{ hover }" open-delay="200">
-            <v-card
+            <v-card 
               :elevation="hover ? 12 : 2"
               :class="{ 'on-hover': hover }"
               shaped
-              :color="getColorBack()"
+              color="#80D8FF"
             >
-              <v-card-title class="display-1 titulo-tarjeta">
+              <v-card-title class="titulo">
                 <v-row>
                   <v-col cols="12" lg="8" md="8" xs="8" class="">
                     <p class="mt-1 text-left mx-6">
@@ -33,19 +33,19 @@
                 </v-row>
               </v-card-title>
               <v-card-text>
-                <p class="subtitle-1 text-left mx-6">
+                <p class="subtitulo text-left mx-6">
                   {{ item.nombreDocente }}
                 </p>
-                <p class="subtitle-1 grey--text mx-6 my-0 text-left">
+                <p class="subtitulo-2 mx-6 my-0 text-left">
                   {{ item.horario }}
                 </p>
-                <v-divider class="mx-6"></v-divider>
+                <v-divider class="mt-1 mx-6"></v-divider>
               </v-card-text>
-              <p class="body-1" justify="">
+              <p class="cuerpo" justify="center">
                 {{ item.descripcion }}
               </p>
               <v-card-actions>
-                <v-btn class="" color="deep-purple accent-3" block text>
+                <v-btn color="teal darken-3" block text>
                   Ver mas
                 </v-btn>
               </v-card-actions>
@@ -84,17 +84,6 @@ export default {
         img: "https://cdn.vuetifyjs.com/images/cards/foster.jpg",
       },
     ],
-    getColorBack() {
-      let a = 1;
-      let b = 6;
-      let numeroAleatorio = a + Math.floor(Math.random() * b);
-      if (numeroAleatorio == 1) return "morado";
-      else if (numeroAleatorio == 2) return "morado-claro";
-      else if (numeroAleatorio == 3) return "turquesa";
-      else if (numeroAleatorio == 4) return "naranja-claro";
-      else if (numeroAleatorio == 5) return "verde";
-      else return "morado-inicial";
-    },
   }),
 };
 </script>
@@ -102,20 +91,31 @@ export default {
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap");
 
-.title-container {
-  width: 80%;
-  height: 30px;
-  margin-top: 5%;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #5d576b;
-}
-.title-text {
+.titulo {
   font-family: "Montserrat";
-  font-weight: 800;
+  font: weight 800px;
+  font-size: 34px;
+  line-height: 40px;
+  letter-spacing: 0.01px;
   color: white;
-  font-size: 20px;
-  margin-left: 20px;
+}
+.subtitulo {
+  font-family: "Montserrat";
+  font-weight: 600px;
+  font-size: 28px;
+  color: white;
+}
+.subtitulo-2 {
+  font-family: "Montserrat";
+  font-weight:400;
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.815);
+}
+.cuerpo {
+  font-family: "Montserrat";
+  font-weight:400;
+  font-size: 18px;
+  color: white;
 }
 .container {
   width: 100%;
@@ -169,47 +169,6 @@ export default {
   font-weight: 800;
   color: #30dba0;
 }
-
-.morado-inicial {
-  background-color: #7c4dff;
-}
-.morado-opaco {
-  background-color: #4527a0;
-}
-.morado {
-  background-color: #7e57c2;
-}
-.morado-claro {
-  background-color: #ba68c8;
-}
-.turquesa {
-  background-color: #26a69a;
-}
-.naranja{
-  background-color: #FF9800;
-}
-.naranja-claro {
-  background-color: #ff9800;
-}
-.verde {
-  background-color: #64dd17;
-}
-.verde-claro{
-  background-color: #B2FF59;
-}
-.azul{
-  background-color: #283593;
-}
-.azul-claro{
-  background-color: #80D8FF;
-}
-.rojo{
-  background-color: #D50000;
-}
-.rojo-claro{
-  background-color: #E91E63;
-}
-
 
 </style>
 
