@@ -1,6 +1,6 @@
 <template>
   <div class="footerHome">
-    <v-footer color="#5D576B" absolute height="150px">
+    <v-footer color="#26A69A" absolute height="150px">
       <v-row justify="center" no-gutters>
         <v-btn color="white" text rounded class="my-2" href="/Home">
           Inicio

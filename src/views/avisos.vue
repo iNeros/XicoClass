@@ -2,8 +2,8 @@
   <div class="Avisos">
     <navbar></navbar>
 
-    <h2 style="color: #f45b69" id="ods">Hoy</h2>
-    <hr color="#f45b69" id="od" />
+    <h2 style="color: #D50000" id="ods">Hoy</h2>
+    <hr color="#D50000" id="od" />
     <div v-if="AvisosH.id_avisos != []">
       <v-row class="margenes">
         <v-col
@@ -14,7 +14,7 @@
           v-for="user in AvisosH"
           :key="user.id_avisos"
         >
-          <v-card class="sizes" color="#f45b69" dark>
+          <v-card class="sizes" color="#ef5350" dark>
             <v-card-title class="ods">
               {{ user.nombre }}
             </v-card-title>
@@ -22,7 +22,7 @@
               user.descripcion
             }}</v-card-subtitle>
             <v-card-actions>
-              <v-btn color="#f45b69" dark @click="Enlace(user.urls)">
+              <v-btn color="#D50000" dark @click="Enlace(user.urls)">
                 Enlace
               </v-btn>
             </v-card-actions>
@@ -33,7 +33,7 @@
     <div v-else>
       <v-row class="margenes">
         <v-col cols="12" sm="12" md="6" lg="3">
-          <v-card class="sizes" color="#f45b69" dark>
+          <v-card class="sizes" color="#ef5350 " dark>
             <v-card-title class="ods"> Nada nuevo por aquí </v-card-title>
             <v-card-subtitle class="texto">Descripción</v-card-subtitle>
             <v-card-actions> </v-card-actions>
@@ -41,8 +41,8 @@
         </v-col>
       </v-row>
     </div>
-    <h2 style="color: #f8b725" id="ods">Esta semana</h2>
-    <hr color="#f45b69" id="od" />
+    <h2 style="color: #FF9800" id="ods">Esta semana</h2>
+    <hr color="#FF9800" id="od" />
     <div v-if="AvisosS.id_avisos != []">
       <v-row class="margenes">
         <v-col
@@ -53,7 +53,7 @@
           v-for="user in AvisosS"
           :key="user.id_avisos"
         >
-          <v-card class="sizes" color="#f8b725" dark>
+          <v-card class="sizes" color="#FFCA28" dark>
             <v-card-title class="ods">
               {{ user.nombre }}
             </v-card-title>
@@ -64,7 +64,7 @@
               <v-btn text>
                 {{ user.fecha }}
               </v-btn>
-              <v-btn color="#f8b725" dark @click="Enlace(user.urls)">
+              <v-btn color="#FF9800" dark @click="Enlace(user.urls)">
                 Enlace
               </v-btn>
             </v-card-actions>
@@ -75,7 +75,7 @@
     <div v-else>
       <v-row class="margenes">
         <v-col cols="12" sm="12" md="6" lg="3">
-          <v-card class="sizes" color="#f8b725" dark>
+          <v-card class="sizes" color="#FFCA28 " dark>
             <v-card-title class="ods"> Nada nuevo por aquí </v-card-title>
             <v-card-subtitle class="texto">Descripción</v-card-subtitle>
             <v-card-actions> </v-card-actions>
@@ -83,8 +83,8 @@
         </v-col>
       </v-row>
     </div>
-    <h2 style="color: #349ff4" id="ods">Ultimos meses</h2>
-    <hr color="#f45b69" id="od" />
+    <h2 style="color: #00c853" id="ods">Ultimos meses</h2>
+    <hr color="#00c853" id="od" />
     <v-row class="margenes">
       <v-col
         cols="12"
@@ -94,7 +94,7 @@
         v-for="user in AvisosM"
         :key="user.id_avisos"
       >
-        <v-card class="sizes" color="#349ff4" dark>
+        <v-card class="sizes" color="#64dd17" dark>
           <v-card-title class="ods">
             {{ user.nombre }}
           </v-card-title>
@@ -105,7 +105,7 @@
             <v-btn text>
               {{ user.fecha }}
             </v-btn>
-            <v-btn color="#349ff4" dark @click="Enlace(user.urls)">
+            <v-btn color="#00c853" dark @click="Enlace(user.urls)">
               Enlace
             </v-btn>
           </v-card-actions>
@@ -188,7 +188,7 @@ export default {
 </script>
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 .v-text-field {
   margin-left: 20px;
   margin-right: 20px;
@@ -200,12 +200,12 @@ export default {
   color: #f45b69;
 }
 #ods {
-  font-family: "Montserrat";
+  font-family: "Poppins";
   margin-left: 20px;
   margin-right: 20px;
 }
 .v-card {
-  font-family: "Montserrat";
+  font-family: "Poppins";
   margin-left: 20px;
   margin-bottom: 10px;
   margin-top: 10px;

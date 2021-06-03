@@ -1,12 +1,12 @@
 <template>
   <v-container fluid>
     <v-row>
-      <v-carousel hide-delimiter-background show-arrows-on-hover>
+     <v-carousel hide-delimiter-background show-arrows-on-hover cycle>
         <template v-slot:prev="{ on, attrs }">
-          <v-btn color="success" v-bind="attrs" v-on="on">Atras</v-btn>
+          <v-btn color="#B2FF59" v-bind="attrs" v-on="on">←</v-btn>
         </template>
         <template v-slot:next="{ on, attrs }">
-          <v-btn color="info" v-bind="attrs" v-on="on">Siguiente</v-btn>
+          <v-btn color="#80D8FF" v-bind="attrs" v-on="on">→</v-btn>
         </template>
         <v-carousel-item
           v-for="(item, i) in items"

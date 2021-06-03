@@ -1,7 +1,7 @@
 <template>
   <div class="navbar">
     <v-app-bar
-      color="#5D576B"
+      color="#26A69A"
       height="100px"
       dense
       fixed
@@ -12,7 +12,7 @@
       <div class="img-logo mx-5">
         <img
           class="mx-10"
-          src="@/assets/media/logos/letras.png"
+          src="@/assets/media/logos/letrasdos.png"
           alt="XICO CLASS"
           width="200"
           height="80"
@@ -296,7 +296,7 @@ export default {
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,300&display=swap');
 .navbar {
   display: block;
   height: 100px;
@@ -308,9 +308,9 @@ export default {
 .menu-text {
   color: white !important;
   font-size: 18px !important;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 .btn-selected {
-  color: #30dba0 !important;
+  color: #607D8B !important;
 }
 </style>
