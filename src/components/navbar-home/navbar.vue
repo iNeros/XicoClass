@@ -311,6 +311,6 @@ export default {
   font-family: "Poppins", sans-serif;
 }
 .btn-selected {
-  color: #607D8B !important;
+  color: #000000 !important;
 }
 </style>

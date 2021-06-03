@@ -37,8 +37,7 @@ export default {
 </script>
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,300&display=swap');
 .footerHome {
   margin-top: 150px;
 }
@@ -47,7 +46,7 @@ export default {
   width: 250px;
 }
 .subtitle-text {
-  font-family: "Montserrat";
+  font-family: "Poppins";
   color: white !important;
 }
 </style>

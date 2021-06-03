@@ -14,7 +14,7 @@
           v-for="user in AvisosH"
           :key="user.id_avisos"
         >
-          <v-card class="sizes" color="#ef5350" dark>
+          <v-card class="sizes" color="#ef5350" dark elevation="5">
             <v-card-title class="ods">
               {{ user.nombre }}
             </v-card-title>
@@ -53,7 +53,7 @@
           v-for="user in AvisosS"
           :key="user.id_avisos"
         >
-          <v-card class="sizes" color="#FFCA28" dark>
+          <v-card class="sizes" color="#FFCA28" dark elevation="5">
             <v-card-title class="ods">
               {{ user.nombre }}
             </v-card-title>
@@ -94,7 +94,7 @@
         v-for="user in AvisosM"
         :key="user.id_avisos"
       >
-        <v-card class="sizes" color="#64dd17" dark>
+        <v-card class="sizes" color="#64dd17" dark elevation="5">
           <v-card-title class="ods">
             {{ user.nombre }}
           </v-card-title>
