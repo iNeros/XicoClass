@@ -2,7 +2,7 @@
   <div class="menuTabs">
     <!-- VISTA DE LAS TABS EN WIDEVIEW --->
     <div class="hidden-sm-and-down">
-      <v-tabs fixed-tabs class="menu-tabs" color="#30dba0!important">
+      <v-tabs fixed-tabs class="menu-tabs" color="rgb(40, 53, 147)!important">
         <v-tab @click="(texto = 'MIS MATERIAS'), setMaterias()">
           MIS MATERIAS
         </v-tab>
@@ -114,7 +114,7 @@ export default {
 </script>
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 .menu-tabs {
   max-width: 80%;
   margin-left: auto;
@@ -122,7 +122,7 @@ export default {
   font-weight: 900;
 }
 .button-menu {
-  font-family: "Montserrat";
+  font-family: "Poppins";
   width: 500px;
   height: 40px;
   font-weight: 900;

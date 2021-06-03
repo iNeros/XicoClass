@@ -16,7 +16,8 @@
               :elevation="hover ? 12 : 2"
               :class="{ 'on-hover': hover }"
               shaped              
-              color="#80D8FF"
+              color="#b388ff"
+
             >
               <v-card-title class="titulo">
                 <v-row>
@@ -45,7 +46,7 @@
                 {{ item.descripcion }}
               </p>
               <v-card-actions>
-                <v-btn color="teal darken-3" block text>
+                <v-btn color="#7b1fa2" block text>
                   Ver mas
                 </v-btn>
               </v-card-actions>
@@ -97,30 +98,29 @@ export default {
 </script>
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 .titulo {
-  font-family: "Montserrat";
-  font: weight 800px;
+  font-family: "Poppins";
+  font: weight 700px;
   font-size: 34px;
   line-height: 40px;
   letter-spacing: 0.01px;
-  color: white;
+  color: black;
 }
 .subtitulo {
-  font-family: "Montserrat";
-  font-weight: 600px;
+  font-family: "Poppins";
+  font-weight: 500px;
   font-size: 28px;
   color: white;
 }
 .subtitulo-2 {
-  font-family: "Montserrat";
+  font-family: "Poppins";
   font-weight:400;
   font-size: 22px;
-  color: rgba(255, 255, 255, 0.815);
+  color:white    ;
 }
 .cuerpo {
-  font-family: "Montserrat";
+  font-family: "Poppins";
   font-weight:400;
   font-size: 18px;
   color: white;
@@ -140,7 +140,7 @@ export default {
   margin-right: auto;
 }
 .titulo-tarjeta {
-  font-family: "Montserrat";
+  font-family: "Poppins";
 }
 .boton-entregar {
   float: right;
@@ -151,29 +151,29 @@ export default {
   margin-bottom: 10px;
 }
 .titulo-tarjeta {
-  font-family: "Montserrat";
+  font-family: "Poppins";
   font-weight: 800;
 }
 .status-text {
   text-align: right;
 }
 .status-label {
-  font-family: "Montserrat";
+  font-family: "Poppins";
   font-weight: 800;
   color: blue;
   margin-left: 10px;
 }
 .texto-descriptivo {
-  font-family: "Montserrat";
+  font-family: "Poppins";
   text-align: justify;
 }
 .texto-material {
-  font-family: "Montserrat";
+  font-family: "Poppins";
   font-weight: 800;
   color: #da37a4;
 }
 .texto-trabajo {
-  font-family: "Montserrat";
+  font-family: "Poppins";
   font-weight: 800;
   color: #30dba0;
 }

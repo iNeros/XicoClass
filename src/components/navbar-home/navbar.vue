@@ -3,9 +3,7 @@
     <v-app-bar
       color="#26A69A"
       height="100px"
-      dense
       fixed
-      dark
       class="navbar-generals"
     >
       <!--#region              LOGO -- IZQUIERDA    -->
