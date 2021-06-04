@@ -16,20 +16,17 @@
                     <v-btn 
                       class="ma-2"
                       color="error"
-                      elevation="2"                      
-                      large
+                      elevation="3" 
                       >Eliminar</v-btn>
                     <v-btn 
                       class="ma-2"
                       color="primary"
-                      elevation="2"                      
-                      large
+                      elevation="3" 
                       >Subir</v-btn>
                     <v-btn 
                       class="ma-2"
                       color="success"
-                      elevation="2"                      
-                      large
+                      elevation="3"                                            
                     >Ver</v-btn>
                   </td>
                 </tr>
