@@ -19,11 +19,47 @@
                 </tr>
               </thead>
               <tbody>
-                <tr v-for="item in datos" :key="item.datos" class="titulo">
-                  <td :bgcolor="getColor(item.id)">{{ item.campo }}</td>
-                  <td :bgcolor="getColor(item.id)">{{ item.dato }}</td>
+                <tr v-for="item in datos" :key="item.id" class="titulo">
+                  <td :bgcolor="getColor(1)">{{ item.Matricula }}</td>
+                  <td :bgcolor="getColor(1)">{{ item.Matricula }}</td>
                 </tr>
               </tbody>
+              <tbody>
+                <tr v-for="item in datos" :key="item.id" class="titulo">
+                  <td :bgcolor="getColor(2)">{{ item.NombreA }}</td>
+                  <td :bgcolor="getColor(2)">{{ item.NameA }}</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr v-for="item in datos" :key="item.id" class="titulo">
+                  <td :bgcolor="getColor(3)">{{ item.Curp }}</td>
+                  <td :bgcolor="getColor(3)">{{ item.curp_niño }}</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr v-for="item in datos" :key="item.id" class="titulo">
+                  <td :bgcolor="getColor(4)">{{ item.FNAC }}</td>
+                  <td :bgcolor="getColor(4)">{{ item.FNAC }}</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr v-for="item in datos" :key="item.id" class="titulo">
+                  <td :bgcolor="getColor(5)">{{ item.Grupo }}</td>
+                  <td :bgcolor="getColor(5)">{{ item.grupo }}</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr v-for="item in datos" :key="item.id" class="titulo">
+                  <td :bgcolor="getColor(6)">{{ item.PFT }}</td>
+                  <td :bgcolor="getColor(6)">{{ item.NameB }}</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr v-for="item in datos" :key="item.id" class="titulo">
+                  <td :bgcolor="getColor(7)">{{ item.ECDEL }}</td>
+                  <td :bgcolor="getColor(7)">{{ item.ECDEL }}</td>
+                </tr>
+              </tbody>                                                                      
             </template>
           </v-simple-table>
         </v-col>
@@ -37,48 +73,15 @@
 <script>
 import navbar from "@/components/navbar-home/navbar.vue";
 import footerHome from "@/components/footer-home/footer.vue";
-
+import axios from 'axios'
 export default {
+  mounted(){
+  this.Perfil();
+},
   name: "MiPerfil",
   data() {
     return {
-      datos: [
-        {
-          id: 1,
-          campo: "Matricula",
-          dato: "167O00561",
-        },
-        {
-          id: 2,
-          campo: "Nombre del alumno",
-          dato: "Susana Distancia",
-        },
-        {
-          id: 3,
-          campo: "Curp",
-          dato: "MOVO970604HVZ",
-        },
-        {
-          id: 4,
-          campo: "Fecha de nacimiento",
-          dato: "16/04/2018",
-        },
-        {
-          id: 5,
-          campo: "Grupo",
-          dato: "3º grado",
-        },
-        {
-          id: 6,
-          campo: "Padre de familia o Tutor",
-          dato: "Elmer Homero",
-        },
-        {
-          id: 7,
-          campo: "En caso de emergencia llamar:",
-          dato: "2283534791",
-        },
-      ],
+      datos:[],
     };
   },
   components: {
@@ -90,6 +93,7 @@ export default {
       if (id % 2 == 0) return "#4527A0";
       else return "#7C4DFF";
     },
+    //checar porque no se usa esta función, thats it
     getColorBack() {
       let a = 1;
       let b = 6;
@@ -100,6 +104,17 @@ export default {
       else if (numeroAleatorio == 4) return "naranja-claro";
       else if (numeroAleatorio == 5) return "verde";
       else return "morado-inicial";
+    },
+    Perfil() {
+      axios
+        .get("https://xicoclassapi.azurewebsites.net/Alumno.php?Perfil=2")
+        .then((r) => {
+          this.datos = r.data;
+          console.log(this.datos);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
     },
   },
 };
