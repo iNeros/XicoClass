@@ -17,7 +17,6 @@
               :class="{ 'on-hover': hover }"
               shaped              
               color="#b388ff"
-
             >
               <v-card-title class="titulo">
                 <v-row>
