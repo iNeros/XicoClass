@@ -4,9 +4,9 @@
     <v-container>
       <v-row class="mt-2">
         <v-col 
-          cols="12" xl="4" lg="4" md="4" sm="12" xs="12"
+          xl="4" lg="4" md="4" sm="12" xs="12"
         >
-          <v-card elevation="2" color="#7e57c2">
+          <v-card elevation="2" color="#7e57c2" height="30em">
             <v-card-title class="titulo">
               disciplina <br />
               y conducta
@@ -29,9 +29,9 @@
         </v-col>
 
         <v-col 
-          cols="12" xl="4" lg="4" md="4" sm="12" xs="12"
+           xl="4" lg="4" md="4" sm="12" xs="12"
         >
-          <v-card elevation="2" color="#283593">
+          <v-card elevation="2" color="#283593" height="30em">
             <v-card-title class="titulo">
               uniforme e <br />
               higiene personal
@@ -54,9 +54,9 @@
         </v-col>
 
         <v-col 
-          cols="12" xl="4" lg="4" md="4" sm="12" xs="12"
+           xl="4" lg="4" md="4" sm="12" xs="12"
         >
-          <v-card elevation="2" color="#26a69a">
+          <v-card elevation="2" color="#26a69a" height="30em">
             <v-card-title class="titulo">
               actividad de <br />
               reforzamiento
@@ -79,30 +79,57 @@
         </v-col>
       </v-row>
 
-      <v-row class="mt-4">
-        <v-col 
-          cols="12" xl="12" lg="12" md="12" xs="12"
+      <v-row>
+        <v-col
+          class="my-6"
+          cols="12"
         >
           <v-card elevation="2" color="#64dd17">
-            <v-col 
-              cols="12" xl="3" lg="3" md="3" xs="3"
-            >
-              <v-card-title class="titulo-boleta">
-                <h3>asistencia</h3>
+            <v-row>
+              <v-col
+                xl="4" lg="4" md="4" sm="8" xs="8"
+              >
+              <div class="mt-10">
+                <v-card-title class="titulo-boleta">
+                <h5>asistencia</h5>
               </v-card-title>
-              <v-card-title class="titulo-boleta">
-                <h3>retardos</h3>
+                <v-card-title class="titulo-boleta">
+                <h5>retardos</h5>
               </v-card-title>
-              <v-card-title class="titulo-boleta">
-                <h3>participación</h3>
+                <v-card-title class="titulo-boleta">
+                <h5>participación</h5>
               </v-card-title>
+              </div>
+                            
+              </v-col>
+              <v-col
+                xl="8" lg="8" md="8" sm="4" xs="4"
+              >              
+              <v-simple-table id="t01">
+                <template>
+                  <thead>
+                    <tr class="titulo"> 
+                      <th>Enero</th>
+                      <th>Febrero</th>
+                      <th>Marzo</th>
+                      <th>Abril</th>
+                      <th>Mayo</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="subtitulo-2">
+                      <td>90</td>
+                      <td>90</td>
+                      <td>60</td>
+                      <td>90</td>
+                      <td>70</td>
+                    </tr>
+                  </tbody>
+                </template>
+              </v-simple-table>
             </v-col>
-            <v-col
-              cols="12" xl="4" lg="4" md="4" sm="12" xs="12"
-            >
-              
-            </v-col>
-          </v-card>
+            </v-row>
+          </v-card>    
         </v-col>
       </v-row>
     </v-container>
@@ -140,12 +167,11 @@ export default {
 }
 .titulo-boleta {
   font-family: "Poppins";
-  font: weight 700px;
+  font: weight 800px;
   font-size: 34px;
   line-height: 40px;
   letter-spacing: 0.01px;
   color: white;
-  text-align: center;
   text-transform: uppercase;
 }
 .subtitulo {
@@ -174,5 +200,9 @@ export default {
   height: 216px;
   opacity: 1;
   background: transparent;
+}
+#t01{
+  background-color:  #64dd17;
+  color: white;
 }
 </style>
