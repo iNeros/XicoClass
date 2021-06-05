@@ -5,12 +5,16 @@
       <v-row class="my-6">
         <v-col cols="12" class="tam-card estilo-card morado-inicial">
           <div class="elipse container mt-6">
-            <img
+            <img v-if="Math.ceil(Math.random()*2)==2"
+              class="avatar container"
+              src="@/assets/media/logos/CaraNiño.png"
+            />
+            <img v-else
               class="avatar container"
               src="@/assets/media/logos/CaraNiña.png"
             />
           </div>
-          <v-simple-table height="400px" class="deep-purple accent-2 mt-6">
+          <v-simple-table height="400px" class="deep-purple accent-2 mt-6" v-for="item in datos" :key="item.id">
             <template v-slot:default>
               <thead>
                 <tr>
@@ -19,45 +23,33 @@
                 </tr>
               </thead>
               <tbody>
-                <tr v-for="item in datos" :key="item.id" class="titulo">
-                  <td :bgcolor="getColor(1)">{{ item.Matricula }}</td>
-                  <td :bgcolor="getColor(1)">{{ item.Matricula }}</td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr v-for="item in datos" :key="item.id" class="titulo">
-                  <td :bgcolor="getColor(2)">{{ item.NombreA }}</td>
+                <tr class="titulo">
+                  <td :bgcolor="getColor(2)">Nombre del alumno</td>
                   <td :bgcolor="getColor(2)">{{ item.NameA }}</td>
                 </tr>
               </tbody>
               <tbody>
-                <tr v-for="item in datos" :key="item.id" class="titulo">
-                  <td :bgcolor="getColor(3)">{{ item.Curp }}</td>
+                <tr class="titulo">
+                  <td :bgcolor="getColor(3)">Curp</td>
                   <td :bgcolor="getColor(3)">{{ item.curp_niño }}</td>
                 </tr>
               </tbody>
               <tbody>
-                <tr v-for="item in datos" :key="item.id" class="titulo">
-                  <td :bgcolor="getColor(4)">{{ item.FNAC }}</td>
-                  <td :bgcolor="getColor(4)">{{ item.FNAC }}</td>
+                <tr class="titulo">
+                  <td :bgcolor="getColor(4)">Fecha de nacimiento</td>
+                  <td :bgcolor="getColor(4)">{{ item.fechaNac }}</td>
                 </tr>
               </tbody>
               <tbody>
-                <tr v-for="item in datos" :key="item.id" class="titulo">
-                  <td :bgcolor="getColor(5)">{{ item.Grupo }}</td>
+                <tr class="titulo">
+                  <td :bgcolor="getColor(5)">Grupo</td>
                   <td :bgcolor="getColor(5)">{{ item.grupo }}</td>
                 </tr>
               </tbody>
               <tbody>
-                <tr v-for="item in datos" :key="item.id" class="titulo">
-                  <td :bgcolor="getColor(6)">{{ item.PFT }}</td>
-                  <td :bgcolor="getColor(6)">{{ item.NameB }}</td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr v-for="item in datos" :key="item.id" class="titulo">
-                  <td :bgcolor="getColor(7)">{{ item.ECDEL }}</td>
-                  <td :bgcolor="getColor(7)">{{ item.ECDEL }}</td>
+                <tr class="titulo">
+                  <td :bgcolor="getColor(6)">Padre de familia o Tutor</td>
+                  <td :bgcolor="getColor(6)">{{ item.NameP }}</td>
                 </tr>
               </tbody>                                                                      
             </template>
