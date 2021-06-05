@@ -85,7 +85,7 @@ export default {
       if (id % 2 == 0) return "#4527A0";
       else return "#7C4DFF";
     },
-    //checar porque no se usa esta función, thats it
+    //La funcion sirve pero solo cambia el color de atras lo cual no hace que combine con el color de la tabla
     getColorBack() {
       let a = 1;
       let b = 6;
