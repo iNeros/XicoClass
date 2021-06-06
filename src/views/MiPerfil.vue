@@ -69,6 +69,7 @@ import axios from 'axios'
 export default {
   mounted(){
   this.Perfil();
+  this.Session();
 },
   name: "MiPerfil",
   data() {
@@ -99,7 +100,7 @@ export default {
     },
     Perfil() {
       axios
-        .get("https://xicoclassapi.azurewebsites.net/Alumno.php?Perfil=2")
+        .get("https://xicoclassapi.azurewebsites.net/Alumno.php?Perfil="+window.sessionStorage.getItem('id_alumno'))
         .then((r) => {
           this.datos = r.data;
           console.log(this.datos);
@@ -108,7 +109,12 @@ export default {
           console.log(error);
         });
     },
+      Session(){
+    if(window.sessionStorage.getItem('id_alumno')==null){
+      window.location.href = "/"
+      }
   },
+},
 };
 </script>
 

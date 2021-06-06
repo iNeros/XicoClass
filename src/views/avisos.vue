@@ -142,7 +142,7 @@ export default {
     ObtenerAvisosH() {
       axios
         .get(
-          "https://xicoclassapi.azurewebsites.net/Avisos.php?tiempo=1&id_grado=1"
+          "https://xicoclassapi.azurewebsites.net/Avisos.php?tiempo=1&id_grupo="+window.sessionStorage.getItem('id_grado')
         )
         .then((r) => {
           this.AvisosH = r.data;
@@ -155,7 +155,7 @@ export default {
     ObtenerAvisosS() {
       axios
         .get(
-          "https://xicoclassapi.azurewebsites.net/Avisos.php?tiempo=2&id_grado=1"
+          "https://xicoclassapi.azurewebsites.net/Avisos.php?tiempo=2&id_grupo="+window.sessionStorage.getItem('id_grado')
         )
         .then((r) => {
           this.AvisosS = r.data;
@@ -168,7 +168,7 @@ export default {
     ObtenerAvisosM() {
       axios
         .get(
-          "https://xicoclassapi.azurewebsites.net/Avisos.php?tiempo=3&id_grado=1"
+          "https://xicoclassapi.azurewebsites.net/Avisos.php?tiempo=3&id_grupo="+window.sessionStorage.getItem('id_grado')
         )
         .then((r) => {
           this.AvisosM = r.data;
