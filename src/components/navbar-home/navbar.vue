@@ -98,7 +98,7 @@
               </v-list-item>
               <v-list-item>
                 <v-list-item-title
-                  ><v-btn href="/" depressed plain
+                  ><v-btn @click="CloseSession()" plain
                     >Cerrar Sesion</v-btn
                   ></v-list-item-title
                 >
@@ -193,7 +193,7 @@
             </v-list-item>
             <v-list-item>
               <v-list-item-title
-                ><v-btn color="red" href="/" depressed plain
+                ><v-btn color="red" @click="CloseSession()" depressed plain
                   >Cerrar Sesion</v-btn
                 ></v-list-item-title
               >
@@ -286,6 +286,16 @@ export default {
           break;
       }
     },
+CloseSession(){
+          window.sessionStorage.removeItem('id_alumno');
+          window.sessionStorage.removeItem('nombre');
+          window.sessionStorage.removeItem('appPat');
+          window.sessionStorage.removeItem('appMat');
+          window.sessionStorage.removeItem('fechaNac');
+          window.sessionStorage.removeItem('usuario');
+          window.sessionStorage.removeItem('id_grado');
+          window.location.href = "/"
+ },
   },
   mounted() {
     this.setSelected();

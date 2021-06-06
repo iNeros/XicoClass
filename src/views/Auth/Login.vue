@@ -18,27 +18,33 @@
           <v-form class="login-form">
             <v-text-field
               prepend-icon="mdi-account"
-              name="login"
               label="Usuario"
               type="text"
               class="mb-6"
+              v-model="User"
             ></v-text-field>
 
             <v-text-field
               prepend-icon="mdi-lock"
-              id="password"
-              name="password"
               label="Contraseña"
               type="password"
+              v-model="Pass"
             ></v-text-field>
           </v-form>
         </v-card-text>
         <v-card-actions>
-          <v-btn dark color="red" width="200" class="btn-design" href="/home">
+          <v-btn dark color="red" width="200" class="btn-design" @click="Session()">
             INICIAR SESION
           </v-btn>
         </v-card-actions>
         <div class="forgotten-password">
+          <v-alert v-show="show"
+          color="orange"
+          dense
+          dismissible
+          elevation="8"
+          type="info"
+          >¡Verifica tu usuario y contraseña!</v-alert>
           <forgottenPassword></forgottenPassword>
         </div>
       </v-card>
@@ -48,6 +54,7 @@
 
 <script>
 import forgottenPassword from "@/components/dialogs/forgottenPassword.vue";
+import axios from 'axios'
 
 export default {
   name: "Landing",
@@ -57,9 +64,40 @@ export default {
   data() {
     return {
       show: false,
+      User:'',
+      Pass:'',
+      AlumnoD:[],
       userData: [],
     };
   },
+methods:{
+  Session(){
+      this.show=false;
+      axios.get("https://xicoclassapi.azurewebsites.net/Alumno.php?User="+ this.User +"&Pass="+ this.Pass)
+        .then((r) => {
+          this.AlumnoD = r.data;
+          if(this.AlumnoD.length==1){
+          console.log(this.AlumnoD);
+          window.sessionStorage.setItem('id_alumno',this.AlumnoD[0]['id_alumno']);
+          window.sessionStorage.setItem('nombre',this.AlumnoD[0]['nombre']);
+          window.sessionStorage.setItem('appPat',this.AlumnoD[0]['appPat']);
+          window.sessionStorage.setItem('appMat',this.AlumnoD[0]['appMat']);
+          window.sessionStorage.setItem('fechaNac',this.AlumnoD[0]['fechaNac']);
+          window.sessionStorage.setItem('usuario',this.AlumnoD[0]['usuario']);
+          window.sessionStorage.setItem('id_grado',this.AlumnoD[0]['id_grado']);
+          window.location.href = "/home"
+          }else{this.show=true;}
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+  },
+  guardarID(){
+      //window.sessionStorage.setItem('idUsuario',1); // AQUI VA EL ID DE USUARIO
+      // window.sessionStorage.getItem('idUsuario'); 
+      //window.sessionStorage.removeItem('idUsuario'); 
+  },
+},
 };
 </script>
 

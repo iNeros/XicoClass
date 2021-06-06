@@ -48,7 +48,16 @@ export default {
     misDocumentos,
     misTramites,
   },
-  mounted() {},
+  methods:{
+  Session(){
+    if(window.sessionStorage.getItem('id_alumno')==null){
+      window.location.href = "/"
+      }
+  }
+  },
+  mounted() {
+    this.Session();
+  },
 };
 </script>
 

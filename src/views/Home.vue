@@ -30,8 +30,19 @@ export default {
     seccionNoticias,
   },
   data() {
-    return {};
+    return {
+    };
   },
+methods:{
+  Session(){
+    if(window.sessionStorage.getItem('id_alumno')==null){
+      window.location.href = "/"
+      }
+  }
+},
+created(){
+this.Session();
+},
 };
 </script>
 

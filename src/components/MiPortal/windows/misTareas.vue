@@ -84,7 +84,7 @@ export default {
     },
     Tarea() {
       axios
-        .get("https://xicoclassapi.azurewebsites.net/Actividades.php?id=1")
+        .get("https://xicoclassapi.azurewebsites.net/Actividades.php?id="+window.sessionStorage.getItem('id_grado'))
         .then((r) => {
           this.Tareas = r.data;
           console.log(this.Tareas);
