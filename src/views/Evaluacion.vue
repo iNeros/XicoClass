@@ -4,7 +4,7 @@
     <v-container>
       <v-row class="mt-2">
         <v-col 
-          xl="4" lg="4" md="4" sm="12" xs="12"
+          cols="12" xl="4" lg="4" md="4" sm="12" xs="12"
         >
           <v-card elevation="2" color="#7e57c2" height="30em">
             <v-card-title class="titulo">
@@ -29,7 +29,7 @@
         </v-col>
 
         <v-col 
-           xl="4" lg="4" md="4" sm="12" xs="12"
+           cols="12" xl="4" lg="4" md="4" sm="12" xs="12"
         >
           <v-card elevation="2" color="#283593" height="30em">
             <v-card-title class="titulo">
@@ -41,8 +41,8 @@
             </v-card-subtitle>
             <v-card-text class="cuerpo">
               <v-img
-                class="cometa ml-12"
-                src="@/assets/media/logos/Cometa2.png"
+                class="castillo ml-12"
+                src="@/assets/media/logos/CastilloyBandera.png"
               >
               </v-img>
               Hola soy el cuerpo
@@ -54,7 +54,7 @@
         </v-col>
 
         <v-col 
-           xl="4" lg="4" md="4" sm="12" xs="12"
+           cols="12" xl="4" lg="4" md="4" sm="12" xs="12"
         >
           <v-card elevation="2" color="#26a69a" height="30em">
             <v-card-title class="titulo">
@@ -66,8 +66,8 @@
             </v-card-subtitle>
             <v-card-text class="cuerpo">
               <v-img
-                class="cometa ml-12"
-                src="@/assets/media/logos/Cometa2.png"
+                class="globos"
+                src="@/assets/media/logos/TresGlobos.png"
               >
               </v-img>
               Hola soy el cuerpo
@@ -87,7 +87,7 @@
           <v-card elevation="2" color="#64dd17">
             <v-row>
               <v-col
-                xl="4" lg="4" md="4" sm="8" xs="8"
+                cols="12" xl="4" lg="4" md="4" sm="8" xs="8"
               >
               <div class="mt-10">
                 <v-card-title class="titulo-boleta">
@@ -103,7 +103,7 @@
                             
               </v-col>
               <v-col
-                xl="8" lg="8" md="8" sm="4" xs="4"
+                cols="12" xl="8" lg="8" md="8" sm="4" xs="4"
               >              
               <v-simple-table id="t01">
                 <template>
@@ -196,8 +196,20 @@ export default {
   border-radius: 55px;
 }
 .cometa {
+  display: block;
   width: 199px;
   height: 216px;
+  opacity: 1;
+  background: transparent;
+}
+.castillo{
+  
+  opacity: 1;
+  background: transparent;
+}
+.globos{
+  width: 146px;
+  height: 259px;
   opacity: 1;
   background: transparent;
 }
