@@ -16,22 +16,42 @@
             </v-card-subtitle>
             <v-card-text class="cuerpo">
               <v-img
-                class="cometa ml-12"
-                src="@/assets/media/logos/Cometa2.png"
+                class="imagen-carta mx-12 "
+                src="@/assets/media/logos/Cometa2.png"                
               >
               </v-img>
               Hola soy el cuerpo
             </v-card-text>
-            <v-card-actions>
-              <v-btn class="" block elevation="2"> Accion </v-btn>
-            </v-card-actions>
+            <v-row class="ma-2">              
+              <v-chip
+                class="ma-2" 
+                color="#283593" 
+                text-color="white"                  
+              >
+                S
+              </v-chip> 
+              <v-chip
+                class="ma-2"                   
+                color="#64DD17" 
+                text-color="white"                
+              >
+                CS
+              </v-chip> 
+              <v-chip
+                class="ma-2" 
+                color="#D50000" 
+                text-color="white"
+              >
+                EP
+              </v-chip>                             
+            </v-row>               
           </v-card>
         </v-col>
 
         <v-col 
            cols="12" xl="4" lg="4" md="4" sm="12" xs="12"
         >
-          <v-card elevation="2" color="#283593" height="30em">
+          <v-card elevation="2" color="#80D8FF" height="30em">
             <v-card-title class="titulo">
               uniforme e <br />
               higiene personal
@@ -39,17 +59,38 @@
             <v-card-subtitle class="subtitulo-2">
               Hola soy el subtitulo
             </v-card-subtitle>
-            <v-card-text class="cuerpo">
+            <v-card-text class="cuerpo">              
               <v-img
-                class="castillo ml-12"
-                src="@/assets/media/logos/Castillo.png"
-              >
+                contain              
+                class="imagen-carta mx-12"
+                src="@/assets/media/logos/CastilloyBandera.png"
+              >              
               </v-img>
               Hola soy el cuerpo
-            </v-card-text>
-            <v-card-actions>
-              <v-btn class="" block elevation="2"> Accion </v-btn>
-            </v-card-actions>
+            </v-card-text>            
+              <v-row class="ma-2">              
+              <v-chip
+                class="ma-2" 
+                color="#283593" 
+                text-color="white"                  
+              >
+                S
+              </v-chip> 
+              <v-chip
+                class="ma-2"                   
+                color="#64DD17" 
+                text-color="white"                
+              >
+                CS
+              </v-chip> 
+              <v-chip
+                class="ma-2" 
+                color="#D50000" 
+                text-color="white"
+              >
+                EP
+              </v-chip>                             
+            </v-row>  
           </v-card>
         </v-col>
 
@@ -66,30 +107,93 @@
             </v-card-subtitle>
             <v-card-text class="cuerpo">
               <v-img
-                class="globos"
+                contain              
+                class="imagen-carta mx-12"
                 src="@/assets/media/logos/TresGlobos.png"
               >
               </v-img>
               Hola soy el cuerpo
             </v-card-text>
-            <v-card-actions>
-              <v-btn class="" block elevation="2"> Accion </v-btn>
-            </v-card-actions>
+            <v-row class="ma-2">              
+              <v-chip
+                class="ma-2" 
+                color="#283593" 
+                text-color="white"                  
+              >
+                S
+              </v-chip> 
+              <v-chip
+                class="ma-2"                   
+                color="#64DD17" 
+                text-color="white"                
+              >
+                CS
+              </v-chip> 
+              <v-chip
+                class="ma-2" 
+                color="#D50000" 
+                text-color="white"
+              >
+                EP
+              </v-chip>                             
+            </v-row>
           </v-card>
         </v-col>
       </v-row>
 
-      <v-row>
-        <v-col
-          class="my-6"
-          cols="12"
-        >
+      <v-row class="mt-3">
+        <v-col cols="3">
+          <v-chip
+            class="ma-2" 
+            color="#283593" 
+            text-color="white"
+          >
+          S
+          </v-chip> 
+          SIEMPRE
+        </v-col>
+
+        <v-col cols="3">
+          <v-chip
+            class="ma-2" 
+            color="#64DD17" 
+            text-color="white"
+          >
+          CS
+          </v-chip> 
+          CASI SIEMPRE
+        </v-col>
+        <v-col cols="3">
+          <v-chip
+            class="ma-2" 
+            color="#FFCA28" 
+            text-color="white"
+          >
+          AV
+          </v-chip> 
+          ALGUNAS VECES
+        </v-col>
+
+        <v-col cols="3">
+          <v-chip
+            class="ma-2" 
+            color="#D50000" 
+            text-color="white"
+          >
+          EP
+          </v-chip> 
+          EN PROCESO
+        </v-col>
+      </v-row>
+
+      <v-row class="my-6"> 
+        <v-col cols="12">
           <v-card elevation="2" color="#64dd17">
             <v-row>
               <v-col
                 cols="12" xl="4" lg="4" md="4" sm="8" xs="8"
               >
-              <div class="mt-10">
+              <div class="mt-11">
                 <v-card-title class="titulo-boleta">
                 <h5>asistencia</h5>
               </v-card-title>
@@ -197,23 +301,14 @@ export default {
 }
 .cuerpo {
   font-family: "Poppins";
-  font-weight: 400;
+  font-weight: 400px;
   font-size: 18px;
   color: white;
 }
-.card {
-  border-radius: 55px;
-}
-.cometa {
+.imagen-carta {
   display: block;
-  width: 199px;
-  height: 216px;
-  opacity: 1;
-  background: transparent;
-}
-.castillo{
-  width: 122px;
-  height: 105px;
+  width: 200px;
+  height: 200px;
   opacity: 1;
   background: transparent;
 }
