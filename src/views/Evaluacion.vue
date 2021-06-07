@@ -42,7 +42,7 @@
             <v-card-text class="cuerpo">
               <v-img
                 class="castillo ml-12"
-                src="@/assets/media/logos/CastilloyBandera.png"
+                src="@/assets/media/logos/Castillo.png"
               >
               </v-img>
               Hola soy el cuerpo
@@ -212,7 +212,8 @@ export default {
   background: transparent;
 }
 .castillo{
-  
+  width: 122px;
+  height: 105px;
   opacity: 1;
   background: transparent;
 }
