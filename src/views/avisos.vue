@@ -85,7 +85,7 @@
     </div>
     <h2 style="color: #00c853" id="ods">Ultimos meses</h2>
     <hr color="#00c853" id="od" />
-    <v-row class="margenes">
+    <v-row class="margenes mb-4">
       <v-col
         cols="12"
         sm="12"
