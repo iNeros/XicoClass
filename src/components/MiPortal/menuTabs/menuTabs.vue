@@ -114,16 +114,16 @@ export default {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 .menu-tabs {
-  max-width: 80%;
+  max-width: 300px !important;
   margin-left: auto;
   margin-right: auto;
   font-weight: 900;
 }
 .button-menu {
   font-family: "Poppins";
-  width: 500px;
+  width: 300px !important;
   height: 40px;
   font-weight: 900;
 }

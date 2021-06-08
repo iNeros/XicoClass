@@ -30,24 +30,23 @@ export default {
     seccionNoticias,
   },
   data() {
-    return {
-    };
+    return {};
   },
-methods:{
-  Session(){
-    if(window.sessionStorage.getItem('id_alumno')==null){
-      window.location.href = "/"
+  methods: {
+    Session() {
+      if (window.sessionStorage.getItem("id_alumno") == null) {
+        window.location.href = "/";
       }
-  }
-},
-created(){
-this.Session();
-},
+    },
+  },
+  created() {
+    this.Session();
+  },
 };
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 .spacer {
   display: block;
   height: 20px;

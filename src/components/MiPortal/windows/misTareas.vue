@@ -1,7 +1,7 @@
 <template>
   <div class="misTareas">
     <div class="container" v-for="item in Tareas" :key="item.id_actividad">
-      <v-card elevation="24" class="card-container" >
+      <v-card elevation="24" class="card-container">
         <v-card-text>
           <v-row>
             <v-col cols="8">
@@ -84,7 +84,10 @@ export default {
     },
     Tarea() {
       axios
-        .get("https://xicoclassapi.azurewebsites.net/Actividades.php?id="+window.sessionStorage.getItem('id_grado'))
+        .get(
+          "https://xicoclassapi.azurewebsites.net/Actividades.php?id=" +
+            window.sessionStorage.getItem("id_grado")
+        )
         .then((r) => {
           this.Tareas = r.data;
           console.log(this.Tareas);
@@ -187,8 +190,8 @@ export default {
 .turquesa {
   background-color: #26a69a;
 }
-.naranja{
-  background-color: #FF9800;
+.naranja {
+  background-color: #ff9800;
 }
 .naranja-claro {
   background-color: #ff9800;
@@ -196,20 +199,20 @@ export default {
 .verde {
   background-color: #64dd17;
 }
-.verde-claro{
-  background-color: #B2FF59;
+.verde-claro {
+  background-color: #b2ff59;
 }
-.azul{
+.azul {
   background-color: #283593;
 }
-.azul-claro{
-  background-color: #80D8FF;
+.azul-claro {
+  background-color: #80d8ff;
 }
-.rojo{
-  background-color: #D50000;
+.rojo {
+  background-color: #d50000;
 }
-.rojo-claro{
-  background-color: #E91E63;
+.rojo-claro {
+  background-color: #e91e63;
 }
 /* Estos Estilos Los Aplicaremos Al ID: estado-text  */
 .estado-pendiente {

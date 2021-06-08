@@ -8,51 +8,49 @@
              El Contenido.. :V  
     </v-card> -->
     <v-container fluid class="pa-4 text-center">
-      <v-row class="fill-height"> 
-      <template v-for="(item, i) in items">
-        <v-col :key="i" cols="12" xl="4" lg="4" md="6" xs="12">
-          <v-hover v-slot="{ hover }" open-delay="200">
-            <v-card 
-              :elevation="hover ? 12 : 2"
-              :class="{ 'on-hover': hover }"
-              shaped              
-              color="#b388ff"
-            >
-              <v-card-title class="titulo">
-                <v-row>
-                  <v-col cols="12" xl="8" lg="8" md="8" xs="8" class="">
-                    <p class="mt-1 text-left mx-6">
-                      {{ item.materia }}
-                    </p>
-                  </v-col>
-                  <v-col cols="12" lg="4" md="4" xs="4" class="">
-                    <v-avatar class="ma-0 pa-0" size="90">
-                      <v-img :src="item.img"></v-img>
-                    </v-avatar>
-                  </v-col>
-                </v-row>
-              </v-card-title>
-              <v-card-text>
-                <p class="subtitulo text-left mx-6">
-                  {{ item.nombreDocente }}
+      <v-row class="fill-height">
+        <template v-for="(item, i) in items">
+          <v-col :key="i" cols="12" xl="4" lg="4" md="6" xs="12">
+            <v-hover v-slot="{ hover }" open-delay="200">
+              <v-card
+                :elevation="hover ? 12 : 2"
+                :class="{ 'on-hover': hover }"
+                shaped
+                color="#b388ff"
+              >
+                <v-card-title class="titulo">
+                  <v-row>
+                    <v-col cols="12" xl="8" lg="8" md="8" xs="8" class="">
+                      <p class="mt-1 text-left mx-6">
+                        {{ item.materia }}
+                      </p>
+                    </v-col>
+                    <v-col cols="12" lg="4" md="4" xs="4" class="">
+                      <v-avatar class="ma-0 pa-0" size="90">
+                        <v-img :src="item.img"></v-img>
+                      </v-avatar>
+                    </v-col>
+                  </v-row>
+                </v-card-title>
+                <v-card-text>
+                  <p class="subtitulo text-left mx-6">
+                    {{ item.nombreDocente }}
+                  </p>
+                  <p class="subtitulo-2 mx-6 my-0 text-left">
+                    {{ item.horario }}
+                  </p>
+                  <v-divider class="mt-1 mx-6"></v-divider>
+                </v-card-text>
+                <p class="cuerpo" justify="center">
+                  {{ item.descripcion }}
                 </p>
-                <p class="subtitulo-2 mx-6 my-0 text-left">
-                  {{ item.horario }}
-                </p>
-                <v-divider class="mt-1 mx-6"></v-divider>
-              </v-card-text>
-              <p class="cuerpo" justify="center">
-                {{ item.descripcion }}
-              </p>
-              <v-card-actions>
-                <v-btn color="#7b1fa2" block text>
-                  Ver mas
-                </v-btn>
-              </v-card-actions>
-            </v-card>
-          </v-hover>
-        </v-col>
-      </template>
+                <v-card-actions>
+                  <v-btn color="#7b1fa2" block text> Ver mas </v-btn>
+                </v-card-actions>
+              </v-card>
+            </v-hover>
+          </v-col>
+        </template>
       </v-row>
     </v-container>
   </div>
@@ -97,7 +95,7 @@ export default {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 .titulo {
   font-family: "Poppins";
   font: weight 700px;
@@ -114,13 +112,13 @@ export default {
 }
 .subtitulo-2 {
   font-family: "Poppins";
-  font-weight:400;
+  font-weight: 400;
   font-size: 22px;
-  color:white    ;
+  color: white;
 }
 .cuerpo {
   font-family: "Poppins";
-  font-weight:400;
+  font-weight: 400;
   font-size: 18px;
   color: white;
 }
@@ -176,7 +174,6 @@ export default {
   font-weight: 800;
   color: #30dba0;
 }
-
 </style>
 
 <style lang="sass" scoped>

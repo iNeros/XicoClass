@@ -51,14 +51,14 @@ export default {
   data() {
     return {};
   },
-  methods:{
-      Session(){
-    if(window.sessionStorage.getItem('id_alumno')==null){
-      window.location.href = "/"
+  methods: {
+    Session() {
+      if (window.sessionStorage.getItem("id_alumno") == null) {
+        window.location.href = "/";
       }
+    },
   },
-  },
-  mounted(){
+  mounted() {
     this.Session();
   },
 };

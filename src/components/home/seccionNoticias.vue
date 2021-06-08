@@ -3,7 +3,7 @@
     <v-row dense class="">
       <!-- Barra de avisos recientes-->
       <v-col cols="12" xs="6" lg="8" class="">
-        <h2 style="color: #D50000" id="ods">Avisos recientes</h2>
+        <h2 style="color: #d50000" id="ods">Avisos recientes</h2>
         <hr class="mb-3" color="#D50000" id="od" />
         <!-- Carta de Avisos-->
         <v-card class="sizes" color="#ef5350 " dark elevation="5">
@@ -102,7 +102,7 @@ export default {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 .seccionNoticias {
   display: block;
   margin-top: 100px;
@@ -120,7 +120,7 @@ export default {
   height: 150px;
   overflow-y: auto;
 }
-.ods{
-font-family: "Poppins";
+.ods {
+  font-family: "Poppins";
 }
 </style>

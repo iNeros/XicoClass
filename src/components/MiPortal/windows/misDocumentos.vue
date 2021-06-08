@@ -1,38 +1,26 @@
 <template>
   <div class="misDocumentos">
-    <v-container >
+    <v-container>
       <v-simple-table height="400px" class="mt-6">
-            <template v-slot:default>
-              <thead>
-                <tr>
-                  <th class="titulo">Documentos</th>
-                  <th class="titulo">Acciones</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr v-for="item in items" :key="item.items" class="titulo">
-                  <td bgcolor="" class="titulo" >{{ item.doc }}</td>
-                  <td bgcolor="">
-                    <v-btn 
-                      class="ma-2"
-                      color="error"
-                      elevation="3" 
-                      >Eliminar</v-btn>
-                    <v-btn 
-                      class="ma-2"
-                      color="primary"
-                      elevation="3" 
-                      >Subir</v-btn>
-                    <v-btn 
-                      class="ma-2"
-                      color="success"
-                      elevation="3"                                            
-                    >Ver</v-btn>
-                  </td>
-                </tr>
-              </tbody>
-            </template>
-          </v-simple-table>
+        <template v-slot:default>
+          <thead>
+            <tr>
+              <th class="titulo">Documentos</th>
+              <th class="titulo">Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="item in items" :key="item.items" class="titulo">
+              <td bgcolor="" class="titulo">{{ item.doc }}</td>
+              <td bgcolor="">
+                <v-btn class="ma-2" color="error" elevation="3">Eliminar</v-btn>
+                <v-btn class="ma-2" color="primary" elevation="3">Subir</v-btn>
+                <v-btn class="ma-2" color="success" elevation="3">Ver</v-btn>
+              </td>
+            </tr>
+          </tbody>
+        </template>
+      </v-simple-table>
     </v-container>
   </div>
 </template>
@@ -41,22 +29,22 @@
 export default {
   name: "misDocumentos",
   data: () => ({
-    items: [ 
+    items: [
       {
-        id:1,
-        doc: 'Acta de nacimiento',
+        id: 1,
+        doc: "Acta de nacimiento",
       },
       {
-        id:2,
-        doc: 'CURP del Alumno',
+        id: 2,
+        doc: "CURP del Alumno",
       },
       {
-        id:3,
-        doc: 'CURP del Padre de familia o Tutor',
+        id: 3,
+        doc: "CURP del Padre de familia o Tutor",
       },
       {
-        id:4,
-        doc: 'docs oficiales',
+        id: 4,
+        doc: "docs oficiales",
       },
     ],
   }),

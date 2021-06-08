@@ -1,22 +1,17 @@
 <template>
   <div class="navbar">
-    <v-app-bar
-      color="#26A69A"
-      height="100px"
-      fixed
-      class="navbar-generals"
-    >
+    <v-app-bar color="#26A69A" height="100px" fixed class="navbar-generals">
       <!--#region              LOGO -- IZQUIERDA    -->
-      <div class="img-logo mx-5">
+      <div class="img-logo my-auto">
         <a href="/Home">
-          <img            
-            class="mx-10"
-            src="@/assets/media/logos/letrasdos.png"          
+          <img
+            class="mx-4"
+            src="@/assets/media/logos/letrasdos.png"
             alt="XICO CLASS"
             width="200"
             height="80"
           />
-        </a>        
+        </a>
       </div>
       <v-spacer></v-spacer>
 
@@ -117,7 +112,7 @@
         <v-menu>
           <template v-slot:activator="{ on, att }">
             <v-container>
-              <v-row justify="space-arround" class="mr-12 pr-12 ">
+              <v-row justify="space-around" class="mobile-container">
                 <v-col cols="12">
                   <v-btn dark plain v-bind="att" v-on="on" rounded>
                     <v-icon color="white">mdi-dots-vertical</v-icon>
@@ -293,16 +288,16 @@ export default {
           break;
       }
     },
-CloseSession(){
-          window.sessionStorage.removeItem('id_alumno');
-          window.sessionStorage.removeItem('nombre');
-          window.sessionStorage.removeItem('appPat');
-          window.sessionStorage.removeItem('appMat');
-          window.sessionStorage.removeItem('fechaNac');
-          window.sessionStorage.removeItem('usuario');
-          window.sessionStorage.removeItem('id_grado');
-          window.location.href = "/"
- },
+    CloseSession() {
+      window.sessionStorage.removeItem("id_alumno");
+      window.sessionStorage.removeItem("nombre");
+      window.sessionStorage.removeItem("appPat");
+      window.sessionStorage.removeItem("appMat");
+      window.sessionStorage.removeItem("fechaNac");
+      window.sessionStorage.removeItem("usuario");
+      window.sessionStorage.removeItem("id_grado");
+      window.location.href = "/";
+    },
   },
   mounted() {
     this.setSelected();
@@ -311,7 +306,7 @@ CloseSession(){
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,300&display=swap");
 .navbar {
   display: block;
   height: 100px;
