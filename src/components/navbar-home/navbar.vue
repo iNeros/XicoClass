@@ -23,7 +23,7 @@
       <!--#endregion-->
 
       <!--#region            VISTA DEL MENU DE SECCIONES EN WIDE VIEW                          -->
-      <div class="hidden-sm-and-down mx-12">
+      <div class="hidden-sm-and-down">
         <v-row justify="space-around">
           <v-menu offset-y dark>
             <template v-slot:activator="{ on, attrs }">
@@ -117,11 +117,11 @@
         <v-menu>
           <template v-slot:activator="{ on, att }">
             <v-container>
-              <v-row justify="space-arround" class="mx-3 px-3">
+              <v-row justify="space-arround" class="mr-12 pr-12 ">
                 <v-col cols="12">
-                   <v-btn dark plain v-bind="att" v-on="on" rounded>
-              <v-icon color="white">mdi-dots-vertical</v-icon>
-            </v-btn>
+                  <v-btn dark plain v-bind="att" v-on="on" rounded>
+                    <v-icon color="white">mdi-dots-vertical</v-icon>
+                  </v-btn>
                 </v-col>
               </v-row>
             </v-container>

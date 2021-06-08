@@ -21,7 +21,7 @@
             <v-btn
               elevation="24"
               class="button-menu"
-              color="red"
+              color="blue"
               dark
               v-bind="attrs"
               v-on="on"
@@ -34,7 +34,7 @@
               <v-list-item-title>
                 <v-btn
                   class="button-menu ma-0"
-                  color="red"
+                  color="blue"
                   dark
                   @click="(texto = 'MIS MATERIAS'), setMaterias()"
                 >
@@ -47,7 +47,7 @@
               <v-list-item-title>
                 <v-btn
                   class="button-menu"
-                  color="red"
+                  color="blue"
                   dark
                   @click="(texto = 'TAREAS'), setTareas()"
                 >
@@ -60,7 +60,7 @@
               <v-list-item-title>
                 <v-btn
                   class="button-menu"
-                  color="red"
+                  color="blue"
                   dark
                   @click="(texto = 'MIS DOCUMENTOS'), setDocumentos()"
                 >
@@ -73,7 +73,7 @@
               <v-list-item-title>
                 <v-btn
                   class="button-menu"
-                  color="red"
+                  color="blue"
                   dark
                   @click="(texto = 'TRAMITES'), setTramites()"
                 >
