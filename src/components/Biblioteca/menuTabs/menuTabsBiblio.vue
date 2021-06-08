@@ -2,7 +2,7 @@
   <div class="menuTabs">
     <!-- VISTA DE LAS TABS EN WIDEVIEW --->
     <div class="hidden-sm-and-down">
-      <v-tabs grow class="menu-tabs" color="#30dba0!important">
+      <v-tabs grow class="menu-tabs" color="rgb(40, 53, 147)!important">
         <v-tab @click="(texto = 'Materia Impreso'), setImpreso()">
           MATERIAL IMPRESO
         </v-tab>
@@ -23,7 +23,7 @@
             <v-btn
               elevation="24"
               class="button-menu"
-              color="red"
+              color="blue"
               dark
               v-bind="attrs"
               v-on="on"
@@ -36,7 +36,7 @@
               <v-list-item-title>
                 <v-btn
                   class="button-menu ma-0"
-                  color="red"
+                  color="blue"
                   dark
                   @click="(texto = 'Material Impreso'), setImpreso()"
                 >
@@ -49,7 +49,7 @@
               <v-list-item-title>
                 <v-btn
                   class="button-menu"
-                  color="red"
+                  color="blue"
                   dark
                   @click="(texto = 'Material Visual'), setVisual()"
                 >
@@ -62,7 +62,7 @@
               <v-list-item-title>
                 <v-btn
                   class="button-menu"
-                  color="red"
+                  color="blue"
                   dark
                   @click="(texto = 'Material Didactico'), setDidactico()"
                 >
@@ -75,7 +75,7 @@
               <v-list-item-title>
                 <v-btn
                   class="button-menu"
-                  color="red"
+                  color="blue"
                   dark
                   @click="(texto = 'Xico Store'), setStore()"
                 >

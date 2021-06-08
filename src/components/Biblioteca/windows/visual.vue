@@ -6,7 +6,7 @@
             <v-subheader>VIDEOS</v-subheader>
             <v-list-item-group
               v-model="selectedItem"
-              color="#30dba0"
+              color="rgb(40, 53, 147)!important"
               mandatory
             >
               <v-divider></v-divider>
@@ -45,7 +45,7 @@ export default {
   name: "visual",
   data() {
     return {
-      link:'https://www.youtube.com/embed/AV8fPO0VN14',
+      link:'https://www.youtube.com/embed/X1sQg4nxEe8',
       datos:[],
     };
   },
