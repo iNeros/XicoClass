@@ -1,7 +1,7 @@
 <template>
   <v-container fluid>
     <v-row>
-     <v-carousel hide-delimiter-background show-arrows-on-hover cycle>
+      <v-carousel hide-delimiter-background show-arrows-on-hover cycle>
         <template v-slot:prev="{ on, attrs }">
           <v-btn color="#B2FF59" v-bind="attrs" v-on="on">←</v-btn>
         </template>

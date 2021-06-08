@@ -5,16 +5,23 @@
       <v-row class="my-6">
         <v-col cols="12" class="tam-card estilo-card morado-inicial">
           <div class="elipse container mt-6">
-            <img v-if="Math.ceil(Math.random()*2)==2"
+            <img
+              v-if="Math.ceil(Math.random() * 2) == 2"
               class="avatar container"
               src="@/assets/media/logos/CaraNiño.png"
             />
-            <img v-else
+            <img
+              v-else
               class="avatar container"
               src="@/assets/media/logos/CaraNiña.png"
             />
           </div>
-          <v-simple-table height="400px" class="deep-purple accent-2 mt-6" v-for="item in datos" :key="item.id">
+          <v-simple-table
+            height="400px"
+            class="deep-purple accent-2 mt-6"
+            v-for="item in datos"
+            :key="item.id"
+          >
             <template v-slot:default>
               <thead>
                 <tr>
@@ -51,7 +58,7 @@
                   <td :bgcolor="getColor(6)">Padre de familia o Tutor</td>
                   <td :bgcolor="getColor(6)">{{ item.NameP }}</td>
                 </tr>
-              </tbody>                                                                      
+              </tbody>
             </template>
           </v-simple-table>
         </v-col>
@@ -65,16 +72,16 @@
 <script>
 import navbar from "@/components/navbar-home/navbar.vue";
 import footerHome from "@/components/footer-home/footer.vue";
-import axios from 'axios'
+import axios from "axios";
 export default {
-  mounted(){
-  this.Perfil();
-  this.Session();
-},
+  mounted() {
+    this.Perfil();
+    this.Session();
+  },
   name: "MiPerfil",
   data() {
     return {
-      datos:[],
+      datos: [],
     };
   },
   components: {
@@ -100,7 +107,10 @@ export default {
     },
     Perfil() {
       axios
-        .get("https://xicoclassapi.azurewebsites.net/Alumno.php?Perfil="+window.sessionStorage.getItem('id_alumno'))
+        .get(
+          "https://xicoclassapi.azurewebsites.net/Alumno.php?Perfil=" +
+            window.sessionStorage.getItem("id_alumno")
+        )
         .then((r) => {
           this.datos = r.data;
           console.log(this.datos);
@@ -109,12 +119,12 @@ export default {
           console.log(error);
         });
     },
-      Session(){
-    if(window.sessionStorage.getItem('id_alumno')==null){
-      window.location.href = "/"
+    Session() {
+      if (window.sessionStorage.getItem("id_alumno") == null) {
+        window.location.href = "/";
       }
+    },
   },
-},
 };
 </script>
 
@@ -182,8 +192,8 @@ export default {
 .turquesa {
   background-color: #26a69a;
 }
-.naranja{
-  background-color: #FF9800;
+.naranja {
+  background-color: #ff9800;
 }
 .naranja-claro {
   background-color: #ff9800;
@@ -191,19 +201,19 @@ export default {
 .verde {
   background-color: #64dd17;
 }
-.verde-claro{
-  background-color: #B2FF59;
+.verde-claro {
+  background-color: #b2ff59;
 }
-.azul{
+.azul {
   background-color: #283593;
 }
-.azul-claro{
-  background-color: #80D8FF;
+.azul-claro {
+  background-color: #80d8ff;
 }
-.rojo{
-  background-color: #D50000;
+.rojo {
+  background-color: #d50000;
 }
-.rojo-claro{
-  background-color: #E91E63;
+.rojo-claro {
+  background-color: #e91e63;
 }
 </style>

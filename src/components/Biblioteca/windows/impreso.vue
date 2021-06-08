@@ -80,7 +80,7 @@ export default {
       datos:[],
     };
   },
-  methods:{
+  methods: {
     descargarArchivo(id) {
       window.open("" + id, "_blank");
     },

@@ -2,9 +2,9 @@
   <div class="Avisos">
     <navbar></navbar>
 
-    <h2 style="color: #D50000" id="ods">Hoy</h2>
+    <h2 style="color: #d50000" id="ods">Hoy</h2>
     <hr color="#D50000" id="od" />
-    <div v-if="AvisosH.id_avisos != []">
+    <div v-if="AvisosH.id_avisos > 0">
       <v-row class="margenes">
         <v-col
           cols="12"
@@ -29,7 +29,9 @@
           </v-card>
         </v-col>
       </v-row>
+      fsdfdsfsdfds
     </div>
+
     <div v-else>
       <v-row class="margenes">
         <v-col cols="12" sm="12" md="6" lg="3">
@@ -41,9 +43,9 @@
         </v-col>
       </v-row>
     </div>
-    <h2 style="color: #FF9800" id="ods">Esta semana</h2>
+    <h2 style="color: #ff9800" id="ods">Esta semana</h2>
     <hr color="#FF9800" id="od" />
-    <div v-if="AvisosS.id_avisos != []">
+    <div v-if="AvisosS.id_avisos !== []">
       <v-row class="margenes">
         <v-col
           cols="12"
@@ -130,7 +132,11 @@ export default {
   },
   data() {
     return {
-      AvisosH: [],
+      AvisosH: [
+        {
+          id_avisos: 0,
+        },
+      ],
       AvisosS: [],
       AvisosM: [],
     };
@@ -142,7 +148,8 @@ export default {
     ObtenerAvisosH() {
       axios
         .get(
-          "https://xicoclassapi.azurewebsites.net/Avisos.php?tiempo=1&id_grupo="+window.sessionStorage.getItem('id_grado')
+          "https://xicoclassapi.azurewebsites.net/Avisos.php?tiempo=1&id_grupo=" +
+            window.sessionStorage.getItem("id_grado")
         )
         .then((r) => {
           this.AvisosH = r.data;
@@ -155,7 +162,8 @@ export default {
     ObtenerAvisosS() {
       axios
         .get(
-          "https://xicoclassapi.azurewebsites.net/Avisos.php?tiempo=2&id_grupo="+window.sessionStorage.getItem('id_grado')
+          "https://xicoclassapi.azurewebsites.net/Avisos.php?tiempo=2&id_grupo=" +
+            window.sessionStorage.getItem("id_grado")
         )
         .then((r) => {
           this.AvisosS = r.data;
@@ -168,7 +176,8 @@ export default {
     ObtenerAvisosM() {
       axios
         .get(
-          "https://xicoclassapi.azurewebsites.net/Avisos.php?tiempo=3&id_grupo="+window.sessionStorage.getItem('id_grado')
+          "https://xicoclassapi.azurewebsites.net/Avisos.php?tiempo=3&id_grupo=" +
+            window.sessionStorage.getItem("id_grado")
         )
         .then((r) => {
           this.AvisosM = r.data;
@@ -188,7 +197,7 @@ export default {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 .v-text-field {
   margin-left: 20px;
   margin-right: 20px;

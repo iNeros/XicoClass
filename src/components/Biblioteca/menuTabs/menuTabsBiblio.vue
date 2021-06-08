@@ -118,13 +118,15 @@ export default {
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
 .menu-tabs {
-  max-width: 100%;
+  max-width: 300px !important;
   margin-left: auto;
   margin-right: auto;
+  font-weight: 900;
 }
 .button-menu {
   font-family: "Montserrat";
-  width: 500px;
+  width: 300px !important;
   height: 40px;
+  font-weight: 900;
 }
 </style>
