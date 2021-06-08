@@ -8,13 +8,15 @@
     >
       <!--#region              LOGO -- IZQUIERDA    -->
       <div class="img-logo mx-5">
-        <img
-          class="mx-10"
-          src="@/assets/media/logos/letrasdos.png"
-          alt="XICO CLASS"
-          width="200"
-          height="80"
-        />
+        <a href="/Home">
+          <img            
+            class="mx-10"
+            src="@/assets/media/logos/letrasdos.png"          
+            alt="XICO CLASS"
+            width="200"
+            height="80"
+          />
+        </a>        
       </div>
       <v-spacer></v-spacer>
 
@@ -114,9 +116,15 @@
       <div class="hidden-md-and-up">
         <v-menu>
           <template v-slot:activator="{ on, att }">
-            <v-btn dark plain v-bind="att" v-on="on" rounded>
+            <v-container>
+              <v-row justify="space-arround" class="mx-3 px-3">
+                <v-col cols="12">
+                   <v-btn dark plain v-bind="att" v-on="on" rounded>
               <v-icon color="white">mdi-dots-vertical</v-icon>
             </v-btn>
+                </v-col>
+              </v-row>
+            </v-container>
           </template>
           <v-list>
             <v-list-item>
