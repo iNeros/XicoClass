@@ -269,7 +269,6 @@ export default {
       }
     },
     setSelectedSmallView() {
-      setTimeout(6000);
       switch (localStorage.selectedNavTab) {
         case "1":
           document.getElementById("smInicio").classList.add("btn-selected");
