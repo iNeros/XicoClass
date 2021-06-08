@@ -1,11 +1,17 @@
 <template>
   <div class="navbar">
-    <v-app-bar color="#26A69A" height="100px" fixed class="navbar-generals">
+    <v-app-bar
+      color="#26A69A"
+      height="100px"
+      fixed
+      elevate-on-scroll
+      class="navbar-generals"
+    >
       <!--#region              LOGO -- IZQUIERDA    -->
-      <div class="img-logo my-auto">
+      <div class="my-auto">
         <a href="/Home">
           <img
-            class="mx-4"
+            class="img-logo mx-4"
             src="@/assets/media/logos/letrasdos.png"
             alt="XICO CLASS"
             width="200"
@@ -322,5 +328,8 @@ export default {
 }
 .btn-selected {
   color: #000000 !important;
+}
+.img-logo {
+  margin-top: 7px;
 }
 </style>

@@ -20,9 +20,9 @@
       </v-col>
       <!--Columna de Redes sociales-->
       <v-col cols="12" xs="6" lg="4" class="">
-        <h2 class="ml-6" style="color: #1565c0">Redes Sociales</h2>
+        <h2 class="" style="color: #1565c0">Redes Sociales</h2>
         <hr class="mb-3" color="#1565c0" id="od" />
-        <v-card class="ml-6" color="#26c6da" dark max-width="400" elevation="5">
+        <v-card class="mx-3" color="#26c6da" dark max-width="400" elevation="5">
           <v-card-title>
             <v-icon large left> mdi-twitter </v-icon>
             <span class="title font-weight-light">Twitter</span>

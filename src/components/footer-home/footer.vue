@@ -14,7 +14,7 @@
         <v-btn color="white" text rounded class="my-2" href="/AcercaDe">
           Acerca De
         </v-btn>
-        <v-col class="py-4 text-center white--text" cols="12">
+        <v-col class="py-0 text-center white--text" cols="12">
           {{ new Date().getFullYear() }} — <strong>XicoClass</strong>
         </v-col>
       </v-row>

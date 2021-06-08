@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid>
+  <v-container fluid class="slider-container">
     <v-row>
       <v-carousel hide-delimiter-background show-arrows-on-hover cycle>
         <template v-slot:prev="{ on, attrs }">
@@ -14,6 +14,7 @@
           :src="item.src"
           reverse-transition="fade-transition"
           transition="fade-transition"
+          @click="window.location.href = '#'"
         ></v-carousel-item>
       </v-carousel>
     </v-row>

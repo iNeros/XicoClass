@@ -29,7 +29,7 @@
               {{ texto }}
             </v-btn>
           </template>
-          <v-list>
+          <v-list class="button-container">
             <v-list-item>
               <v-list-item-title>
                 <v-btn
@@ -116,15 +116,19 @@ export default {
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 .menu-tabs {
-  max-width: 300px !important;
+  max-width: 100% !important;
+  min-width: 800px !important;
   margin-left: auto;
   margin-right: auto;
   font-weight: 900;
 }
 .button-menu {
   font-family: "Poppins";
-  width: 300px !important;
+  width: 100% !important;
   height: 40px;
   font-weight: 900;
+}
+.button-container {
+  width: 100% !important;
 }
 </style>
