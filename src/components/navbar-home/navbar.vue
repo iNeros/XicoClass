@@ -143,7 +143,7 @@
               <v-list-item-title
                 ><v-btn
                   id="smAvisos"
-                  href="/avisos"
+                  href="/Avisos"
                   depressed
                   plain
                   @click="setAvisos()"
