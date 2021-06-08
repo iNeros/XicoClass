@@ -22,6 +22,7 @@
               user.descripcion
             }}</v-card-subtitle>
             <v-card-actions>
+              <v-spacer></v-spacer>
               <v-btn color="#D50000" dark @click="Enlace(user.urls)">
                 Enlace
               </v-btn>
@@ -63,9 +64,10 @@
               user.descripcion
             }}</v-card-subtitle>
             <v-card-actions>
-              <v-btn text>
+              <div class="ml-2"> <!-- ESTOS DEBERIAN SER DIVS NO BOTONES WTF -->
                 {{ user.fecha }}
-              </v-btn>
+              </div>
+              <v-spacer></v-spacer>
               <v-btn color="#FF9800" dark @click="Enlace(user.urls)">
                 Enlace
               </v-btn>
@@ -107,6 +109,7 @@
             <v-btn text>
               {{ user.fecha }}
             </v-btn>
+            <v-spacer></v-spacer>
             <v-btn color="#00c853" dark @click="Enlace(user.urls)">
               Enlace
             </v-btn>
