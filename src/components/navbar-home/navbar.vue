@@ -9,8 +9,7 @@
       <!--#region              LOGO -- IZQUIERDA    -->
       <div class="img-logo mx-5">
         <a href="/Home">
-          <img
-            
+          <img            
             class="mx-10"
             src="@/assets/media/logos/letrasdos.png"          
             alt="XICO CLASS"
