@@ -108,7 +108,7 @@ export default {
     Perfil() {
       axios
         .get(
-          "https://xicoclassapi.azurewebsites.net/Alumno.php?Perfil=" +
+          "https://xicoclass.online/Alumno.php?Perfil=" +
             window.sessionStorage.getItem("id_alumno")
         )
         .then((r) => {

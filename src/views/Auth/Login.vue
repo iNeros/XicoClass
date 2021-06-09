@@ -83,7 +83,7 @@ export default {
       this.show = false;
       axios
         .get(
-          "https://xicoclassapi.azurewebsites.net/Alumno.php?User=" +
+          "https://xicoclass.online/Alumno.php?User=" +
             this.User +
             "&Pass=" +
             this.Pass

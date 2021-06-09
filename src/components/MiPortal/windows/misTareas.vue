@@ -85,7 +85,7 @@ export default {
     Tarea() {
       axios
         .get(
-          "https://xicoclassapi.azurewebsites.net/Actividades.php?id=" +
+          "https://xicoclass.online/Actividades.php?id=" +
             window.sessionStorage.getItem("id_grado")
         )
         .then((r) => {
@@ -98,7 +98,7 @@ export default {
     },
     Archivo() {
       axios
-        .get("https://xicoclassapi.azurewebsites.net/Archivos.php")
+        .get("https://xicoclass.online/Archivos.php")
         .then((r) => {
           this.archivos = r.data;
           console.log(this.archivos);
