@@ -80,12 +80,12 @@ export default {
       window.open("" + id, "_blank");
     },
     SubirArchivo() {
-      window.alert("si funca loco");
+      window.alert("si funciona");
     },
     Tarea() {
       axios
         .get(
-          "https://xicoclass.online/Actividades.php?id=" +
+          "https://xicoclass.online/Actividades.php?id_grupo=" +
             window.sessionStorage.getItem("id_grado")
         )
         .then((r) => {

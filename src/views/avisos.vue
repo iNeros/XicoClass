@@ -4,7 +4,7 @@
 
     <h2 style="color: #d50000" id="ods">Hoy</h2>
     <hr color="#D50000" id="od" />
-    <div v-if="AvisosH.id_avisos > 0">
+    <div v-show="Var">
       <v-row class="margenes">
         <v-col
           cols="12"
@@ -30,15 +30,14 @@
           </v-card>
         </v-col>
       </v-row>
-      fsdfdsfsdfds
     </div>
 
-    <div v-else>
+    <div v-if="AvisosH == '' ">
       <v-row class="margenes">
         <v-col cols="12" sm="12" md="6" lg="3">
           <v-card class="sizes" color="#ef5350 " dark>
             <v-card-title class="ods"> Nada nuevo por aquí </v-card-title>
-            <v-card-subtitle class="texto">Descripción</v-card-subtitle>
+            <v-card-subtitle class="texto">No hay avisos nuevos el día de hoy</v-card-subtitle>
             <v-card-actions> </v-card-actions>
           </v-card>
         </v-col>
@@ -46,7 +45,7 @@
     </div>
     <h2 style="color: #ff9800" id="ods">Esta semana</h2>
     <hr color="#FF9800" id="od" />
-    <div v-if="AvisosS.id_avisos !== []">
+    <div v-show="Var2">
       <v-row class="margenes">
         <v-col
           cols="12"
@@ -64,7 +63,7 @@
               user.descripcion
             }}</v-card-subtitle>
             <v-card-actions>
-              <div class="ml-2"> <!-- ESTOS DEBERIAN SER DIVS NO BOTONES WTF -->
+              <div class="ml-2"> <!-- ESTOS DEBERIAN SER DIVS NO BOTONES WTF, simon pero ya se despedorró el diseño, mejor botón -->
                 {{ user.fecha }}
               </div>
               <v-spacer></v-spacer>
@@ -76,12 +75,12 @@
         </v-col>
       </v-row>
     </div>
-    <div v-else>
+    <div v-if="AvisosS == '' ">
       <v-row class="margenes">
         <v-col cols="12" sm="12" md="6" lg="3">
           <v-card class="sizes" color="#FFCA28 " dark>
             <v-card-title class="ods"> Nada nuevo por aquí </v-card-title>
-            <v-card-subtitle class="texto">Descripción</v-card-subtitle>
+            <v-card-subtitle class="texto">No hay avisos nuevos avisos esta semana.</v-card-subtitle>
             <v-card-actions> </v-card-actions>
           </v-card>
         </v-col>
@@ -135,13 +134,11 @@ export default {
   },
   data() {
     return {
-      AvisosH: [
-        {
-          id_avisos: 0,
-        },
-      ],
-      AvisosS: [],
-      AvisosM: [],
+      Var:true,
+      Var2:true,
+      AvisosH: '',
+      AvisosS: '',
+      AvisosM: '',
     };
   },
   methods: {
@@ -154,9 +151,11 @@ export default {
           "https://xicoclass.online/Avisos.php?tiempo=1&id_grupo=" +
             window.sessionStorage.getItem("id_grado")
         )
-        .then((r) => {
+        .then((r) => { 
           this.AvisosH = r.data;
-          console.log(this.AvisosH);
+          if(this.AvisosH.length == 0){
+            this.Var = false;
+          }//console.log(this.AvisosH);
         })
         .catch(function (error) {
           console.log(error);
@@ -170,7 +169,9 @@ export default {
         )
         .then((r) => {
           this.AvisosS = r.data;
-          console.log(this.AvisosS);
+          if(this.AvisosS.length == 0){
+            this.Var2 = false;
+          }//console.log(this.AvisosS);
         })
         .catch(function (error) {
           console.log(error);
@@ -184,7 +185,7 @@ export default {
         )
         .then((r) => {
           this.AvisosM = r.data;
-          console.log(this.AvisosM);
+          //console.log(this.AvisosM);
         })
         .catch(function (error) {
           console.log(error);
