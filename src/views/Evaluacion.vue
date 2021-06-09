@@ -67,7 +67,7 @@
         </v-col>
 
         <v-col cols="12" xl="4" lg="4" md="4" sm="12" xs="12">
-          <v-card elevation="2" color="#26a69a" height="30em">
+          <v-card elevation="2" color="#ffee58" height="30em">
             <v-card-title class="titulo">
               actividad de <br />
               reforzamiento
@@ -110,7 +110,7 @@
           CASI SIEMPRE
         </v-col>
         <v-col cols="3">
-          <v-chip class="ma-2" color="#FFCA28" text-color="white"> AV </v-chip>
+          <v-chip class="ma-2" color="#fb8c00" text-color="white"> AV </v-chip>
           ALGUNAS VECES
         </v-col>
 
