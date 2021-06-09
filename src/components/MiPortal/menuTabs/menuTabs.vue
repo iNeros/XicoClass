@@ -3,10 +3,10 @@
     <!-- VISTA DE LAS TABS EN WIDEVIEW --->
     <div class="hidden-sm-and-down">
       <v-tabs fixed-tabs class="menu-tabs" color="rgb(40, 53, 147)!important">
-        <v-tab @click="(texto = 'MIS MATERIAS'), setMaterias()">
-          MIS MATERIAS
+        <v-tab @click="(texto = 'MIS CAMPOS FORMATIVOS Y AREAS DE CONOCIMIENTO'), setMaterias()">
+          MIS CAMPOS FORMATIVOS Y AREAS DE CONOCIMIENTO
         </v-tab>
-        <v-tab @click="(texto = 'TAREAS'), setTareas()"> TAREAS </v-tab>
+        <v-tab @click="(texto = 'TAREAS Y ACTIVIDADES'), setTareas()"> TAREAS Y ACTIVIDADES </v-tab>
         <v-tab @click="(texto = 'DATOS PERSONALES'), setDocumentos()">
           DATOS PERSONALES
         </v-tab>
@@ -36,9 +36,9 @@
                   class="button-menu ma-0"
                   color="blue"
                   dark
-                  @click="(texto = 'MIS MATERIAS'), setMaterias()"
+                  @click="(texto = 'MIS CAMPOS FORMATIVOS Y AREAS DE CONOCIMIENTO'), setMaterias()"
                 >
-                  MIS MATERIAS
+                  MIS CAMPOS FORMATIVOS Y AREAS DE CONOCIMIENTO
                 </v-btn>
               </v-list-item-title>
             </v-list-item>
@@ -49,9 +49,9 @@
                   class="button-menu"
                   color="blue"
                   dark
-                  @click="(texto = 'TAREAS'), setTareas()"
+                  @click="(texto = 'TAREAS Y ACTIVIDADES'), setTareas()"
                 >
-                  TAREAS
+                  TAREAS Y ACTIVIDADES
                 </v-btn>
               </v-list-item-title>
             </v-list-item>
@@ -93,7 +93,7 @@ export default {
   name: "menuTabs",
   data() {
     return {
-      texto: "Mis Materias",
+      texto: "MIS CAMPOS FORMATIVOS Y AREAS DE CONOCIMIENTO",
     };
   },
   methods: {

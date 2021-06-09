@@ -62,28 +62,35 @@ export default {
   data: () => ({
     items: [
       {
-        materia: "#Nombre Asignatura",
+        materia: "Lenguaje y Comunicación",
         nombreDocente: "Nombre del docente",
         horario: "Horario",
         descripcion: "Lorem ipsum dolor sit amet consectetur",
         img: "https://cdn.vuetifyjs.com/images/john.jpg",
       },
       {
-        materia: "#Nombre Asignatura",
+        materia: "Pensamiento Matemático",
         nombreDocente: "Nombre del docente",
         horario: "Horario",
         descripcion: "Lorem ipsum dolor sit amet consectetur",
         img: "https://cdn.vuetifyjs.com/images/cards/halcyon.png",
       },
       {
-        materia: "#Nombre Asignatura",
+        materia: "Exploración y Comprensión del mundo",
         nombreDocente: "Nombre del docente",
         horario: "Horario",
         descripcion: "Lorem ipsum dolor sit amet consectetur",
         img: "https://cdn.vuetifyjs.com/images/cards/foster.jpg",
       },
       {
-        materia: "#Nombre Asignatura",
+        materia: "Arte",
+        nombreDocente: "Nombre del docente",
+        horario: "Horario",
+        descripcion: "Lorem ipsum dolor sit amet consectetur",
+        img: "https://cdn.vuetifyjs.com/images/cards/foster.jpg",
+      },
+       {
+        materia: "Educación Socioemocional",
         nombreDocente: "Nombre del docente",
         horario: "Horario",
         descripcion: "Lorem ipsum dolor sit amet consectetur",
@@ -98,22 +105,22 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 .titulo {
   font-family: "Poppins";
-  font: weight 700px;
-  font-size: 34px;
+  font: weight 500px;
+  font-size: 31px;
   line-height: 40px;
   letter-spacing: 0.01px;
   color: black;
 }
 .subtitulo {
   font-family: "Poppins";
-  font-weight: 500px;
-  font-size: 28px;
+  font-weight: 400px;
+  font-size: 20px;
   color: white;
 }
 .subtitulo-2 {
   font-family: "Poppins";
   font-weight: 400;
-  font-size: 22px;
+  font-size: 20px;
   color: white;
 }
 .cuerpo {
