@@ -87,7 +87,7 @@ export default {
     obtenerImpreso() {
       axios
         .get(
-          "https://xicoclassapi.azurewebsites.net/impreso.php"
+          "https://xicoclass.online/Impreso.php"
         )
         .then((r) => {
           this.datos = r.data;

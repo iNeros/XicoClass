@@ -68,7 +68,7 @@ export default {
     },
     obtenerVisual() {
       axios
-        .get("https://xicoclassapi.azurewebsites.net/Visual.php?id_grado=1")
+        .get("https://xicoclass.online/Visual.php")
         .then((r) => {
           this.datos = r.data;
           console.log(this.datos);
