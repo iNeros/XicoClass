@@ -68,7 +68,7 @@ export default {
     },
     obtenerVisual() {
       axios
-        .get("https://xicoclass.online/Visual.php")
+        .get("https://xicoclass.online/Visual.php?periodoAsociado=1")
         .then((r) => {
           this.datos = r.data;
           console.log(this.datos);
