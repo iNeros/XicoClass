@@ -7,7 +7,7 @@
           MIS MATERIAS
         </v-tab>
         <v-tab @click="(texto = 'TAREAS'), setTareas()"> TAREAS </v-tab>
-        <v-tab @click="(texto = 'MIS DOCUMENTOS'), setDocumentos()">
+        <v-tab @click="(texto = 'DATOS PERSONALES'), setDocumentos()">
           DATOS PERSONALES
         </v-tab>
         <v-tab @click="(texto = 'TRAMITES'), setTramites()"> FORMATOS </v-tab>
@@ -62,7 +62,7 @@
                   class="button-menu"
                   color="blue"
                   dark
-                  @click="(texto = 'MIS DOCUMENTOS'), setDocumentos()"
+                  @click="(texto = 'DATOS PERSONALES'), setDocumentos()"
                 >
                   DATOS PERSONALES
                 </v-btn>
