@@ -4,52 +4,66 @@
       <v-flex xs2>
         <v-list dense>
           <v-subheader>JUEGOS</v-subheader>
-          <v-list-item-group v-model="selectedItem" color="#30dba0" mandatory>
+          <v-list-item-group 
+            v-model="selectedItem" 
+            color="rgb(40, 53, 147)!important" 
+            mandatory
+          >
             <v-divider></v-divider>
             <v-list-item
               class="menu-tex"
               v-for="n in datos"
               :key="n"
-              v-text="n"
+              v-text="n.titulo"
+              @click="selectLink(n.url)"
             ></v-list-item>
           </v-list-item-group>
         </v-list>
       </v-flex>
       <v-flex xs10>
-        <h4>flex xs10</h4>
+        <iframe
+          class="xicostore"
+          src="https://firebasestorage.googleapis.com/v0/b/xicoclassproject-579bb.appspot.com/o/Didactico%2F1%2Findex.html?alt=media&token=9f794bad-e8cf-4289-a387-5ce8d5c9063f"
+          width="90%"
+          height="800px"
+        ></iframe>
       </v-flex>
     </v-layout>
   </v-container>
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   name: "didactico",
   data() {
     return {
-      datos: [
-        "Juego 1",
-        "Juego 2",
-        "Juego 3",
-        "Juego 4",
-        "Juego 5",
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        16,
-        17,
-        18,
-        19,
-        20,
-      ],
+      datos: [],
     };
+  },
+  methods: {
+    selectLink(item) {
+      //agregar item entre los parentesis
+      this.link = item;
+      // link = axios de la consulta db
+      //link =
+      //@click="setLink()" in v-list-item
+    },
+    obtenerDidactico() {
+      axios
+        .get("https://xicoclass.online/Didactico.php?periodoAsociado=1")
+        .then((r) => {
+          this.datos = r.data;
+          console.log(this.datos);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    },
+  },
+  mounted() {
+    this.obtenerDidactico();
   },
 };
 </script>
