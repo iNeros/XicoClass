@@ -28,7 +28,7 @@ v-for="n in datos"
     </v-btn>
   </div>
 </template>
--->
+
 
 <template>
   <v-container fluid>
@@ -69,6 +69,127 @@ v-for="n in datos"
   </v-container>
 </template>
 
+-->
+<template>
+  <v-container>
+    <v-row class="mt-6 mx-6">
+      <v-col cols="12" xl="3" lg="4" md="5" sm="7" xs="12"> 
+        <v-list max-height="50%" outlined rounded elevation="12">
+          <v-subheader class = "menu-subtitle mx-16">CUENTOS</v-subheader>
+            <v-list-item-group>
+              <v-divider></v-divider>
+              <div 
+                v-for="n in datos"
+                :key="n"
+              >
+              <v-list-item
+                class="menu-text"
+                v-if="n.tipo == 1"
+                @click="descargarArchivo(n.ruta)"
+              >
+              {{n.titulo}}
+              </v-list-item>
+              </div>
+          </v-list-item-group>
+        </v-list>
+      </v-col>
+
+      <v-col cols="12" xl="3" lg="4" md="5" sm="7" xs="12">
+        <v-list max-height="50%" outlined rounded elevation="12">
+          <v-subheader class = "menu-subtitle mx-16">RECORTABLE</v-subheader>
+            <v-list-item-group
+              color="rgb(40, 53, 147)!important"
+            >
+              <v-divider></v-divider>
+              <div 
+                v-for="n in datos"
+                :key="n"
+              >
+              <v-list-item
+                class="menu-tex"
+                v-if="n.tipo == 2"
+                v-text="n.titulo"
+                @click="descargarArchivo(n.ruta)"
+              >
+              </v-list-item>
+              </div>
+          </v-list-item-group>
+        </v-list>
+      </v-col>
+
+      <v-col cols="12" xl="3" lg="4" md="5" sm="7" xs="12">
+        <v-list max-height="50%" outlined rounded elevation="12">
+          <v-subheader class = "menu-subtitle mx-16">MI ÁLBUM</v-subheader>
+            <v-list-item-group
+              
+            >
+              <v-divider></v-divider>
+              <div 
+                v-for="n in datos"
+                :key="n"
+              >
+              <v-list-item
+                class="menu-tex"
+                v-if="n.tipo == 3"
+                v-text="n.titulo"
+                @click="descargarArchivo(n.ruta)"
+              >
+              </v-list-item>
+              </div>
+          </v-list-item-group>
+        </v-list>
+      </v-col>
+
+      <v-col cols="12" xl="3" lg="4" md="5" sm="7" xs="12">
+        <v-list max-height="50%" outlined rounded elevation="12" two-line>
+          <v-subheader class = "menu-subtitle mx-16">VALORES</v-subheader>
+            <v-list-item-group
+              color="rgb(40, 53, 147)!important"
+            >
+              <v-divider></v-divider>
+              <div 
+                v-for="n in datos"
+                :key="n"
+              >
+              <v-list-item
+                class="menu-tex"
+                v-if="n.tipo == 4"
+                v-text="n.titulo"
+                @click="descargarArchivo(n.ruta)"
+              >
+              </v-list-item>
+              </div>
+          </v-list-item-group>
+        </v-list>
+      </v-col>
+
+      <v-col cols="12" xl="3" lg="4" md="5" sm="7" xs="12">
+        <v-list max-height="50%" outlined rounded elevation="12">
+          <v-subheader class = "menu-subtitle mx-16">OTROS</v-subheader>
+            <v-list-item-group
+              color="rgb(40, 53, 147)!important"
+            >
+              <v-divider></v-divider>
+              <div 
+                v-for="n in datos"
+                :key="n"
+              >
+              <v-list-item
+                class="menu-tex"
+                v-if="n.tipo == 5"
+                v-text="n.titulo"
+                @click="descargarArchivo(n.ruta)"
+              >
+              </v-list-item>
+              </div>
+          </v-list-item-group>
+        </v-list>
+      </v-col>
+    </v-row>
+  </v-container>
+</template>
+
+
 <script>
 import axios from "axios";
 
@@ -107,6 +228,17 @@ export default {
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+.menu-text {
+  color: rgb(40, 53, 147)!important;
+  font-size: 16px !important;
+  font-family: "Montserrat";
+}
+.menu-subtitle {
+  color: rgb(40, 53, 147)!important;
+  font-size: 18px !important;
+  font-family: "Montserrat", sans-serif;
+}
 .card{
   min-height: 150px;
   max-height: 150px;

@@ -3,15 +3,14 @@
     <v-layout justify-space-between>
       <v-flex xs2>
         <v-list dense>
-          <v-subheader>VIDEOS</v-subheader>
+          <v-subheader class = "menu-subtitle">VIDEOS</v-subheader>
           <v-list-item-group
             v-model="selectedItem"
-            color="rgb(40, 53, 147)!important"
             mandatory
           >
             <v-divider></v-divider>
             <v-list-item
-              class="menu-tex"
+              class="menu-text"
               v-for="n in datos"
               :key="n"
               v-text="n.titulo"
@@ -87,7 +86,12 @@ export default {
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 .menu-text {
-  color: #5d576b !important;
+  color: rgb(40, 53, 147)!important;
+  font-size: 18px !important;
+  font-family: "Montserrat", sans-serif;
+}
+.menu-subtitle {
+  color: rgb(40, 53, 147)!important;
   font-size: 18px !important;
   font-family: "Montserrat", sans-serif;
 }
