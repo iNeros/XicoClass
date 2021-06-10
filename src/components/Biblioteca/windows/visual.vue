@@ -102,7 +102,7 @@ export default {
   name: "visual",
   data() {
     return {
-      link: "https://www.youtube.com/embed/X1sQg4nxEe8",
+      link: "https://i.ytimg.com/vi/xJ200hf9w90/maxresdefault.jpg",
       datos: [],
     };
   },
