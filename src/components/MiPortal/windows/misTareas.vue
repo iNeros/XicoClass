@@ -3,20 +3,17 @@
     <div class="container" v-for="item in Tareas" :key="item.id_actividad">
       <v-card elevation="24" class="card-container">
           <v-row class="mt-2 mb-0 pb-0">
-            <v-col cols="12" xl="8" lg="8" md="8" sm="8" xs="8" class="ml-4">
+            <v-col cols="12" xl="12" lg="12" md="12" sm="12" xs="12" class="ml-4">
               <h1 class="tittle-text">
                 #{{ item.id_actividad }} {{ item.nombre }}
               </h1>
-            </v-col>
-          </v-row>
-          <v-row class="mt-0">
-            <v-col cols="12" xl="4" lg="4" md="4" sm="4" xs="4" class="status-text ml-4 " >
               <span class="status-label">ESTATUS: </span>
               <span id="estado-text" class="status-label estado-pendiente"
                 >PENDIENTE</span
               >
             </v-col>
           </v-row>
+          
           <div class="texto-descriptivo mx-4">
             <span style="font-size: 18px; color: #8e78ec">
               <b>Descripcion:</b>
