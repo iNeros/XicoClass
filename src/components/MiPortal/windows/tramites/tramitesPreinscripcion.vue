@@ -1,6 +1,5 @@
 <template>
-  <div class="misTramites">
-    <v-container>
+    <v-container fluid>
       <v-stepper v-model="e6" vertical>
         <v-stepper-step :complete="e6 > 1" step="1" class="titulo">
           DATOS DEL ALUMNO
@@ -160,13 +159,12 @@
         </v-stepper-content>
       </v-stepper>
     </v-container>
-  </div>
 </template>
 
 
 <script>
 export default {
-  name: "misTramites",
+  name: "tramitesPrimero",
   data: () => ({
     e6: 1,
     valid: true,
@@ -231,5 +229,8 @@ export default {
   font-weight: 800px;
   font-size: 22px;
   line-height: 40px;
+}
+.containerTramite{
+  width: 1800px;
 }
 </style>

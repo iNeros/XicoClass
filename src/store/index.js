@@ -7,6 +7,7 @@ export default new Vuex.Store({
   state: {
     portalStep: 1,
     tabsBiblio: 1,
+    formatosStep: 0,
   },
   mutations: {
     //MUTATIONS FOR MI PORTAL

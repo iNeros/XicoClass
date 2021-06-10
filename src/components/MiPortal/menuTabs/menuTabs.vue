@@ -75,7 +75,7 @@
                   class="button-menu"
                   color="blue"
                   dark
-                  @click="(texto = 'TRAMITES'), setTramites()"
+                  @click="(texto = 'FORMATOS'), setTramites()"
                 >
                   TRAMITES
                 </v-btn>
