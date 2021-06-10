@@ -74,12 +74,13 @@ export default {
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 .menu-text {
-  color: rgb(40, 53, 147) !important;
+  color:#e65100 !important;
   font-size: 18px !important;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
+
 .v-list {
   height: 60vh; /* or any height you want */
   width: 300px;
@@ -93,7 +94,7 @@ export default {
   min-height: 400px !important;
 }
 .box-title {
-  font-family: Montserrat;
+  font-family: "Poppins";
   font-weight: 800;
   color: white;
   font-size: 25px;
@@ -103,7 +104,7 @@ export default {
 .titulo-seccion {
   width: 100%;
   height: 40px;
-  background-color: #26a69a;
+  background-color: #FFCA28;
 }
 .img-seccion {
   height: 80px !important;

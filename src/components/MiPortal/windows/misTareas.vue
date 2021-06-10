@@ -13,7 +13,6 @@
               >
             </v-col>
           </v-row>
-          
           <div class="texto-descriptivo mx-4">
             <span style="font-size: 18px; color: #8e78ec">
               <b>Descripcion:</b>
@@ -155,7 +154,7 @@ export default {
 .status-label {
   font-family: "Poppins";
   font-weight: 800;
-  color:  #283593;
+  color:  black;
 }
 .texto-descriptivo {
   font-family: "Poppins";

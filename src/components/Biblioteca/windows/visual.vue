@@ -133,14 +133,14 @@ export default {
 </script>
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 .menu-text {
-  color: rgb(40, 53, 147) !important;
+  color: #64dd17 !important;
   font-size: 18px !important;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 .box-title {
-  font-family: Montserrat;
+  font-family: "Poppins";
   font-weight: 800;
   color: white;
   font-size: 25px;
@@ -150,7 +150,7 @@ export default {
 .titulo-seccion {
   width: 100%;
   height: 40px;
-  background-color: #26a69a;
+  background-color: #B2FF59;
 }
 .img-seccion {
   height: 80px !important;

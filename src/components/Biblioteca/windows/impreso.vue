@@ -8,7 +8,7 @@
             src="@/assets/media/biblioteca/img-cuento.png"
           ></v-img>
         </div>
-        <div class="titulo-seccion">
+        <div class="titulo-seccion"  >
           <span class="box-title"> CUENTOS </span>
         </div>
         <v-list height="360" width="90%" outlined rounded elevation="12" two-line>
@@ -33,7 +33,7 @@
             src="@/assets/media/biblioteca/img-recortable.png"
           ></v-img>
         </div>
-        <div class="titulo-seccion">
+        <div class="titulo-seccion2">
           <span class="box-title"> RECORTABLES </span>
         </div>
         <v-list height="360" width="90%" outlined rounded elevation="12" two-line>
@@ -58,7 +58,7 @@
             src="@/assets/media/biblioteca/img-album.png"
           ></v-img>
         </div>
-        <div class="titulo-seccion">
+        <div class="titulo-seccion3">
           <span class="box-title"> MI ÁLBUM </span>
         </div>
         <v-list height="360" width="90%" outlined rounded elevation="12" two-line>
@@ -83,7 +83,7 @@
             src="@/assets/media/biblioteca/img-valores.png"
           ></v-img>
         </div>
-        <div class="titulo-seccion">
+        <div class="titulo-seccion4">
           <span class="box-title"> VALORES </span>
         </div>
         <v-list height="360" width="90%" outlined rounded elevation="12" two-line>
@@ -108,7 +108,7 @@
             src="@/assets/media/biblioteca/img-otros.png"
           ></v-img>
         </div>
-        <div class="titulo-seccion">
+        <div class="titulo-seccion5">
           <span class="box-title"> OTROS </span>
         </div>
         <v-list height="360" width="90%" outlined rounded elevation="12">
@@ -172,7 +172,7 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 
 .box-title {
-  font-family: Montserrat;
+  font-family: "Poppins";
   font-weight: 800;
   color: white;
   font-size: 25px;
@@ -182,7 +182,27 @@ export default {
 .titulo-seccion {
   width: 90%;
   height: 40px;
-  background-color: #26a69a;
+  background-color: #E91E63;
+}
+.titulo-seccion2 {
+  width: 90%;
+  height: 40px;
+  background-color: #7E57C2;
+}
+.titulo-seccion3 {
+  width: 90%;
+  height: 40px;
+  background-color: #80D8FF;
+}
+.titulo-seccion4 {
+  width: 90%;
+  height: 40px;
+  background-color: #283593;
+}
+.titulo-seccion5 {
+  width: 90%;
+  height: 40px;
+  background-color: #64DD17 ;
 }
 .img-seccion {
   height: 80px !important;
@@ -194,6 +214,6 @@ export default {
 .menu-text {
   color: rgb(40, 53, 147) !important;
   font-size: 16px !important;
-  font-family: "Montserrat";
+  font-family: "Poppins";
 }
 </style>
