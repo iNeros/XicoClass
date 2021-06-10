@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-row class="fill-height mt-6 mx-6" justify="space-around">
+    <v-row class="fill-height mt-6 mx-6 mb-6" justify="space-around">
       <v-col cols="12" xl="3" lg="4" md="5" sm="7" xs="12">
         <div>
           <v-img
@@ -11,7 +11,7 @@
         <div class="titulo-seccion">
           <span class="box-title"> CUENTOS </span>
         </div>
-        <v-list height="360" width="90%" outlined rounded elevation="12">
+        <v-list height="360" width="90%" outlined rounded elevation="12" two-line>
           <v-list-item-group>
             <div v-for="n in datos" :key="n">
               <v-list-item
@@ -34,9 +34,9 @@
           ></v-img>
         </div>
         <div class="titulo-seccion">
-          <span class="box-title"> RECORTABLE </span>
+          <span class="box-title"> RECORTABLES </span>
         </div>
-        <v-list height="360" width="90%" outlined rounded elevation="12">
+        <v-list height="360" width="90%" outlined rounded elevation="12" two-line>
           <v-list-item-group>
             <div v-for="n in datos" :key="n">
               <v-list-item
@@ -61,7 +61,7 @@
         <div class="titulo-seccion">
           <span class="box-title"> MI ÁLBUM </span>
         </div>
-        <v-list height="360" width="90%" outlined rounded elevation="12">
+        <v-list height="360" width="90%" outlined rounded elevation="12" two-line>
           <v-list-item-group>
             <div v-for="n in datos" :key="n">
               <v-list-item
@@ -86,7 +86,7 @@
         <div class="titulo-seccion">
           <span class="box-title"> VALORES </span>
         </div>
-        <v-list height="360" width="90%" outlined rounded elevation="12">
+        <v-list height="360" width="90%" outlined rounded elevation="12" two-line>
           <v-list-item-group>
             <div v-for="n in datos" :key="n">
               <v-list-item
@@ -195,15 +195,5 @@ export default {
   color: rgb(40, 53, 147) !important;
   font-size: 16px !important;
   font-family: "Montserrat";
-}
-.card {
-  min-height: 150px;
-  max-height: 150px;
-}
-.subtitulo {
-  font-family: "Poppins";
-  font-weight: 500px;
-  font-size: 14px;
-  color: white;
 }
 </style>
