@@ -8,7 +8,7 @@
         <template v-slot:next="{ on, attrs }">
           <v-btn color="#80D8FF" v-bind="attrs" v-on="on">→</v-btn>
         </template>
-        <v-carousel-item
+        <v-carousel-item     
           v-for="(item, i) in items"
           :key="i"        
           :src="item.src"
@@ -33,17 +33,17 @@ export default {
           src: require("@/assets/media/sliders/slider1.png"),
         },
         {
-          src: "https://cdn.vuetifyjs.com/images/carousel/sky.jpg",
+          src: require("@/assets/media/sliders/slider2.png"),
         },
         {
-          src: "https://cdn.vuetifyjs.com/images/carousel/bird.jpg",
+          src: require("@/assets/media/sliders/slider3.png"),
         },
         {
           src: "https://cdn.vuetifyjs.com/images/carousel/planet.jpg",
         },
       ],
     };
-  },
+  },  
 };
 </script>
 
