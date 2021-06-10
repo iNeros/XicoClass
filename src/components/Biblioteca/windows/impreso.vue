@@ -72,16 +72,16 @@ v-for="n in datos"
 -->
 <template>
   <v-container>
-    <v-row class="mt-6 mx-6">
+    <v-row class="fill-height mt-6 mx-6" justify="center">
       <v-col cols="12" xl="3" lg="4" md="5" sm="7" xs="12"> 
-        <v-list max-height="50%" outlined rounded elevation="12">
+        <v-list height="360" outlined rounded elevation="12">
           <v-subheader class = "menu-subtitle mx-16">CUENTOS</v-subheader>
-            <v-list-item-group>
-              <v-divider></v-divider>
-              <div 
-                v-for="n in datos"
+          <v-list-item-group>
+            <v-divider></v-divider>
+            <div 
+              v-for="n in datos"
                 :key="n"
-              >
+            >
               <v-list-item
                 class="menu-text"
                 v-if="n.tipo == 1"
@@ -89,13 +89,13 @@ v-for="n in datos"
               >
               {{n.titulo}}
               </v-list-item>
-              </div>
+            </div>
           </v-list-item-group>
         </v-list>
       </v-col>
 
       <v-col cols="12" xl="3" lg="4" md="5" sm="7" xs="12">
-        <v-list max-height="50%" outlined rounded elevation="12">
+        <v-list height="360" outlined rounded elevation="12">
           <v-subheader class = "menu-subtitle mx-16">RECORTABLE</v-subheader>
             <v-list-item-group
               color="rgb(40, 53, 147)!important"
@@ -118,7 +118,7 @@ v-for="n in datos"
       </v-col>
 
       <v-col cols="12" xl="3" lg="4" md="5" sm="7" xs="12">
-        <v-list max-height="50%" outlined rounded elevation="12">
+        <v-list height="360" outlined rounded elevation="12">
           <v-subheader class = "menu-subtitle mx-16">MI ÁLBUM</v-subheader>
             <v-list-item-group
               
@@ -141,7 +141,7 @@ v-for="n in datos"
       </v-col>
 
       <v-col cols="12" xl="3" lg="4" md="5" sm="7" xs="12">
-        <v-list max-height="50%" outlined rounded elevation="12" two-line>
+        <v-list height="360" outlined rounded elevation="12" two-line>
           <v-subheader class = "menu-subtitle mx-16">VALORES</v-subheader>
             <v-list-item-group
               color="rgb(40, 53, 147)!important"
@@ -164,7 +164,7 @@ v-for="n in datos"
       </v-col>
 
       <v-col cols="12" xl="3" lg="4" md="5" sm="7" xs="12">
-        <v-list max-height="50%" outlined rounded elevation="12">
+        <v-list height="360" outlined rounded elevation="12">
           <v-subheader class = "menu-subtitle mx-16">OTROS</v-subheader>
             <v-list-item-group
               color="rgb(40, 53, 147)!important"
