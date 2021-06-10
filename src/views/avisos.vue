@@ -10,7 +10,8 @@
           cols="12"
           sm="12"
           md="6"
-          lg="3"
+          lg="4"
+          xl="3"
           v-for="user in AvisosH"
           :key="user.id_avisos"
         >
@@ -34,7 +35,7 @@
 
     <div v-if="AvisosH == '' ">
       <v-row class="margenes">
-        <v-col cols="12" sm="12" md="6" lg="3">
+        <v-col cols="12" sm="12" md="6" lg="4" xl="3">
           <v-card class="sizes" color="#ef5350 " dark>
             <v-card-title class="ods"> Nada nuevo por aquí </v-card-title>
             <v-card-subtitle class="texto">No hay avisos nuevos el día de hoy</v-card-subtitle>
@@ -51,7 +52,8 @@
           cols="12"
           sm="12"
           md="6"
-          lg="3"
+          lg="4"
+          xl="3"
           v-for="user in AvisosS"
           :key="user.id_avisos"
         >
@@ -77,7 +79,7 @@
     </div>
     <div v-if="AvisosS == '' ">
       <v-row class="margenes">
-        <v-col cols="12" sm="12" md="6" lg="3">
+        <v-col cols="12" sm="12" md="6" lg="4" xl="3">
           <v-card class="sizes" color="#FFCA28 " dark>
             <v-card-title class="ods"> Nada nuevo por aquí </v-card-title>
             <v-card-subtitle class="texto">No hay avisos nuevos avisos esta semana.</v-card-subtitle>
@@ -93,7 +95,8 @@
         cols="12"
         sm="12"
         md="6"
-        lg="3"
+        lg="4"
+        xl="3"
         v-for="user in AvisosM"
         :key="user.id_avisos"
       >
