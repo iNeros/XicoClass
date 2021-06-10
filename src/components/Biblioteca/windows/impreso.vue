@@ -72,12 +72,19 @@ v-for="n in datos"
 -->
 <template>
   <v-container>
-    <v-row class="mt-6 mx-6">
-      <v-col cols="12" xl="3" lg="4" md="5" sm="7" xs="12"> 
-        <v-list max-height="50%" outlined rounded elevation="12">
-          <v-subheader class = "menu-subtitle mx-16">CUENTOS</v-subheader>
+    <v-row class="mt-6" justify="space-around">
+      <v-col cols="12" xl="3" lg="4" md="5" sm="7" xs="12" class="mx-5"> 
+        <div>
+          <v-img
+          class="img-seccion"
+          src="@/assets/media/biblioteca/Libro.png"
+          ></v-img>
+        </div>
+        <div class="titulo-seccion">
+          <span class="box-title"> CUENTOS </span>
+        </div>
+        <v-list max-height="80%" width="100%" outlined rounded elevation="12">
             <v-list-item-group>
-              <v-divider></v-divider>
               <div 
                 v-for="n in datos"
                 :key="n"
@@ -119,7 +126,7 @@ v-for="n in datos"
 
       <v-col cols="12" xl="3" lg="4" md="5" sm="7" xs="12">
         <v-list max-height="50%" outlined rounded elevation="12">
-          <v-subheader class = "menu-subtitle mx-16">MI ÁLBUM</v-subheader>
+          <v-subheader  class = "menu-subtitle mx-16">MI ÁLBUM</v-subheader>
             <v-list-item-group
               
             >
@@ -229,6 +236,29 @@ export default {
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+.box-title{
+  font-family: Montserrat;
+  font-weight: 800;
+  color: white;
+  font-size: 25px;
+  margin-left: 20px!important;
+  vertical-align: middle;
+}
+
+.titulo-seccion{
+  width: 100%;
+  height: 40px;
+  background-color: #26A69A;
+}
+.img-seccion{
+  height: 150px!important;
+  width: 150px!important;
+  margin-left: auto!important;
+  margin-right: 30px!important;
+  margin-bottom: -50px!important;
+}
+
 .menu-text {
   color: rgb(40, 53, 147)!important;
   font-size: 16px !important;
@@ -238,6 +268,7 @@ export default {
   color: rgb(40, 53, 147)!important;
   font-size: 18px !important;
   font-family: "Montserrat", sans-serif;
+  margin-left: 20px!important;
 }
 .card{
   min-height: 150px;
