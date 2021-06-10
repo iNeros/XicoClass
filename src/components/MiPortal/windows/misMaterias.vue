@@ -20,15 +20,10 @@
               >
                 <v-card-title class="titulo">
                   <v-row>
-                    <v-col cols="12" xl="8" lg="8" md="8" xs="8" class="">
-                      <p class="mt-1 text-left mx-6">
+                    <v-col cols="12" xl="12" lg="12" md="12" xs="12" class="">
+                      <p class="mt-1 text-left mx-6 " >
                         {{ item.materia }}
                       </p>
-                    </v-col>
-                    <v-col cols="12" lg="4" md="4" xs="4" class="">
-                      <v-avatar class="ma-0 pa-0" size="90">
-                        <v-img :src="item.img"></v-img>
-                      </v-avatar>
                     </v-col>
                   </v-row>
                 </v-card-title>
@@ -66,35 +61,36 @@ export default {
         nombreDocente: "Nombre del docente",
         horario: "Horario",
         descripcion: "Lorem ipsum dolor sit amet consectetur",
-        img: "https://cdn.vuetifyjs.com/images/john.jpg",
       },
       {
         materia: "Pensamiento Matemático",
         nombreDocente: "Nombre del docente",
         horario: "Horario",
         descripcion: "Lorem ipsum dolor sit amet consectetur",
-        img: "https://cdn.vuetifyjs.com/images/cards/halcyon.png",
       },
       {
         materia: "Exploración y Comprensión del mundo",
         nombreDocente: "Nombre del docente",
         horario: "Horario",
         descripcion: "Lorem ipsum dolor sit amet consectetur",
-        img: "https://cdn.vuetifyjs.com/images/cards/foster.jpg",
       },
       {
         materia: "Arte",
         nombreDocente: "Nombre del docente",
         horario: "Horario",
         descripcion: "Lorem ipsum dolor sit amet consectetur",
-        img: "https://cdn.vuetifyjs.com/images/cards/foster.jpg",
       },
       {
         materia: "Educación Socioemocional",
         nombreDocente: "Nombre del docente",
         horario: "Horario",
         descripcion: "Lorem ipsum dolor sit amet consectetur",
-        img: "https://cdn.vuetifyjs.com/images/cards/foster.jpg",
+      },
+      {
+        materia: "Educación Física",
+        nombreDocente: "Nombre del docente",
+        horario: "Horario",
+        descripcion: "Lorem ipsum dolor sit amet consectetur",
       },
     ],
   }),
@@ -106,27 +102,28 @@ export default {
 .titulo {
   font-family: "Poppins";
   font: weight 500px;
-  font-size: 31px;
+  font-size: 24px;
   line-height: 40px;
   letter-spacing: 0.01px;
   color: black;
+  text-align: center;
 }
 .subtitulo {
   font-family: "Poppins";
   font-weight: 400px;
-  font-size: 20px;
+  font-size: 18px;
   color: white;
 }
 .subtitulo-2 {
   font-family: "Poppins";
   font-weight: 400;
-  font-size: 20px;
+  font-size: 15px;
   color: white;
 }
 .cuerpo {
   font-family: "Poppins";
   font-weight: 400;
-  font-size: 18px;
+  font-size: 15px;
   color: white;
 }
 .container {
