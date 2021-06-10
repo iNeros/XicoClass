@@ -72,20 +72,16 @@ v-for="n in datos"
 -->
 <template>
   <v-container>
-    <v-row class="mt-6" justify="space-around">
-      <v-col cols="12" xl="3" lg="4" md="5" sm="7" xs="12" class="mx-5">
-        <div>
-          <v-img
-            class="img-seccion"
-            src="@/assets/media/biblioteca/Libro.png"
-          ></v-img>
-        </div>
-        <div class="titulo-seccion">
-          <span class="box-title"> CUENTOS </span>
-        </div>
-        <v-list max-height="80%" width="100%" outlined rounded elevation="12">
+    <v-row class="fill-height mt-6 mx-6" justify="center">
+      <v-col cols="12" xl="3" lg="4" md="5" sm="7" xs="12"> 
+        <v-list height="360" outlined rounded elevation="12">
+          <v-subheader class = "menu-subtitle mx-16">CUENTOS</v-subheader>
           <v-list-item-group>
-            <div v-for="n in datos" :key="n">
+            <v-divider></v-divider>
+            <div 
+              v-for="n in datos"
+                :key="n"
+            >
               <v-list-item
                 class="menu-text"
                 v-if="n.tipo == 1"
@@ -99,11 +95,16 @@ v-for="n in datos"
       </v-col>
 
       <v-col cols="12" xl="3" lg="4" md="5" sm="7" xs="12">
-        <v-list max-height="50%" outlined rounded elevation="12">
-          <v-subheader class="menu-subtitle mx-16">RECORTABLE</v-subheader>
-          <v-list-item-group color="rgb(40, 53, 147)!important">
-            <v-divider></v-divider>
-            <div v-for="n in datos" :key="n">
+        <v-list height="360" outlined rounded elevation="12">
+          <v-subheader class = "menu-subtitle mx-16">RECORTABLE</v-subheader>
+            <v-list-item-group
+              color="rgb(40, 53, 147)!important"
+            >
+              <v-divider></v-divider>
+              <div 
+                v-for="n in datos"
+                :key="n"
+              >
               <v-list-item
                 class="menu-tex"
                 v-if="n.tipo == 2"
@@ -117,11 +118,16 @@ v-for="n in datos"
       </v-col>
 
       <v-col cols="12" xl="3" lg="4" md="5" sm="7" xs="12">
-        <v-list max-height="50%" outlined rounded elevation="12">
-          <v-subheader class="menu-subtitle mx-16">MI ÁLBUM</v-subheader>
-          <v-list-item-group>
-            <v-divider></v-divider>
-            <div v-for="n in datos" :key="n">
+        <v-list height="360" outlined rounded elevation="12">
+          <v-subheader class = "menu-subtitle mx-16">MI ÁLBUM</v-subheader>
+            <v-list-item-group
+              
+            >
+              <v-divider></v-divider>
+              <div 
+                v-for="n in datos"
+                :key="n"
+              >
               <v-list-item
                 class="menu-tex"
                 v-if="n.tipo == 3"
@@ -135,11 +141,16 @@ v-for="n in datos"
       </v-col>
 
       <v-col cols="12" xl="3" lg="4" md="5" sm="7" xs="12">
-        <v-list max-height="50%" outlined rounded elevation="12" two-line>
-          <v-subheader class="menu-subtitle mx-16">VALORES</v-subheader>
-          <v-list-item-group color="rgb(40, 53, 147)!important">
-            <v-divider></v-divider>
-            <div v-for="n in datos" :key="n">
+        <v-list height="360" outlined rounded elevation="12" two-line>
+          <v-subheader class = "menu-subtitle mx-16">VALORES</v-subheader>
+            <v-list-item-group
+              color="rgb(40, 53, 147)!important"
+            >
+              <v-divider></v-divider>
+              <div 
+                v-for="n in datos"
+                :key="n"
+              >
               <v-list-item
                 class="menu-tex"
                 v-if="n.tipo == 4"
@@ -153,11 +164,16 @@ v-for="n in datos"
       </v-col>
 
       <v-col cols="12" xl="3" lg="4" md="5" sm="7" xs="12">
-        <v-list max-height="50%" outlined rounded elevation="12">
-          <v-subheader class="menu-subtitle mx-16">OTROS</v-subheader>
-          <v-list-item-group color="rgb(40, 53, 147)!important">
-            <v-divider></v-divider>
-            <div v-for="n in datos" :key="n">
+        <v-list height="360" outlined rounded elevation="12">
+          <v-subheader class = "menu-subtitle mx-16">OTROS</v-subheader>
+            <v-list-item-group
+              color="rgb(40, 53, 147)!important"
+            >
+              <v-divider></v-divider>
+              <div 
+                v-for="n in datos"
+                :key="n"
+              >
               <v-list-item
                 class="menu-tex"
                 v-if="n.tipo == 5"
