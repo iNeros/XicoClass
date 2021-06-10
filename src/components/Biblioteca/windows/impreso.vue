@@ -87,7 +87,7 @@ v-for="n in datos"
                 v-if="n.tipo == 1"
                 @click="descargarArchivo(n.ruta)"
               >
-              {{n.titulo}}
+                {{ n.titulo }}
               </v-list-item>
             </div>
           </v-list-item-group>
@@ -112,7 +112,7 @@ v-for="n in datos"
                 @click="descargarArchivo(n.ruta)"
               >
               </v-list-item>
-              </div>
+            </div>
           </v-list-item-group>
         </v-list>
       </v-col>
@@ -135,7 +135,7 @@ v-for="n in datos"
                 @click="descargarArchivo(n.ruta)"
               >
               </v-list-item>
-              </div>
+            </div>
           </v-list-item-group>
         </v-list>
       </v-col>
@@ -158,7 +158,7 @@ v-for="n in datos"
                 @click="descargarArchivo(n.ruta)"
               >
               </v-list-item>
-              </div>
+            </div>
           </v-list-item-group>
         </v-list>
       </v-col>
@@ -181,14 +181,13 @@ v-for="n in datos"
                 @click="descargarArchivo(n.ruta)"
               >
               </v-list-item>
-              </div>
+            </div>
           </v-list-item-group>
         </v-list>
       </v-col>
     </v-row>
   </v-container>
 </template>
-
 
 <script>
 import axios from "axios";
@@ -197,8 +196,8 @@ export default {
   name: "impreso",
   data() {
     return {
-      links:[],
-      datos:[],
+      links: [],
+      datos: [],
     };
   },
   methods: {
@@ -209,7 +208,7 @@ export default {
       axios
         .get(
           "https://xicoclass.online/Impreso.php?periodoAsociado=" +
-          window.sessionStorage.getItem("id_grado")
+            window.sessionStorage.getItem("id_grado")
         )
         .then((r) => {
           this.datos = r.data;
@@ -227,23 +226,47 @@ export default {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+.box-title {
+  font-family: Montserrat;
+  font-weight: 800;
+  color: white;
+  font-size: 25px;
+  margin-left: 20px !important;
+  vertical-align: middle;
+}
+
+.titulo-seccion {
+  width: 100%;
+  height: 40px;
+  background-color: #26a69a;
+}
+.img-seccion {
+  height: 150px !important;
+  width: 150px !important;
+  margin-left: auto !important;
+  margin-right: 30px !important;
+  margin-bottom: -50px !important;
+}
+
 .menu-text {
-  color: rgb(40, 53, 147)!important;
+  color: rgb(40, 53, 147) !important;
   font-size: 16px !important;
   font-family: "Montserrat";
 }
 .menu-subtitle {
-  color: rgb(40, 53, 147)!important;
+  color: rgb(40, 53, 147) !important;
   font-size: 18px !important;
   font-family: "Montserrat", sans-serif;
+  margin-left: 20px !important;
 }
-.card{
+.card {
   min-height: 150px;
   max-height: 150px;
 }
-.imagen{
+.imagen {
   display: block;
   width: 60px;
   height: 60px;
@@ -255,4 +278,3 @@ export default {
   color: white;
 }
 </style>
-
