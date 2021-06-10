@@ -87,7 +87,8 @@ export default {
     obtenerImpreso() {
       axios
         .get(
-          "https://xicoclass.online/Impreso.php"
+          "https://xicoclass.online/Impreso.php?periodoAsociado=" +
+          window.sessionStorage.getItem("id_grado")
         )
         .then((r) => {
           this.datos = r.data;
