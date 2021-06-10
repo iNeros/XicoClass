@@ -4,9 +4,9 @@
       <v-flex xs2>
         <v-list dense>
           <v-subheader>JUEGOS</v-subheader>
-          <v-list-item-group 
-            v-model="selectedItem" 
-            color="rgb(40, 53, 147)!important" 
+          <v-list-item-group
+            v-model="selectedItem"
+            color="rgb(40, 53, 147)!important"
             mandatory
           >
             <v-divider></v-divider>

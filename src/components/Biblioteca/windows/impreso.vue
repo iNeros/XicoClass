@@ -73,45 +73,37 @@ v-for="n in datos"
 <template>
   <v-container>
     <v-row class="mt-6" justify="space-around">
-      <v-col cols="12" xl="3" lg="4" md="5" sm="7" xs="12" class="mx-5"> 
+      <v-col cols="12" xl="3" lg="4" md="5" sm="7" xs="12" class="mx-5">
         <div>
           <v-img
-          class="img-seccion"
-          src="@/assets/media/biblioteca/Libro.png"
+            class="img-seccion"
+            src="@/assets/media/biblioteca/Libro.png"
           ></v-img>
         </div>
         <div class="titulo-seccion">
           <span class="box-title"> CUENTOS </span>
         </div>
         <v-list max-height="80%" width="100%" outlined rounded elevation="12">
-            <v-list-item-group>
-              <div 
-                v-for="n in datos"
-                :key="n"
-              >
+          <v-list-item-group>
+            <div v-for="n in datos" :key="n">
               <v-list-item
                 class="menu-text"
                 v-if="n.tipo == 1"
                 @click="descargarArchivo(n.ruta)"
               >
-              {{n.titulo}}
+                {{ n.titulo }}
               </v-list-item>
-              </div>
+            </div>
           </v-list-item-group>
         </v-list>
       </v-col>
 
       <v-col cols="12" xl="3" lg="4" md="5" sm="7" xs="12">
         <v-list max-height="50%" outlined rounded elevation="12">
-          <v-subheader class = "menu-subtitle mx-16">RECORTABLE</v-subheader>
-            <v-list-item-group
-              color="rgb(40, 53, 147)!important"
-            >
-              <v-divider></v-divider>
-              <div 
-                v-for="n in datos"
-                :key="n"
-              >
+          <v-subheader class="menu-subtitle mx-16">RECORTABLE</v-subheader>
+          <v-list-item-group color="rgb(40, 53, 147)!important">
+            <v-divider></v-divider>
+            <div v-for="n in datos" :key="n">
               <v-list-item
                 class="menu-tex"
                 v-if="n.tipo == 2"
@@ -119,22 +111,17 @@ v-for="n in datos"
                 @click="descargarArchivo(n.ruta)"
               >
               </v-list-item>
-              </div>
+            </div>
           </v-list-item-group>
         </v-list>
       </v-col>
 
       <v-col cols="12" xl="3" lg="4" md="5" sm="7" xs="12">
         <v-list max-height="50%" outlined rounded elevation="12">
-          <v-subheader  class = "menu-subtitle mx-16">MI ÁLBUM</v-subheader>
-            <v-list-item-group
-              
-            >
-              <v-divider></v-divider>
-              <div 
-                v-for="n in datos"
-                :key="n"
-              >
+          <v-subheader class="menu-subtitle mx-16">MI ÁLBUM</v-subheader>
+          <v-list-item-group>
+            <v-divider></v-divider>
+            <div v-for="n in datos" :key="n">
               <v-list-item
                 class="menu-tex"
                 v-if="n.tipo == 3"
@@ -142,22 +129,17 @@ v-for="n in datos"
                 @click="descargarArchivo(n.ruta)"
               >
               </v-list-item>
-              </div>
+            </div>
           </v-list-item-group>
         </v-list>
       </v-col>
 
       <v-col cols="12" xl="3" lg="4" md="5" sm="7" xs="12">
         <v-list max-height="50%" outlined rounded elevation="12" two-line>
-          <v-subheader class = "menu-subtitle mx-16">VALORES</v-subheader>
-            <v-list-item-group
-              color="rgb(40, 53, 147)!important"
-            >
-              <v-divider></v-divider>
-              <div 
-                v-for="n in datos"
-                :key="n"
-              >
+          <v-subheader class="menu-subtitle mx-16">VALORES</v-subheader>
+          <v-list-item-group color="rgb(40, 53, 147)!important">
+            <v-divider></v-divider>
+            <div v-for="n in datos" :key="n">
               <v-list-item
                 class="menu-tex"
                 v-if="n.tipo == 4"
@@ -165,22 +147,17 @@ v-for="n in datos"
                 @click="descargarArchivo(n.ruta)"
               >
               </v-list-item>
-              </div>
+            </div>
           </v-list-item-group>
         </v-list>
       </v-col>
 
       <v-col cols="12" xl="3" lg="4" md="5" sm="7" xs="12">
         <v-list max-height="50%" outlined rounded elevation="12">
-          <v-subheader class = "menu-subtitle mx-16">OTROS</v-subheader>
-            <v-list-item-group
-              color="rgb(40, 53, 147)!important"
-            >
-              <v-divider></v-divider>
-              <div 
-                v-for="n in datos"
-                :key="n"
-              >
+          <v-subheader class="menu-subtitle mx-16">OTROS</v-subheader>
+          <v-list-item-group color="rgb(40, 53, 147)!important">
+            <v-divider></v-divider>
+            <div v-for="n in datos" :key="n">
               <v-list-item
                 class="menu-tex"
                 v-if="n.tipo == 5"
@@ -188,14 +165,13 @@ v-for="n in datos"
                 @click="descargarArchivo(n.ruta)"
               >
               </v-list-item>
-              </div>
+            </div>
           </v-list-item-group>
         </v-list>
       </v-col>
     </v-row>
   </v-container>
 </template>
-
 
 <script>
 import axios from "axios";
@@ -204,8 +180,8 @@ export default {
   name: "impreso",
   data() {
     return {
-      links:[],
-      datos:[],
+      links: [],
+      datos: [],
     };
   },
   methods: {
@@ -216,7 +192,7 @@ export default {
       axios
         .get(
           "https://xicoclass.online/Impreso.php?periodoAsociado=" +
-          window.sessionStorage.getItem("id_grado")
+            window.sessionStorage.getItem("id_grado")
         )
         .then((r) => {
           this.datos = r.data;
@@ -234,47 +210,47 @@ export default {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 
-.box-title{
+.box-title {
   font-family: Montserrat;
   font-weight: 800;
   color: white;
   font-size: 25px;
-  margin-left: 20px!important;
+  margin-left: 20px !important;
   vertical-align: middle;
 }
 
-.titulo-seccion{
+.titulo-seccion {
   width: 100%;
   height: 40px;
-  background-color: #26A69A;
+  background-color: #26a69a;
 }
-.img-seccion{
-  height: 150px!important;
-  width: 150px!important;
-  margin-left: auto!important;
-  margin-right: 30px!important;
-  margin-bottom: -50px!important;
+.img-seccion {
+  height: 150px !important;
+  width: 150px !important;
+  margin-left: auto !important;
+  margin-right: 30px !important;
+  margin-bottom: -50px !important;
 }
 
 .menu-text {
-  color: rgb(40, 53, 147)!important;
+  color: rgb(40, 53, 147) !important;
   font-size: 16px !important;
   font-family: "Montserrat";
 }
 .menu-subtitle {
-  color: rgb(40, 53, 147)!important;
+  color: rgb(40, 53, 147) !important;
   font-size: 18px !important;
   font-family: "Montserrat", sans-serif;
-  margin-left: 20px!important;
+  margin-left: 20px !important;
 }
-.card{
+.card {
   min-height: 150px;
   max-height: 150px;
 }
-.imagen{
+.imagen {
   display: block;
   width: 60px;
   height: 60px;
@@ -286,4 +262,3 @@ export default {
   color: white;
 }
 </style>
-

@@ -1,24 +1,16 @@
 <template>
-    <v-container fluid>
-      SEGUNDO FORMATO
-    </v-container>
+  <v-container fluid> SEGUNDO FORMATO </v-container>
 </template>
-
 
 <script>
 export default {
   name: "tramitesSegundo",
 
-  data(){
-      return{
-
-      }
+  data() {
+    return {};
   },
-  methods: {
-    
-  },
+  methods: {},
 };
-
 </script>
 
 <style scoped>
@@ -32,5 +24,4 @@ export default {
   line-height: 40px;
   letter-spacing: 0.01px;
 }
-
 </style>

@@ -1,24 +1,16 @@
 <template>
-    <v-container fluid>
-      QUINTO FORMATO
-    </v-container>
+  <v-container fluid> QUINTO FORMATO </v-container>
 </template>
-
 
 <script>
 export default {
   name: "tramitesQuinto",
 
-  data(){
-      return{
-
-      }
+  data() {
+    return {};
   },
-  methods: {
-    
-  },
+  methods: {},
 };
-
 </script>
 
 <style scoped>
@@ -32,5 +24,4 @@ export default {
   line-height: 40px;
   letter-spacing: 0.01px;
 }
-
 </style>

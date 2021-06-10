@@ -89,7 +89,7 @@ export default {
         descripcion: "Lorem ipsum dolor sit amet consectetur",
         img: "https://cdn.vuetifyjs.com/images/cards/foster.jpg",
       },
-       {
+      {
         materia: "Educación Socioemocional",
         nombreDocente: "Nombre del docente",
         horario: "Horario",
