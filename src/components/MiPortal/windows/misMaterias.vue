@@ -46,7 +46,7 @@
                 </v-card-text>                
                 <v-card-actions>
                   <v-btn 
-                    color="#E0E0E0"
+                    color=black
                     elevation="2"
                     block text
                     href="/Evaluacion" 
@@ -109,12 +109,12 @@ export default {
       let a = 1;
       let b = 6;
       let numeroAleatorio = a + Math.floor(Math.random() * b);
-      if (numeroAleatorio == 1) return "#7E57C2";
-      else if (numeroAleatorio == 2) return "#BA68C8";
-      else if (numeroAleatorio == 3) return "#26A69A";
-      else if (numeroAleatorio == 4) return "#FF9800";
-      else if (numeroAleatorio == 5) return "#64DD17";
-      else if (numeroAleatorio == 6) return "#E91E63";
+      if (numeroAleatorio == 1) return "#E91E63";
+      else if (numeroAleatorio == 2) return "#7E57C2";
+      else if (numeroAleatorio == 3) return "#82b1ff";
+      else if (numeroAleatorio == 4) return "#64DD17";
+      else if (numeroAleatorio == 5) return "#FF9800";
+      else if (numeroAleatorio == 6) return "#BA68C8";
     },
   },
 };
@@ -124,8 +124,8 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 .titulo {
   font-family: "Poppins";
-  font: weight 500px;
-  font-size: 24px;
+  font: weight 460px;
+  font-size: 22px;
   line-height: 40px;
   letter-spacing: 0.01px;
   color: black;
@@ -135,18 +135,18 @@ export default {
   font-family: "Poppins";
   font-weight: 400px;
   font-size: 18px;
-  color: white;
+  color: #fafafa;
 }
 .subtitulo-2 {
   font-family: "Poppins";
   font-weight: 400;
-  font-size: 15px;
-  color: white;
+  font-size: 13px;
+  color: #fafafa;
 }
 .cuerpo {
   font-family: "Poppins";
   font-weight: 400px;
-  font-size: 15px;
+  font-size: 13px;
   color: white;
   letter-spacing: 0.01px;
   text-align: justify;
