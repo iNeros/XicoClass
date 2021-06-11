@@ -29,6 +29,7 @@
               label="Contraseña"
               type="password"
               v-model="Pass"
+              v-on:keyup.enter="Session()"
             ></v-text-field>
           </v-form>
         </v-card-text>

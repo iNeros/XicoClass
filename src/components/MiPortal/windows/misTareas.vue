@@ -44,16 +44,18 @@
                 </div>
               </template>
             </v-col>
-            <v-col cols="6">
+            <v-col cols="6" v-for="arch in archivosAlumno" :key="arch.id_archivos_alumnos"> 
               <span class="texto-trabajo">MI TRABAJO:</span>
               <!-- AQUI SUBEN EL ARCHIVO -->
-              <template v-if="archivosAlumno !== null">
-                <v-chip class="ma-2">+1</v-chip>
+              <template v-if="arch.id_actividad == item.id_actividad">
+                <v-chip class="ma-2" @click="DescargarArchivo(arch.ruta)">{{arch.nombre}} </v-chip>
               </template>
-              <template v-if="archivosAlumno == null">
-                <v-chip class="ma-2" @click="SubirArchivo()">+2</v-chip>
+              <template >
+                <v-chip class="ma-2" @click="Gig = !Gig">+</v-chip>
+                <v-file-input v-show="Gig" class="ma-2" v-model="archivoA">Subir archivo </v-file-input>
+                {{archivoA}}
               </template>
-              <v-btn class="boton-entregar" color="green" dark>
+              <v-btn class="boton-entregar" color="green" dark @click="SubirArchivo()">
                 Entregar
               </v-btn>
             </v-col>
@@ -66,13 +68,17 @@
 
 <script>
 import axios from "axios";
+//import firebase from 'firebase';
+
 export default {
   name: "misTareas",
   data() {
     return {
+      Gig: false,
       archivos: [],
-      archivosAlumno: [],
+      archivosAlumno: '',
       Tareas: [],
+      archivoA:'',
     };
   },
   methods: {
@@ -80,7 +86,22 @@ export default {
       window.open("" + id, "_blank");
     },
     SubirArchivo() {
-      window.alert("si funciona");
+  /*  const storageRef = firebase.storage().ref(`/ArchivosAlumnos/1/${this.archivoA}`);
+        const task = storageRef.put(this.archivoA);
+
+        task.on('state_changed',snapshot =>{
+          let percentage = (snapshot.bytesTransferred/snapshot.totalBytes)*100;
+          this.uploadValue = percentage;
+        }, error=>{console.log(error.message)},
+          ()=>{this.uploadValue=100;
+          //OBTENER EL LINK
+            task.snapshot.ref.getDownloadURL().then((url)=> {
+              this.urlFile[i] = url;
+              console.log(this.urlFile[i]);
+            });;
+          });; */
+    window.alert('Archivo subido');
+    console.log(this.archivoA.name);
     },
     Tarea() {
       axios
@@ -107,10 +128,23 @@ export default {
           console.log(error);
         });
     },
+    ArchivoAlumno() {
+      axios
+        .get("https://xicoclass.online/ArchivosAlumnos.php?id_alumno="+
+            window.sessionStorage.getItem("id_alumno"))
+        .then((r) => {
+          this.archivosAlumno = r.data;
+          console.log(this.archivosAlumno);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    },
   },
   mounted() {
     this.Tarea();
     this.Archivo();
+    this.ArchivoAlumno();
   },
 };
 </script>
