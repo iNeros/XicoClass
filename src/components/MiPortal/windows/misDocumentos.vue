@@ -32,7 +32,7 @@ export default {
     items: [
       {
         id: 1,
-        doc: "Acta de nacimiento",
+        doc: "Acta de nacimiento del Alumno",
       },
       {
         id: 2,
@@ -40,11 +40,23 @@ export default {
       },
       {
         id: 3,
-        doc: "CURP del Padre de familia o Tutor",
+        doc: "CURP del papá",
       },
       {
         id: 4,
-        doc: "docs oficiales",
+        doc: "CURP de la mamá",
+      },
+      {
+        id: 5,
+        doc: "Copia del INE del papá ",
+      },
+      {
+        id: 6,
+        doc: "Copia del INE de la mamá",
+      },
+       {
+        id: 7,
+        doc: "Comprobante domicilio",
       },
     ],
   }),
