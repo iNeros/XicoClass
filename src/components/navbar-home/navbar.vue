@@ -203,7 +203,11 @@
             </v-list-item>
             <v-list-item>
               <v-list-item-title
-                ><v-btn color="red" @click="CloseSession(), setInicio()" depressed plain
+                ><v-btn
+                  color="red"
+                  @click="CloseSession(), setInicio()"
+                  depressed
+                  plain
                   >Cerrar Sesion</v-btn
                 ></v-list-item-title
               >

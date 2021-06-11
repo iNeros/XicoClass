@@ -4,17 +4,20 @@
     <v-container>
       <v-row class="mt-2">
         <v-col cols="12" xl="4" lg="4" md="6" sm="6" xs="12">
-          <v-card 
-            elevation="2" 
-            color="#E91E63"
-            min-height="610" 
-            width="100%"    
-          >
+          <v-card elevation="2" color="#E91E63" min-height="610" width="100%">
             <v-card-title class="titulo">
               Lenguaje y Comunicación
             </v-card-title>
-            
-              <v-col cols="12" xl="12" lg="12" md="12" sm="12" xs="12" class="ml-16">
+
+            <v-col
+              cols="12"
+              xl="12"
+              lg="12"
+              md="12"
+              sm="12"
+              xs="12"
+              class="ml-16"
+            >
               <v-img
                 contain
                 class="imagen-carta ml-12"
@@ -24,38 +27,33 @@
             </v-col>
 
             <div class="mt-1">
-              <p class="subtitulo-2 mx-4">Observaciones del mes de Noviembre </p>                
-              <p class="cuerpo mx-6" justify="center">
-                Observaciones Nov
-              </p>
+              <p class="subtitulo-2 mx-4">Observaciones del mes de Noviembre</p>
+              <p class="cuerpo mx-6" justify="center">Observaciones Nov</p>
             </div>
             <div class="mt-1">
-              <p class="subtitulo-2 mx-4">Observaciones del mes de Marzo</p>                
-              <p class="cuerpo mx-6" justify="center">
-                Observaciones Marzo
-              </p>
+              <p class="subtitulo-2 mx-4">Observaciones del mes de Marzo</p>
+              <p class="cuerpo mx-6" justify="center">Observaciones Marzo</p>
             </div>
             <div class="mt-1">
-              <p class="subtitulo-2 mx-4">Observaciones del mes de Junio </p>                
-              <p class="cuerpo mx-6" justify="center">
-                Observaciones Junio
-              </p>
-            </div>              
+              <p class="subtitulo-2 mx-4">Observaciones del mes de Junio</p>
+              <p class="cuerpo mx-6" justify="center">Observaciones Junio</p>
+            </div>
           </v-card>
         </v-col>
 
         <v-col cols="12" xl="4" lg="4" md="6" sm="6" xs="12">
-          <v-card 
-            elevation="2" 
-            color="#7E57C2" 
-            min-height="610" 
-            width="100%" >
-            <v-card-title class="titulo">
-              Pensamiento Matemático
-            </v-card-title>
+          <v-card elevation="2" color="#7E57C2" min-height="610" width="100%">
+            <v-card-title class="titulo"> Pensamiento Matemático </v-card-title>
 
-            <v-col cols="12" xl="12" lg="12" md="12" sm="12" xs="12"
-            class="ml-16">
+            <v-col
+              cols="12"
+              xl="12"
+              lg="12"
+              md="12"
+              sm="12"
+              xs="12"
+              class="ml-16"
+            >
               <v-img
                 contain
                 class="imagen-carta mx-12"
@@ -63,39 +61,36 @@
               >
               </v-img>
             </v-col>
-             <div class="mt-1">
-              <p class="subtitulo-2 mx-4">Observaciones del mes de Noviembre </p>                
-              <p class="cuerpo mx-6" justify="center">
-                Observaciones Nov
-              </p>
+            <div class="mt-1">
+              <p class="subtitulo-2 mx-4">Observaciones del mes de Noviembre</p>
+              <p class="cuerpo mx-6" justify="center">Observaciones Nov</p>
             </div>
             <div class="mt-1">
-              <p class="subtitulo-2 mx-4">Observaciones del mes de Marzo</p>                
-              <p class="cuerpo mx-6" justify="center">
-                Observaciones Marzo
-              </p>
+              <p class="subtitulo-2 mx-4">Observaciones del mes de Marzo</p>
+              <p class="cuerpo mx-6" justify="center">Observaciones Marzo</p>
             </div>
             <div class="mt-1">
-              <p class="subtitulo-2 mx-4">Observaciones del mes de Junio </p>                
-              <p class="cuerpo mx-6" justify="center">
-                Observaciones Junio
-              </p>
-            </div>  
+              <p class="subtitulo-2 mx-4">Observaciones del mes de Junio</p>
+              <p class="cuerpo mx-6" justify="center">Observaciones Junio</p>
+            </div>
           </v-card>
         </v-col>
 
         <v-col cols="12" xl="4" lg="4" md="6" sm="6" xs="12">
-          <v-card 
-            elevation="2" 
-            color="#80D8FF"
-            min-height="610" 
-            width="100%"    
-          >
+          <v-card elevation="2" color="#80D8FF" min-height="610" width="100%">
             <v-card-title class="titulo">
               Exploración y Comprensión del Mundo
             </v-card-title>
-            
-            <v-col cols="12" xl="12" lg="12" md="12" sm="12" xs="12" class="ml-16">
+
+            <v-col
+              cols="12"
+              xl="12"
+              lg="12"
+              md="12"
+              sm="12"
+              xs="12"
+              class="ml-16"
+            >
               <v-img
                 contain
                 class="imagen-carta mx-12"
@@ -105,38 +100,33 @@
             </v-col>
 
             <div class="mt-1">
-              <p class="subtitulo-2 mx-4">Observaciones del mes de Noviembre </p>                
-              <p class="cuerpo mx-6" justify="center">
-                Observaciones Nov
-              </p>
+              <p class="subtitulo-2 mx-4">Observaciones del mes de Noviembre</p>
+              <p class="cuerpo mx-6" justify="center">Observaciones Nov</p>
             </div>
             <div class="mt-1">
-              <p class="subtitulo-2 mx-4">Observaciones del mes de Marzo</p>                
-              <p class="cuerpo mx-6" justify="center">
-                Observaciones Marzo
-              </p>
+              <p class="subtitulo-2 mx-4">Observaciones del mes de Marzo</p>
+              <p class="cuerpo mx-6" justify="center">Observaciones Marzo</p>
             </div>
             <div class="mt-1">
-              <p class="subtitulo-2 mx-4">Observaciones del mes de Junio </p>                
-              <p class="cuerpo mx-6" justify="center">
-                Observaciones Junio
-              </p>
-            </div>              
+              <p class="subtitulo-2 mx-4">Observaciones del mes de Junio</p>
+              <p class="cuerpo mx-6" justify="center">Observaciones Junio</p>
+            </div>
           </v-card>
         </v-col>
 
-        <v-col cols="12" xl="4" lg="4" md="6" sm="6" xs="12" >
-          <v-card 
-            elevation="2" 
-            color="#64DD17"
-            min-height="610" 
-            width="100%"    
-          >
-            <v-card-title class="titulo">
-              Arte
-            </v-card-title>
-            
-            <v-col cols="12" xl="12" lg="12" md="12" sm="12" xs="12" class="ml-16">
+        <v-col cols="12" xl="4" lg="4" md="6" sm="6" xs="12">
+          <v-card elevation="2" color="#64DD17" min-height="610" width="100%">
+            <v-card-title class="titulo"> Arte </v-card-title>
+
+            <v-col
+              cols="12"
+              xl="12"
+              lg="12"
+              md="12"
+              sm="12"
+              xs="12"
+              class="ml-16"
+            >
               <v-img
                 contain
                 class="imagen-carta mx-12"
@@ -146,38 +136,35 @@
             </v-col>
 
             <div class="mt-1">
-              <p class="subtitulo-2 mx-4">Observaciones del mes de Noviembre </p>                
-              <p class="cuerpo mx-6" justify="center">
-                Observaciones Nov
-              </p>
+              <p class="subtitulo-2 mx-4">Observaciones del mes de Noviembre</p>
+              <p class="cuerpo mx-6" justify="center">Observaciones Nov</p>
             </div>
             <div class="mt-1">
-              <p class="subtitulo-2 mx-4">Observaciones del mes de Marzo</p>                
-              <p class="cuerpo mx-6" justify="center">
-                Observaciones Marzo
-              </p>
+              <p class="subtitulo-2 mx-4">Observaciones del mes de Marzo</p>
+              <p class="cuerpo mx-6" justify="center">Observaciones Marzo</p>
             </div>
             <div class="mt-1">
-              <p class="subtitulo-2 mx-4">Observaciones del mes de Junio </p>                
-              <p class="cuerpo mx-6" justify="center">
-                Observaciones Junio
-              </p>
-            </div>              
+              <p class="subtitulo-2 mx-4">Observaciones del mes de Junio</p>
+              <p class="cuerpo mx-6" justify="center">Observaciones Junio</p>
+            </div>
           </v-card>
         </v-col>
 
         <v-col cols="12" xl="4" lg="4" md="6" sm="6" xs="12">
-          <v-card 
-            elevation="2" 
-            color="#FFFF00"
-            min-height="610" 
-            width="100%"    
-          >
+          <v-card elevation="2" color="#FFFF00" min-height="610" width="100%">
             <v-card-title class="titulo">
               Eduación Socioemocional
             </v-card-title>
-            
-            <v-col cols="12" xl="12" lg="12" md="12" sm="12" xs="12" class="ml-16">
+
+            <v-col
+              cols="12"
+              xl="12"
+              lg="12"
+              md="12"
+              sm="12"
+              xs="12"
+              class="ml-16"
+            >
               <v-img
                 contain
                 class="imagen-carta mx-12"
@@ -186,38 +173,33 @@
               </v-img>
             </v-col>
             <div class="mt-1">
-              <p class="subtitulo-2 mx-4">Observaciones del mes de Noviembre </p>                
-              <p class="cuerpo mx-6" justify="center">
-                Observaciones Nov
-              </p>
+              <p class="subtitulo-2 mx-4">Observaciones del mes de Noviembre</p>
+              <p class="cuerpo mx-6" justify="center">Observaciones Nov</p>
             </div>
             <div class="mt-1">
-              <p class="subtitulo-2 mx-4">Observaciones del mes de Marzo</p>                
-              <p class="cuerpo mx-6" justify="center">
-                Observaciones Marzo
-              </p>
+              <p class="subtitulo-2 mx-4">Observaciones del mes de Marzo</p>
+              <p class="cuerpo mx-6" justify="center">Observaciones Marzo</p>
             </div>
             <div class="mt-1">
-              <p class="subtitulo-2 mx-4">Observaciones del mes de Junio </p>                
-              <p class="cuerpo mx-6" justify="center">
-                Observaciones Junio
-              </p>
-            </div>              
+              <p class="subtitulo-2 mx-4">Observaciones del mes de Junio</p>
+              <p class="cuerpo mx-6" justify="center">Observaciones Junio</p>
+            </div>
           </v-card>
         </v-col>
 
-        <v-col cols="12" xl="4" lg="4" md="6" sm="6" xs="12" >
-          <v-card 
-            elevation="2" 
-            color="#FF9800"
-            min-height="610" 
-            width="100%"    
-          >
-            <v-card-title class="titulo">
-              Educación Física
-            </v-card-title>
-            
-            <v-col cols="12" xl="12" lg="12" md="12" sm="12" xs="12" class="ml-16">
+        <v-col cols="12" xl="4" lg="4" md="6" sm="6" xs="12">
+          <v-card elevation="2" color="#FF9800" min-height="610" width="100%">
+            <v-card-title class="titulo"> Educación Física </v-card-title>
+
+            <v-col
+              cols="12"
+              xl="12"
+              lg="12"
+              md="12"
+              sm="12"
+              xs="12"
+              class="ml-16"
+            >
               <v-img
                 contain
                 class="imagen-carta mx-12"
@@ -227,27 +209,20 @@
             </v-col>
 
             <div class="mt-1">
-              <p class="subtitulo-2 mx-4">Observaciones del mes de Noviembre </p>                
-              <p class="cuerpo mx-6" justify="center">
-                Observaciones Nov
-              </p>
+              <p class="subtitulo-2 mx-4">Observaciones del mes de Noviembre</p>
+              <p class="cuerpo mx-6" justify="center">Observaciones Nov</p>
             </div>
             <div class="mt-1">
-              <p class="subtitulo-2 mx-4">Observaciones del mes de Marzo</p>                
-              <p class="cuerpo mx-6" justify="center">
-                Observaciones Marzo
-              </p>
+              <p class="subtitulo-2 mx-4">Observaciones del mes de Marzo</p>
+              <p class="cuerpo mx-6" justify="center">Observaciones Marzo</p>
             </div>
             <div class="mt-1">
-              <p class="subtitulo-2 mx-4">Observaciones del mes de Junio </p>                
-              <p class="cuerpo mx-6" justify="center">
-                Observaciones Junio
-              </p>
-            </div>              
+              <p class="subtitulo-2 mx-4">Observaciones del mes de Junio</p>
+              <p class="cuerpo mx-6" justify="center">Observaciones Junio</p>
+            </div>
           </v-card>
         </v-col>
       </v-row>
-
     </v-container>
     <footerHome></footerHome>
   </div>
@@ -308,5 +283,4 @@ export default {
   opacity: 1;
   background: transparent;
 }
-
 </style>

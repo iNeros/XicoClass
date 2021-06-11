@@ -13,7 +13,7 @@
             <tr v-for="item in items" :key="item.items" class="titulo">
               <td bgcolor="" class="titulo">{{ item.doc }}</td>
               <td bgcolor="">
-                <v-btn class="ma-2" color=#64DD17 elevation="3">Ver</v-btn>
+                <v-btn class="ma-2" color="#64DD17" elevation="3">Ver</v-btn>
               </td>
             </tr>
           </tbody>
@@ -52,7 +52,7 @@ export default {
         id: 6,
         doc: "Copia del INE de la mamá",
       },
-       {
+      {
         id: 7,
         doc: "Comprobante domicilio",
       },
@@ -70,7 +70,7 @@ export default {
   line-height: 40px;
   letter-spacing: 0.01px;
 }
-.ma-2{
-  color:white;
+.ma-2 {
+  color: white;
 }
 </style>

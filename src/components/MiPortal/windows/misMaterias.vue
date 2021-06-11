@@ -11,49 +11,48 @@
       <v-row class="fill-height" justify="space-around">
         <template v-for="(item, i) in items">
           <v-col :key="i" cols="12" xl="4" lg="4" md="6" xs="12">
-              <v-card
-                min-height="400" 
-                width="100%"                              
-                shaped
-                elevation="3"
-                :color="getColorBack()"                
-              >
-                <v-card-title>
-                  <v-row >
-                    <v-col cols="12" xl="12" lg="11" md="11" sm ="11" xs="11">
-                      <p 
-                        class="mt-1 mx-7 titulo"
-                        style="text-align:justify"
-                      >
-                          {{ item.materia }}                      
-                      </p>
-                    </v-col>
-                  </v-row>
-                </v-card-title>
-                <v-card-text>
-                  <p class="subtitulo text-left mx-6">
-                    {{ item.nombreDocente }}
-                  </p>
-                  <p class="subtitulo-2 mx-6 my-0 text-left">
-                    {{ item.horario }}
-                  </p>
-                  <v-divider class="mt-1 mx-6"></v-divider>
-                </v-card-text>
-                <v-card-text>
-                  <p class="cuerpo">
-                    {{ item.descripcion }}
-                  </p>
-                </v-card-text>                
-                <v-card-actions>
-                  <v-btn 
-                    color=black
-                    elevation="2"
-                    block text
-                    href="/Evaluacion" 
-                  > Ver mas </v-btn>
-                </v-card-actions>
-              </v-card>
-            
+            <v-card
+              min-height="400"
+              width="100%"
+              shaped
+              elevation="3"
+              :color="getColorBack()"
+            >
+              <v-card-title>
+                <v-row>
+                  <v-col cols="12" xl="12" lg="11" md="11" sm="11" xs="11">
+                    <p class="mt-1 mx-7 titulo" style="text-align: justify">
+                      {{ item.materia }}
+                    </p>
+                  </v-col>
+                </v-row>
+              </v-card-title>
+              <v-card-text>
+                <p class="subtitulo text-left mx-6">
+                  {{ item.nombreDocente }}
+                </p>
+                <p class="subtitulo-2 mx-6 my-0 text-left">
+                  {{ item.horario }}
+                </p>
+                <v-divider class="mt-1 mx-6"></v-divider>
+              </v-card-text>
+              <v-card-text>
+                <p class="cuerpo">
+                  {{ item.descripcion }}
+                </p>
+              </v-card-text>
+              <v-card-actions>
+                <v-btn
+                  color="black"
+                  elevation="2"
+                  block
+                  text
+                  href="/Evaluacion"
+                >
+                  Ver mas
+                </v-btn>
+              </v-card-actions>
+            </v-card>
           </v-col>
         </template>
       </v-row>
@@ -70,37 +69,43 @@ export default {
         materia: "Lenguaje y Comunicación",
         nombreDocente: "Laura Luz Tlaxcalteco",
         horario: "Horario",
-        descripcion: "Adquirir y desarrollar los conocimientos, actitudes y valores que permitan a los estudiantes seguir aprendiendo a lo largo de su vida y afrontar los retos que implica una sociedad diversa y en continuo cambio. ",
+        descripcion:
+          "Adquirir y desarrollar los conocimientos, actitudes y valores que permitan a los estudiantes seguir aprendiendo a lo largo de su vida y afrontar los retos que implica una sociedad diversa y en continuo cambio. ",
       },
       {
         materia: "Pensamiento Matemático",
         nombreDocente: "Laura Luz Tlaxcalteco",
         horario: "Horario",
-        descripcion: "Busca que los estudiantes desarrollen esa forma de razonar tanto lógica como no convencional y que al hacerlo aprecien el valor de ese pensamiento, lo que ha de traducirse en actitudes y valores favorables hacia las matemáticas, su utilidad y su valor científico y cultural.",
+        descripcion:
+          "Busca que los estudiantes desarrollen esa forma de razonar tanto lógica como no convencional y que al hacerlo aprecien el valor de ese pensamiento, lo que ha de traducirse en actitudes y valores favorables hacia las matemáticas, su utilidad y su valor científico y cultural.",
       },
       {
         materia: "Exploración y Comprensión del Mundo",
         nombreDocente: "Laura Luz Tlaxcalteco",
         horario: "Horario",
-        descripcion: "Ofrece un conjunto de aproximaciones a ciertos fenómenos y procesos naturales y sociales cuidadosamente seleccionados.",
+        descripcion:
+          "Ofrece un conjunto de aproximaciones a ciertos fenómenos y procesos naturales y sociales cuidadosamente seleccionados.",
       },
       {
         materia: "Arte",
         nombreDocente: "Laura Luz Tlaxcalteco",
         horario: "Horario",
-        descripcion: "Concepto amplio, abierto e incluyente de las artes que permite reconocer la diversidad cultural y artística de México y del mundo, y que engloba tanto las llamadas bellas artes como las distintas artes populares, indígenas, clásicas, emergentes, tradicionales y contemporáneas.",
+        descripcion:
+          "Concepto amplio, abierto e incluyente de las artes que permite reconocer la diversidad cultural y artística de México y del mundo, y que engloba tanto las llamadas bellas artes como las distintas artes populares, indígenas, clásicas, emergentes, tradicionales y contemporáneas.",
       },
       {
         materia: "Educación Socioemocional",
         nombreDocente: "Laura Luz Tlaxcalteco",
         horario: "Horario",
-        descripcion: "Aporta a la formación de los estudiantes conocimientos, habilidades, valores y actitudes enfocados en el desarrollo personal, sin perder de vista que estos aprendizajes adquieren valor en contextos sociales y de convivencia.",
+        descripcion:
+          "Aporta a la formación de los estudiantes conocimientos, habilidades, valores y actitudes enfocados en el desarrollo personal, sin perder de vista que estos aprendizajes adquieren valor en contextos sociales y de convivencia.",
       },
       {
         materia: "Educación Física",
         nombreDocente: "Laura Luz Tlaxcalteco",
         horario: "Horario",
-        descripcion: "Motiva la realización de diversas acciones motrices, en un proceso dinámico y reflexivo, a partir de estrategias didácticas que se derivan del juego motor, como la expresión corporal, la iniciación deportiva y el deporte educativo, entre otras. ",
+        descripcion:
+          "Motiva la realización de diversas acciones motrices, en un proceso dinámico y reflexivo, a partir de estrategias didácticas que se derivan del juego motor, como la expresión corporal, la iniciación deportiva y el deporte educativo, entre otras. ",
       },
     ],
   }),

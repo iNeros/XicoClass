@@ -5,7 +5,8 @@
         <div>
           <v-img
             class="img-seccion"
-            src="@/assets/media/biblioteca/img-videos.png">
+            src="@/assets/media/biblioteca/img-videos.png"
+          >
           </v-img>
         </div>
         <div class="titulo-seccion">
@@ -16,53 +17,44 @@
             <template v-slot:activator>
               <v-list-item-title>CUENTOS</v-list-item-title>
             </template>
-            <div
-            v-for="n in datos"
-            :key="n"
-            >
-            <v-list-item
-              class="menu-text"
-              v-if="n.tipo == 1"
-              @click="selectLink(n.url)"
-            >
-            {{n.titulo}}
-            </v-list-item>
+            <div v-for="n in datos" :key="n">
+              <v-list-item
+                class="menu-text"
+                v-if="n.tipo == 1"
+                @click="selectLink(n.url)"
+              >
+                {{ n.titulo }}
+              </v-list-item>
             </div>
           </v-list-group>
 
-           <v-list-group class="menu-text">
+          <v-list-group class="menu-text">
             <template v-slot:activator>
               <v-list-item-title>CLASES</v-list-item-title>
             </template>
-            <div
-            v-for="n in datos"
-            :key="n"
-            >
-            <v-list-item
-              class="menu-text"
-              v-if="n.tipo == 2"
-              @click="selectLink(n.url)"
-            >
-            {{n.titulo}}
-            </v-list-item>
+            <div v-for="n in datos" :key="n">
+              <v-list-item
+                class="menu-text"
+                v-if="n.tipo == 2"
+                @click="selectLink(n.url)"
+              >
+                {{ n.titulo }}
+              </v-list-item>
             </div>
           </v-list-group>
 
-           <v-list-group class="menu-text">
+          <v-list-group class="menu-text">
             <template v-slot:activator>
               <v-list-item-title>REFORZAMIENTO</v-list-item-title>
             </template>
-            <div
-            v-for="n in datos"
-            :key="n"
-            >
-            <v-list-item
-              class="menu-text"
-              v-if="n.tipo == 3"
-              @click="selectLink(n.url)"
-            >
-            {{n.titulo}}
-            </v-list-item>
+            <div v-for="n in datos" :key="n">
+              <v-list-item
+                class="menu-text"
+                v-if="n.tipo == 3"
+                @click="selectLink(n.url)"
+              >
+                {{ n.titulo }}
+              </v-list-item>
             </div>
           </v-list-group>
         </v-list>
@@ -89,7 +81,6 @@
           ></iframe>
         </div>
       </v-col>
-
     </v-row>
   </v-container>
 </template>
@@ -101,7 +92,8 @@ export default {
   name: "visual",
   data() {
     return {
-      link: "https://firebasestorage.googleapis.com/v0/b/xicoclassproject-579bb.appspot.com/o/ImagenEleccion%2FholderVisual670.png?alt=media&token=3f1aa114-2581-4201-8754-d31960ef8c5f",
+      link:
+        "https://firebasestorage.googleapis.com/v0/b/xicoclassproject-579bb.appspot.com/o/ImagenEleccion%2FholderVisual670.png?alt=media&token=3f1aa114-2581-4201-8754-d31960ef8c5f",
       datos: [],
     };
   },
@@ -149,7 +141,7 @@ export default {
 .titulo-seccion {
   width: 100%;
   height: 40px;
-  background-color: #B2FF59;
+  background-color: #b2ff59;
 }
 .img-seccion {
   height: 80px !important;

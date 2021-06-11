@@ -8,10 +8,17 @@
             src="@/assets/media/biblioteca/img-cuento.png"
           ></v-img>
         </div>
-        <div class="titulo-seccion"  >
+        <div class="titulo-seccion">
           <span class="box-title"> CUENTOS </span>
         </div>
-        <v-list height="360" width="90%" outlined rounded elevation="12" two-line>
+        <v-list
+          height="360"
+          width="90%"
+          outlined
+          rounded
+          elevation="12"
+          two-line
+        >
           <v-list-item-group>
             <div v-for="n in datos" :key="n">
               <v-list-item
@@ -36,7 +43,14 @@
         <div class="titulo-seccion2">
           <span class="box-title"> RECORTABLES </span>
         </div>
-        <v-list height="360" width="90%" outlined rounded elevation="12" two-line>
+        <v-list
+          height="360"
+          width="90%"
+          outlined
+          rounded
+          elevation="12"
+          two-line
+        >
           <v-list-item-group>
             <div v-for="n in datos" :key="n">
               <v-list-item
@@ -61,7 +75,14 @@
         <div class="titulo-seccion3">
           <span class="box-title"> MI ÁLBUM </span>
         </div>
-        <v-list height="360" width="90%" outlined rounded elevation="12" two-line>
+        <v-list
+          height="360"
+          width="90%"
+          outlined
+          rounded
+          elevation="12"
+          two-line
+        >
           <v-list-item-group>
             <div v-for="n in datos" :key="n">
               <v-list-item
@@ -86,7 +107,14 @@
         <div class="titulo-seccion4">
           <span class="box-title"> VALORES </span>
         </div>
-        <v-list height="360" width="90%" outlined rounded elevation="12" two-line>
+        <v-list
+          height="360"
+          width="90%"
+          outlined
+          rounded
+          elevation="12"
+          two-line
+        >
           <v-list-item-group>
             <div v-for="n in datos" :key="n">
               <v-list-item
@@ -100,7 +128,7 @@
           </v-list-item-group>
         </v-list>
       </v-col>
-      
+
       <v-col cols="12" xl="3" lg="4" md="5" sm="7" xs="12">
         <div>
           <v-img
@@ -125,8 +153,6 @@
           </v-list-item-group>
         </v-list>
       </v-col>
-
-
     </v-row>
   </v-container>
 </template>
@@ -182,17 +208,17 @@ export default {
 .titulo-seccion {
   width: 90%;
   height: 40px;
-  background-color: #E91E63;
+  background-color: #e91e63;
 }
 .titulo-seccion2 {
   width: 90%;
   height: 40px;
-  background-color: #7E57C2;
+  background-color: #7e57c2;
 }
 .titulo-seccion3 {
   width: 90%;
   height: 40px;
-  background-color: #80D8FF;
+  background-color: #80d8ff;
 }
 .titulo-seccion4 {
   width: 90%;
@@ -202,7 +228,7 @@ export default {
 .titulo-seccion5 {
   width: 90%;
   height: 40px;
-  background-color: #64DD17 ;
+  background-color: #64dd17;
 }
 .img-seccion {
   height: 80px !important;

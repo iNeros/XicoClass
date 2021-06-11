@@ -153,8 +153,8 @@ export default {
   height: 150px;
   overflow-y: auto;
 }
-.od{
-font-family: "Poppins";
+.od {
+  font-family: "Poppins";
 }
 .ods {
   font-family: "Poppins";

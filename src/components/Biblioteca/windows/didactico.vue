@@ -1,11 +1,12 @@
 <template>
   <v-container fluid>
-    <v-row class="fill-height mx-6" justify="space-around" >
+    <v-row class="fill-height mx-6" justify="space-around">
       <v-col cols="12" xl="3" lg="3" md="3" sm="12" xs="12">
         <div>
           <v-img
             class="img-seccion"
-            src="@/assets/media/biblioteca/img-juegos.png">
+            src="@/assets/media/biblioteca/img-juegos.png"
+          >
           </v-img>
         </div>
         <div class="titulo-seccion">
@@ -25,13 +26,8 @@
       </v-col>
 
       <v-col cols="12" xl="9" lg="9" md="9" sm="12" xs="12">
-        <iframe
-          :src="link"
-          width="100%"
-          height="675px"
-        ></iframe>
+        <iframe :src="link" width="100%" height="675px"></iframe>
       </v-col>
-
     </v-row>
   </v-container>
 </template>
@@ -43,7 +39,9 @@ export default {
   name: "didactico",
   data() {
     return {
-      link: ["https://firebasestorage.googleapis.com/v0/b/xicoclassproject-579bb.appspot.com/o/ImagenEleccion%2FholderDidactico670.png?alt=media&token=792f0fc2-2911-4156-846c-a606fb93b2e6"],
+      link: [
+        "https://firebasestorage.googleapis.com/v0/b/xicoclassproject-579bb.appspot.com/o/ImagenEleccion%2FholderDidactico670.png?alt=media&token=792f0fc2-2911-4156-846c-a606fb93b2e6",
+      ],
       datos: [],
     };
   },
@@ -76,7 +74,7 @@ export default {
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 .menu-text {
-  color:#e65100 !important;
+  color: #e65100 !important;
   font-size: 18px !important;
   font-family: "Poppins", sans-serif;
 }
@@ -104,7 +102,7 @@ export default {
 .titulo-seccion {
   width: 100%;
   height: 40px;
-  background-color: #FFCA28;
+  background-color: #ffca28;
 }
 .img-seccion {
   height: 80px !important;

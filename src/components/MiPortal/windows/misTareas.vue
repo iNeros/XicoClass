@@ -1,26 +1,26 @@
 <template>
   <div class="misTareas">
     <div class="container" v-for="item in Tareas" :key="item.id_actividad">
-      <v-card  elevation="10" class="card-container " shaped color="#f5f5f5">
-          <v-row class="mt-2 mb-0 pb-0">
-            <v-col cols="12" xl="12" lg="12" md="12" sm="12" xs="12" class="ml-4">
-              <h1 class="tittle-text">
-                #{{ item.id_actividad }} {{ item.nombre }}
-              </h1>
-              <span class="status-label">ESTATUS: </span>
-              <span id="estado-text" class="status-label estado-pendiente"
-                >PENDIENTE</span
-              >
-            </v-col>
-          </v-row>
-          <div class="texto-descriptivo mx-4">
-            <span style="font-size: 18px; color: #8e78ec">
-              <b>Descripción:</b>
-            </span>
-            <p>
-              {{ item.descripcion }}
-            </p>
-          </div>
+      <v-card elevation="10" class="card-container" shaped color="#f5f5f5">
+        <v-row class="mt-2 mb-0 pb-0">
+          <v-col cols="12" xl="12" lg="12" md="12" sm="12" xs="12" class="ml-4">
+            <h1 class="tittle-text">
+              #{{ item.id_actividad }} {{ item.nombre }}
+            </h1>
+            <span class="status-label">ESTATUS: </span>
+            <span id="estado-text" class="status-label estado-pendiente"
+              >PENDIENTE</span
+            >
+          </v-col>
+        </v-row>
+        <div class="texto-descriptivo mx-4">
+          <span style="font-size: 18px; color: #8e78ec">
+            <b>Descripción:</b>
+          </span>
+          <p>
+            {{ item.descripcion }}
+          </p>
+        </div>
         <v-card-actions>
           <v-row class="acciones mx-4" align-content="space-around">
             <v-col cols="6">
@@ -39,18 +39,31 @@
                 </div>
               </template>
             </v-col>
-            <v-col cols="6" v-for="arch in archivosAlumno" :key="arch.id_archivos_alumnos"> 
+            <v-col
+              cols="6"
+              v-for="arch in archivosAlumno"
+              :key="arch.id_archivos_alumnos"
+            >
               <span class="texto-trabajo">MI TRABAJO:</span>
               <!-- AQUI SUBEN EL ARCHIVO -->
               <template v-if="arch.id_actividad == item.id_actividad">
-                <v-chip class="ma-2" @click="DescargarArchivo(arch.ruta)">{{arch.nombre}} </v-chip>
+                <v-chip class="ma-2" @click="DescargarArchivo(arch.ruta)"
+                  >{{ arch.nombre }}
+                </v-chip>
               </template>
-              <template >
+              <template>
                 <v-chip class="ma-2" @click="Gig = !Gig">+</v-chip>
-                <v-file-input v-show="Gig" class="ma-2" v-model="archivoA">Subir archivo </v-file-input>
-                {{archivoA}}
+                <v-file-input v-show="Gig" class="ma-2" v-model="archivoA"
+                  >Subir archivo
+                </v-file-input>
+                {{ archivoA }}
               </template>
-              <v-btn class="boton-entregar" color="green" dark @click="SubirArchivo()">
+              <v-btn
+                class="boton-entregar"
+                color="green"
+                dark
+                @click="SubirArchivo()"
+              >
                 Entregar
               </v-btn>
             </v-col>
@@ -71,9 +84,9 @@ export default {
     return {
       Gig: false,
       archivos: [],
-      archivosAlumno: '',
+      archivosAlumno: "",
       Tareas: [],
-      archivoA:'',
+      archivoA: "",
     };
   },
   methods: {
@@ -81,7 +94,7 @@ export default {
       window.open("" + id, "_blank");
     },
     SubirArchivo() {
-  /*  const storageRef = firebase.storage().ref(`/ArchivosAlumnos/1/${this.archivoA}`);
+      /*  const storageRef = firebase.storage().ref(`/ArchivosAlumnos/1/${this.archivoA}`);
         const task = storageRef.put(this.archivoA);
 
         task.on('state_changed',snapshot =>{
@@ -95,8 +108,8 @@ export default {
               console.log(this.urlFile[i]);
             });;
           });; */
-    window.alert('Archivo subido');
-    console.log(this.archivoA.name);
+      window.alert("Archivo subido");
+      console.log(this.archivoA.name);
     },
     Tarea() {
       axios
@@ -125,8 +138,10 @@ export default {
     },
     ArchivoAlumno() {
       axios
-        .get("https://xicoclass.online/ArchivosAlumnos.php?id_alumno="+
-            window.sessionStorage.getItem("id_alumno"))
+        .get(
+          "https://xicoclass.online/ArchivosAlumnos.php?id_alumno=" +
+            window.sessionStorage.getItem("id_alumno")
+        )
         .then((r) => {
           this.archivosAlumno = r.data;
           console.log(this.archivosAlumno);
@@ -188,31 +203,31 @@ export default {
 .status-label {
   font-family: "Poppins";
   font-weight: 800;
-  color:  black;
+  color: black;
 }
 .texto-descriptivo {
   font-family: "Poppins";
   text-align: justify;
-  color:black;
+  color: black;
 }
 .texto-material {
   font-family: "Poppins";
   font-weight: 800;
-  color: #E91E63;
+  color: #e91e63;
 }
 .texto-trabajo {
   font-family: "Poppins";
   font-weight: 800;
-  color:  #7E57C2;
+  color: #7e57c2;
 }
-.v-chip{
+.v-chip {
   color: #e0e0e0;
 }
 /* Estos Estilos Los Aplicaremos Al ID: estado-text  */
 .estado-pendiente {
-  color: #D50000 !important;
+  color: #d50000 !important;
 }
 .estado-entregado {
-  color: #64DD17   !important;
+  color: #64dd17 !important;
 }
 </style>
