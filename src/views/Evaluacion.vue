@@ -89,7 +89,7 @@
             width="100%"    
           >
             <v-card-title class="titulo">
-              Exploración y Comprenseón del Mundo
+              Exploración y Comprensión del Mundo
             </v-card-title>
             <div>
               <v-img
