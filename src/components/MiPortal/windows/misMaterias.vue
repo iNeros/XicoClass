@@ -16,14 +16,16 @@
                 width="100%"                              
                 shaped
                 elevation="3"
-                :color="getColorBack()"
-                
+                :color="getColorBack()"                
               >
                 <v-card-title>
                   <v-row >
                     <v-col cols="12" xl="12" lg="11" md="11" sm ="11" xs="11">
-                      <p class="mt-1 text-left mx-6 titulo">
-                        {{ item.materia }}                      
+                      <p 
+                        class="mt-1 text-left mx-6 titulo"
+                        style="text-align:justify"
+                      >
+                          {{ item.materia }}                      
                       </p>
                     </v-col>
                   </v-row>
@@ -43,7 +45,12 @@
                   </p>
                 </v-card-text>                
                 <v-card-actions>
-                  <v-btn color="#7b1fa2" href="/Evaluacion" block text> Ver mas </v-btn>
+                  <v-btn 
+                    color="#E0E0E0"
+                    elevation="2"
+                    block text
+                    href="/Evaluacion" 
+                  > Ver mas </v-btn>
                 </v-card-actions>
               </v-card>
             
@@ -142,7 +149,7 @@ export default {
   font-size: 15px;
   color: white;
   letter-spacing: 0.01px;
-  text-align: center;
+  text-align: justify;
 }
 .container {
   width: 100%;
