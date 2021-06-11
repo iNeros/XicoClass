@@ -4,7 +4,7 @@
     <v-container>
       <v-row class="mt-2">
         <v-col cols="12" xl="4" lg="4" md="4" sm="12" xs="12">
-          <v-card elevation="2" color="#7e57c2" height="30em">
+          <v-card elevation="2" color="#E91E63" height="40em">
             <v-card-title class="titulo">
               Lenguaje y Comunicación
             </v-card-title>
@@ -31,7 +31,7 @@
         </v-col>
 
         <v-col cols="12" xl="4" lg="4" md="4" sm="12" xs="12">
-          <v-card elevation="2" color="#80D8FF" height="30em">
+          <v-card elevation="2" color="#7E57C2" height="40em">
             <v-card-title class="titulo">
               Pensamiento Matemático
             </v-card-title>
@@ -59,7 +59,7 @@
         </v-col>
 
         <v-col cols="12" xl="4" lg="4" md="4" sm="12" xs="12">
-          <v-card elevation="2" color="#ffee58" height="30em">
+          <v-card elevation="2" color="#80D8FF" height="40em">
             <v-card-title class="titulo">
               Exploración y Comprensión del mundo
             </v-card-title>
@@ -87,7 +87,7 @@
         </v-col>
 
         <v-col cols="12" xl="4" lg="4" md="4" sm="12" xs="12">
-          <v-card elevation="2" color="#ffee58" height="30em">
+          <v-card elevation="2" color="#64DD17" height="40em">
             <v-card-title class="titulo">
              Arte
             </v-card-title>
@@ -95,7 +95,7 @@
               <v-img
                 contain
                 class="imagen-carta mx-12"
-                src="@/assets/media/logos/TresGlobos.png"
+                src="@/assets/media/logos/Cometa2.png"
               ></v-img>
               </v-card-text>
                <v-card-subtitle class="subtitulo-2">
@@ -114,7 +114,7 @@
         </v-col>
 
         <v-col cols="12" xl="4" lg="4" md="4" sm="12" xs="12">
-          <v-card elevation="2" color="#ffee58" height="30em">
+          <v-card elevation="2" color="#eeff41" height="40em">
             <v-card-title class="titulo">
               Educación Socioemocional
             </v-card-title>
@@ -122,7 +122,7 @@
               <v-img
                 contain
                 class="imagen-carta mx-12"
-                src="@/assets/media/logos/TresGlobos.png"
+                src="@/assets/media/logos/CastilloyBandera.png"
               >
               </v-img>
             </v-card-text>
@@ -142,7 +142,7 @@
         </v-col>
 
         <v-col cols="12" xl="4" lg="4" md="4" sm="12" xs="12">
-          <v-card elevation="2" color="#ffee58" height="30em">
+          <v-card elevation="2" color="#FF9800" height="40em">
             <v-card-title class="titulo">
               Educación Física
             </v-card-title>
@@ -205,23 +205,23 @@ export default {
 .titulo {
   font-family: "Poppins";
   font: weight 700px;
-  font-size: 29px;
+  font-size: 24px;
   line-height: 40px;
   letter-spacing: 0.01px;
-  color: white;
+  color: #37474f;
   text-align: justify;
 }
 .subtitulo-2 {
   font-family: "Poppins";
   font-weight: 500px;
   font-size: 20px;
-  color: white;
+  color: black;
 }
 .cuerpo {
   font-family: "Poppins";
   font-weight: 400px;
   font-size: 12px;
-  color: white;
+  color: black;
 }
 .imagen-carta {
   display: block;
