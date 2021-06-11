@@ -39,7 +39,7 @@
             color="red"
             width="200"
             class="btn-design"
-            @click="Session()"
+            @click="Session(), setInicio()"
           >
             INICIAR SESION
           </v-btn>
@@ -125,6 +125,9 @@ export default {
       //window.sessionStorage.setItem('idUsuario',1); // AQUI VA EL ID DE USUARIO
       // window.sessionStorage.getItem('idUsuario');
       //window.sessionStorage.removeItem('idUsuario');
+    },
+    setInicio() {
+      localStorage.selectedNavTab = 1;
     },
   },
 };

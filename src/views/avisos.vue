@@ -10,7 +10,8 @@
           cols="12"
           sm="12"
           md="6"
-          lg="3"
+          lg="4"
+          xl="3"
           v-for="user in AvisosH"
           :key="user.id_avisos"
         >
@@ -32,12 +33,14 @@
       </v-row>
     </div>
 
-    <div v-if="AvisosH == '' ">
+    <div v-if="AvisosH == ''">
       <v-row class="margenes">
-        <v-col cols="12" sm="12" md="6" lg="3">
+        <v-col cols="12" sm="12" md="6" lg="4" xl="3">
           <v-card class="sizes" color="#ef5350 " dark>
             <v-card-title class="ods"> Nada nuevo por aquí </v-card-title>
-            <v-card-subtitle class="texto">No hay avisos nuevos el día de hoy</v-card-subtitle>
+            <v-card-subtitle class="texto"
+              >No hay avisos nuevos el día de hoy</v-card-subtitle
+            >
             <v-card-actions> </v-card-actions>
           </v-card>
         </v-col>
@@ -51,7 +54,8 @@
           cols="12"
           sm="12"
           md="6"
-          lg="3"
+          lg="4"
+          xl="3"
           v-for="user in AvisosS"
           :key="user.id_avisos"
         >
@@ -63,7 +67,8 @@
               user.descripcion
             }}</v-card-subtitle>
             <v-card-actions>
-              <div class="ml-2"> <!-- ESTOS DEBERIAN SER DIVS NO BOTONES WTF, simon pero ya se despedorró el diseño, mejor botón -->
+              <div class="ml-2">
+                <!-- ESTOS DEBERIAN SER DIVS NO BOTONES WTF, simon pero ya se despedorró el diseño, mejor botón -->
                 {{ user.fecha }}
               </div>
               <v-spacer></v-spacer>
@@ -75,12 +80,14 @@
         </v-col>
       </v-row>
     </div>
-    <div v-if="AvisosS == '' ">
+    <div v-if="AvisosS == ''">
       <v-row class="margenes">
-        <v-col cols="12" sm="12" md="6" lg="3">
+        <v-col cols="12" sm="12" md="6" lg="4" xl="3">
           <v-card class="sizes" color="#FFCA28 " dark>
             <v-card-title class="ods"> Nada nuevo por aquí </v-card-title>
-            <v-card-subtitle class="texto">No hay avisos nuevos avisos esta semana.</v-card-subtitle>
+            <v-card-subtitle class="texto"
+              >No hay avisos nuevos avisos esta semana.</v-card-subtitle
+            >
             <v-card-actions> </v-card-actions>
           </v-card>
         </v-col>
@@ -93,7 +100,8 @@
         cols="12"
         sm="12"
         md="6"
-        lg="3"
+        lg="4"
+        xl="3"
         v-for="user in AvisosM"
         :key="user.id_avisos"
       >
@@ -134,11 +142,11 @@ export default {
   },
   data() {
     return {
-      Var:true,
-      Var2:true,
-      AvisosH: '',
-      AvisosS: '',
-      AvisosM: '',
+      Var: true,
+      Var2: true,
+      AvisosH: "",
+      AvisosS: "",
+      AvisosM: "",
     };
   },
   methods: {
@@ -151,11 +159,11 @@ export default {
           "https://xicoclass.online/Avisos.php?tiempo=1&id_grupo=" +
             window.sessionStorage.getItem("id_grado")
         )
-        .then((r) => { 
+        .then((r) => {
           this.AvisosH = r.data;
-          if(this.AvisosH.length == 0){
+          if (this.AvisosH.length == 0) {
             this.Var = false;
-          }//console.log(this.AvisosH);
+          } //console.log(this.AvisosH);
         })
         .catch(function (error) {
           console.log(error);
@@ -169,9 +177,9 @@ export default {
         )
         .then((r) => {
           this.AvisosS = r.data;
-          if(this.AvisosS.length == 0){
+          if (this.AvisosS.length == 0) {
             this.Var2 = false;
-          }//console.log(this.AvisosS);
+          } //console.log(this.AvisosS);
         })
         .catch(function (error) {
           console.log(error);

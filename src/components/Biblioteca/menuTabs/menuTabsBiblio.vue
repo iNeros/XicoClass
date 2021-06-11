@@ -3,7 +3,7 @@
     <!-- VISTA DE LAS TABS EN WIDEVIEW --->
     <div class="hidden-sm-and-down">
       <v-tabs grow class="menu-tabs" color="rgb(40, 53, 147)!important">
-        <v-tab @click="(texto = 'Materia Impreso'), setImpreso()">
+        <v-tab @click="(texto = 'Material Impreso'), setImpreso()">
           MATERIAL IMPRESO
         </v-tab>
         <v-tab @click="(texto = 'Material Visual'), setVisual()">

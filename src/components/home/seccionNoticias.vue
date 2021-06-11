@@ -1,18 +1,24 @@
 <template>
   <v-container fluid>
-    <v-row dense class="" >
+    <v-row dense class="">
       <!-- Barra de avisos recientes-->
-      <v-col cols="6" xs="3" lg="4" class="" >
-        <h2 style="color: #D50000" id="ods">Noticias recientes</h2>
+      <v-col cols="6" xs="3" lg="4" class="">
+        <h2 style="color: #d50000" id="ods">Noticias recientes</h2>
         <hr class="mb-3" color="#D50000" id="od" />
         <!-- Carta de Avisos-->
-        <v-card class="sizes" color="#ef5350 " dark elevation="5" >
+        <v-card class="sizes" color="#ef5350 " dark elevation="5">
           <v-card-title class="ods">
-          {{noticias[0].nombre}}
+            {{ noticias[0].nombre }}
           </v-card-title>
-          <v-card-subtitle class="texto">{{noticias[0].descripcion}}</v-card-subtitle>
+          <v-card-subtitle class="texto">{{
+            noticias[0].descripcion
+          }}</v-card-subtitle>
           <v-card-actions>
-            <v-btn color="#D50000" dark v-bind:href="'' + noticias[0].ruta_archivo">
+            <v-btn
+              color="#D50000"
+              dark
+              v-bind:href="'' + noticias[0].ruta_archivo"
+            >
               Enlace
             </v-btn>
           </v-card-actions>
@@ -20,16 +26,22 @@
       </v-col>
 
       <v-col cols="6" xs="3" lg="4" class="">
-        <h2 style="color: #D50000" id="ods">Más noticias recientes</h2>
+        <h2 style="color: #d50000" id="ods">Más noticias recientes</h2>
         <hr class="mb-3" color="#D50000" id="od" />
-       <!--  Carta de Avisos      -->
+        <!--  Carta de Avisos      -->
         <v-card class="sizes" color="#ef5350 " dark elevation="5">
           <v-card-title class="ods">
-           {{noticias[1].nombre}}
+            {{ noticias[1].nombre }}
           </v-card-title>
-          <v-card-subtitle class="texto">{{noticias[1].descripcion}}</v-card-subtitle>
+          <v-card-subtitle class="texto">{{
+            noticias[1].descripcion
+          }}</v-card-subtitle>
           <v-card-actions>
-            <v-btn color="#D50000" dark v-bind:href="'' + noticias[1].ruta_archivo">
+            <v-btn
+              color="#D50000"
+              dark
+              v-bind:href="'' + noticias[1].ruta_archivo"
+            >
               Enlace
             </v-btn>
           </v-card-actions>
@@ -81,12 +93,12 @@
 </template>
 
 <script>
-import axios from 'axios'
+import axios from "axios";
 export default {
   name: "seccionNoticias",
   data() {
     return {
-      noticias: '',
+      noticias: "",
       items: [
         {
           color: "#1F7087",
@@ -123,7 +135,7 @@ export default {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 .seccionNoticias {
   display: block;
   margin-top: 100px;
@@ -141,7 +153,10 @@ export default {
   height: 150px;
   overflow-y: auto;
 }
-.ods{
+.od{
 font-family: "Poppins";
+}
+.ods {
+  font-family: "Poppins";
 }
 </style>

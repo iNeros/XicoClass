@@ -1,21 +1,24 @@
 <template>
   <v-container fluid class="slider-container">
     <v-row>
-      <v-carousel hide-delimiter-background show-arrows-on-hover cycle>
+      <v-carousel height="auto" hide-delimiter-background show-arrows-on-hover >
         <template v-slot:prev="{ on, attrs }">
           <v-btn color="#B2FF59" v-bind="attrs" v-on="on">←</v-btn>
         </template>
         <template v-slot:next="{ on, attrs }">
           <v-btn color="#80D8FF" v-bind="attrs" v-on="on">→</v-btn>
         </template>
-        <v-carousel-item
+        <v-carousel-item   
+          eager  
           v-for="(item, i) in items"
-          :key="i"
+          :key="i"        
           :src="item.src"
           reverse-transition="fade-transition"
           transition="fade-transition"
-          @click="window.location.href = '#'"
-        ></v-carousel-item>
+          @click="window.location.href = '#'"          
+        >
+        </v-carousel-item>        
+        
       </v-carousel>
     </v-row>
   </v-container>
@@ -29,25 +32,19 @@ export default {
     return {
       items: [
         {
-          src: require("@/assets/media/sliders/slider1.png"),
+          src: require("@/assets/media/carusel/carusel1.png"),
         },
         {
-          src: "https://cdn.vuetifyjs.com/images/carousel/sky.jpg",
+          src: require("@/assets/media/carusel/carusel1.png"),
         },
         {
-          src: "https://cdn.vuetifyjs.com/images/carousel/bird.jpg",
-        },
-        {
-          src: "https://cdn.vuetifyjs.com/images/carousel/planet.jpg",
+          src: require("@/assets/media/carusel/carusel1.png"),
         },
       ],
     };
-  },
+  },  
 };
 </script>
 
 <style scoped>
-.carousel {
-  display: block;
-}
 </style>

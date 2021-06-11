@@ -16,6 +16,7 @@
             alt="XICO CLASS"
             width="200"
             height="80"
+            @click="setInicio()"
           />
         </a>
       </div>
@@ -101,7 +102,7 @@
               </v-list-item>
               <v-list-item>
                 <v-list-item-title
-                  ><v-btn @click="CloseSession()" plain
+                  ><v-btn @click="CloseSession(), setInicio()" plain
                     >Cerrar Sesion</v-btn
                   ></v-list-item-title
                 >
@@ -202,7 +203,7 @@
             </v-list-item>
             <v-list-item>
               <v-list-item-title
-                ><v-btn color="red" @click="CloseSession()" depressed plain
+                ><v-btn color="red" @click="CloseSession(), setInicio()" depressed plain
                   >Cerrar Sesion</v-btn
                 ></v-list-item-title
               >
@@ -312,7 +313,7 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 .navbar {
   display: block;
   height: 100px;

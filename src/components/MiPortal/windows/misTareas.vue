@@ -1,33 +1,28 @@
 <template>
   <div class="misTareas">
     <div class="container" v-for="item in Tareas" :key="item.id_actividad">
-      <v-card elevation="24" class="card-container">
-        <v-card-text>
-          <v-row>
-            <v-col cols="8">
-              <p class="display-1 titulo-tarjeta">
+      <v-card  elevation="10" class="card-container " shaped color="#f5f5f5">
+          <v-row class="mt-2 mb-0 pb-0">
+            <v-col cols="12" xl="12" lg="12" md="12" sm="12" xs="12" class="ml-4">
+              <h1 class="tittle-text">
                 #{{ item.id_actividad }} {{ item.nombre }}
-              </p>
-            </v-col>
-            <v-col cols="4" class="status-text">
+              </h1>
               <span class="status-label">ESTATUS: </span>
               <span id="estado-text" class="status-label estado-pendiente"
                 >PENDIENTE</span
               >
             </v-col>
           </v-row>
-
           <div class="texto-descriptivo mx-4">
             <span style="font-size: 18px; color: #8e78ec">
-              <b>Descripcion:</b>
+              <b>Descripción:</b>
             </span>
             <p>
               {{ item.descripcion }}
             </p>
           </div>
-        </v-card-text>
         <v-card-actions>
-          <v-row class="acciones" align-content="space-around">
+          <v-row class="acciones mx-4" align-content="space-around">
             <v-col cols="6">
               <span class="texto-material"> MATERIAL ADJUNTO: </span>
               <!-- AQUI VA UN: V-FOR -->
@@ -150,18 +145,19 @@ export default {
 </script>
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 
 .title-text {
-  font-family: "Montserrat";
+  font-family: "Poppins";
   font-weight: 800;
-  color: white;
-  font-size: 20px;
+  color: black;
+  font-size: 60px;
   margin-left: 20px;
 }
 .boton-entregar {
   float: right;
   margin-right: 20px;
+  font-family: "Poppins";
 }
 .container {
   width: 100%;
@@ -182,77 +178,41 @@ export default {
   margin-right: auto;
 }
 .titulo-tarjeta {
-  font-family: "Montserrat";
+  font-family: "Poppins";
   font-weight: 800;
+  color: black;
 }
 .status-text {
-  text-align: right;
+  font-family: "Poppins";
 }
 .status-label {
-  font-family: "Montserrat";
+  font-family: "Poppins";
   font-weight: 800;
-  color: blue;
-  margin-left: 10px;
+  color:  black;
 }
 .texto-descriptivo {
-  font-family: "Montserrat";
+  font-family: "Poppins";
   text-align: justify;
+  color:black;
 }
 .texto-material {
-  font-family: "Montserrat";
+  font-family: "Poppins";
   font-weight: 800;
-  color: #da37a4;
+  color: #E91E63;
 }
 .texto-trabajo {
-  font-family: "Montserrat";
+  font-family: "Poppins";
   font-weight: 800;
-  color: #30dba0;
+  color:  #7E57C2;
 }
-/* Colores  */
-.morado-inicial {
-  background-color: #7c4dff;
-}
-.morado-opaco {
-  background-color: #4527a0;
-}
-.morado {
-  background-color: #7e57c2;
-}
-.morado-claro {
-  background-color: #ba68c8;
-}
-.turquesa {
-  background-color: #26a69a;
-}
-.naranja {
-  background-color: #ff9800;
-}
-.naranja-claro {
-  background-color: #ff9800;
-}
-.verde {
-  background-color: #64dd17;
-}
-.verde-claro {
-  background-color: #b2ff59;
-}
-.azul {
-  background-color: #283593;
-}
-.azul-claro {
-  background-color: #80d8ff;
-}
-.rojo {
-  background-color: #d50000;
-}
-.rojo-claro {
-  background-color: #e91e63;
+.v-chip{
+  color: #e0e0e0;
 }
 /* Estos Estilos Los Aplicaremos Al ID: estado-text  */
 .estado-pendiente {
-  color: red !important;
+  color: #D50000 !important;
 }
 .estado-entregado {
-  color: green !important;
+  color: #64DD17   !important;
 }
 </style>

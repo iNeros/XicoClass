@@ -1,28 +1,75 @@
 <template>
   <v-container fluid>
-    <v-layout justify-space-between>
-      <v-flex xs2>
-        <v-list dense>
-          <v-subheader>VIDEOS</v-subheader>
-          <v-list-item-group
-            v-model="selectedItem"
-            color="rgb(40, 53, 147)!important"
-            mandatory
-          >
-            <v-divider></v-divider>
+    <v-row class="fill-height mx-6" justify="space-around">
+      <v-col cols="12" xl="3" lg="3" md="3" sm="12" xs="12">
+        <div>
+          <v-img
+            class="img-seccion"
+            src="@/assets/media/biblioteca/img-videos.png">
+          </v-img>
+        </div>
+        <div class="titulo-seccion">
+          <span class="box-title"> VIDEOS </span>
+        </div>
+        <v-list width="100%" outlined rounded elevation="12">
+          <v-list-group class="menu-text">
+            <template v-slot:activator>
+              <v-list-item-title>CUENTOS</v-list-item-title>
+            </template>
+            <div
+            v-for="n in datos"
+            :key="n"
+            >
             <v-list-item
-              class="menu-tex"
-              v-for="n in datos"
-              :key="n"
-              v-text="n.titulo"
+              class="menu-text"
+              v-if="n.tipo == 1"
               @click="selectLink(n.url)"
-            ></v-list-item>
-          </v-list-item-group>
-        </v-list>
-      </v-flex>
+            >
+            {{n.titulo}}
+            </v-list-item>
+            </div>
+          </v-list-group>
 
-      <v-flex xs10>
-        <div class="hidden-sm-and-down mx-12">
+           <v-list-group class="menu-text">
+            <template v-slot:activator>
+              <v-list-item-title>CLASES</v-list-item-title>
+            </template>
+            <div
+            v-for="n in datos"
+            :key="n"
+            >
+            <v-list-item
+              class="menu-text"
+              v-if="n.tipo == 2"
+              @click="selectLink(n.url)"
+            >
+            {{n.titulo}}
+            </v-list-item>
+            </div>
+          </v-list-group>
+
+           <v-list-group class="menu-text">
+            <template v-slot:activator>
+              <v-list-item-title>REFORZAMIENTO</v-list-item-title>
+            </template>
+            <div
+            v-for="n in datos"
+            :key="n"
+            >
+            <v-list-item
+              class="menu-text"
+              v-if="n.tipo == 3"
+              @click="selectLink(n.url)"
+            >
+            {{n.titulo}}
+            </v-list-item>
+            </div>
+          </v-list-group>
+        </v-list>
+      </v-col>
+
+      <v-col cols="12" xl="9" lg="9" md="9" sm="12" xs="12">
+        <div class="hidden-sm-and-down">
           <iframe
             margin-top="10px"
             width="100%"
@@ -42,8 +89,9 @@
             allowfullscreen
           ></iframe>
         </div>
-      </v-flex>
-    </v-layout>
+      </v-col>
+
+    </v-row>
   </v-container>
 </template>
 
@@ -54,7 +102,7 @@ export default {
   name: "visual",
   data() {
     return {
-      link: "https://www.youtube.com/embed/X1sQg4nxEe8",
+      link: "https://i.ytimg.com/vi/xJ200hf9w90/maxresdefault.jpg",
       datos: [],
     };
   },
@@ -85,22 +133,30 @@ export default {
 </script>
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 .menu-text {
-  color: #5d576b !important;
+  color: #64dd17 !important;
   font-size: 18px !important;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
-.v-list {
-  height: 60vh; /* or any height you want */
-  width: 300px;
-  overflow-y: auto;
-  margin-left: 0px;
+.box-title {
+  font-family: "Poppins";
+  font-weight: 800;
+  color: white;
+  font-size: 25px;
+  margin-left: 60px !important;
+  vertical-align: middle;
 }
-.videoClass {
-  max-width: 1200px !important;
-  max-height: 680px !important;
-  min-width: 400px !important;
-  min-height: 400px !important;
+.titulo-seccion {
+  width: 100%;
+  height: 40px;
+  background-color: #B2FF59;
+}
+.img-seccion {
+  height: 80px !important;
+  width: 80px !important;
+  margin-left: auto !important;
+  margin-right: 0px !important;
+  margin-bottom: -60px !important;
 }
 </style>
