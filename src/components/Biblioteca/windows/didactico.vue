@@ -26,11 +26,9 @@
 
       <v-col cols="12" xl="9" lg="9" md="9" sm="12" xs="12">
         <iframe
-          :src="holder"
+          :src="link"
           width="100%"
-          height="670px"
-          allow="accelerometer; gyroscope; picture-in-picture"
-          allowfullscreen
+          height="675px"
         ></iframe>
       </v-col>
 
@@ -45,8 +43,7 @@ export default {
   name: "didactico",
   data() {
     return {
-      holder: require("@/assets/media/holders/holderDidactico.png"),
-      link: ["https://i.ytimg.com/vi/xJ200hf9w90/maxresdefault.jpg"],
+      link: ["https://firebasestorage.googleapis.com/v0/b/xicoclassproject-579bb.appspot.com/o/ImagenEleccion%2FholderDidactico670.png?alt=media&token=792f0fc2-2911-4156-846c-a606fb93b2e6"],
       datos: [],
     };
   },
