@@ -40,7 +40,7 @@
                   {{ item.descripcion }}
                 </p>
                 <v-card-actions>
-                  <v-btn color="#7b1fa2" block text> Ver mas </v-btn>
+                  <v-btn color="#7b1fa2" href="/Evaluacion" block text> Ver mas </v-btn>
                 </v-card-actions>
               </v-card>
             </v-hover>
