@@ -8,21 +8,23 @@
              El Contenido.. :V  
     </v-card> -->
     <v-container fluid class="pa-4 text-center">
-      <v-row class="fill-height">
+      <v-row class="fill-height" justify="space-around">
         <template v-for="(item, i) in items">
           <v-col :key="i" cols="12" xl="4" lg="4" md="6" xs="12">
             <v-hover v-slot="{ hover }" open-delay="200">
               <v-card
+                min-height="400" 
+                width="100%"
                 :elevation="hover ? 12 : 2"
                 :class="{ 'on-hover': hover }"
                 shaped
                 color="#b388ff"
               >
-                <v-card-title class="titulo">
-                  <v-row>
-                    <v-col cols="12" xl="12" lg="12" md="12" xs="12" class="">
-                      <p class="mt-1 text-left mx-6 " >
-                        {{ item.materia }}
+                <v-card-title>
+                  <v-row >
+                    <v-col cols="12" xl="12" lg="11" md="11" sm ="11" xs="11">
+                      <p class="mt-1 text-left mx-6 titulo">
+                        {{ item.materia }}                      
                       </p>
                     </v-col>
                   </v-row>
@@ -36,9 +38,12 @@
                   </p>
                   <v-divider class="mt-1 mx-6"></v-divider>
                 </v-card-text>
-                <p class="cuerpo" justify="center">
-                  {{ item.descripcion }}
-                </p>
+                <v-card-text>
+                  <p class="cuerpo">
+                    {{ item.descripcion }}
+                  </p>
+                </v-card-text>
+                
                 <v-card-actions>
                   <v-btn color="#7b1fa2" href="/Evaluacion" block text> Ver mas </v-btn>
                 </v-card-actions>
@@ -69,7 +74,7 @@ export default {
         descripcion: "Busca que los estudiantes desarrollen esa forma de razonar tanto lógica como no convencional y que al hacerlo aprecien el valor de ese pensamiento, lo que ha de traducirse en actitudes y valores favorables hacia las matemáticas, su utilidad y su valor científico y cultural.",
       },
       {
-        materia: "Exploración y Comprensión del mundo",
+        materia: "Exploración y Comprensión del Mundo",
         nombreDocente: "Laura Luz Tlaxcalteco",
         horario: "Horario",
         descripcion: "Ofrece un conjunto de aproximaciones a ciertos fenómenos y procesos naturales y sociales cuidadosamente seleccionados.",
@@ -122,9 +127,11 @@ export default {
 }
 .cuerpo {
   font-family: "Poppins";
-  font-weight: 400;
+  font-weight: 400px;
   font-size: 15px;
   color: white;
+  letter-spacing: 0.01px;
+  text-align: center;
 }
 .container {
   width: 100%;
