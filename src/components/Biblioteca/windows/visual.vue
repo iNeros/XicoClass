@@ -74,7 +74,7 @@
             margin-top="10px"
             width="100%"
             height="670px"
-            :src="link"
+            :src="holder"
             allow="accelerometer; gyroscope; picture-in-picture"
             allowfullscreen
           ></iframe>
@@ -103,6 +103,7 @@ export default {
   data() {
     return {
       link: "https://i.ytimg.com/vi/xJ200hf9w90/maxresdefault.jpg",
+      holder: require("@/assets/media/holders/holderVisual.png"),
       datos: [],
     };
   },

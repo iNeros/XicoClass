@@ -26,9 +26,11 @@
 
       <v-col cols="12" xl="9" lg="9" md="9" sm="12" xs="12">
         <iframe
-          :src=link
+          :src="holder"
           width="100%"
-          height="100%"
+          height="670px"
+          allow="accelerometer; gyroscope; picture-in-picture"
+          allowfullscreen
         ></iframe>
       </v-col>
 
@@ -43,6 +45,7 @@ export default {
   name: "didactico",
   data() {
     return {
+      holder: require("@/assets/media/holders/holderDidactico.png"),
       link: ["https://i.ytimg.com/vi/xJ200hf9w90/maxresdefault.jpg"],
       datos: [],
     };
