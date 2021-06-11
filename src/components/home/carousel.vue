@@ -6,7 +6,7 @@
           <v-btn color="#B2FF59" v-bind="attrs" v-on="on">←</v-btn>
         </template>
         <template v-slot:next="{ on, attrs }">
-          <v-btn color="#80D8FF" v-bind="attrs" v-on="on">→</v-btn>
+          <v-btn color="#7E57C2" v-bind="attrs" v-on="on">→</v-btn>
         </template>
         <v-carousel-item   
           eager  
