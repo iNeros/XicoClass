@@ -71,10 +71,9 @@
       <v-col cols="12" xl="9" lg="9" md="9" sm="12" xs="12">
         <div class="hidden-sm-and-down">
           <iframe
-            margin-top="10px"
             width="100%"
-            height="670px"
-            :src="holder"
+            height="675px"
+            :src="link"
             allow="accelerometer; gyroscope; picture-in-picture"
             allowfullscreen
           ></iframe>
@@ -102,8 +101,7 @@ export default {
   name: "visual",
   data() {
     return {
-      link: "https://i.ytimg.com/vi/xJ200hf9w90/maxresdefault.jpg",
-      holder: require("@/assets/media/holders/holderVisual.png"),
+      link: "https://firebasestorage.googleapis.com/v0/b/xicoclassproject-579bb.appspot.com/o/ImagenEleccion%2FholderVisual670.png?alt=media&token=3f1aa114-2581-4201-8754-d31960ef8c5f",
       datos: [],
     };
   },
