@@ -35,7 +35,7 @@ export default {
           src: require("@/assets/media/carusel/carusel1.png"),
         },
         {
-          src: require("@/assets/media/carusel/carusel1.png"),
+          src: require("@/assets/media/carusel/carusel2.png"),
         },
         {
           src: require("@/assets/media/carusel/carusel1.png"),
