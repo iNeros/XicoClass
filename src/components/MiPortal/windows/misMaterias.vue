@@ -66,7 +66,7 @@ export default {
         materia: "Pensamiento Matemático",
         nombreDocente: "Laura Luz Tlaxcalteco",
         horario: "Horario",
-        descripcion: "Busca que los estudiantes desarrollen esa forma de razonar tanto lógica como no convencional y que al hacerlo aprecien el valor de ese pensamiento, lo que ha de traducirse en actitudes y valores favorables hacia las matemáticas, su utilidad y su valor científico y cultural.Lorem ipsum dolor sit amet consectetur",
+        descripcion: "Busca que los estudiantes desarrollen esa forma de razonar tanto lógica como no convencional y que al hacerlo aprecien el valor de ese pensamiento, lo que ha de traducirse en actitudes y valores favorables hacia las matemáticas, su utilidad y su valor científico y cultural.",
       },
       {
         materia: "Exploración y Comprensión del mundo",
