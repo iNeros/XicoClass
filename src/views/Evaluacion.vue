@@ -3,7 +3,7 @@
     <navbar></navbar>
     <v-container>
       <v-row class="mt-2">
-        <v-col cols="12" xl="4" lg="4" md="4" sm="12" xs="12">
+        <v-col cols="12" xl="4" lg="4" md="6" sm="6" xs="12">
           <v-card 
             elevation="2" 
             color="#E91E63"
@@ -13,14 +13,15 @@
             <v-card-title class="titulo">
               Lenguaje y Comunicación
             </v-card-title>
-            <div>
+            
+              <v-col cols="12" xl="12" lg="12" md="12" sm="12" xs="12" class="ml-16">
               <v-img
                 contain
-                class="imagen-carta mx-12"
-                src="@/assets/media/logos/Cometa2.png"
+                class="imagen-carta ml-12"
+                src="@/assets/media/biblioteca/img-notas.png"
               >
               </v-img>
-            </div>
+            </v-col>
 
             <div class="mt-1">
               <p class="subtitulo-2 mx-4">Observaciones del mes de Noviembre </p>                
@@ -43,7 +44,7 @@
           </v-card>
         </v-col>
 
-        <v-col cols="12" xl="4" lg="4" md="4" sm="12" xs="12">
+        <v-col cols="12" xl="4" lg="4" md="6" sm="6" xs="12">
           <v-card 
             elevation="2" 
             color="#7E57C2" 
@@ -52,14 +53,16 @@
             <v-card-title class="titulo">
               Pensamiento Matemático
             </v-card-title>
-            <div>
+
+            <v-col cols="12" xl="12" lg="12" md="12" sm="12" xs="12"
+            class="ml-16">
               <v-img
                 contain
                 class="imagen-carta mx-12"
-                src="@/assets/media/logos/CastilloyBandera.png"
+                src="@/assets/media/biblioteca/img-mate.png"
               >
               </v-img>
-            </div>
+            </v-col>
              <div class="mt-1">
               <p class="subtitulo-2 mx-4">Observaciones del mes de Noviembre </p>                
               <p class="cuerpo mx-6" justify="center">
@@ -81,7 +84,7 @@
           </v-card>
         </v-col>
 
-        <v-col cols="12" xl="4" lg="4" md="4" sm="12" xs="12">
+        <v-col cols="12" xl="4" lg="4" md="6" sm="6" xs="12">
           <v-card 
             elevation="2" 
             color="#80D8FF"
@@ -91,14 +94,15 @@
             <v-card-title class="titulo">
               Exploración y Comprensión del Mundo
             </v-card-title>
-            <div>
+            
+            <v-col cols="12" xl="12" lg="12" md="12" sm="12" xs="12" class="ml-16">
               <v-img
                 contain
                 class="imagen-carta mx-12"
-                src="@/assets/media/logos/Cometa2.png"
+                src="@/assets/media/biblioteca/img-pensar.png"
               >
               </v-img>
-            </div>
+            </v-col>
 
             <div class="mt-1">
               <p class="subtitulo-2 mx-4">Observaciones del mes de Noviembre </p>                
@@ -121,7 +125,7 @@
           </v-card>
         </v-col>
 
-        <v-col cols="12" xl="4" lg="4" md="4" sm="12" xs="12">
+        <v-col cols="12" xl="4" lg="4" md="6" sm="6" xs="12" >
           <v-card 
             elevation="2" 
             color="#64DD17"
@@ -131,14 +135,15 @@
             <v-card-title class="titulo">
               Arte
             </v-card-title>
-            <div>
+            
+            <v-col cols="12" xl="12" lg="12" md="12" sm="12" xs="12" class="ml-16">
               <v-img
                 contain
                 class="imagen-carta mx-12"
-                src="@/assets/media/logos/Cometa2.png"
+                src="@/assets/media/biblioteca/img-grimm.png"
               >
               </v-img>
-            </div>
+            </v-col>
 
             <div class="mt-1">
               <p class="subtitulo-2 mx-4">Observaciones del mes de Noviembre </p>                
@@ -161,7 +166,7 @@
           </v-card>
         </v-col>
 
-        <v-col cols="12" xl="4" lg="4" md="4" sm="12" xs="12">
+        <v-col cols="12" xl="4" lg="4" md="6" sm="6" xs="12">
           <v-card 
             elevation="2" 
             color="#FFFF00"
@@ -171,15 +176,15 @@
             <v-card-title class="titulo">
               Eduación Socioemocional
             </v-card-title>
-            <div>
+            
+            <v-col cols="12" xl="12" lg="12" md="12" sm="12" xs="12" class="ml-16">
               <v-img
                 contain
                 class="imagen-carta mx-12"
-                src="@/assets/media/logos/Cometa2.png"
+                src="@/assets/media/biblioteca/img-valores.png"
               >
               </v-img>
-            </div>
-
+            </v-col>
             <div class="mt-1">
               <p class="subtitulo-2 mx-4">Observaciones del mes de Noviembre </p>                
               <p class="cuerpo mx-6" justify="center">
@@ -201,7 +206,7 @@
           </v-card>
         </v-col>
 
-        <v-col cols="12" xl="4" lg="4" md="4" sm="12" xs="12">
+        <v-col cols="12" xl="4" lg="4" md="6" sm="6" xs="12" >
           <v-card 
             elevation="2" 
             color="#FF9800"
@@ -211,14 +216,15 @@
             <v-card-title class="titulo">
               Educación Física
             </v-card-title>
-            <div>
+            
+            <v-col cols="12" xl="12" lg="12" md="12" sm="12" xs="12" class="ml-16">
               <v-img
                 contain
                 class="imagen-carta mx-12"
-                src="@/assets/media/logos/Cometa2.png"
+                src="@/assets/media/biblioteca/img-juegos.png"
               >
               </v-img>
-            </div>
+            </v-col>
 
             <div class="mt-1">
               <p class="subtitulo-2 mx-4">Observaciones del mes de Noviembre </p>                
@@ -297,8 +303,8 @@ export default {
 }
 .imagen-carta {
   display: block;
-  width: 200px;
-  height: 200px;
+  width: 128px;
+  height: 128px;
   opacity: 1;
   background: transparent;
 }
