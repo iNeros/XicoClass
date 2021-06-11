@@ -1,7 +1,7 @@
 <template>
   <div class="misTareas">
     <div class="container" v-for="item in Tareas" :key="item.id_actividad">
-      <v-card elevation="24" class="card-container">
+      <v-card  elevation="10" class="card-container " shaped color="#f5f5f5">
           <v-row class="mt-2 mb-0 pb-0">
             <v-col cols="12" xl="12" lg="12" md="12" sm="12" xs="12" class="ml-4">
               <h1 class="tittle-text">
@@ -15,14 +15,14 @@
           </v-row>
           <div class="texto-descriptivo mx-4">
             <span style="font-size: 18px; color: #8e78ec">
-              <b>Descripcion:</b>
+              <b>Descripción:</b>
             </span>
             <p>
               {{ item.descripcion }}
             </p>
           </div>
         <v-card-actions>
-          <v-row class="acciones" align-content="space-around">
+          <v-row class="acciones mx-4" align-content="space-around">
             <v-col cols="6">
               <span class="texto-material"> MATERIAL ADJUNTO: </span>
               <!-- AQUI VA UN: V-FOR -->
@@ -171,7 +171,9 @@ export default {
   font-weight: 800;
   color:  #7E57C2;
 }
-
+.v-chip{
+  color: #e0e0e0;
+}
 /* Estos Estilos Los Aplicaremos Al ID: estado-text  */
 .estado-pendiente {
   color: #D50000 !important;
