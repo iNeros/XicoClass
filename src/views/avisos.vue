@@ -113,9 +113,9 @@
             user.descripcion
           }}</v-card-subtitle>
           <v-card-actions>
-            <v-btn text>
+            <div class="ml-2">
               {{ user.fecha }}
-            </v-btn>
+            </div>
             <v-spacer></v-spacer>
             <v-btn color="#00c853" dark @click="Enlace(user.urls)">
               Enlace
