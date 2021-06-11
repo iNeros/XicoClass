@@ -22,7 +22,7 @@
                   <v-row >
                     <v-col cols="12" xl="12" lg="11" md="11" sm ="11" xs="11">
                       <p 
-                        class="mt-1 text-left mx-6 titulo"
+                        class="mt-1 mx-7 titulo"
                         style="text-align:justify"
                       >
                           {{ item.materia }}                      
