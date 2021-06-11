@@ -11,14 +11,13 @@
       <v-row class="fill-height" justify="space-around">
         <template v-for="(item, i) in items">
           <v-col :key="i" cols="12" xl="4" lg="4" md="6" xs="12">
-            <v-hover v-slot="{ hover }" open-delay="200">
               <v-card
                 min-height="400" 
-                width="100%"
-                :elevation="hover ? 12 : 2"
-                :class="{ 'on-hover': hover }"
+                width="100%"                              
                 shaped
-                color="#b388ff"
+                elevation="3"
+                :color="getColorBack()"
+                
               >
                 <v-card-title>
                   <v-row >
@@ -42,13 +41,12 @@
                   <p class="cuerpo">
                     {{ item.descripcion }}
                   </p>
-                </v-card-text>
-                
+                </v-card-text>                
                 <v-card-actions>
                   <v-btn color="#7b1fa2" href="/Evaluacion" block text> Ver mas </v-btn>
                 </v-card-actions>
               </v-card>
-            </v-hover>
+            
           </v-col>
         </template>
       </v-row>
@@ -99,6 +97,19 @@ export default {
       },
     ],
   }),
+  methods: {
+    getColorBack() {
+      let a = 1;
+      let b = 6;
+      let numeroAleatorio = a + Math.floor(Math.random() * b);
+      if (numeroAleatorio == 1) return "#7E57C2";
+      else if (numeroAleatorio == 2) return "#BA68C8";
+      else if (numeroAleatorio == 3) return "#26A69A";
+      else if (numeroAleatorio == 4) return "#FF9800";
+      else if (numeroAleatorio == 5) return "#64DD17";
+      else if (numeroAleatorio == 6) return "#E91E63";
+    },
+  },
 };
 </script>
 
