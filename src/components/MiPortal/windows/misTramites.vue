@@ -6,7 +6,7 @@
           <v-btn class="button-img">
             <v-img
               class="img-setings"
-              src="@/assets/media/tramites-botones/btn-preInscripcion.png"
+              src="@/assets/media/tramites-botones/tramitesPre.png"
               @click="setTramiteSelected(1)"
             >
             </v-img>
