@@ -9,7 +9,7 @@
             </h1>
             <span class="status-label">ESTATUS: </span>
             <span id="estado-text" class="status-label estado-pendiente"
-              >PENDIENTE</span
+              >{{item.estado}}</span
             >
           </v-col>
         </v-row>
@@ -52,11 +52,11 @@
                 </v-chip>
               </template>
               <template>
-                <v-chip class="ma-2" @click="Gig = !Gig">+</v-chip>
-                <v-file-input v-show="Gig" class="ma-2" v-model="archivoA"
-                  >Subir archivo
-                </v-file-input>
-                {{ archivoA }}
+                <v-file-input class="ma-2" v-model="archivoA" 
+                hide-input
+                show-size
+                prepend-icon="mdi-upload"
+                  ></v-file-input>
               </template>
               <v-btn
                 class="boton-entregar"
@@ -82,7 +82,6 @@ export default {
   name: "misTareas",
   data() {
     return {
-      Gig: false,
       archivos: [],
       archivosAlumno: "",
       Tareas: [],
