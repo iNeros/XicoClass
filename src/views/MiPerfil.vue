@@ -12,7 +12,7 @@
             />
             <img
               v-else
-              class="avatar container"
+              class="avatar-2 container"
               src="@/assets/media/logos/CaraNiña.png"
             />
           </div>
@@ -142,6 +142,15 @@ export default {
   left: 852px;
   width: 270px;
   height: 270px;
+  background: no-repeat padding-box;
+  opacity: 1;
+}
+.avatar-2{
+  display: block;
+  top: 52px;
+  left: 852px;
+width: 270px;
+height: 270px;
   background: no-repeat padding-box;
   opacity: 1;
 }
