@@ -199,11 +199,17 @@ export default {
           console.log(error);
         });
     },
+    Session() {
+      if (window.sessionStorage.getItem("id_alumno") == null) {
+        window.location.href = "/";
+      }
+    },
   },
   mounted() {
     this.ObtenerAvisosH();
     this.ObtenerAvisosS();
     this.ObtenerAvisosM();
+    this.Session();
   },
 };
 </script>
