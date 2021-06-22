@@ -40,7 +40,7 @@ export default {
   data() {
     return {
       link: [
-        "https://firebasestorage.googleapis.com/v0/b/xicoclassproject-579bb.appspot.com/o/ImagenEleccion%2FholderDidactico670.png?alt=media&token=792f0fc2-2911-4156-846c-a606fb93b2e6",
+        "https://firebasestorage.googleapis.com/v0/b/xicoclassproject-579bb.appspot.com/o/ImagenEleccion%2FholderJuego.png?alt=media&token=45bbba8c-b781-4a96-8ef8-8498fdbfa71b",
       ],
       datos: [],
     };

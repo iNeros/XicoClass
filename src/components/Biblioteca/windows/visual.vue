@@ -93,7 +93,7 @@ export default {
   data() {
     return {
       link:
-        "https://firebasestorage.googleapis.com/v0/b/xicoclassproject-579bb.appspot.com/o/ImagenEleccion%2FholderVisual670.png?alt=media&token=3f1aa114-2581-4201-8754-d31960ef8c5f",
+        "https://firebasestorage.googleapis.com/v0/b/xicoclassproject-579bb.appspot.com/o/ImagenEleccion%2FholderVideo.png?alt=media&token=659d282f-4074-48ec-985b-506c65425f23",
       datos: [],
     };
   },
