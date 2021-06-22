@@ -10,7 +10,7 @@
           MATERIAL VISUAL
         </v-tab>
         <v-tab @click="(texto = 'Material Didactico'), setDidactico()">
-          MATERIAL DIDACTICO
+          MATERIAL DIDÁCTICO
         </v-tab>
         <v-tab @click="(texto = 'Xico Store'), setStore()"> XICO STORE </v-tab>
       </v-tabs>

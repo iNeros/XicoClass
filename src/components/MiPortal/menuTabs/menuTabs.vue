@@ -9,7 +9,7 @@
               setMaterias()
           "
         >
-          MIS CAMPOS FORMATIVOS Y AREAS DE CONOCIMIENTO
+          MIS CAMPOS FORMATIVOS Y ÁREAS DE CONOCIMIENTO
         </v-tab>
         <v-tab @click="(texto = 'TAREAS Y ACTIVIDADES'), setTareas()">
           TAREAS Y ACTIVIDADES
