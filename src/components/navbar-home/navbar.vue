@@ -78,7 +78,7 @@
                   class="menu-text"
                   @click="setEvaluacion()"
                 >
-                  Evaluacion
+                  Evaluación
                 </v-btn>
                 <v-btn
                   id="MiPerfil"
@@ -185,7 +185,7 @@
                   depressed
                   plain
                   @click="setEvaluacion()"
-                  >Evaluacion</v-btn
+                  >Evaluación</v-btn
                 ></v-list-item-title
               >
             </v-list-item>
