@@ -62,16 +62,16 @@
               </v-img>
             </v-col>
             <div class="mt-1">
-              <p class="subtitulo-2 mx-4">Observaciones del mes de Noviembre</p>
-              <p class="cuerpo mx-6" justify="center">Observaciones Nov</p>
+              <p class="subtitulo-2 mx-4">Observaciones del mes de noviembre</p>
+              <p class="cuerpo mx-6" justify="center">Observaciones nov</p>
             </div>
             <div class="mt-1">
-              <p class="subtitulo-2 mx-4">Observaciones del mes de Marzo</p>
-              <p class="cuerpo mx-6" justify="center">Observaciones Marzo</p>
+              <p class="subtitulo-2 mx-4">Observaciones del mes de marzo</p>
+              <p class="cuerpo mx-6" justify="center">Observaciones marzo</p>
             </div>
             <div class="mt-1">
-              <p class="subtitulo-2 mx-4">Observaciones del mes de Junio</p>
-              <p class="cuerpo mx-6" justify="center">Observaciones Junio</p>
+              <p class="subtitulo-2 mx-4">Observaciones del mes de junio</p>
+              <p class="cuerpo mx-6" justify="center">Observaciones junio</p>
             </div>
           </v-card>
         </v-col>
@@ -100,16 +100,16 @@
             </v-col>
 
             <div class="mt-1">
-              <p class="subtitulo-2 mx-4">Observaciones del mes de Noviembre</p>
-              <p class="cuerpo mx-6" justify="center">Observaciones Nov</p>
+              <p class="subtitulo-2 mx-4">Observaciones del mes de noviembre</p>
+              <p class="cuerpo mx-6" justify="center">Observaciones nov</p>
             </div>
             <div class="mt-1">
-              <p class="subtitulo-2 mx-4">Observaciones del mes de Marzo</p>
-              <p class="cuerpo mx-6" justify="center">Observaciones Marzo</p>
+              <p class="subtitulo-2 mx-4">Observaciones del mes de marzo</p>
+              <p class="cuerpo mx-6" justify="center">Observaciones marzo</p>
             </div>
             <div class="mt-1">
-              <p class="subtitulo-2 mx-4">Observaciones del mes de Junio</p>
-              <p class="cuerpo mx-6" justify="center">Observaciones Junio</p>
+              <p class="subtitulo-2 mx-4">Observaciones del mes de junio</p>
+              <p class="cuerpo mx-6" justify="center">Observaciones junio</p>
             </div>
           </v-card>
         </v-col>
@@ -136,16 +136,16 @@
             </v-col>
 
             <div class="mt-1">
-              <p class="subtitulo-2 mx-4">Observaciones del mes de Noviembre</p>
-              <p class="cuerpo mx-6" justify="center">Observaciones Nov</p>
+              <p class="subtitulo-2 mx-4">Observaciones del mes de noviembre</p>
+              <p class="cuerpo mx-6" justify="center">Observaciones nov</p>
             </div>
             <div class="mt-1">
-              <p class="subtitulo-2 mx-4">Observaciones del mes de Marzo</p>
+              <p class="subtitulo-2 mx-4">Observaciones del mes de marzo</p>
               <p class="cuerpo mx-6" justify="center">Observaciones Marzo</p>
             </div>
             <div class="mt-1">
-              <p class="subtitulo-2 mx-4">Observaciones del mes de Junio</p>
-              <p class="cuerpo mx-6" justify="center">Observaciones Junio</p>
+              <p class="subtitulo-2 mx-4">Observaciones del mes de junio</p>
+              <p class="cuerpo mx-6" justify="center">Observaciones junio</p>
             </div>
           </v-card>
         </v-col>
@@ -173,16 +173,16 @@
               </v-img>
             </v-col>
             <div class="mt-1">
-              <p class="subtitulo-2 mx-4">Observaciones del mes de Noviembre</p>
-              <p class="cuerpo mx-6" justify="center">Observaciones Nov</p>
+              <p class="subtitulo-2 mx-4">Observaciones del mes de noviembre</p>
+              <p class="cuerpo mx-6" justify="center">Observaciones nov</p>
             </div>
             <div class="mt-1">
-              <p class="subtitulo-2 mx-4">Observaciones del mes de Marzo</p>
-              <p class="cuerpo mx-6" justify="center">Observaciones Marzo</p>
+              <p class="subtitulo-2 mx-4">Observaciones del mes de marzo</p>
+              <p class="cuerpo mx-6" justify="center">Observaciones marzo</p>
             </div>
             <div class="mt-1">
-              <p class="subtitulo-2 mx-4">Observaciones del mes de Junio</p>
-              <p class="cuerpo mx-6" justify="center">Observaciones Junio</p>
+              <p class="subtitulo-2 mx-4">Observaciones del mes de junio</p>
+              <p class="cuerpo mx-6" justify="center">Observaciones junio</p>
             </div>
           </v-card>
         </v-col>
@@ -209,16 +209,16 @@
             </v-col>
 
             <div class="mt-1">
-              <p class="subtitulo-2 mx-4">Observaciones del mes de Noviembre</p>
-              <p class="cuerpo mx-6" justify="center">Observaciones Nov</p>
+              <p class="subtitulo-2 mx-4">Observaciones del mes de noviembre</p>
+              <p class="cuerpo mx-6" justify="center">Observaciones nov</p>
             </div>
             <div class="mt-1">
-              <p class="subtitulo-2 mx-4">Observaciones del mes de Marzo</p>
-              <p class="cuerpo mx-6" justify="center">Observaciones Marzo</p>
+              <p class="subtitulo-2 mx-4">Observaciones del mes de marzo</p>
+              <p class="cuerpo mx-6" justify="center">Observaciones marzo</p>
             </div>
             <div class="mt-1">
-              <p class="subtitulo-2 mx-4">Observaciones del mes de Junio</p>
-              <p class="cuerpo mx-6" justify="center">Observaciones Junio</p>
+              <p class="subtitulo-2 mx-4">Observaciones del mes de junio</p>
+              <p class="cuerpo mx-6" justify="center">Observaciones junio</p>
             </div>
           </v-card>
         </v-col>
