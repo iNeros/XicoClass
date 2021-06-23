@@ -2,7 +2,7 @@
   <div class="misTramites">
     <v-window v-model="$store.state.formatosStep">
       <v-window-item :value="0">
-        <v-row justify="space-around" class="rowSettings">
+        <v-row justify="space-around" class="rowSettings mt-5">
           <v-btn class="button-img">
             <v-img
               class="img-setings"
