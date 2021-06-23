@@ -157,7 +157,7 @@ export default {
   height: 10px;
   width: 100%;
   border-radius: 20px;
-  background-color: #26a69a;
+  background-color: #E91E63;
 }
 
 .misTramites {
