@@ -14,7 +14,7 @@
           <v-btn class="button-img">
             <v-img
               class="img-setings"
-              src="https://picsum.photos/id/12/600/300"
+              src="@/assets/media/tramites-botones/tramiteForm.png"
               @click="setTramiteSelected(2)"
             >
             </v-img>
