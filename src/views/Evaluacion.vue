@@ -2,7 +2,7 @@
   <div class="Evaluacion">
     <navbar></navbar>
     <v-container>
-      <v-row class="mt-2">
+      <v-row class="mt-2 mb-6">
         <v-col cols="12" xl="4" lg="4" md="6" sm="6" xs="12">
           <v-card elevation="2" color="#E91E63" min-height="610" width="100%">
             <v-card-title class="titulo">
@@ -222,7 +222,7 @@
             </div>
           </v-card>
         </v-col>
-      </v-row>
+      </v-row>      
     </v-container>
     <footerHome></footerHome>
   </div>
