@@ -40,7 +40,7 @@
               </template>
             </v-col>
             <v-col
-              cols="6"
+              cols="12" xl="6" lg="6" md="6" sm="6" xs="6"
               v-for="arch in archivosAlumno"
               :key="arch.id_archivos_alumnos"
             >
@@ -57,7 +57,9 @@
                 show-size
                 prepend-icon="mdi-upload"
                   ></v-file-input>
-              </template>
+              </template>                            
+            </v-col>
+            <v-col cols="12" xl="6" lg="6" md="6" sm="6" xs="6">
               <v-btn
                 class="boton-entregar"
                 color="green"
