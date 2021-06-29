@@ -57,7 +57,7 @@
                 </v-btn>
               </v-list-item-title>
             </v-list-item>
-
+            <!--
             <v-list-item>
               <v-list-item-title>
                 <v-btn
@@ -83,6 +83,7 @@
                 </v-btn>
               </v-list-item-title>
             </v-list-item>
+            -->
           </v-list>
         </v-menu>
       </div>
@@ -95,7 +96,7 @@ export default {
   name: "menuTabsBiblio",
   data() {
     return {
-      texto: "Material",
+      texto: "Material Impreso",
     };
   },
   methods: {

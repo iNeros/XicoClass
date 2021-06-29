@@ -12,55 +12,109 @@
         <div class="titulo-seccion">
           <span class="box-title"> VIDEOS </span>
         </div>
-        <v-list width="100%" outlined rounded elevation="12">
-          <v-list-group class="menu-text">
-            <template v-slot:activator>
-              <v-list-item-title>CUENTOS</v-list-item-title>
-            </template>
-            <div v-for="n in datos" :key="n">
-              <v-list-item
-                class="menu-text"
-                v-if="n.tipo == 1"
-                @click="selectLink(n.url)"
-              >
-                {{ n.titulo }}
-              </v-list-item>
-            </div>
-          </v-list-group>
+<!-- VISTA DE LAS TABS EN WIDEVIEW --->
+        <div class="hidden-sm-and-down">
+          <v-list width="100%" outlined rounded elevation="12">
+            <v-list-group class="menu-text">
+              <template v-slot:activator>
+                <v-list-item-title>CUENTOS</v-list-item-title>
+              </template>
+              <div v-for="n in datos" :key="n">
+                <v-list-item
+                  class="menu-text"
+                  v-if="n.tipo == 1"
+                  @click="selectLink(n.url)"
+                >
+                  {{ n.titulo }}
+                </v-list-item>
+              </div>
+            </v-list-group>
 
-          <v-list-group class="menu-text">
-            <template v-slot:activator>
-              <v-list-item-title>CLASES</v-list-item-title>
-            </template>
-            <div v-for="n in datos" :key="n">
-              <v-list-item
-                class="menu-text"
-                v-if="n.tipo == 2"
-                @click="selectLink(n.url)"
-              >
-                {{ n.titulo }}
-              </v-list-item>
-            </div>
-          </v-list-group>
+            <v-list-group class="menu-text">
+              <template v-slot:activator>
+                <v-list-item-title>CLASES</v-list-item-title>
+              </template>
+              <div v-for="n in datos" :key="n">
+                <v-list-item
+                  class="menu-text"
+                  v-if="n.tipo == 2"
+                  @click="selectLink(n.url)"
+                >
+                  {{ n.titulo }}
+                </v-list-item>
+              </div>
+            </v-list-group>
 
-          <v-list-group class="menu-text">
-            <template v-slot:activator>
-              <v-list-item-title>REFORZAMIENTO</v-list-item-title>
-            </template>
-            <div v-for="n in datos" :key="n">
-              <v-list-item
-                class="menu-text"
-                v-if="n.tipo == 3"
-                @click="selectLink(n.url)"
-              >
-                {{ n.titulo }}
-              </v-list-item>
-            </div>
-          </v-list-group>
-        </v-list>
+            <v-list-group class="menu-text">
+              <template v-slot:activator>
+                <v-list-item-title>REFORZAMIENTO</v-list-item-title>
+              </template>
+              <div v-for="n in datos" :key="n">
+                <v-list-item
+                  class="menu-text"
+                  v-if="n.tipo == 3"
+                  @click="selectLink(n.url)"
+                >
+                  {{ n.titulo }}
+                </v-list-item>
+              </div>
+            </v-list-group>
+          </v-list>
+        </div>
+<!-- VISTA DE LAS TABS EN DISPOSITIVOS MOVILES --->        
+        <div class="hidden-md-and-up">
+          <v-list width="100%" height="250px" outlined rounded elevation="12">
+            <v-list-group class="menu-text">
+              <template v-slot:activator>
+                <v-list-item-title>CUENTOS</v-list-item-title>
+              </template>
+              <div v-for="n in datos" :key="n">
+                <v-list-item
+                  class="menu-text"
+                  v-if="n.tipo == 1"
+                  @click="selectLink(n.url)"
+                >
+                  {{ n.titulo }}
+                </v-list-item>
+              </div>
+            </v-list-group>
+
+            <v-list-group class="menu-text">
+              <template v-slot:activator>
+                <v-list-item-title>CLASES</v-list-item-title>
+              </template>
+              <div v-for="n in datos" :key="n">
+                <v-list-item
+                  class="menu-text"
+                  v-if="n.tipo == 2"
+                  @click="selectLink(n.url)"
+                >
+                  {{ n.titulo }}
+                </v-list-item>
+              </div>
+            </v-list-group>
+
+            <v-list-group class="menu-text">
+              <template v-slot:activator>
+                <v-list-item-title>REFORZAMIENTO</v-list-item-title>
+              </template>
+              <div v-for="n in datos" :key="n">
+                <v-list-item
+                  class="menu-text"
+                  v-if="n.tipo == 3"
+                  @click="selectLink(n.url)"
+                >
+                  {{ n.titulo }}
+                </v-list-item>
+              </div>
+            </v-list-group>
+          </v-list>
+        </div>
+
       </v-col>
 
       <v-col cols="12" xl="9" lg="9" md="9" sm="12" xs="12">
+<!-- VISTA DE LAS TABS EN WIDEVIEW --->
         <div class="hidden-sm-and-down">
           <iframe
             width="100%"
@@ -70,11 +124,12 @@
             allowfullscreen
           ></iframe>
         </div>
+<!-- VISTA DE LAS TABS EN DISPOSITIVOS MOVILES --->
         <div class="hidden-md-and-up">
           <iframe
             margin-top="10px"
             width="100%"
-            height="480px"
+            height="300px"
             :src="link"
             allow="accelerometer; gyroscope; picture-in-picture"
             allowfullscreen
