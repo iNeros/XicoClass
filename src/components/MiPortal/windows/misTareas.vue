@@ -92,7 +92,8 @@ export default {
   },
   methods: {
     DescargarArchivo(id) {
-      window.open("" + id, "_blank");
+      const decodedData = atob(id);
+      window.open("" +decodedData, "_blank");
     },
     SubirArchivo() {
       /*  const storageRef = firebase.storage().ref(`/ArchivosAlumnos/1/${this.archivoA}`);
