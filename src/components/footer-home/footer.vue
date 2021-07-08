@@ -2,7 +2,7 @@
   <div class="footerHome">
     <v-footer color="#26A69A" absolute height="150px">
       <v-row justify="center" no-gutters>
-        <v-btn color="white" text rounded class="my-2" href="/Home">
+        <v-btn color="white" text rounded class="my-2" href="/Home" @click="setInicio()">
           Inicio
         </v-btn>
         <v-btn color="white" text rounded class="my-2" href="/ApartadoLegal">
@@ -32,6 +32,11 @@ export default {
     return {
       links: ["Inicio", "Apartado Legal", "Equipo", "Acerca De"],
     };
+  },
+  methods: {
+    setInicio() {
+      localStorage.selectedNavTab = 1;
+    },
   },
 };
 </script>
