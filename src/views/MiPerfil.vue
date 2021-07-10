@@ -145,12 +145,12 @@ export default {
   background: no-repeat padding-box;
   opacity: 1;
 }
-.avatar-2{
+.avatar-2 {
   display: block;
   top: 52px;
   left: 852px;
-width: 270px;
-height: 270px;
+  width: 270px;
+  height: 270px;
   background: no-repeat padding-box;
   opacity: 1;
 }

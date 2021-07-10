@@ -8,9 +8,9 @@
               #{{ item.id_actividad }} {{ item.nombre }}
             </h1>
             <span class="status-label">ESTATUS: </span>
-            <span id="estado-text" class="status-label estado-pendiente"
-              >{{item.estado}}</span
-            >
+            <span id="estado-text" class="status-label estado-pendiente">{{
+              item.estado
+            }}</span>
           </v-col>
         </v-row>
         <div class="texto-descriptivo mx-4">
@@ -40,7 +40,12 @@
               </template>
             </v-col>
             <v-col
-              cols="12" xl="6" lg="6" md="6" sm="6" xs="6"
+              cols="12"
+              xl="6"
+              lg="6"
+              md="6"
+              sm="6"
+              xs="6"
               v-for="arch in archivosAlumno"
               :key="arch.id_archivos_alumnos"
             >
@@ -52,12 +57,14 @@
                 </v-chip>
               </template>
               <template>
-                <v-file-input class="ma-2" v-model="archivoA" 
-                hide-input
-                show-size
-                prepend-icon="mdi-upload"
-                  ></v-file-input>
-              </template>                            
+                <v-file-input
+                  class="ma-2"
+                  v-model="archivoA"
+                  hide-input
+                  show-size
+                  prepend-icon="mdi-upload"
+                ></v-file-input>
+              </template>
             </v-col>
             <v-col cols="12" xl="6" lg="6" md="6" sm="6" xs="6">
               <v-btn
@@ -93,7 +100,7 @@ export default {
   methods: {
     DescargarArchivo(id) {
       const decodedData = atob(id);
-      window.open("" +decodedData, "_blank");
+      window.open("" + decodedData, "_blank");
     },
     SubirArchivo() {
       /*  const storageRef = firebase.storage().ref(`/ArchivosAlumnos/1/${this.archivoA}`);

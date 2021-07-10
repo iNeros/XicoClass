@@ -171,7 +171,7 @@ export default {
   methods: {
     descargarArchivo(id) {
       const decodedData = atob(id);
-      window.open("" +decodedData, "_blank");
+      window.open("" + decodedData, "_blank");
     },
     obtenerImpreso() {
       axios

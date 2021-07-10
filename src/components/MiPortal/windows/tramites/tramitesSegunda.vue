@@ -1,9 +1,17 @@
 <template>
-<v-container fluid> 
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfbsePGhPtPkB9Avf3sovnA0-wxRW8H8Dp9BQtwyfORwh9IUQ/viewform?embedded=true" width="760" height="1400" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
-</v-container>
+  <v-container fluid>
+    <iframe
+      src="https://docs.google.com/forms/d/e/1FAIpQLSfbsePGhPtPkB9Avf3sovnA0-wxRW8H8Dp9BQtwyfORwh9IUQ/viewform?embedded=true"
+      width="760"
+      height="1400"
+      frameborder="0"
+      marginheight="0"
+      marginwidth="0"
+      >Cargando…</iframe
+    >
+  </v-container>
 </template>
-  
+
 <script>
 export default {
   name: "tramitesSegundo",
@@ -26,5 +34,3 @@ export default {
   letter-spacing: 0.01px;
 }
 </style>
-
-
