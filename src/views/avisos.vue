@@ -151,7 +151,9 @@ export default {
   },
   methods: {
     Enlace(id) {
+      if(id != null){
       window.open("" + id, "_blank");
+      }else {return 0;}
     },
     ObtenerAvisosH() {
       axios
