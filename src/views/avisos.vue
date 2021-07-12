@@ -151,9 +151,11 @@ export default {
   },
   methods: {
     Enlace(id) {
-      if(id != ''){
-      window.open("" + id, "_blank");
-      }else {return 0;}
+      if (id != "") {
+        window.open("" + id, "_blank");
+      } else {
+        return 0;
+      }
     },
     ObtenerAvisosH() {
       axios
