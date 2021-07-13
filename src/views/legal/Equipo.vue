@@ -7,10 +7,9 @@
       </v-row>
           <hr color="#BA68C8" id="od" />
 
-
-      <!-- MAESTRA SALOME-->
+      <!-- MAESTRA SALOME ORIGINAL
       <v-row class="mt-11 mb-4" justify="center" >
-        <v-card elevation="3" width="400" shaped outlined>
+        <v-card elevation="3" width="400" shaped outlined class="sombra-avatar1">
           <div class="d-flex justify-center">
             <v-avatar size="164" class="sombra-avatar1">
               <v-img
@@ -39,6 +38,39 @@
             optio! Quidem, debitis.
           </v-card-text>
         </v-card>
+      </v-row>
+      -->
+
+      <!--PRUEBA SOMBRA COLOR-->
+      <v-row class="mt-7 mb-4" justify="center" >
+        <v-col cols="12" class="card-salome redondo" xl="4" lg="4" md="6" sm="7" xs="10">
+            <div class="d-flex justify-center">
+            <v-avatar size="164" class="sombra-avatar1">
+              <v-img
+                contain
+                class="mt-6"
+                src="@/assets/media/logos/CaraNiña.png"
+              >
+              </v-img>
+            </v-avatar>
+          </div>
+
+          <div class="d-flex justify-center">
+            <p class="titulo mt-4 mb-0 pb-0">
+              Mtra. María <br />
+              Salomé Alejandre<br />
+              Apolinar
+            </p>
+          </div>
+          <p class="subtitulo texto-centrado mb-1">
+            Asesor de proyecto del ITSX
+          </p>
+          <p class="descripcion mt-3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+            molestias dolorem eum, ab officia perferendis veniam, consectetur
+            quas obcaecati facilis nisi fugiat modi.
+          </p>          
+        </v-col>                  
       </v-row>
 
       <!-- NOSOTROS-->
@@ -245,6 +277,17 @@ export default {
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 
+.card-salome{
+  height: 455px;
+  box-shadow: 0px 6px 8px #E91E63;
+}
+.card-team{
+  height: 474px;
+}
+.redondo{
+  border: none;
+  border-radius: 40px 10px;
+}
 .titulo-pagina {
   font-family: "Poppins";
   font: weight 700px;
@@ -265,8 +308,14 @@ export default {
   font-family: "Poppins";
   font-weight: 500px;
   font-size: 20px;
-  color: white;
   text-align: center;
+  color: rgba(0, 0, 0, 0.6);
+}
+.descripcion{
+  font-size: 14px;
+  text-align: center;
+  font-family: "Poppins";
+  color: rgba(0, 0, 0, 0.6);  
 }
 .texto-centrado {
   text-align: center;
@@ -285,6 +334,7 @@ export default {
   opacity: 1;
   background: transparent;
 }
+
 .linea {
   width: 200px;
   height: 0px;
@@ -294,7 +344,6 @@ export default {
 .margen-abajo {
   margin-bottom: 0px;
 }
-
 .sombra-avatar1{
   box-shadow: 0px 6px 8px #E91E63;
 }
