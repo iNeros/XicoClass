@@ -50,7 +50,7 @@
                 <v-img
                   contain
                   class="mt-6"
-                  src="@/assets/media/logos/Adriana.jpeg"
+                  src="@/assets/media/logos/CaraNiña.png"
                 >
                 </v-img>
               </v-avatar>
