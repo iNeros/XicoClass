@@ -75,8 +75,7 @@
 
       <!-- NOSOTROS-->
       <v-row justify-lg="space-around" class="mb-2">
-        <v-col xl="4" lg="4" md="4" sm="12" xs="12">
-          <v-card elevation="3" width="400" shaped outlined min-height="450">
+        <v-col  class="card-adri redondo" xl="4" lg="4" md="6" sm="7" xs="10">
             <div class="d-flex justify-center">
               <v-avatar size="164" class="sombra-avatar2">
                 <v-img
@@ -89,24 +88,22 @@
             </div>
 
             <div class="d-flex justify-center">
-              <v-card-title class="titulo mb-0 pb-0">
+              <p class="titulo mb-0 pb-0">
                 Adriana Abigail <br />
                 Dominguez <br />
                 Morales
-              </v-card-title>
+              </p>
             </div>
 
-            <v-card-subtitle class="subtitulo pt-1">
+            <p class="subtitulo pt-1">
               Lider del proyecto
-            </v-card-subtitle>
-            <v-card-text class="texto-centrado fuente-poppins">
+            </p>
+            <p class="texto-centrado fuente-poppins">
               Ingeniera en sistemas computacionales con una especialidad en redes.
-            </v-card-text>
-          </v-card>
+            </p>
         </v-col>
 
-        <v-col xl="4" lg="4" md="4" sm="12" xs="12">
-          <v-card elevation="3" width="400" shaped outlined min-height="450">
+        <v-col  class="card-gibran redondo" xl="4" lg="4" md="6" sm="7" xs="10">
             <div class="d-flex justify-center">
               <v-avatar size="164" class="sombra-avatar3">
                 <v-img
@@ -119,23 +116,21 @@
             </div>
 
             <div class="d-flex justify-center">
-              <v-card-title class="titulo mb-0 pb-0">
+              <p class="titulo mb-0 pb-0">
                 Gibran Camacho Ramos
-              </v-card-title>
+              </p>
             </div>
 
-            <v-card-subtitle class="subtitulo pt-1">
+            <p class="subtitulo pt-1">
               Lider del proyecto
-            </v-card-subtitle>
-            <v-card-text class="texto-centrado fuente-poppins">
+            </p>
+            <p class="texto-centrado fuente-poppins">
             Ingeniero en sistemas computacionales con una especialidad en redes.
 
-            </v-card-text>
-          </v-card>
+            </p>
         </v-col>
 
-        <v-col xl="4" lg="4" md="4" sm="12" xs="12">
-          <v-card elevation="3" width="400" shaped outlined min-height="450">
+          <v-col  class="card-chable redondo" xl="4" lg="4" md="6" sm="7" xs="10">
             <div class="d-flex justify-center">
               <v-avatar size="164" class="sombra-avatar4">
                 <v-img
@@ -148,26 +143,24 @@
             </div>
 
             <div class="d-flex justify-center">
-              <v-card-title class="titulo mb-0 pb-0">
+              <p class="titulo mb-0 pb-0">
                 Michel Yafté <br />
                 Chablé Antonio
-              </v-card-title>
+              </p>
             </div>
 
-            <v-card-subtitle class="subtitulo pt-1">
+            <p class="subtitulo pt-1">
               Lider del proyecto
-            </v-card-subtitle>
-            <v-card-text class="texto-centrado fuente-poppins">
+            </p>
+            <p class="texto-centrado fuente-poppins">
               Ingeniero en sistemas computacionales con una especialidad en software.
 
-            </v-card-text>
-          </v-card>
+            </p>
         </v-col>
       </v-row>
 
       <v-row justify-lg="space-around" class="mb-2">
-        <v-col xl="4" lg="4" md="4" sm="12" xs="12">
-          <v-card elevation="3" width="400" shaped outlined min-height="450">
+        <v-col  class="card-raul redondo" xl="4" lg="4" md="6" sm="7" xs="10">
             <div class="d-flex justify-center">
               <v-avatar size="164" class="sombra-avatar5">
                 <v-img
@@ -180,23 +173,21 @@
             </div>
 
             <div class="d-flex justify-center">
-              <v-card-title class="titulo mb-0 pb-0">
+              <p class="titulo mb-0 pb-0">
                 Raúl Alfonso <br />
                 Tenorio De La O
-              </v-card-title>
+              </p>
             </div>
 
-            <v-card-subtitle class="subtitulo pt-1">
+            <p class="subtitulo pt-1">
               Lider del proyecto
-            </v-card-subtitle>
-            <v-card-text class="texto-centrado fuente-poppins">
+            </p>
+            <p class="texto-centrado fuente-poppins">
               Ingeniero en sistemas computacionales con una especialidad en software.
-            </v-card-text>
-          </v-card>
+            </p>
         </v-col>
 
-        <v-col xl="4" lg="4" md="4" sm="12" xs="12">
-          <v-card elevation="3" width="400" shaped outlined min-height="450" >
+          <v-col  class="card-othon redondo" xl="4" lg="4" md="6" sm="7" xs="10">
             <div class="d-flex justify-center">
               <v-avatar size="164" class="sombra-avatar6">
                 <v-img
@@ -209,23 +200,21 @@
             </div>
 
             <div class="d-flex justify-center">
-              <v-card-title class="titulo mb-0 pb-0">
+              <p class="titulo mb-0 pb-0">
                 Othón Andrés <br />
                 Morales Viveros
-              </v-card-title>
+              </p>
             </div>
 
-            <v-card-subtitle class="subtitulo pt-1">
+            <p class="subtitulo pt-1">
               Lider del proyecto
-            </v-card-subtitle>
-            <v-card-text class="texto-centrado fuente-poppins">
+            </p>
+            <p class="texto-centrado fuente-poppins">
               Ingeniero en sistemas computacionales con una especialidad en software.
-            </v-card-text>
-          </v-card>
+            </p>
         </v-col>
 
-        <v-col xl="4" lg="4" md="4" sm="12" xs="12">
-          <v-card elevation="3" width="400" shaped outlined min-height="450" >
+          <v-col  class="card-iji redondo" xl="4" lg="4" md="6" sm="7" xs="10">
             <div class="d-flex justify-center">
               <v-avatar size="164" class="sombra-avatar7">
                 <v-img
@@ -238,19 +227,18 @@
             </div>
 
             <div class="d-flex justify-center">
-              <v-card-title class="titulo mb-0 pb-0">
+              <p class="titulo mb-0 pb-0">
                 Alejandro Oliva <br />
                 Baizabal
-              </v-card-title>
+              </p>
             </div>
 
-            <v-card-subtitle class="subtitulo pt-1">
+            <p class="subtitulo pt-1">
               Lider del proyecto
-            </v-card-subtitle>
-            <v-card-text class="texto-centrado fuente-poppins">
+            </p>
+            <p class="texto-centrado fuente-poppins">
               Ingeniero en sistemas computacionales con una especialidad en redes.
-            </v-card-text>
-          </v-card>
+            </p>
         </v-col>
       </v-row>
     </v-container>
@@ -278,9 +266,40 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 
 .card-salome{
-  height: 455px;
+  height: 474px;
   box-shadow: 0px 6px 8px #E91E63;
 }
+.card-adri{
+  height: 474px;
+  box-shadow: 0px 6px 8px #7E57C2;
+  
+}
+.card-gibran{
+  height: 474px;
+  box-shadow: 0px 6px 8px #80D8FF;
+
+}
+.card-chable{
+  height: 474px;
+  box-shadow: 0px 6px 8px #283593;
+
+}
+.card-raul{
+  height: 474px;
+  box-shadow: 0px 6px 8px #64DD17;
+
+}
+.card-othon{
+  height: 474px;
+  box-shadow: 0px 6px 8px #FFFF00;
+  
+}
+.card-iji{
+  height: 474px;
+  box-shadow: 0px 6px 8px #FF9800;
+  
+}
+
 .card-team{
   height: 474px;
 }
