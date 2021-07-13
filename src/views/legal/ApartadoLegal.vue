@@ -3,6 +3,8 @@
     <navbar></navbar>
     <v-container>
       <h1 class="titulo mt-8">Apartado Legal XicoClass</h1>
+      <br>
+        <hr color="#263238" id="od" />
       <h1 class="mt-8">Aviso legal y términos de uso</h1>
       <br />
       <p>
@@ -26,18 +28,18 @@
       <p>
         Las presentes Condiciones Generales regulan el uso (incluyendo el mero
         acceso) de las páginas de la web, integrantes del sitio web de
-        https://xicoclass.firebaseapp.com/ incluidos los contenidos y servicios
+        <a href="https://xicoclass.firebaseapp.com/">XicoClass</a> incluidos los contenidos y servicios
         puestos a disposición en ellas. Toda persona que acceda a la web,
-        https://xicoclass.firebaseapp.com/ (“Usuario”) acepta someterse a las
+        <a href="https://xicoclass.firebaseapp.com/">XicoClass</a> (“Usuario”) acepta someterse a las
         Condiciones Generales vigentes en cada momento del portal
-        https://xicoclass.firebaseapp.com/.
+        <a href="https://xicoclass.firebaseapp.com/">XicoClass</a>.
       </p>
       <h1>COMPROMISOS Y OBLIGACIONES DE LOS USUARIOS</h1>
       <br />
       <p>
         El Usuario queda informado, y acepta, que el acceso a la presente web no
         supone, en modo alguno, el inicio de una relación comercial con
-        https://xicoclass.firebaseapp.com/. De esta forma, el usuario se
+        <a href="https://xicoclass.firebaseapp.com/">XicoClass</a>. De esta forma, el usuario se
         compromete a utilizar el sitio Web, sus servicios y contenidos sin
         contravenir la legislación vigente, la buena fe y el orden público.
         Queda prohibido el uso de la web, con fines ilícitos o lesivos, o que,
@@ -48,14 +50,14 @@
         titulares;Cualquier vulneración de los derechos del prestador o de los
         legítimos titulares;Su utilización para fines comerciales o
         publicitarios. En la utilización de la web,
-        https://xicoclass.firebaseapp.com/, el Usuario se compromete a no llevar
+        <a href="https://xicoclass.firebaseapp.com/">XicoClass</a>, el Usuario se compromete a no llevar
         a cabo ninguna conducta que pudiera dañar la imagen, los intereses y los
-        derechos de https://xicoclass.firebaseapp.com/ o de terceros o que
+        derechos de <a href="https://xicoclass.firebaseapp.com/">XicoClass</a> o de terceros o que
         pudiera dañar, inutilizar o sobrecargar el portal (indicar dominio) o
         que impidiera, de cualquier forma, la normal utilización de la web. No
         obstante, el Usuario debe ser consciente de que las medidas de seguridad
         de los sistemas informáticos en Internet no son enteramente fiables y
-        que, por tanto https://xicoclass.firebaseapp.com/ no puede garantizar la
+        que, por tanto <a href="https://xicoclass.firebaseapp.com/">XicoClass</a> no puede garantizar la
         inexistencia de virus u otros elementos que puedan producir alteraciones
         en los sistemas informáticos (software y hardware) del Usuario o en sus
         documentos electrónicos y ficheros contenidos en los mismos.
@@ -65,14 +67,14 @@
       <br />
       <p>
         Los datos personales comunicados por el usuario a
-        https://xicoclass.firebaseapp.com/ pueden ser almacenados en bases de
+        <a href="https://xicoclass.firebaseapp.com/">XicoClass</a> pueden ser almacenados en bases de
         datos automatizadas o no, cuya titularidad corresponde en exclusiva a
-        https://xicoclass.firebaseapp.com/, asumiendo ésta todas las medidas de
+        <a href="https://xicoclass.firebaseapp.com/">XicoClass</a>, asumiendo ésta todas las medidas de
         índole técnica, organizativa y de seguridad que garantizan la
         confidencialidad, integridad y calidad de la información contenida en
         las mismas de acuerdo con lo establecido en la normativa vigente en
         protección de datos. La comunicación entre los usuarios y
-        https://xicoclass.firebaseapp.com/ utiliza un canal seguro, y los datos
+        <a href="https://xicoclass.firebaseapp.com/">XicoClass</a> utiliza un canal seguro, y los datos
         transmitidos son cifrados gracias a protocolos a https, por tanto,
         garantizamos las mejores condiciones de seguridad para que la
         confidencialidad de los usuarios esté garantizada.
@@ -80,7 +82,7 @@
       <h1>RECLAMACIONES</h1>
       <br />
       <p>
-        https://xicoclass.firebaseapp.com/ informa que existen hojas de
+        <a href="https://xicoclass.firebaseapp.com/">XicoClass</a> informa que existen hojas de
         reclamación a disposición de usuarios y clientes. El Usuario podrá
         realizar reclamaciones solicitando su hoja de reclamación o remitiendo
         un correo electrónico a indicando su nombre y apellidos, el servicio y/o
@@ -109,9 +111,9 @@
         modalidad de puesta a disposición, de la totalidad o parte de los
         contenidos de esta página web, con fines comerciales, en cualquier
         soporte y por cualquier medio técnico, sin la autorización de
-        https://xicoclass.firebaseapp.com/. El usuario se compromete a respetar
+        <a href="https://xicoclass.firebaseapp.com/">XicoClass</a>. El usuario se compromete a respetar
         los derechos de Propiedad Intelectual e Industrial titularidad de
-        https://xicoclass.firebaseapp.com/. El usuario conoce y acepta que la
+        <a href="https://xicoclass.firebaseapp.com/">XicoClass</a>. El usuario conoce y acepta que la
         totalidad del sitio web, conteniendo sin carácter exhaustivo el texto,
         software, contenidos (incluyendo estructura, selección, ordenación y
         presentación de los mismos) podcast, fotografías, material audiovisual y
@@ -121,7 +123,7 @@
         que un usuario o un tercero consideren que se ha producido una violación
         de sus legítimos derechos de propiedad intelectual por la introducción
         de un determinado contenido en la web, deberá notificar dicha
-        circunstancia a https://xicoclass.firebaseapp.com/ indicando: Datos
+        circunstancia a <a href="https://xicoclass.firebaseapp.com/">XicoClass</a> indicando: Datos
         personales del interesado titular de los derechos presuntamente
         infringidos, o indicar la representación con la que actúa en caso de que
         la reclamación la presente un tercero distinto del interesado. Señalar
@@ -134,11 +136,11 @@
       <h1>ENLACES EXTERNOS</h1>
       <br />
       <p>
-        Las páginas de la web https://xicoclass.firebaseapp.com/, podría
+        Las páginas de la web <a href="https://xicoclass.firebaseapp.com/">XicoClass</a>, podría
         proporcionar enlaces a otros sitios web propios y contenidos que son
         propiedad de terceros. El único objeto de los enlaces es proporcionar al
         Usuario la posibilidad de acceder a dichos enlaces.
-        https://xicoclass.firebaseapp.com/ no se responsabiliza en ningún caso
+        <a href="https://xicoclass.firebaseapp.com/">XicoClass</a> no se responsabiliza en ningún caso
         de los resultados que puedan derivarse al Usuario por acceso a dichos
         enlaces. Asimismo, el usuario encontrará dentro de este sitio, páginas,
         promociones, programas de afiliados que acceden a los hábitos de
@@ -150,12 +152,12 @@
         ampliamente a los Usuarios a revisar detalladamente las políticas de
         privacidad de los enlaces de afiliado. El Usuario que se proponga
         establecer cualquier dispositivo técnico de enlace desde su sitio web al
-        portal https://xicoclass.firebaseapp.com/ deberá obtener la autorización
-        previa y escrita de https://xicoclass.firebaseapp.com/ El
+        portal <a href="https://xicoclass.firebaseapp.com/">XicoClass</a> deberá obtener la autorización
+        previa y escrita de <a href="https://xicoclass.firebaseapp.com/">XicoClass</a> El
         establecimiento del enlace no implica en ningún caso la existencia de
-        relaciones entre https://xicoclass.firebaseapp.com/ y el propietario del
+        relaciones entre <a href="https://xicoclass.firebaseapp.com/">XicoClass</a> y el propietario del
         sitio en el que se establezca el enlace, ni la aceptación o aprobación
-        por parte de https://xicoclass.firebaseapp.com/ de sus contenidos o
+        por parte de <a href="https://xicoclass.firebaseapp.com/">XicoClass</a> de sus contenidos o
         servicios.
       </p>
       <h1>POLÍTICA DE COMENTARIOS</h1>
@@ -196,7 +198,7 @@
       <br />
       <p>
         Con carácter general las relaciones entre
-        https://xicoclass.firebaseapp.com/ con los Usuarios de sus servicios
+        <a href="https://xicoclass.firebaseapp.com/">XicoClass</a> con los Usuarios de sus servicios
         telemáticos, presentes en esta web se encuentran sometidas a la
         legislación y jurisdicción españolas y a los tribunales.
       </p>
@@ -205,7 +207,7 @@
       <p>
         En caso de que cualquier Usuario tuviese alguna duda acerca de estas
         Condiciones legales o cualquier comentario sobre el portal
-        https://xicoclass.firebaseapp.com/, por favor diríjase a De parte del
+        <a href="https://xicoclass.firebaseapp.com/">XicoClass</a>, por favor diríjase a De parte del
         equipo que formamos XicoClass te agradecemos el tiempo dedicado en leer
         este Aviso Legal
       </p>
@@ -237,7 +239,7 @@ export default {
   font: weight 700px;
   font-size: 40px;
   line-height: 40px;
-  color: #37474f;
+  color: black;
   text-align: center;
 }
 p {
@@ -245,5 +247,13 @@ p {
   font-weight: 500px;
   font-size: 16px;
   text-align: justify;
+}
+#od {
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 5px;
+}
+.href{
+  color: #26A69A;
 }
 </style>
