@@ -19,6 +19,7 @@ import carousel from "@/components/home/carousel.vue";
 import centerImages from "@/components/home/centerImages.vue";
 import seccionNoticias from "@/components/home/seccionNoticias.vue";
 
+
 export default {
   name: "Home",
 

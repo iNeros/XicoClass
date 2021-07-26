@@ -10,9 +10,9 @@
         </template>
         <v-carousel-item
           eager
-          v-for="(item, i) in items"
+          v-for="(item, i) in imagenesC"
           :key="i"
-          :src="item.src"
+          :src="item.url_img"
           reverse-transition="fade-transition"
           transition="fade-transition"
           @click="window.location.href = '#'"
@@ -24,24 +24,39 @@
 </template>
 
 <script>
+import { fr } from "../../../firebase"
 export default {
   name: "Carousel",
 
+  mounted(){
+      this.obtenerImagenes();  
+  },
+
   data() {
     return {
-      items: [
-        {
-          src: require("@/assets/media/carusel/carusel1.png"),
-        },
-        {
-          src: require("@/assets/media/carusel/carusel2.png"),
-        },
-        {
-          src: require("@/assets/media/carusel/carusel3.png"),
-        },
-      ],
+      imagenesC: [],
     };
   },
+
+  methods:{
+    async obtenerImagenes(){
+      const imagenes = [];
+       await fr.collection('carruselPrincipal').get()
+            .then(snapshot => {
+                snapshot.docs.forEach(imagen => {
+                    let currentID = imagen.id
+                    let appObj = { ...imagen.data(), ['id']: currentID }
+                    imagenes.push(appObj);
+            })
+            this.imagenesC = imagenes;
+        });
+    
+    },
+    testObtain(){
+
+    }
+  },
+
 };
 </script>
 
