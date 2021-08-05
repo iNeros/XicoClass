@@ -15,7 +15,7 @@
           }}</v-card-subtitle>
           <v-card-actions>
             <v-btn
-            v-if="noticias[0].ruta_archivo != ''"
+              v-if="noticias[0].ruta_archivo != ''"
               color="#D50000"
               dark
               v-bind:href="'' + noticias[0].ruta_archivo"
@@ -39,7 +39,7 @@
           }}</v-card-subtitle>
           <v-card-actions>
             <v-btn
-            v-if="noticias[1].ruta_archivo != ''"
+              v-if="noticias[1].ruta_archivo != ''"
               color="#D50000"
               dark
               v-bind:href="'' + noticias[1].ruta_archivo"

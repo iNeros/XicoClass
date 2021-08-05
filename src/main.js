@@ -8,10 +8,10 @@ import axios from "axios";
 import VueAxios from "vue-axios";
 import Vuex from "vuex";
 
-import firebase from 'firebase/app';
-import 'firebase/database'; // If using Firebase database
-import 'firebase/storage';  // If using Firebase storage
-import 'firebase/firestore';
+import firebase from "firebase/app";
+import "firebase/database"; // If using Firebase database
+import "firebase/storage"; // If using Firebase storage
+import "firebase/firestore";
 
 Vue.use(VueAxios, axios);
 Vue.use(Vuelidate);

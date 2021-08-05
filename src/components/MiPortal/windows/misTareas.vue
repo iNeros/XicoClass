@@ -60,12 +60,12 @@
             <v-col cols="12" xl="6" lg="6" md="6" sm="6" xs="6">
               <template>
                 <input
-                id="files"
-                type="file"
-                multiple
-                ref="ArchivosDocentes"
-                label="Agregar archivos"
-              >
+                  id="files"
+                  type="file"
+                  multiple
+                  ref="ArchivosDocentes"
+                  label="Agregar archivos"
+                />
               </template>
               <v-btn
                 class="boton-entregar"
@@ -102,8 +102,8 @@ export default {
       window.open("" + decodedData, "_blank");
     },
 
-async SubirArchivo() {
-/*        const storageRef = firebase.storage().ref(`/ArchivosAlumnos/1/${this.$refs.ArchivosDocentes.name}`);
+    async SubirArchivo() {
+      /*        const storageRef = firebase.storage().ref(`/ArchivosAlumnos/1/${this.$refs.ArchivosDocentes.name}`);
         const task = storageRef.put(this.$refs.ArchivosDocentes);
 
         task.on('state_changed',snapshot =>{
@@ -118,24 +118,22 @@ async SubirArchivo() {
             });;
           });; */
       for (var i = 0; i < 1; i++) {
-      try {
-        const { files } = this.$refs.ArchivosDocentes;
-        const file = files[0];
-        if (file) {
+        try {
+          const { files } = this.$refs.ArchivosDocentes;
+          const file = files[0];
+          if (file) {
             const response = await firebase
               .storage()
               .ref(`/ArchivosDocentes/2/${file.name}`)
               .put(file);
-              const url = await response.ref.getDownloadURL();
-            console.log('archivo disponible en '+url);
-        } else {
-          console.log('falta el archivo');
+            const url = await response.ref.getDownloadURL();
+            console.log("archivo disponible en " + url);
+          } else {
+            console.log("falta el archivo");
+          }
+        } catch (error) {
+          console.error(error);
         }
-
-        
-      } catch (error) {
-        console.error(error);
-      }
       }
     },
     Tarea() {

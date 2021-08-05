@@ -24,12 +24,12 @@
 </template>
 
 <script>
-import { fr } from "../../../firebase"
+import { fr } from "../../../firebase";
 export default {
   name: "Carousel",
 
-  mounted(){
-      this.obtenerImagenes();  
+  mounted() {
+    this.obtenerImagenes();
   },
 
   data() {
@@ -38,25 +38,23 @@ export default {
     };
   },
 
-  methods:{
-    async obtenerImagenes(){
+  methods: {
+    async obtenerImagenes() {
       const imagenes = [];
-       await fr.collection('carruselPrincipal').get()
-            .then(snapshot => {
-                snapshot.docs.forEach(imagen => {
-                    let currentID = imagen.id
-                    let appObj = { ...imagen.data(), ['id']: currentID }
-                    imagenes.push(appObj);
-            })
-            this.imagenesC = imagenes;
+      await fr
+        .collection("carruselPrincipal")
+        .get()
+        .then((snapshot) => {
+          snapshot.docs.forEach((imagen) => {
+            let currentID = imagen.id;
+            let appObj = { ...imagen.data(), ["id"]: currentID };
+            imagenes.push(appObj);
+          });
+          this.imagenesC = imagenes;
         });
-    
     },
-    testObtain(){
-
-    }
+    testObtain() {},
   },
-
 };
 </script>
 
