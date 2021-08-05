@@ -100,10 +100,7 @@ export default {
   name: "seccionNoticias",
   data() {
     return {
-      noticias: [
-        {nombre: ""},
-        {nombre: ""}
-      ],
+      noticias: [{ nombre: "" }, { nombre: "" }],
       items: [
         {
           color: "#1F7087",
@@ -137,7 +134,7 @@ export default {
   },
   created() {
     this.Nglobales();
-  }
+  },
 };
 </script>
 

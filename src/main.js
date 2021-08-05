@@ -8,13 +8,13 @@ import axios from "axios";
 import VueAxios from "vue-axios";
 import Vuex from "vuex";
 
-import firebase from 'firebase/app'
-import 'firebase/firestore'
-import 'firebase/auth'
-import 'firebase/database'
-import 'firebase/analytics'
-import 'firebase/functions'
-import 'firebase/storage'
+import firebase from "firebase/app";
+import "firebase/firestore";
+import "firebase/auth";
+import "firebase/database";
+import "firebase/analytics";
+import "firebase/functions";
+import "firebase/storage";
 
 Vue.use(VueAxios, axios);
 Vue.use(Vuelidate);
@@ -40,10 +40,10 @@ new Vue({
 
 firebase.initializeApp(firebaseConfig);
 
-const fr = firebase.firestore()
+const fr = firebase.firestore();
 const auth = firebase.auth();
 const db = firebase.database();
 const analytics = firebase.analytics();
 const storage = firebase.storage();
 
-export { fr, auth, db, analytics, storage, firebase }
+export { fr, auth, db, analytics, storage, firebase };

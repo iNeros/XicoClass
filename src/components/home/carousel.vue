@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import  { fr }  from "../../main.js";
+import { fr } from "../../main.js";
 export default {
   name: "Carousel",
 
