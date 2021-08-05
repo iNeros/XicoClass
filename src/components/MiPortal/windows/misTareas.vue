@@ -1,53 +1,78 @@
 <template>
   <div class="misTareas">
-    <div class="container" v-for="(item, i) in Tareas" :key="i">
-      <v-card elevation="24" class="card-container">
-        <v-card-text>
-          <v-row>
-            <v-col cols="8">
-              <p class="display-1 titulo-tarjeta">#{{item[0]}} {{item[1]}}</p>
-            </v-col>
-            <v-col cols="4" class="status-text">
-              <span class="status-label">ESTATUS: </span>
-              <span id="estado-text" class="status-label estado-pendiente"
-                >PENDIENTE</span
-              >
-            </v-col>
-          </v-row>
-
-          <div class="texto-descriptivo mx-4">
-            <span style="font-size: 18px; color: #8e78ec">
-              <b>Descripcion:</b>
-            </span>
-            <p>
-              {{item[2]}}
-            </p>
-          </div>
-        </v-card-text>
+    <div class="container" v-for="item in Tareas" :key="item.id_actividad">
+      <v-card elevation="10" class="card-container" shaped color="#f5f5f5">
+        <v-row class="mt-2 mb-0 pb-0">
+          <v-col cols="12" xl="12" lg="12" md="12" sm="12" xs="12" class="ml-4">
+            <h1 class="tittle-text">
+              #{{ item.id_actividad }} {{ item.nombre }}
+            </h1>
+            <span class="status-label">ESTATUS: </span>
+            <span id="estado-text" class="status-label estado-pendiente">{{
+              item.estado
+            }}</span>
+          </v-col>
+        </v-row>
+        <div class="texto-descriptivo mx-4">
+          <span style="font-size: 18px; color: #8e78ec">
+            <b>Descripción:</b>
+          </span>
+          <p>
+            {{ item.descripcion }}
+          </p>
+        </div>
         <v-card-actions>
-          <v-row class="acciones" align-content="space-around">
+          <v-row class="acciones mx-4" align-content="space-around">
             <v-col cols="6">
               <span class="texto-material"> MATERIAL ADJUNTO: </span>
+              <!-- AQUI VA UN: V-FOR -->
               <template>
-                <!-- AQUI VA UN: V-FOR -->
-                <v-chip class="mx-2" @click="DescargarArchivo(id)">
-                  Este Es Un Documento
-                </v-chip>
-                <v-chip class="ma-2" @click="DescargarArchivo(id)">
-                  Este Es Otro Documento
+                <div v-for="archivo in archivos" :key="archivo.id_archivo">
+                  <div v-if="archivo.id_actividades == item.id_actividad">
+                    <v-chip
+                      class="mx-2"
+                      @click="DescargarArchivo(archivo.ruta)"
+                    >
+                      {{ archivo.nombre }}
+                    </v-chip>
+                  </div>
+                </div>
+              </template>
+            </v-col>
+            <v-col
+              cols="12"
+              xl="6"
+              lg="6"
+              md="6"
+              sm="6"
+              xs="6"
+              v-for="arch in archivosAlumno"
+              :key="arch.id_archivos_alumnos"
+            >
+              <span class="texto-trabajo">MI TRABAJO:</span>
+              <!-- AQUI SUBEN EL ARCHIVO -->
+              <template v-if="arch.id_actividad == item.id_actividad">
+                <v-chip class="ma-2" @click="DescargarArchivo(arch.ruta)"
+                  >{{ arch.nombre }}
                 </v-chip>
               </template>
             </v-col>
-            <v-col cols="6">
-              <span class="texto-trabajo">MI TRABAJO:</span>
-              <!-- AQUI SUBEN EL ARCHIVO -->
-              <template v-if="archivos">
-                <v-chip class="ma-2">+</v-chip>
+            <v-col cols="12" xl="6" lg="6" md="6" sm="6" xs="6">
+              <template>
+                <input
+                  id="files"
+                  type="file"
+                  multiple
+                  ref="ArchivosDocentes"
+                  label="Agregar archivos"
+                />
               </template>
-              <template v-if="archivos == null">
-                <v-chip class="ma-2" @click="SubirArchivo()">+</v-chip>
-              </template>
-              <v-btn class="boton-entregar" color="green" dark>
+              <v-btn
+                class="boton-entregar"
+                color="green"
+                dark
+                @click="SubirArchivo()"
+              >
                 Entregar
               </v-btn>
             </v-col>
@@ -59,46 +84,120 @@
 </template>
 
 <script>
+import axios from "axios";
+import firebase from "firebase";
+
 export default {
   name: "misTareas",
   data() {
     return {
+      archivos: [],
+      archivosAlumno: "",
       Tareas: [],
-      archivos: null,
     };
   },
   methods: {
-    DescargarArchivo() {},
-    SubirArchivo() {},
+    DescargarArchivo(id) {
+      const decodedData = atob(id);
+      window.open("" + decodedData, "_blank");
+    },
+
+    async SubirArchivo() {
+      /*        const storageRef = firebase.storage().ref(`/ArchivosAlumnos/1/${this.$refs.ArchivosDocentes.name}`);
+        const task = storageRef.put(this.$refs.ArchivosDocentes);
+
+        task.on('state_changed',snapshot =>{
+          let percentage = (snapshot.bytesTransferred/snapshot.totalBytes)*100;
+          this.uploadValue = percentage;
+        }, error=>{console.log(error.message)},
+          ()=>{this.uploadValue=100;
+          //OBTENER EL LINK
+             task.snapshot.ref.getDownloadURL().then((url)=> {
+             // this.urlFile[i] = url;
+              console.log(url);
+            });;
+          });; */
+      for (var i = 0; i < 1; i++) {
+        try {
+          const { files } = this.$refs.ArchivosDocentes;
+          const file = files[0];
+          if (file) {
+            const response = await firebase
+              .storage()
+              .ref(`/ArchivosDocentes/2/${file.name}`)
+              .put(file);
+            const url = await response.ref.getDownloadURL();
+            console.log("archivo disponible en " + url);
+          } else {
+            console.log("falta el archivo");
+          }
+        } catch (error) {
+          console.error(error);
+        }
+      }
+    },
     Tarea() {
-      let vue = this;
-      fetch("https://xicolass.herokuapp.com/TareasApi.php?ap=1")
-        .then((datos) => datos.json())
-        .then((datos) => {
-          vue.Tareas = datos;
-          console.log(vue.Tareas); //esto solo muestra
+      axios
+        .get(
+          "https://xicoclass.online/Actividades.php?id_grupo=" +
+            window.sessionStorage.getItem("id_grado")
+        )
+        .then((r) => {
+          this.Tareas = r.data;
+          console.log(this.Tareas);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    },
+    Archivo() {
+      axios
+        .get("https://xicoclass.online/Archivos.php")
+        .then((r) => {
+          this.archivos = r.data;
+          console.log(this.archivos);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    },
+    ArchivoAlumno() {
+      axios
+        .get(
+          "https://xicoclass.online/ArchivosAlumnos.php?id_alumno=" +
+            window.sessionStorage.getItem("id_alumno")
+        )
+        .then((r) => {
+          this.archivosAlumno = r.data;
+          console.log(this.archivosAlumno);
+        })
+        .catch(function (error) {
+          console.log(error);
         });
     },
   },
-mounted() {
+  mounted() {
     this.Tarea();
+    this.Archivo();
+    this.ArchivoAlumno();
   },
 };
 </script>
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 
 .title-text {
-  font-family: "Montserrat";
+  font-family: "Poppins";
   font-weight: 800;
-  color: white;
-  font-size: 20px;
+  color: black;
+  font-size: 60px;
   margin-left: 20px;
 }
 .boton-entregar {
   float: right;
   margin-right: 20px;
+  font-family: "Poppins";
 }
 .container {
   width: 100%;
@@ -119,38 +218,41 @@ mounted() {
   margin-right: auto;
 }
 .titulo-tarjeta {
-  font-family: "Montserrat";
+  font-family: "Poppins";
   font-weight: 800;
+  color: black;
 }
 .status-text {
-  text-align: right;
+  font-family: "Poppins";
 }
 .status-label {
-  font-family: "Montserrat";
+  font-family: "Poppins";
   font-weight: 800;
-  color: blue;
-  margin-left: 10px;
+  color: black;
 }
 .texto-descriptivo {
-  font-family: "Montserrat";
+  font-family: "Poppins";
   text-align: justify;
+  color: black;
 }
 .texto-material {
-  font-family: "Montserrat";
+  font-family: "Poppins";
   font-weight: 800;
-  color: #da37a4;
+  color: #e91e63;
 }
 .texto-trabajo {
-  font-family: "Montserrat";
+  font-family: "Poppins";
   font-weight: 800;
-  color: #30dba0;
+  color: #7e57c2;
 }
-
+.v-chip {
+  color: #e0e0e0;
+}
 /* Estos Estilos Los Aplicaremos Al ID: estado-text  */
 .estado-pendiente {
-  color: red !important;
+  color: #d50000 !important;
 }
 .estado-entregado {
-  color: green !important;
+  color: #64dd17 !important;
 }
 </style>

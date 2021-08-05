@@ -1,52 +1,60 @@
 <template>
-  <v-container fluid>
+  <v-container fluid class="slider-container">
     <v-row>
-      <v-carousel hide-delimiter-background show-arrows-on-hover>
+      <v-carousel height="auto" hide-delimiter-background show-arrows-on-hover>
         <template v-slot:prev="{ on, attrs }">
-          <v-btn color="success" v-bind="attrs" v-on="on">Atras</v-btn>
+          <v-btn color="#B2FF59" v-bind="attrs" v-on="on">←</v-btn>
         </template>
         <template v-slot:next="{ on, attrs }">
-          <v-btn color="info" v-bind="attrs" v-on="on">Siguiente</v-btn>
+          <v-btn color="#7E57C2" v-bind="attrs" v-on="on">→</v-btn>
         </template>
         <v-carousel-item
-          v-for="(item, i) in items"
+          eager
+          v-for="(item, i) in imagenesC"
           :key="i"
-          :src="item.src"
+          :src="item.url_img"
           reverse-transition="fade-transition"
           transition="fade-transition"
-        ></v-carousel-item>
+          @click="window.location.href = '#'"
+        >
+        </v-carousel-item>
       </v-carousel>
     </v-row>
   </v-container>
 </template>
 
 <script>
+import { fr } from "../../main.js";
 export default {
   name: "Carousel",
 
+  mounted() {
+    this.obtenerImagenes();
+  },
+
   data() {
     return {
-      items: [
-        {
-          src: require("@/assets/media/sliders/slider1.png"),
-        },
-        {
-          src: "https://cdn.vuetifyjs.com/images/carousel/sky.jpg",
-        },
-        {
-          src: "https://cdn.vuetifyjs.com/images/carousel/bird.jpg",
-        },
-        {
-          src: "https://cdn.vuetifyjs.com/images/carousel/planet.jpg",
-        },
-      ],
+      imagenesC: [],
     };
+  },
+
+  methods: {
+    async obtenerImagenes() {
+      const imagenes = [];
+      await fr
+        .collection("carruselPrincipal")
+        .get()
+        .then((snapshot) => {
+          snapshot.docs.forEach((imagen) => {
+            let currentID = imagen.id;
+            let appObj = { ...imagen.data(), ["id"]: currentID };
+            imagenes.push(appObj);
+          });
+          this.imagenesC = imagenes;
+        });
+    },
   },
 };
 </script>
 
-<style scoped>
-.carousel {
-  display: block;
-}
-</style>
+<style scoped></style>

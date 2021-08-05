@@ -1,29 +1,31 @@
 <template>
   <div class="navbar">
     <v-app-bar
-      color="#5D576B"
+      color="#26A69A"
       height="100px"
-      dense
       fixed
-      dark
+      elevate-on-scroll
       class="navbar-generals"
     >
       <!--#region              LOGO -- IZQUIERDA    -->
-      <div class="img-logo mx-5">
-        <img
-          class="mx-10"
-          src="@/assets/media/logos/letras.png"
-          alt="XICO CLASS"
-          width="200"
-          height="80"
-        />
+      <div class="my-auto">
+        <a href="/Home">
+          <img
+            class="img-logo mx-4"
+            src="@/assets/media/logos/letrasdos.png"
+            alt="XICO CLASS"
+            width="200"
+            height="80"
+            @click="setInicio()"
+          />
+        </a>
       </div>
       <v-spacer></v-spacer>
 
       <!--#endregion-->
 
       <!--#region            VISTA DEL MENU DE SECCIONES EN WIDE VIEW                          -->
-      <div class="hidden-sm-and-down mx-12">
+      <div class="hidden-sm-and-down">
         <v-row justify="space-around">
           <v-menu offset-y dark>
             <template v-slot:activator="{ on, attrs }">
@@ -69,6 +71,16 @@
                   Mi Portal
                 </v-btn>
                 <v-btn
+                  id="Evaluacion"
+                  href="/Evaluacion"
+                  depressed
+                  plain
+                  class="menu-text"
+                  @click="setEvaluacion()"
+                >
+                  Evaluación
+                </v-btn>
+                <v-btn
                   id="MiPerfil"
                   depressed
                   plain
@@ -90,7 +102,7 @@
               </v-list-item>
               <v-list-item>
                 <v-list-item-title
-                  ><v-btn href="/" depressed plain
+                  ><v-btn @click="CloseSession(), setInicio()" plain
                     >Cerrar Sesion</v-btn
                   ></v-list-item-title
                 >
@@ -106,9 +118,15 @@
       <div class="hidden-md-and-up">
         <v-menu>
           <template v-slot:activator="{ on, att }">
-            <v-btn dark plain v-bind="att" v-on="on" rounded>
-              <v-icon color="white">mdi-dots-vertical</v-icon>
-            </v-btn>
+            <v-container>
+              <v-row justify="space-around" class="mobile-container">
+                <v-col cols="12">
+                  <v-btn dark plain v-bind="att" v-on="on" rounded>
+                    <v-icon color="white">mdi-dots-vertical</v-icon>
+                  </v-btn>
+                </v-col>
+              </v-row>
+            </v-container>
           </template>
           <v-list>
             <v-list-item>
@@ -127,7 +145,7 @@
               <v-list-item-title
                 ><v-btn
                   id="smAvisos"
-                  href="/avisos"
+                  href="/Avisos"
                   depressed
                   plain
                   @click="setAvisos()"
@@ -162,6 +180,18 @@
             <v-list-item>
               <v-list-item-title
                 ><v-btn
+                  id="smEvaluacion"
+                  href="/Evaluacion"
+                  depressed
+                  plain
+                  @click="setEvaluacion()"
+                  >Evaluación</v-btn
+                ></v-list-item-title
+              >
+            </v-list-item>
+            <v-list-item>
+              <v-list-item-title
+                ><v-btn
                   id="smPerfil"
                   href="/MiPerfil"
                   depressed
@@ -173,7 +203,11 @@
             </v-list-item>
             <v-list-item>
               <v-list-item-title
-                ><v-btn color="red" href="/" depressed plain
+                ><v-btn
+                  color="red"
+                  @click="CloseSession(), setInicio()"
+                  depressed
+                  plain
                   >Cerrar Sesion</v-btn
                 ></v-list-item-title
               >
@@ -212,6 +246,9 @@ export default {
     setPerfil() {
       localStorage.selectedNavTab = 5;
     },
+    setEvaluacion() {
+      localStorage.selectedNavTab = 6;
+    },
     setSelected() {
       switch (localStorage.selectedNavTab) {
         case "1":
@@ -229,13 +266,15 @@ export default {
         case "5":
           document.getElementById("MiPerfil").classList.add("btn-selected");
           break;
+        case "6":
+          document.getElementById("Evaluacion").classList.add("btn-selected");
+          break;
         default:
           document.getElementById("Inicio").classList.add("btn-selected");
           break;
       }
     },
     setSelectedSmallView() {
-      setTimeout(6000);
       switch (localStorage.selectedNavTab) {
         case "1":
           document.getElementById("smInicio").classList.add("btn-selected");
@@ -252,10 +291,23 @@ export default {
         case "5":
           document.getElementById("smPerfil").classList.add("btn-selected");
           break;
+        case "6":
+          document.getElementById("smEvaluacion").classList.add("btn-selected");
+          break;
         default:
           document.getElementById("smInicio").classList.add("btn-selected");
           break;
       }
+    },
+    CloseSession() {
+      window.sessionStorage.removeItem("id_alumno");
+      window.sessionStorage.removeItem("nombre");
+      window.sessionStorage.removeItem("appPat");
+      window.sessionStorage.removeItem("appMat");
+      window.sessionStorage.removeItem("fechaNac");
+      window.sessionStorage.removeItem("usuario");
+      window.sessionStorage.removeItem("id_grado");
+      window.location.href = "/";
     },
   },
   mounted() {
@@ -265,7 +317,7 @@ export default {
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 .navbar {
   display: block;
   height: 100px;
@@ -277,9 +329,12 @@ export default {
 .menu-text {
   color: white !important;
   font-size: 18px !important;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 .btn-selected {
-  color: #30dba0 !important;
+  color: #000000 !important;
+}
+.img-logo {
+  margin-top: 7px;
 }
 </style>

@@ -7,6 +7,7 @@ export default new Vuex.Store({
   state: {
     portalStep: 1,
     tabsBiblio: 1,
+    formatosStep: 0,
   },
   mutations: {
     //MUTATIONS FOR MI PORTAL
@@ -32,6 +33,9 @@ export default new Vuex.Store({
     },
     setDidacticoTab(state) {
       state.tabsBiblio = 3;
+    },
+    setStoreTab(state) {
+      state.tabsBiblio = 4;
     },
     // END OF MUTATIONS FOR BIBLIOTECA
   },

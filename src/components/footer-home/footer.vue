@@ -1,8 +1,15 @@
 <template>
   <div class="footerHome">
-    <v-footer color="#5D576B" absolute height="150px">
+    <v-footer color="#26A69A" absolute height="150px">
       <v-row justify="center" no-gutters>
-        <v-btn color="white" text rounded class="my-2" href="/Home">
+        <v-btn
+          color="white"
+          text
+          rounded
+          class="my-2"
+          href="/Home"
+          @click="setInicio()"
+        >
           Inicio
         </v-btn>
         <v-btn color="white" text rounded class="my-2" href="/ApartadoLegal">
@@ -14,7 +21,7 @@
         <v-btn color="white" text rounded class="my-2" href="/AcercaDe">
           Acerca De
         </v-btn>
-        <v-col class="py-4 text-center white--text" cols="12">
+        <v-col class="py-0 text-center white--text" cols="12">
           {{ new Date().getFullYear() }} — <strong>XicoClass</strong>
         </v-col>
       </v-row>
@@ -33,12 +40,16 @@ export default {
       links: ["Inicio", "Apartado Legal", "Equipo", "Acerca De"],
     };
   },
+  methods: {
+    setInicio() {
+      localStorage.selectedNavTab = 1;
+    },
+  },
 };
 </script>
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,300&display=swap");
 .footerHome {
   margin-top: 150px;
 }
@@ -47,7 +58,7 @@ export default {
   width: 250px;
 }
 .subtitle-text {
-  font-family: "Montserrat";
+  font-family: "Poppins";
   color: white !important;
 }
 </style>

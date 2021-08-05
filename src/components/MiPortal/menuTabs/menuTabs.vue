@@ -2,15 +2,22 @@
   <div class="menuTabs">
     <!-- VISTA DE LAS TABS EN WIDEVIEW --->
     <div class="hidden-sm-and-down">
-      <v-tabs fixed-tabs class="menu-tabs" color="#30dba0!important">
-        <v-tab @click="(texto = 'MIS MATERIAS'), setMaterias()">
-          MIS MATERIAS
+      <v-tabs fixed-tabs class="menu-tabs" color="rgb(40, 53, 147)!important">
+        <v-tab
+          @click="
+            (texto = 'MIS CAMPOS FORMATIVOS Y AREAS DE CONOCIMIENTO'),
+              setMaterias()
+          "
+        >
+          MIS CAMPOS FORMATIVOS Y ÁREAS DE CONOCIMIENTO
         </v-tab>
-        <v-tab @click="(texto = 'TAREAS'), setTareas()"> TAREAS </v-tab>
-        <v-tab @click="(texto = 'MIS DOCUMENTOS'), setDocumentos()">
-          MIS DOCUMENTOS
+        <v-tab @click="(texto = 'TAREAS Y ACTIVIDADES'), setTareas()">
+          TAREAS Y ACTIVIDADES
         </v-tab>
-        <v-tab @click="(texto = 'TRAMITES'), setTramites()"> TRAMITES </v-tab>
+        <v-tab @click="(texto = 'DATOS PERSONALES'), setDocumentos()">
+          DATOS PERSONALES
+        </v-tab>
+        <v-tab @click="(texto = 'TRAMITES'), setTramites()"> FORMATOS </v-tab>
       </v-tabs>
     </div>
     <!-- VISTA DE LAS TABS EN DISPOSITIVOS MOVILES --->
@@ -21,7 +28,7 @@
             <v-btn
               elevation="24"
               class="button-menu"
-              color="red"
+              color="blue"
               dark
               v-bind="attrs"
               v-on="on"
@@ -29,16 +36,19 @@
               {{ texto }}
             </v-btn>
           </template>
-          <v-list>
+          <v-list class="button-container">
             <v-list-item>
               <v-list-item-title>
                 <v-btn
                   class="button-menu ma-0"
-                  color="red"
+                  color="blue"
                   dark
-                  @click="(texto = 'MIS MATERIAS'), setMaterias()"
+                  @click="
+                    (texto = 'MIS CAMPOS FORMATIVOS Y AREAS DE CONOCIMIENTO'),
+                      setMaterias()
+                  "
                 >
-                  MIS MATERIAS
+                  MIS CAMPOS FORMATIVOS Y AREAS DE CONOCIMIENTO
                 </v-btn>
               </v-list-item-title>
             </v-list-item>
@@ -47,11 +57,11 @@
               <v-list-item-title>
                 <v-btn
                   class="button-menu"
-                  color="red"
+                  color="blue"
                   dark
-                  @click="(texto = 'TAREAS'), setTareas()"
+                  @click="(texto = 'TAREAS Y ACTIVIDADES'), setTareas()"
                 >
-                  TAREAS
+                  TAREAS Y ACTIVIDADES
                 </v-btn>
               </v-list-item-title>
             </v-list-item>
@@ -60,11 +70,11 @@
               <v-list-item-title>
                 <v-btn
                   class="button-menu"
-                  color="red"
+                  color="blue"
                   dark
-                  @click="(texto = 'MIS DOCUMENTOS'), setDocumentos()"
+                  @click="(texto = 'DATOS PERSONALES'), setDocumentos()"
                 >
-                  MIS DOCUMENTOS
+                  DATOS PERSONALES
                 </v-btn>
               </v-list-item-title>
             </v-list-item>
@@ -73,9 +83,9 @@
               <v-list-item-title>
                 <v-btn
                   class="button-menu"
-                  color="red"
+                  color="blue"
                   dark
-                  @click="(texto = 'TRAMITES'), setTramites()"
+                  @click="(texto = 'FORMATOS'), setTramites()"
                 >
                   TRAMITES
                 </v-btn>
@@ -93,7 +103,7 @@ export default {
   name: "menuTabs",
   data() {
     return {
-      texto: "Mis Materias",
+      texto: "MIS CAMPOS FORMATIVOS Y AREAS DE CONOCIMIENTO",
     };
   },
   methods: {
@@ -114,17 +124,21 @@ export default {
 </script>
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 .menu-tabs {
-  max-width: 80%;
+  max-width: 100% !important;
+  min-width: 800px !important;
   margin-left: auto;
   margin-right: auto;
   font-weight: 900;
 }
 .button-menu {
-  font-family: "Montserrat";
-  width: 500px;
+  font-family: "Poppins";
+  width: 100% !important;
   height: 40px;
   font-weight: 900;
+}
+.button-container {
+  width: 100% !important;
 }
 </style>

@@ -2,30 +2,59 @@
   <v-container fluid>
     <v-row dense class="">
       <!-- Barra de avisos recientes-->
-      <v-col cols="12" xs="6" lg="8" class="">
-        <h2 style="color: #f45b69" id="ods">Avisos recientes</h2>
-        <hr class="mb-3" color="#f45b69" id="od" />
+      <v-col cols="6" xs="3" lg="4" class="">
+        <h2 style="color: #d50000" id="ods">Noticias recientes</h2>
+        <hr class="mb-3" color="#D50000" id="od" />
         <!-- Carta de Avisos-->
-        <v-card class="sizes" color="#f45b69" dark>
+        <v-card class="sizes" color="#ef5350 " dark elevation="5">
           <v-card-title class="ods">
-            {{ losDatos[1] }}
+            {{ noticias[0].nombre }}
           </v-card-title>
-          <v-card-subtitle class="texto">{{ losDatos[2] }}</v-card-subtitle>
+          <v-card-subtitle class="texto">{{
+            noticias[0].descripcion
+          }}</v-card-subtitle>
           <v-card-actions>
             <v-btn
-      color="#f45b69"
-      dark
-      v-bind:href="''+losDatos[5]"
-    >
-      Enlace
-    </v-btn>
+              v-if="noticias[0].ruta_archivo != ''"
+              color="#D50000"
+              dark
+              v-bind:href="'' + noticias[0].ruta_archivo"
+            >
+              Enlace
+            </v-btn>
           </v-card-actions>
         </v-card>
       </v-col>
+
+      <v-col cols="6" xs="3" lg="4" class="">
+        <h2 style="color: #d50000" id="ods">Más noticias recientes</h2>
+        <hr class="mb-3" color="#D50000" id="od" />
+        <!--  Carta de Avisos      -->
+        <v-card class="sizes" color="#ef5350 " dark elevation="5">
+          <v-card-title class="ods">
+            {{ noticias[1].nombre }}
+          </v-card-title>
+          <v-card-subtitle class="texto">{{
+            noticias[1].descripcion
+          }}</v-card-subtitle>
+          <v-card-actions>
+            <v-btn
+              v-if="noticias[1].ruta_archivo != ''"
+              color="#D50000"
+              dark
+              v-bind:href="'' + noticias[1].ruta_archivo"
+            >
+              Enlace
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-col>
+
       <!--Columna de Redes sociales-->
       <v-col cols="12" xs="6" lg="4" class="">
         <h2 class="ml-6" style="color: #1565c0">Redes Sociales</h2>
-        <v-card class="ml-6" color="#26c6da" dark max-width="400">
+        <hr class="mb-3" color="#1565c0" id="od" />
+        <v-card class="ml-6" color="#26c6da" dark max-width="400" elevation="5">
           <v-card-title>
             <v-icon large left> mdi-twitter </v-icon>
             <span class="title font-weight-light">Twitter</span>
@@ -66,11 +95,12 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
   name: "seccionNoticias",
   data() {
     return {
-      losDatos: [],
+      noticias: [{ nombre: "" }, { nombre: "" }],
       items: [
         {
           color: "#1F7087",
@@ -88,23 +118,28 @@ export default {
     };
   },
   methods: {
-    Obtener() {
-      let vue = this;
-      fetch("https://xicolass.herokuapp.com/FirstAPI.php?var=1&ap=1")
-        .then((datos) => datos.json())
-        .then((datos) => {
-          vue.losDatos = datos[0];
-          console.log(vue.losDatos); //esto solo muestra
+    async Nglobales() {
+      await axios
+        .get("https://xicoclass.online/Noticias_globales.php?R")
+        .then((r) => {
+          this.noticias = r.data;
+        })
+        .catch(function (error) {
+          console.log(error);
         });
     },
   },
   mounted() {
-    this.Obtener();
+    //this.Nglobales();
+  },
+  created() {
+    this.Nglobales();
   },
 };
 </script>
 
 <style scoped>
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 .seccionNoticias {
   display: block;
   margin-top: 100px;
@@ -121,5 +156,11 @@ export default {
 .texto {
   height: 150px;
   overflow-y: auto;
+}
+.od {
+  font-family: "Poppins";
+}
+.ods {
+  font-family: "Poppins";
 }
 </style>
