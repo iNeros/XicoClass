@@ -7,10 +7,26 @@ import Vuelidate from "vuelidate";
 import axios from "axios";
 import VueAxios from "vue-axios";
 import Vuex from "vuex";
+
+import firebase from 'firebase/app';
+import 'firebase/database'; // If using Firebase database
+import 'firebase/storage';  // If using Firebase storage
+import 'firebase/firestore';
+
 Vue.use(VueAxios, axios);
 Vue.use(Vuelidate);
 Vue.use(Vuex);
 Vue.config.productionTip = false;
+
+firebase.initializeApp({
+  apiKey: "AIzaSyBJ1T3z7etFCO38QpGl8UQvqcYCAWRPs6c",
+  authDomain: "xicoclassproject-579bb.firebaseapp.com",
+  projectId: "xicoclassproject-579bb",
+  storageBucket: "xicoclassproject-579bb.appspot.com",
+  messagingSenderId: "396970834685",
+  appId: "1:396970834685:web:bd23a246b1676f014a9c94",
+  measurementId: "G-925M3LDKTF",
+});
 
 new Vue({
   router,

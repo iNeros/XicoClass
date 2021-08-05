@@ -56,17 +56,17 @@
                   >{{ arch.nombre }}
                 </v-chip>
               </template>
-              <template>
-                <v-file-input
-                  class="ma-2"
-                  v-model="archivoA"
-                  hide-input
-                  show-size
-                  prepend-icon="mdi-upload"
-                ></v-file-input>
-              </template>
             </v-col>
             <v-col cols="12" xl="6" lg="6" md="6" sm="6" xs="6">
+              <template>
+                <input
+                id="files"
+                type="file"
+                multiple
+                ref="ArchivosDocentes"
+                label="Agregar archivos"
+              >
+              </template>
               <v-btn
                 class="boton-entregar"
                 color="green"
@@ -85,7 +85,7 @@
 
 <script>
 import axios from "axios";
-//import firebase from 'firebase';
+import firebase from "firebase";
 
 export default {
   name: "misTareas",
@@ -94,7 +94,6 @@ export default {
       archivos: [],
       archivosAlumno: "",
       Tareas: [],
-      archivoA: "",
     };
   },
   methods: {
@@ -102,9 +101,10 @@ export default {
       const decodedData = atob(id);
       window.open("" + decodedData, "_blank");
     },
-    SubirArchivo() {
-      /*  const storageRef = firebase.storage().ref(`/ArchivosAlumnos/1/${this.archivoA}`);
-        const task = storageRef.put(this.archivoA);
+
+async SubirArchivo() {
+/*        const storageRef = firebase.storage().ref(`/ArchivosAlumnos/1/${this.$refs.ArchivosDocentes.name}`);
+        const task = storageRef.put(this.$refs.ArchivosDocentes);
 
         task.on('state_changed',snapshot =>{
           let percentage = (snapshot.bytesTransferred/snapshot.totalBytes)*100;
@@ -112,13 +112,31 @@ export default {
         }, error=>{console.log(error.message)},
           ()=>{this.uploadValue=100;
           //OBTENER EL LINK
-            task.snapshot.ref.getDownloadURL().then((url)=> {
-              this.urlFile[i] = url;
-              console.log(this.urlFile[i]);
+             task.snapshot.ref.getDownloadURL().then((url)=> {
+             // this.urlFile[i] = url;
+              console.log(url);
             });;
           });; */
-      window.alert("Archivo subido");
-      console.log(this.archivoA.name);
+      for (var i = 0; i < 1; i++) {
+      try {
+        const { files } = this.$refs.ArchivosDocentes;
+        const file = files[0];
+        if (file) {
+            const response = await firebase
+              .storage()
+              .ref(`/ArchivosDocentes/2/${file.name}`)
+              .put(file);
+              const url = await response.ref.getDownloadURL();
+            console.log('archivo disponible en '+url);
+        } else {
+          console.log('falta el archivo');
+        }
+
+        
+      } catch (error) {
+        console.error(error);
+      }
+      }
     },
     Tarea() {
       axios
