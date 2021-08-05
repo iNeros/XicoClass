@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import { fr } from "../../../firebase";
+import  { fr }  from "../../main.js";
 export default {
   name: "Carousel",
 
@@ -53,7 +53,6 @@ export default {
           this.imagenesC = imagenes;
         });
     },
-    testObtain() {},
   },
 };
 </script>

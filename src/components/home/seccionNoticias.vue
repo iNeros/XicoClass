@@ -100,7 +100,10 @@ export default {
   name: "seccionNoticias",
   data() {
     return {
-      noticias: "",
+      noticias: [
+        {nombre: ""},
+        {nombre: ""}
+      ],
       items: [
         {
           color: "#1F7087",
@@ -118,12 +121,11 @@ export default {
     };
   },
   methods: {
-    Nglobales() {
-      axios
+    async Nglobales() {
+      await axios
         .get("https://xicoclass.online/Noticias_globales.php?R")
         .then((r) => {
           this.noticias = r.data;
-          console.log(this.noticias);
         })
         .catch(function (error) {
           console.log(error);
@@ -131,8 +133,11 @@ export default {
     },
   },
   mounted() {
-    this.Nglobales();
+    //this.Nglobales();
   },
+  created() {
+    this.Nglobales();
+  }
 };
 </script>
 
