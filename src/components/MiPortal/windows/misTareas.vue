@@ -48,24 +48,26 @@
           </v-col>
 
           <v-col cols="12" md="6">
-            <span v-if="item.entregado=='si'" class="texto-trabajo">
-              <b style="color:#f595bc;">ENTREGADO</b>, MI TRABAJO:
+            <span v-if="item.entregado == 'si'" class="texto-trabajo">
+              <b style="color: #f595bc">ENTREGADO</b>, MI TRABAJO:
             </span>
-            <span v-if="item.entregado=='no'" class="texto-trabajo">
+            <span v-if="item.entregado == 'no'" class="texto-trabajo">
               AÑADIR DOCUMENTOS:
             </span>
             <!--     -------------------------    AQUI SUBEN EL ARCHIVO / SE VIZUALIZAN LO ARCHIVOS SUBIDOS  ----------------------------   -->
             <!-- AQUI SE RECUPERAN LOS ARCHIVOS QUE SE ENTREGARON SI YA ENTREGO LA TAREA -->
-            <div v-if="item.entregado=='si'">
-              <v-chip @click="AbrirMiArchivo(i)" v-for=" i in item.url_documents" :key="i" class="mx-2">
-                <v-icon >
-                  mdi-file-document-multiple
-                </v-icon>
+            <div v-if="item.entregado == 'si'">
+              <v-chip
+                @click="AbrirMiArchivo(i)"
+                v-for="i in item.url_documents"
+                :key="i"
+                class="mx-2"
+              >
+                <v-icon> mdi-file-document-multiple </v-icon>
               </v-chip>
             </div>
             <!---- AQUI SE DA EL ESPACIO PARA QUE SUBA LOS ARCHIVOS ---->
-            <div class="fileInputBox" v-if="item.entregado=='no'">
-            
+            <div class="fileInputBox" v-if="item.entregado == 'no'">
               <v-file-input
                 v-model="tareasFiles[item.id_actividad]"
                 multiple
@@ -75,10 +77,10 @@
             </div>
           </v-col>
         </v-row>
-        <v-card-actions class="mt-n5"> 
+        <v-card-actions class="mt-n5">
           <v-spacer></v-spacer>
           <v-btn
-            v-if="item.entregado=='si'"
+            v-if="item.entregado == 'si'"
             class="boton-entregar mr-4 mb-4"
             color="#f595bc"
             dark
@@ -87,7 +89,7 @@
             Cancelar Entrega
           </v-btn>
           <v-btn
-            v-if="item.entregado=='no'"
+            v-if="item.entregado == 'no'"
             class="boton-entregar mr-4 mb-4"
             color="green"
             dark
@@ -103,7 +105,7 @@
 
 <script>
 //import axios from "axios";
-import {firebase, fr} from "../../../main.js";
+import { firebase, fr } from "../../../main.js";
 
 export default {
   name: "misTareas",
@@ -113,12 +115,12 @@ export default {
       archivosAlumno: "",
       Tareas: [],
       tareasFiles: [],
-      tempLinks:[],
+      tempLinks: [],
       pageViewController: [],
     };
   },
 
-  props:["childVar"],
+  props: ["childVar"],
 
   methods: {
     DescargarArchivo(id) {
@@ -126,22 +128,24 @@ export default {
       window.open("" + decodedData, "_blank");
     },
 
-    AbrirMiArchivo(url){
-      window.open(url,"Mi Archivo Cargado");
+    AbrirMiArchivo(url) {
+      window.open(url, "Mi Archivo Cargado");
     },
 
-    async eliminarTarea(it){
+    async eliminarTarea(it) {
       await fr.collection("relacionDeTareas").doc(it.firebaseId).delete();
       console.log("Eliminado");
       window.location.reload();
     },
 
-    async subirTareas(data){
+    async subirTareas(data) {
       console.log("LA DATA QUE ENVIAS");
       console.log(data);
       const id = data.id_actividad;
-      for (var i=0; i < this.tareasFiles[id].length; i++){
-        const storageRef = firebase.storage().ref(`/ArchivosActividades/${id}/${this.tareasFiles[id][i].name}`);
+      for (var i = 0; i < this.tareasFiles[id].length; i++) {
+        const storageRef = firebase
+          .storage()
+          .ref(`/ArchivosActividades/${id}/${this.tareasFiles[id][i].name}`);
         const task = await storageRef.put(this.tareasFiles[id][i]);
         const tempUrl = await task.ref.getDownloadURL();
         this.tempLinks[i] = await tempUrl;
@@ -153,20 +157,20 @@ export default {
         id_grupo: data.id_grupo,
         id_alumno: sessionStorage.getItem("id_alumno"),
         url_documents: this.tempLinks,
-      };      
+      };
       await fr.collection("relacionDeTareas").doc().set(dataInfo);
       // AQUI VA UN: await axios. ......................... que actualice el dato para este alumno
       window.location.reload();
     },
 
-    loadData(){
-      this.Tareas = this.$store.state.Tareas
-      this.archivos = this.$store.state.archivos
+    loadData() {
+      this.Tareas = this.$store.state.Tareas;
+      this.archivos = this.$store.state.archivos;
       this.archivosAlumno = this.$store.state.archivosAlumno;
-    }
+    },
   },
 
-  mounted() { 
+  mounted() {
     this.loadData();
   },
 };
@@ -243,7 +247,7 @@ export default {
   margin-left: 0px !important;
 }
 
-.fileInputBox{
+.fileInputBox {
   width: 90%;
 }
 

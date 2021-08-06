@@ -10,7 +10,10 @@
           <misMaterias></misMaterias>
         </v-window-item>
         <v-window-item :value="2">
-          <misTareas :key="$store.state.TareasPageViewController" :childVar="childVar"></misTareas>
+          <misTareas
+            :key="$store.state.TareasPageViewController"
+            :childVar="childVar"
+          ></misTareas>
         </v-window-item>
         <v-window-item :value="3">
           <misDocumentos></misDocumentos>
@@ -35,8 +38,7 @@ import misDocumentos from "@/components/MiPortal/windows/misDocumentos.vue";
 import misTramites from "@/components/MiPortal/windows/misTramites.vue";
 
 import axios from "axios";
-import {fr} from "../main.js";
-
+import { fr } from "../main.js";
 
 export default {
   name: "MiPortal",
@@ -46,7 +48,7 @@ export default {
       archivosAlumno: "",
       Tareas: [],
       tareasFiles: [],
-      tempLinks:[],
+      tempLinks: [],
 
       childVar: 0,
 
@@ -69,14 +71,15 @@ export default {
       }
     },
 
-    async revisarEntregas(){
-      for(var k=0;k<this.Tareas.length;k++){
-        const snapshot = await fr.collection("relacionDeTareas")
-        .where('id_actividad', '==', this.Tareas[k].id_actividad)
-        .where('id_docente', '==', this.Tareas[k].id_docente)
-        .where('id_alumno', '==', sessionStorage.getItem("id_alumno"))
-        .get();
-        if(!snapshot.empty){
+    async revisarEntregas() {
+      for (var k = 0; k < this.Tareas.length; k++) {
+        const snapshot = await fr
+          .collection("relacionDeTareas")
+          .where("id_actividad", "==", this.Tareas[k].id_actividad)
+          .where("id_docente", "==", this.Tareas[k].id_docente)
+          .where("id_alumno", "==", sessionStorage.getItem("id_alumno"))
+          .get();
+        if (!snapshot.empty) {
           let temp = [];
           snapshot.forEach((doc) => {
             temp.push({
@@ -88,7 +91,7 @@ export default {
           this.Tareas[k].entregado = "si";
           this.Tareas[k].url_documents = this.dataTemporal.url_documents;
           this.Tareas[k].firebaseId = this.dataTemporal.id;
-        }else{
+        } else {
           this.Tareas[k].entregado = "no";
         }
       }
@@ -104,7 +107,7 @@ export default {
         )
         .then((r) => {
           this.Tareas = r.data;
-          this.$store.state.Tareas = this.Tareas
+          this.$store.state.Tareas = this.Tareas;
           this.revisarEntregas();
         })
         .catch(function (error) {
@@ -138,7 +141,6 @@ export default {
           console.log(error);
         });
     },
-
   },
   mounted() {
     this.Session();
@@ -149,10 +151,9 @@ export default {
 
   watch: {
     childVar() {
-      console.log("CAMBIO LA VARIABLE");  
+      console.log("CAMBIO LA VARIABLE");
     },
   },
-
 };
 </script>
 

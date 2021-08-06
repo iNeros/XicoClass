@@ -13,7 +13,7 @@ export default new Vuex.Store({
     archivosAlumno: "",
     Tareas: [],
     tareasFiles: [],
-    tempLinks:[],
+    tempLinks: [],
     TareasPageViewController: "",
   },
   mutations: {
@@ -48,8 +48,5 @@ export default new Vuex.Store({
   },
   actions: {},
   modules: {},
-  getters: {
-    
-
-  },
+  getters: {},
 });
