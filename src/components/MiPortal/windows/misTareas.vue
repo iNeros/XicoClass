@@ -57,7 +57,11 @@
             <!--     -------------------------    AQUI SUBEN EL ARCHIVO / SE VIZUALIZAN LO ARCHIVOS SUBIDOS  ----------------------------   -->
             <!-- AQUI SE RECUPERAN LOS ARCHIVOS QUE SE ENTREGARON SI YA ENTREGO LA TAREA -->
             <div v-if="item.entregado=='si'">
-              
+              <v-chip @click="AbrirMiArchivo(i)" v-for=" i in item.url_documents" :key="i" class="mx-2">
+                <v-icon >
+                  mdi-file-document-multiple
+                </v-icon>
+              </v-chip>
             </div>
             <!---- AQUI SE DA EL ESPACIO PARA QUE SUBA LOS ARCHIVOS ---->
             <div class="fileInputBox" v-if="item.entregado=='no'">
@@ -78,7 +82,7 @@
             class="boton-entregar mr-4 mb-4"
             color="#f595bc"
             dark
-            @click="eliminarTarea()"
+            @click="eliminarTarea(item)"
           >
             Cancelar Entrega
           </v-btn>
@@ -98,7 +102,7 @@
 </template>
 
 <script>
-import axios from "axios";
+//import axios from "axios";
 import {firebase, fr} from "../../../main.js";
 
 export default {
@@ -110,32 +114,31 @@ export default {
       Tareas: [],
       tareasFiles: [],
       tempLinks:[],
+      pageViewController: [],
     };
   },
+
+  props:["childVar"],
+
   methods: {
     DescargarArchivo(id) {
       const decodedData = atob(id);
       window.open("" + decodedData, "_blank");
     },
 
-    async revisarEntregas(){
-      console.log("Despues de");
-      for(var k=0;k<this.Tareas.length;k++){
-        const snapshot = await fr.collection("relacionDeTareas")
-        .where('id_actividad', '==', this.Tareas[k].id_actividad)
-        .where('id_docente', '==', this.Tareas[k].id_docente)
-        .where('id_alumno', '==', sessionStorage.getItem("id_alumno"))
-        .get();
-        if(!snapshot.empty){
-          this.Tareas[k].entregado = "si";
-        }else{
-          this.Tareas[k].entregado = "no";
-        }
-      }
-      console.log(this.Tareas);
+    AbrirMiArchivo(url){
+      window.open(url,"Mi Archivo Cargado");
+    },
+
+    async eliminarTarea(it){
+      await fr.collection("relacionDeTareas").doc(it.firebaseId).delete();
+      console.log("Eliminado");
+      window.location.reload();
     },
 
     async subirTareas(data){
+      console.log("LA DATA QUE ENVIAS");
+      console.log(data);
       const id = data.id_actividad;
       for (var i=0; i < this.tareasFiles[id].length; i++){
         const storageRef = firebase.storage().ref(`/ArchivosActividades/${id}/${this.tareasFiles[id][i].name}`);
@@ -153,87 +156,18 @@ export default {
       };      
       await fr.collection("relacionDeTareas").doc().set(dataInfo);
       // AQUI VA UN: await axios. ......................... que actualice el dato para este alumno
-      console.log("Completado");
-      
-
+      window.location.reload();
     },
 
-    async SubirArchivo() {
-      /*        const storageRef = firebase.storage().ref(`/ArchivosAlumnos/1/${this.$refs.ArchivosDocentes.name}`);
-        const task = storageRef.put(this.$refs.ArchivosDocentes);
-
-        task.on('state_changed',snapshot =>{
-          let percentage = (snapshot.bytesTransferred/snapshot.totalBytes)*100;
-          this.uploadValue = percentage;
-        }, error=>{console.log(error.message)},
-          ()=>{this.uploadValue=100;
-          //OBTENER EL LINK
-             task.snapshot.ref.getDownloadURL().then((url)=> {
-             // this.urlFile[i] = url;
-              console.log(url);
-            });;
-          });; */
-      for (var i = 0; i < 1; i++) {
-        try {
-          const { files } = this.$refs.ArchivosDocentes;
-          const file = files[0];
-          if (file) {
-            const response = await firebase
-              .storage()
-              .ref(`/ArchivosDocentes/2/${file.name}`)
-              .put(file);
-            const url = await response.ref.getDownloadURL();
-            console.log("archivo disponible en " + url);
-          } else {
-            console.log("falta el archivo");
-          }
-        } catch (error) {
-          console.error(error);
-        }
-      }
-    },
-    async Tarea() {
-      axios
-        .get(
-          "https://xicoclass.online/Actividades.php?id_grupo=" +
-            window.sessionStorage.getItem("id_grado")
-        )
-        .then((r) => {
-          this.Tareas = r.data;
-          this.revisarEntregas();
-        })
-        .catch(function (error) {
-          console.log(error);
-        });
-    },
-    Archivo() {
-      axios
-        .get("https://xicoclass.online/Archivos.php")
-        .then((r) => {
-          this.archivos = r.data;
-        })
-        .catch(function (error) {
-          console.log(error);
-        });
-    },
-    ArchivoAlumno() {
-      axios
-        .get(
-          "https://xicoclass.online/ArchivosAlumnos.php?id_alumno=" +
-            window.sessionStorage.getItem("id_alumno")
-        )
-        .then((r) => {
-          this.archivosAlumno = r.data;
-        })
-        .catch(function (error) {
-          console.log(error);
-        });
-    },
+    loadData(){
+      this.Tareas = this.$store.state.Tareas
+      this.archivos = this.$store.state.archivos
+      this.archivosAlumno = this.$store.state.archivosAlumno;
+    }
   },
+
   mounted() { 
-    this.Tarea();
-    this.Archivo();
-    this.ArchivoAlumno();
+    this.loadData();
   },
 };
 </script>

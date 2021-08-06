@@ -8,6 +8,13 @@ export default new Vuex.Store({
     portalStep: 1,
     tabsBiblio: 1,
     formatosStep: 0,
+
+    archivos: [],
+    archivosAlumno: "",
+    Tareas: [],
+    tareasFiles: [],
+    tempLinks:[],
+    TareasPageViewController: "",
   },
   mutations: {
     //MUTATIONS FOR MI PORTAL
@@ -41,5 +48,8 @@ export default new Vuex.Store({
   },
   actions: {},
   modules: {},
-  getters: {},
+  getters: {
+    
+
+  },
 });
