@@ -28,15 +28,21 @@
 
             <div class="mt-1">
               <p class="subtitulo-2 mx-4">Observaciones del mes de noviembre</p>
-              <p class="cuerpo mx-6" justify="center">Observaciones nov</p>
+              <p class="cuerpo mx-6" justify="center">
+                {{ evalNoviembre[0].text }}
+              </p>
             </div>
             <div class="mt-1">
               <p class="subtitulo-2 mx-4">Observaciones del mes de marzo</p>
-              <p class="cuerpo mx-6" justify="center">Observaciones marzo</p>
+              <p class="cuerpo mx-6" justify="center">
+                {{ evalMarzo[0].text }}
+              </p>
             </div>
             <div class="mt-1">
               <p class="subtitulo-2 mx-4">Observaciones del mes de junio</p>
-              <p class="cuerpo mx-6" justify="center">Observaciones junio</p>
+              <p class="cuerpo mx-6" justify="center">
+                {{ evalJunio[0].text }}
+              </p>
             </div>
           </v-card>
         </v-col>
@@ -63,15 +69,21 @@
             </v-col>
             <div class="mt-1">
               <p class="subtitulo-2 mx-4">Observaciones del mes de noviembre</p>
-              <p class="cuerpo mx-6" justify="center">Observaciones nov</p>
+              <p class="cuerpo mx-6" justify="center">
+                {{ evalNoviembre[1].text }}
+              </p>
             </div>
             <div class="mt-1">
               <p class="subtitulo-2 mx-4">Observaciones del mes de marzo</p>
-              <p class="cuerpo mx-6" justify="center">Observaciones marzo</p>
+              <p class="cuerpo mx-6" justify="center">
+                {{ evalMarzo[1].text }}
+              </p>
             </div>
             <div class="mt-1">
               <p class="subtitulo-2 mx-4">Observaciones del mes de junio</p>
-              <p class="cuerpo mx-6" justify="center">Observaciones junio</p>
+              <p class="cuerpo mx-6" justify="center">
+                {{ evalJunio[1].text }}
+              </p>
             </div>
           </v-card>
         </v-col>
@@ -101,15 +113,21 @@
 
             <div class="mt-1">
               <p class="subtitulo-2 mx-4">Observaciones del mes de noviembre</p>
-              <p class="cuerpo mx-6" justify="center">Observaciones nov</p>
+              <p class="cuerpo mx-6" justify="center">
+                {{ evalNoviembre[2].text }}
+              </p>
             </div>
             <div class="mt-1">
               <p class="subtitulo-2 mx-4">Observaciones del mes de marzo</p>
-              <p class="cuerpo mx-6" justify="center">Observaciones marzo</p>
+              <p class="cuerpo mx-6" justify="center">
+                {{ evalMarzo[2].text }}
+              </p>
             </div>
             <div class="mt-1">
               <p class="subtitulo-2 mx-4">Observaciones del mes de junio</p>
-              <p class="cuerpo mx-6" justify="center">Observaciones junio</p>
+              <p class="cuerpo mx-6" justify="center">
+                {{ evalJunio[2].text }}
+              </p>
             </div>
           </v-card>
         </v-col>
@@ -137,15 +155,21 @@
 
             <div class="mt-1">
               <p class="subtitulo-2 mx-4">Observaciones del mes de noviembre</p>
-              <p class="cuerpo mx-6" justify="center">Observaciones nov</p>
+              <p class="cuerpo mx-6" justify="center">
+                {{ evalNoviembre[3].text }}
+              </p>
             </div>
             <div class="mt-1">
               <p class="subtitulo-2 mx-4">Observaciones del mes de marzo</p>
-              <p class="cuerpo mx-6" justify="center">Observaciones Marzo</p>
+              <p class="cuerpo mx-6" justify="center">
+                {{ evalMarzo[3].text }}
+              </p>
             </div>
             <div class="mt-1">
               <p class="subtitulo-2 mx-4">Observaciones del mes de junio</p>
-              <p class="cuerpo mx-6" justify="center">Observaciones junio</p>
+              <p class="cuerpo mx-6" justify="center">
+                {{ evalJunio[3].text }}
+              </p>
             </div>
           </v-card>
         </v-col>
@@ -174,15 +198,21 @@
             </v-col>
             <div class="mt-1">
               <p class="subtitulo-2 mx-4">Observaciones del mes de noviembre</p>
-              <p class="cuerpo mx-6" justify="center">Observaciones nov</p>
+              <p class="cuerpo mx-6" justify="center">
+                {{ evalNoviembre[4].text }}
+              </p>
             </div>
             <div class="mt-1">
               <p class="subtitulo-2 mx-4">Observaciones del mes de marzo</p>
-              <p class="cuerpo mx-6" justify="center">Observaciones marzo</p>
+              <p class="cuerpo mx-6" justify="center">
+                {{ evalMarzo[4].text }}
+              </p>
             </div>
             <div class="mt-1">
               <p class="subtitulo-2 mx-4">Observaciones del mes de junio</p>
-              <p class="cuerpo mx-6" justify="center">Observaciones junio</p>
+              <p class="cuerpo mx-6" justify="center">
+                {{ evalJunio[4].text }}
+              </p>
             </div>
           </v-card>
         </v-col>
@@ -210,15 +240,21 @@
 
             <div class="mt-1">
               <p class="subtitulo-2 mx-4">Observaciones del mes de noviembre</p>
-              <p class="cuerpo mx-6" justify="center">Observaciones nov</p>
+              <p class="cuerpo mx-6" justify="center">
+                {{ evalNoviembre[5].text }}
+              </p>
             </div>
             <div class="mt-1">
               <p class="subtitulo-2 mx-4">Observaciones del mes de marzo</p>
-              <p class="cuerpo mx-6" justify="center">Observaciones marzo</p>
+              <p class="cuerpo mx-6" justify="center">
+                {{ evalMarzo[5].text }}
+              </p>
             </div>
             <div class="mt-1">
               <p class="subtitulo-2 mx-4">Observaciones del mes de junio</p>
-              <p class="cuerpo mx-6" justify="center">Observaciones junio</p>
+              <p class="cuerpo mx-6" justify="center">
+                {{ evalJunio[5].text }}
+              </p>
             </div>
           </v-card>
         </v-col>
@@ -229,12 +265,38 @@
 </template>
 
 <script>
+import { fr } from "../main.js";
 import navbar from "../components/navbar-home/navbar.vue";
 import footerHome from "@/components/footer-home/footer.vue";
 export default {
   name: "Evaluacion",
   data() {
-    return {};
+    return {
+      evalNoviembre: [
+        { id_local: 0, text: "Evaluacion Aun No Reportada" },
+        { id_local: 1, text: "Evaluacion Aun No Reportada" },
+        { id_local: 2, text: "Evaluacion Aun No Reportada" },
+        { id_local: 3, text: "Evaluacion Aun No Reportada" },
+        { id_local: 4, text: "Evaluacion Aun No Reportada" },
+        { id_local: 5, text: "Evaluacion Aun No Reportada" },
+      ],
+      evalMarzo: [
+        { id_local: 0, text: "Evaluacion Aun No Reportada" },
+        { id_local: 1, text: "Evaluacion Aun No Reportada" },
+        { id_local: 2, text: "Evaluacion Aun No Reportada" },
+        { id_local: 3, text: "Evaluacion Aun No Reportada" },
+        { id_local: 4, text: "Evaluacion Aun No Reportada" },
+        { id_local: 5, text: "Evaluacion Aun No Reportada" },
+      ],
+      evalJunio: [
+        { id_local: 0, text: "Evaluacion Aun No Reportada" },
+        { id_local: 1, text: "Evaluacion Aun No Reportada" },
+        { id_local: 2, text: "Evaluacion Aun No Reportada" },
+        { id_local: 3, text: "Evaluacion Aun No Reportada" },
+        { id_local: 4, text: "Evaluacion Aun No Reportada" },
+        { id_local: 5, text: "Evaluacion Aun No Reportada" },
+      ],
+    };
   },
   components: {
     navbar,
@@ -246,9 +308,85 @@ export default {
         window.location.href = "/";
       }
     },
+    async getNoviembre() {
+      let calificaciones = [];
+      const id_alumno = window.sessionStorage.getItem("id_alumno");
+      await fr
+        .collection("evaluacionesNov")
+        .where("id_alumno", "==", id_alumno)
+        .orderBy("id_local")
+        .get()
+        .then((snapshot) => {
+          snapshot.docs.forEach((calificacion) => {
+            let currentID = calificacion.id;
+            let appObj = { ...calificacion.data(), ["id"]: currentID };
+            calificaciones[appObj.id_local] = appObj;
+          });
+          for (var i = 0; i < 6; i++) {
+            if (calificaciones[i]) {
+              if (calificaciones[i].text != "") {
+                this.evalNoviembre[i].text = calificaciones[i].text;
+              }
+            }
+          }
+          console.log(this.evalNoviembre);
+        });
+    },
+
+    async getMarzo() {
+      let calificaciones = [];
+      const id_alumno = window.sessionStorage.getItem("id_alumno");
+      await fr
+        .collection("evaluacionesMarzo")
+        .where("id_alumno", "==", id_alumno)
+        .orderBy("id_local")
+        .get()
+        .then((snapshot) => {
+          snapshot.docs.forEach((calificacion) => {
+            let currentID = calificacion.id;
+            let appObj = { ...calificacion.data(), ["id"]: currentID };
+            calificaciones[appObj.id_local] = appObj;
+          });
+          for (var i = 0; i < 6; i++) {
+            if (calificaciones[i]) {
+              if (calificaciones[i].text != "") {
+                this.evalMarzo[i].text = calificaciones[i].text;
+              }
+            }
+          }
+          console.log(this.evalMarzo);
+        });
+    },
+    async getJunio() {
+      let calificaciones = [];
+      const id_alumno = window.sessionStorage.getItem("id_alumno");
+      await fr
+        .collection("evaluacionesJunio")
+        .where("id_alumno", "==", id_alumno)
+        .orderBy("id_local")
+        .get()
+        .then((snapshot) => {
+          snapshot.docs.forEach((calificacion) => {
+            let currentID = calificacion.id;
+            let appObj = { ...calificacion.data(), ["id"]: currentID };
+            calificaciones[appObj.id_local] = appObj;
+          });
+          for (var i = 0; i < 6; i++) {
+            if (calificaciones[i]) {
+              if (calificaciones[i].text != "") {
+                this.evalJunio[i].text = calificaciones[i].text;
+              }
+            }
+          }
+          console.log(this.evalJunio);
+        });
+    },
   },
   mounted() {
     this.Session();
+    this.getNoviembre();
+    this.getMarzo();
+    this.getJunio();
   },
 };
 </script>

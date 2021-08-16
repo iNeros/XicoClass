@@ -23,7 +23,7 @@
               <b>Descripción:</b>
             </span>
             <p class="pr-10">
-              {{ item.descripcion }} 
+              {{ item.descripcion }}
             </p>
           </div>
         </v-row>
