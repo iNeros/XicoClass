@@ -28,8 +28,8 @@
                 </v-row>
               </v-card-title>
               <v-card-text>
-                <p class="subtitulo text-left mx-6">
-                  {{ item.nombreDocente }}
+                <p class="subtitulo text-left mx-6" v-for="name in nombreDoc" :key="name.nombre">
+                  {{ name.nombre }}
                 </p>
                 <p class="subtitulo-2 mx-6 my-0 text-left">
                   {{ item.horario }}
@@ -61,55 +61,67 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   name: "misMaterias",
-  data: () => ({
+  data() {
+    return {
+    nombreDoc:'',
     items: [
       {
         materia: "Lenguaje y Comunicación",
-        nombreDocente: "Laura Luz Tlaxcalteco",
         horario: "Horario",
         descripcion:
           "Adquirir y desarrollar los conocimientos, actitudes y valores que permitan a los estudiantes seguir aprendiendo a lo largo de su vida y afrontar los retos que implica una sociedad diversa y en continuo cambio. ",
       },
       {
         materia: "Pensamiento Matemático",
-        nombreDocente: "Laura Luz Tlaxcalteco",
         horario: "Horario",
         descripcion:
           "Busca que los estudiantes desarrollen esa forma de razonar tanto lógica como no convencional y que al hacerlo aprecien el valor de ese pensamiento, lo que ha de traducirse en actitudes y valores favorables hacia las matemáticas, su utilidad y su valor científico y cultural.",
       },
       {
         materia: "Exploración y Comprensión del Mundo",
-        nombreDocente: "Laura Luz Tlaxcalteco",
         horario: "Horario",
         descripcion:
           "Ofrece un conjunto de aproximaciones a ciertos fenómenos y procesos naturales y sociales cuidadosamente seleccionados.",
       },
       {
         materia: "Arte",
-        nombreDocente: "Laura Luz Tlaxcalteco",
         horario: "Horario",
         descripcion:
           "Concepto amplio, abierto e incluyente de las artes que permite reconocer la diversidad cultural y artística de México y del mundo, y que engloba tanto las llamadas bellas artes como las distintas artes populares, indígenas, clásicas, emergentes, tradicionales y contemporáneas.",
       },
       {
         materia: "Educación Socioemocional",
-        nombreDocente: "Laura Luz Tlaxcalteco",
         horario: "Horario",
         descripcion:
           "Aporta a la formación de los estudiantes conocimientos, habilidades, valores y actitudes enfocados en el desarrollo personal, sin perder de vista que estos aprendizajes adquieren valor en contextos sociales y de convivencia.",
       },
       {
         materia: "Educación Física",
-        nombreDocente: "Laura Luz Tlaxcalteco",
         horario: "Horario",
         descripcion:
           "Motiva la realización de diversas acciones motrices, en un proceso dinámico y reflexivo, a partir de estrategias didácticas que se derivan del juego motor, como la expresión corporal, la iniciación deportiva y el deporte educativo, entre otras. ",
       },
     ],
-  }),
+  };
+  },
   methods: {
+    getNameDocente(){
+            axios
+        .get(
+          "https://xicoclass.online/Docente.php?nombreDocente=" +
+            window.sessionStorage.getItem("id_grado")
+        )
+        .then((r) => {
+          this.nombreDoc = r.data;
+          console.log(r.data);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    },
     getColorBack() {
       let a = 1;
       let b = 6;
@@ -122,6 +134,9 @@ export default {
       else if (numeroAleatorio == 6) return "#BA68C8";
     },
   },
+mounted() {
+  this.getNameDocente();
+},
 };
 </script>
 
