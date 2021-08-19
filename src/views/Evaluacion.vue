@@ -20,7 +20,7 @@
             >
               <v-img
                 contain
-                class="imagen-carta ml-12"
+                class="imagen-carta mx-12"
                 src="@/assets/media/biblioteca/img-notas.png"
               >
               </v-img>
@@ -94,22 +94,31 @@
               Exploración y Comprensión del Mundo
             </v-card-title>
 
-            <v-col
-              cols="12"
-              xl="12"
-              lg="12"
-              md="12"
-              sm="12"
-              xs="12"
-              class="ml-16"
-            >
+            <v-row justify="center">
+              <v-col
+                cols="4"
+                class="mx-0"                             
+              >              
               <v-img
                 contain
-                class="imagen-carta mx-12"
-                src="@/assets/media/biblioteca/img-pensar.png"
+                class="imagen-carta mx-0"
+                src="@/assets/media/biblioteca/img-rana.png"
               >
-              </v-img>
-            </v-col>
+              </v-img>            
+              </v-col>
+              
+              <v-col
+                cols="4"
+                class="mx-0"    
+              >
+              <v-img
+                contain
+                class="imagen-carta mx-0"
+                src="@/assets/media/biblioteca/img-conejo.png"
+              >
+              </v-img>            
+              </v-col>
+            </v-row>
 
             <div class="mt-1">
               <p class="subtitulo-2 mx-4">Observaciones del mes de noviembre</p>
@@ -192,7 +201,7 @@
               <v-img
                 contain
                 class="imagen-carta mx-12"
-                src="@/assets/media/biblioteca/img-valores.png"
+                src="@/assets/media/biblioteca/img-niños.png"
               >
               </v-img>
             </v-col>
