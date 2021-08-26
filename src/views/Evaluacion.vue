@@ -95,28 +95,22 @@
             </v-card-title>
 
             <v-row justify="center">
-              <v-col
-                cols="4"
-                class="mx-0"                             
-              >              
-              <v-img
-                contain
-                class="imagen-carta mx-0"
-                src="@/assets/media/biblioteca/img-rana.png"
-              >
-              </v-img>            
+              <v-col cols="4" class="mx-0">
+                <v-img
+                  contain
+                  class="imagen-carta mx-0"
+                  src="@/assets/media/biblioteca/img-rana.png"
+                >
+                </v-img>
               </v-col>
-              
-              <v-col
-                cols="4"
-                class="mx-0"    
-              >
-              <v-img
-                contain
-                class="imagen-carta mx-0"
-                src="@/assets/media/biblioteca/img-conejo.png"
-              >
-              </v-img>            
+
+              <v-col cols="4" class="mx-0">
+                <v-img
+                  contain
+                  class="imagen-carta mx-0"
+                  src="@/assets/media/biblioteca/img-conejo.png"
+                >
+                </v-img>
               </v-col>
             </v-row>
 

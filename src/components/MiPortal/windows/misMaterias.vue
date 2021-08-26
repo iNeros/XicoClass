@@ -28,7 +28,11 @@
                 </v-row>
               </v-card-title>
               <v-card-text>
-                <p class="subtitulo text-left mx-6" v-for="name in nombreDoc" :key="name.nombre">
+                <p
+                  class="subtitulo text-left mx-6"
+                  v-for="name in nombreDoc"
+                  :key="name.nombre"
+                >
                   {{ name.nombre }}
                 </p>
                 <p class="subtitulo-2 mx-6 my-0 text-left">
@@ -61,55 +65,55 @@
 </template>
 
 <script>
-import axios from 'axios'
+import axios from "axios";
 export default {
   name: "misMaterias",
   data() {
     return {
-    nombreDoc:'',
-    items: [
-      {
-        materia: "Lenguaje y Comunicación",
-        horario: "Horario",
-        descripcion:
-          "Adquirir y desarrollar los conocimientos, actitudes y valores que permitan a los estudiantes seguir aprendiendo a lo largo de su vida y afrontar los retos que implica una sociedad diversa y en continuo cambio. ",
-      },
-      {
-        materia: "Pensamiento Matemático",
-        horario: "Horario",
-        descripcion:
-          "Busca que los estudiantes desarrollen esa forma de razonar tanto lógica como no convencional y que al hacerlo aprecien el valor de ese pensamiento, lo que ha de traducirse en actitudes y valores favorables hacia las matemáticas, su utilidad y su valor científico y cultural.",
-      },
-      {
-        materia: "Exploración y Comprensión del Mundo",
-        horario: "Horario",
-        descripcion:
-          "Ofrece un conjunto de aproximaciones a ciertos fenómenos y procesos naturales y sociales cuidadosamente seleccionados.",
-      },
-      {
-        materia: "Arte",
-        horario: "Horario",
-        descripcion:
-          "Concepto amplio, abierto e incluyente de las artes que permite reconocer la diversidad cultural y artística de México y del mundo, y que engloba tanto las llamadas bellas artes como las distintas artes populares, indígenas, clásicas, emergentes, tradicionales y contemporáneas.",
-      },
-      {
-        materia: "Educación Socioemocional",
-        horario: "Horario",
-        descripcion:
-          "Aporta a la formación de los estudiantes conocimientos, habilidades, valores y actitudes enfocados en el desarrollo personal, sin perder de vista que estos aprendizajes adquieren valor en contextos sociales y de convivencia.",
-      },
-      {
-        materia: "Educación Física",
-        horario: "Horario",
-        descripcion:
-          "Motiva la realización de diversas acciones motrices, en un proceso dinámico y reflexivo, a partir de estrategias didácticas que se derivan del juego motor, como la expresión corporal, la iniciación deportiva y el deporte educativo, entre otras. ",
-      },
-    ],
-  };
+      nombreDoc: "",
+      items: [
+        {
+          materia: "Lenguaje y Comunicación",
+          horario: "Horario",
+          descripcion:
+            "Adquirir y desarrollar los conocimientos, actitudes y valores que permitan a los estudiantes seguir aprendiendo a lo largo de su vida y afrontar los retos que implica una sociedad diversa y en continuo cambio. ",
+        },
+        {
+          materia: "Pensamiento Matemático",
+          horario: "Horario",
+          descripcion:
+            "Busca que los estudiantes desarrollen esa forma de razonar tanto lógica como no convencional y que al hacerlo aprecien el valor de ese pensamiento, lo que ha de traducirse en actitudes y valores favorables hacia las matemáticas, su utilidad y su valor científico y cultural.",
+        },
+        {
+          materia: "Exploración y Comprensión del Mundo",
+          horario: "Horario",
+          descripcion:
+            "Ofrece un conjunto de aproximaciones a ciertos fenómenos y procesos naturales y sociales cuidadosamente seleccionados.",
+        },
+        {
+          materia: "Arte",
+          horario: "Horario",
+          descripcion:
+            "Concepto amplio, abierto e incluyente de las artes que permite reconocer la diversidad cultural y artística de México y del mundo, y que engloba tanto las llamadas bellas artes como las distintas artes populares, indígenas, clásicas, emergentes, tradicionales y contemporáneas.",
+        },
+        {
+          materia: "Educación Socioemocional",
+          horario: "Horario",
+          descripcion:
+            "Aporta a la formación de los estudiantes conocimientos, habilidades, valores y actitudes enfocados en el desarrollo personal, sin perder de vista que estos aprendizajes adquieren valor en contextos sociales y de convivencia.",
+        },
+        {
+          materia: "Educación Física",
+          horario: "Horario",
+          descripcion:
+            "Motiva la realización de diversas acciones motrices, en un proceso dinámico y reflexivo, a partir de estrategias didácticas que se derivan del juego motor, como la expresión corporal, la iniciación deportiva y el deporte educativo, entre otras. ",
+        },
+      ],
+    };
   },
   methods: {
-    getNameDocente(){
-            axios
+    getNameDocente() {
+      axios
         .get(
           "https://xicoclass.online/Docente.php?nombreDocente=" +
             window.sessionStorage.getItem("id_grado")
@@ -134,9 +138,9 @@ export default {
       else if (numeroAleatorio == 6) return "#BA68C8";
     },
   },
-mounted() {
-  this.getNameDocente();
-},
+  mounted() {
+    this.getNameDocente();
+  },
 };
 </script>
 

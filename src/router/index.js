@@ -14,7 +14,9 @@ const routes = [
     path: "/preInscripcion",
     name: "preInscripcion",
     component: () =>
-      import(/* webpackChunkName: "Login" */ "../views/Landing-Open/pre-inscripcion.vue"),
+      import(
+        /* webpackChunkName: "Login" */ "../views/Landing-Open/pre-inscripcion.vue"
+      ),
   },
   {
     path: "/LoginDocente",
