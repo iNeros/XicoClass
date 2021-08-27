@@ -146,8 +146,7 @@ export default {
   name: "visual",
   data() {
     return {
-      link:
-        "https://firebasestorage.googleapis.com/v0/b/xicoclassproject-579bb.appspot.com/o/ImagenEleccion%2FholderVideo.png?alt=media&token=659d282f-4074-48ec-985b-506c65425f23",
+      link: "https://firebasestorage.googleapis.com/v0/b/xicoclassproject-579bb.appspot.com/o/ImagenEleccion%2FholderVideo.png?alt=media&token=659d282f-4074-48ec-985b-506c65425f23",
       datos: [],
     };
   },

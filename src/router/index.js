@@ -11,6 +11,14 @@ const routes = [
       import(/* webpackChunkName: "Login" */ "../views/Auth/Login.vue"),
   },
   {
+    path: "/preInscripcion",
+    name: "preInscripcion",
+    component: () =>
+      import(
+        /* webpackChunkName: "Login" */ "../views/Landing-Open/pre-inscripcion.vue"
+      ),
+  },
+  {
     path: "/LoginDocente",
     name: "LoginDocente",
     component: () =>

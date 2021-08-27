@@ -3,7 +3,10 @@
     <div class="degradado"></div>
     <div class="right">
       ¿ERES UN DOCENTE? HAZ CLICK
-      <a href="/LoginDocente" style="color: yellow; text-decoration: underline">
+      <a
+        href="https://xicoclassproject-579bb.web.app/"
+        style="color: yellow; text-decoration: underline"
+      >
         AQUI
       </a>
     </div>
