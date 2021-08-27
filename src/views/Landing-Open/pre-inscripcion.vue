@@ -4,7 +4,7 @@
     <div class="right">
       <v-icon dark> mdi-arrow-left-bold </v-icon>
       <a
-        href="https://xicoclass.firebaseapp.com/"
+        href="https://federiquitos.com/"
         style="color: yellow; text-decoration: underline"
       >
         REGRESAR
@@ -218,7 +218,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style >
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500;600;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap");
 * {
