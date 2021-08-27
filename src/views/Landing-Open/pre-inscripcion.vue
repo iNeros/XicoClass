@@ -218,7 +218,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style >
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500;600;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap");
 * {
