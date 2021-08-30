@@ -6,14 +6,6 @@
           <v-btn class="button-img">
             <v-img
               class="img-setings"
-              src="@/assets/media/tramites-botones/tramitesPre.png"
-              @click="setTramiteSelected(1)"
-            >
-            </v-img>
-          </v-btn>
-          <v-btn class="button-img">
-            <v-img
-              class="img-setings"
               src="@/assets/media/tramites-botones/tramiteForm.png"
               @click="setTramiteSelected(2)"
             >
@@ -22,7 +14,7 @@
           <v-btn class="button-img">
             <v-img
               class="img-setings"
-              src="https://picsum.photos/id/13/700/300"
+              src="@/assets/media/tramites-botones/prox.png"
               @click="setTramiteSelected(3)"
             >
             </v-img>
@@ -30,7 +22,7 @@
           <v-btn class="button-img">
             <v-img
               class="img-setings"
-              src="https://picsum.photos/id/14/600/300"
+              src="@/assets/media/tramites-botones/prox.png"
               @click="setTramiteSelected(4)"
             >
             </v-img>
@@ -38,7 +30,7 @@
           <v-btn class="button-img">
             <v-img
               class="img-setings"
-              src="https://picsum.photos/id/15/600/300"
+              src="@/assets/media/tramites-botones/prox.png"
               @click="setTramiteSelected(5)"
             >
             </v-img>
@@ -46,13 +38,14 @@
           <v-btn class="button-img">
             <v-img
               class="img-setings"
-              src="https://picsum.photos/id/16/600/300"
+              src="@/assets/media/tramites-botones/prox.png"
               @click="setTramiteSelected(6)"
             >
             </v-img>
           </v-btn>
         </v-row>
       </v-window-item>
+
       <v-window-item :value="1">
         <div class="my-12">
           <v-btn width="170" text height="60" left @click="goBackAction()">
@@ -63,6 +56,7 @@
         </div>
         <tramites-preinscripcion />
       </v-window-item>
+
       <v-window-item :value="2">
         <div class="my-12">
           <v-btn width="170" text height="60" left @click="goBackAction()">
@@ -122,7 +116,6 @@
 
 <script>
 import TramitesCuarta from "./tramites/tramitesCuarta.vue";
-import TramitesPreinscripcion from "./tramites/tramitesPreinscripcion.vue";
 import TramitesQuinta from "./tramites/tramitesQuinta.vue";
 import TramitesSegunda from "./tramites/tramitesSegunda.vue";
 import TramitesSexta from "./tramites/tramitesSexta.vue";
@@ -130,7 +123,6 @@ import TramitesTercera from "./tramites/tramitesTercera.vue";
 export default {
   name: "misTramites",
   components: {
-    TramitesPreinscripcion,
     TramitesSegunda,
     TramitesTercera,
     TramitesCuarta,
