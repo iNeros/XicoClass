@@ -157,7 +157,7 @@ export default {
   },
   methods: {
     async subirDocumentos() {
-      this.dialogLoading = true;
+      
       if (
         this.name != null &&
         this.edad != null &&
@@ -168,6 +168,7 @@ export default {
         this.ineFrente != null &&
         this.ineReverso != null
       ) {
+        this.dialogLoading = true;
         const storageCurp = firebase
           .storage()
           .ref(`/Pre-InscripcionFiles/${this.curpFile.name}`);
