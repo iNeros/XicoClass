@@ -354,10 +354,6 @@ body {
   background-color: #0091ea !important;
   border-radius: 20px;
 }
-
-.application.theme--dark {
-  background: url();
-}
 .v-card {
   background: rgba(0, 0, 0, 0.35);
 }
