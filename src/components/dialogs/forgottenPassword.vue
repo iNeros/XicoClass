@@ -4,7 +4,7 @@
       <template v-slot:activator="{ on, attrs }">
         <p>
           ¿Olvidaste Tu Contraseña? <br />
-          Haz Click
+          Haz Clic
           <a
             v-bind="attrs"
             v-on="on"

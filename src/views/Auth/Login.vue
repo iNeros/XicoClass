@@ -2,7 +2,7 @@
   <body>
     <div class="degradado"></div>
     <div class="right">
-      ¿ERES UN DOCENTE? HAZ CLICK
+      ¿ERES UN DOCENTE? HAZ CLIC
       <a
         href="https://xicoclassproject-579bb.web.app/"
         style="color: yellow; text-decoration: underline"
@@ -11,7 +11,7 @@
       </a>
     </div>
     <div class="center">
-      <h1 style="color: #30dba0">INICIA SESION</h1>
+      <h1 style="color: #30dba0">INICIA SESIÓN</h1>
       <v-card class="mx-auto px-6" max-width="500" elevation="0" raised>
         <v-card-text>
           <br />
@@ -44,7 +44,7 @@
             class="btn-design"
             @click="Session(), setInicio()"
           >
-            INICIAR SESION
+            INICIAR SESIÓN
           </v-btn>
         </v-card-actions>
         <div class="forgotten-password">
